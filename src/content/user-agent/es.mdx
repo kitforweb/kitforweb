@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "¿Por qué todos los navegadores dicen Mozilla/5.0?",
+    a: "Por compatibilidad histórica: en los noventa los servidores enviaban mejores páginas a «Mozilla», así que cada navegador nuevo se hizo pasar por uno. La información útil está en el resto del texto.",
+  },
+  {
+    q: "¿Puedo fiarme del User-Agent?",
+    a: "No: cualquier cliente puede enviar el texto que quiera. Úsalo para estadísticas o para reconocer bots que se identifican bien, nunca para decisiones de seguridad. Verifica los bots de los buscadores con una consulta DNS inversa.",
+  },
+  {
+    q: "¿Qué son las User-Agent Client Hints?",
+    a: "El sustituto del User-Agent completo: los navegadores envían un UA reducido y exponen los detalles (plataforma, modelo, versión completa) con las cabeceras Sec-CH-UA y navigator.userAgentData cuando el sitio los pide.",
+  },
+];
+
+## ¿Qué hace?
+
+Desglosa un **User-Agent** en sus partes:
+
+- **Navegador** y versión (Chrome, Safari, Firefox, Edge, Samsung Internet…).
+- **Motor de renderizado** (Blink, WebKit, Gecko).
+- **Sistema operativo** y versión.
+- **Tipo de dispositivo**: escritorio, móvil, tableta, smart TV, consola…
+- **Bots y herramientas**: Googlebot, Bingbot, GPTBot, ClaudeBot, rastreadores de redes sociales, curl, Postman…
+
+Al abrir la página muestra el User-Agent de tu propio navegador, útil para informes de errores.
+
+## Dónde encontrarlo
+
+- En JavaScript: `navigator.userAgent`.
+- En los logs del servidor, la cabecera `User-Agent` de la petición.
+- En Node.js/Express: `req.get("user-agent")`.

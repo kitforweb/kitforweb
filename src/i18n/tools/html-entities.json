@@ -1,0 +1,48 @@
+{
+  "en": {
+    "name": "HTML Entities",
+    "short": "Convert special characters to HTML entities (&amp;, &lt;, &#233;) and back.",
+    "title": "HTML entities encode and decode online",
+    "description": "Convert special characters to HTML entities (&amp;, &lt;, &#233;) and decode entities back to text, with named, decimal or hexadecimal references. 100% in your browser.",
+    "h1": "HTML entities encoder and decoder",
+    "lead": "Escape text to put it safely inside HTML, or decode entities you found in a page or an API.",
+    "text": "Text",
+    "encoded": "Entities",
+    "placeholder": "Paste text (or entities after pressing Swap)…",
+    "encode": "Encode",
+    "decode": "Decode",
+    "style": "Reference style",
+    "nonAscii": "Encode all non-ASCII"
+  },
+  "es": {
+    "name": "Entidades HTML",
+    "short": "Convierte caracteres especiales a entidades HTML (&amp;, &lt;, &#233;) y al revés.",
+    "title": "Codificar y decodificar entidades HTML online",
+    "description": "Convierte caracteres especiales a entidades HTML (&amp;, &lt;, &#233;) y decodifica entidades a texto, con referencias con nombre, decimales o hexadecimales. 100% en tu navegador.",
+    "h1": "Codificar y decodificar entidades HTML",
+    "lead": "Escapa un texto para meterlo con seguridad en HTML, o decodifica las entidades que encuentres en una página o una API.",
+    "text": "Texto",
+    "encoded": "Entidades",
+    "placeholder": "Pega texto (o entidades después de pulsar Intercambiar)…",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "style": "Tipo de referencia",
+    "nonAscii": "Codificar todo lo no ASCII"
+  },
+  "fr": {
+    "name": "Entités HTML",
+    "short": "Convertissez les caractères spéciaux en entités HTML et inversement.",
+    "title": "Encoder et décoder les entités HTML en ligne",
+    "description": "Convertissez les caractères spéciaux en entités HTML (&amp;, &lt;, &#233;) et décodez-les, avec références nommées, décimales ou hexadécimales. 100 % dans votre navigateur.",
+    "h1": "Entités HTML",
+    "lead": "Échappez un texte pour le HTML ou décodez des entités."
+  },
+  "pt": {
+    "name": "Entidades HTML",
+    "short": "Converta caracteres especiais em entidades HTML e vice-versa.",
+    "title": "Codificar e decodificar entidades HTML online",
+    "description": "Converta caracteres especiais em entidades HTML (&amp;, &lt;, &#233;) e decodifique-as, com referências nomeadas, decimais ou hexadecimais. 100% no seu navegador.",
+    "h1": "Entidades HTML",
+    "lead": "Escape um texto para HTML ou decodifique entidades."
+  }
+}

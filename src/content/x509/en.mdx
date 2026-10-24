@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "How do I get the certificate of a website?",
+    a: "Run openssl s_client -connect example.com:443 -showcerts and copy the BEGIN/END CERTIFICATE blocks, or export it from the padlock in your browser's address bar.",
+  },
+  {
+    q: "Why is the Common Name not enough?",
+    a: "Browsers ignore the CN and only trust the Subject Alternative Name (SAN) list. A certificate is valid for a domain only if that domain, or a matching wildcard, appears in the SAN.",
+  },
+  {
+    q: "Is it safe to paste a certificate here?",
+    a: "Certificates are public, and this tool decodes them in your browser anyway. Never paste a private key into any online tool you do not control.",
+  },
+];
+
+## What does it do?
+
+It decodes **X.509 certificates** in PEM format — the ones used by HTTPS, mTLS and code signing — and shows:
+
+- **Subject** and **issuer**, and whether the certificate is self-signed or a CA.
+- The **domains** it covers (Subject Alternative Names) and IP addresses.
+- **Validity** dates with a warning when it has expired or expires in less than 30 days.
+- **Public key** and **signature** algorithms, key size and key usage.
+- **SHA-256** and **SHA-1** fingerprints, to pin or compare certificates.
+
+Paste a whole **chain** (leaf, intermediates, root) and each certificate is shown in order.
+
+## Command-line equivalent
+
+```bash
+openssl x509 -in cert.pem -noout -text
+openssl x509 -in cert.pem -noout -fingerprint -sha256
+```

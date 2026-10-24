@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "¿Qué versiones de JSON Schema admite?",
+    a: "Draft-07, 2019-09 y 2020-12. La versión se elige con la palabra clave $schema; si no está, se usa draft-07. Se comprueban formatos como email, uri, date-time y uuid.",
+  },
+  {
+    q: "¿Cómo se genera un esquema a partir de los datos?",
+    a: "Los tipos se deducen del ejemplo: los objetos enumeran sus propiedades (todas como obligatorias), los arrays toman el esquema de sus elementos y las cadenas que parecen fechas, emails o URIs reciben un format. Revísalo y relaja lo que deba ser opcional.",
+  },
+  {
+    q: "¿Por qué se muestran todos los errores y no solo el primero?",
+    a: "La validación se ejecuta con allErrors activado, para que corrijas todo de una vez en lugar de ir error a error.",
+  },
+];
+
+## ¿Qué hace?
+
+**Valida un documento JSON contra un JSON Schema** y te dice exactamente **qué campo falla y por qué**: cada error aparece con su ruta (por ejemplo `/user/email`), la regla que no se cumple y un mensaje legible, y el valor se subraya en el editor de datos.
+
+También funciona al revés: **genera un esquema a partir de un JSON de ejemplo**, una forma rápida de empezar a documentar el payload de una API o un fichero de configuración.
+
+## Cómo se usa
+
+1. Pega el esquema arriba y los datos abajo.
+2. El resultado se actualiza mientras escribes.
+3. Pulsa en un error para verlo en los datos.
+
+## Ejemplo
+
+Con un esquema que exige `email` con `format: email` y un `plan` que sea `free` o `pro`, los datos `{"email": "ana@", "plan": "gold"}` dan dos errores: el email no cumple el formato y el plan no es uno de los valores permitidos.

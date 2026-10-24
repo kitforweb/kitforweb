@@ -1,0 +1,36 @@
+export const faq = [
+  {
+    q: "¿Por qué un /24 tiene 254 hosts utilizables y no 256?",
+    a: "En IPv4 la primera dirección del bloque identifica la red y la última es la de broadcast, así que ninguna se puede asignar a un equipo. Las excepciones son /31 (enlaces punto a punto, RFC 3021) y /32 (un solo equipo).",
+  },
+  {
+    q: "¿Qué es la máscara wildcard?",
+    a: "La inversa de la máscara de red: 0.0.0.255 para un /24. Las ACL de Cisco y las configuraciones de OSPF la usan en lugar de la máscara.",
+  },
+  {
+    q: "¿Funciona con IPv6?",
+    a: "Sí. IPv6 no tiene broadcast, así que cuentan todas las direcciones del bloque. Los tamaños se calculan exactos, incluso para un /64 con 18 trillones de direcciones.",
+  },
+];
+
+## ¿Qué hace?
+
+Describe un **bloque CIDR**: máscara, wildcard, direcciones de red y broadcast, el rango de hosts utilizables y cuántos son. También te dice si una dirección es **privada, pública, loopback o CGNAT**, comprueba si una IP **pertenece al bloque** y **divide el bloque en subredes más pequeñas**.
+
+## Cómo se usa
+
+- Escribe un bloque como `10.0.0.0/16`, una IP con su máscara (`10.0.0.1 255.255.0.0`) o una IP suelta.
+- Escribe una IP en el segundo campo para comprobar si está dentro del rango: útil para reglas de firewall, security groups y listas de IPs permitidas.
+- Elige un prefijo en **Dividir en** para planificar subredes, por ejemplo una VPC `/16` dividida en subredes `/24`.
+
+## Chuleta
+
+| Prefijo | Máscara | Direcciones |
+| --- | --- | --- |
+| /32 | 255.255.255.255 | 1 |
+| /30 | 255.255.255.252 | 4 |
+| /28 | 255.255.255.240 | 16 |
+| /24 | 255.255.255.0 | 256 |
+| /20 | 255.255.240.0 | 4.096 |
+| /16 | 255.255.0.0 | 65.536 |
+| /8 | 255.0.0.0 | 16.777.216 |

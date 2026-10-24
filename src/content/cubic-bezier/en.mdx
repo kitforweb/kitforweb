@@ -1,0 +1,24 @@
+export const faq = [
+  {
+    q: "What do the four numbers mean?",
+    a: "They are the coordinates of two control points, P1 (x1, y1) and P2 (x2, y2). The x axis is time and the y axis is progress; the curve always starts at (0, 0) and ends at (1, 1).",
+  },
+  {
+    q: "Why can y go below 0 or above 1?",
+    a: "Values outside 0–1 make the animation overshoot: it goes past the end and comes back (easeOutBack) or pulls back before starting (easeInBack). x must stay between 0 and 1 because time cannot go backwards.",
+  },
+  {
+    q: "Which easing should I use?",
+    a: "Elements entering the screen usually feel best with ease-out (fast start, gentle stop), elements leaving with ease-in, and elements moving on screen with ease-in-out. Keep UI transitions between 150 and 300ms.",
+  },
+];
+
+## What does it do?
+
+It is a visual **editor for CSS easing curves**. Drag the two control points of `cubic-bezier()` or type their values, start from presets (the CSS keywords, the easings.net curves and Material's), and press **Play** to compare the motion with a linear animation.
+
+Copy the result for `transition-timing-function` or `animation-timing-function`. When the curve matches a CSS keyword, the keyword is used: `cubic-bezier(0.25, 0.1, 0.25, 1)` is simply `ease`.
+
+## Example
+
+`cubic-bezier(0.34, 1.56, 0.64, 1)` (easeOutBack) overshoots the target a little and settles, a playful effect for menus and toasts.

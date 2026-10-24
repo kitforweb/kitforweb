@@ -1,0 +1,62 @@
+{
+  "en": {
+    "name": "URL Parameters",
+    "short": "Break a URL into a decoded key/value table and rebuild it.",
+    "title": "URL parser: decode query string parameters online",
+    "description": "Break any URL into a decoded key/value table with search: repeated keys, # fragment parameters, nested redirect_uri URLs and JSON, Base64 or JWT values detected. Edit values and rebuild the URL. 100% in your browser.",
+    "h1": "URL Parameters",
+    "lead": "Paste a URL, however long, to see every parameter decoded. Edit any value and copy the rebuilt URL.",
+    "placeholder": "https://example.com/path?utm_source=…&redirect_uri=…",
+    "parameters": "Parameters",
+    "invalid": "This does not look like a valid URL.",
+    "protocol": "Protocol",
+    "host": "Host",
+    "path": "Path",
+    "search": "Search parameters…",
+    "query": "Query string",
+    "fragment": "Fragment (#)",
+    "none": "No parameters.",
+    "key": "Key",
+    "value": "Value",
+    "valueOf": "Value of {key}",
+    "rebuilt": "Rebuilt URL"
+  },
+  "es": {
+    "name": "Parámetros URL",
+    "short": "Desglosa una URL en una tabla clave/valor decodificada y reconstrúyela.",
+    "title": "Desglosar parámetros de una URL online",
+    "description": "Desglosa cualquier URL en una tabla clave/valor decodificada con buscador: claves repetidas, parámetros del fragmento #, URLs anidadas (redirect_uri) y valores JSON, Base64 o JWT detectados. Edita valores y reconstruye la URL. 100% en tu navegador.",
+    "h1": "Parámetros de una URL",
+    "lead": "Pega una URL, por larga que sea, para ver cada parámetro decodificado. Edita cualquier valor y copia la URL reconstruida.",
+    "placeholder": "https://example.com/ruta?utm_source=…&redirect_uri=…",
+    "parameters": "Parámetros",
+    "invalid": "No parece una URL válida.",
+    "protocol": "Protocolo",
+    "host": "Host",
+    "path": "Ruta",
+    "search": "Buscar parámetros…",
+    "query": "Query string",
+    "fragment": "Fragmento (#)",
+    "none": "Sin parámetros.",
+    "key": "Clave",
+    "value": "Valor",
+    "valueOf": "Valor de {key}",
+    "rebuilt": "URL reconstruida"
+  },
+  "fr": {
+    "name": "Paramètres d'URL",
+    "short": "Décomposez une URL en tableau clé/valeur décodé et reconstruisez-la.",
+    "title": "Analyser les paramètres d'une URL en ligne",
+    "description": "Décomposez une URL en tableau clé/valeur décodé : clés répétées, paramètres du fragment #, URL imbriquées et valeurs JSON, Base64 ou JWT détectées. 100 % dans votre navigateur.",
+    "h1": "Paramètres d'une URL",
+    "lead": "Collez une URL pour voir chaque paramètre décodé, modifiez-les et reconstruisez l'URL."
+  },
+  "pt": {
+    "name": "Parâmetros de URL",
+    "short": "Decomponha uma URL em uma tabela chave/valor decodificada e reconstrua.",
+    "title": "Analisar parâmetros de URL online",
+    "description": "Decomponha qualquer URL em uma tabela chave/valor decodificada: chaves repetidas, parâmetros do fragmento #, URLs aninhadas e valores JSON, Base64 ou JWT detectados. 100% no seu navegador.",
+    "h1": "Parâmetros de uma URL",
+    "lead": "Cole uma URL para ver cada parâmetro decodificado, edite e reconstrua a URL."
+  }
+}

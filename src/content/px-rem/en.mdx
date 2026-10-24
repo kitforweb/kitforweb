@@ -1,0 +1,26 @@
+export const faq = [
+  {
+    q: "Why use rem instead of px?",
+    a: "rem is relative to the root font size, which users can change in their browser settings. Sizes in rem follow that preference; sizes in px ignore it, which is an accessibility problem for text.",
+  },
+  {
+    q: "What is the difference between rem and em?",
+    a: "rem is relative to the root (html) font size, so it is the same everywhere. em is relative to the font size of the element itself, so it compounds when nested. Use em for things that should scale with their own text, like a button's padding.",
+  },
+  {
+    q: "Why keep 1px borders in px?",
+    a: "A 0.0625rem border can round down to zero and disappear at some zoom levels. Hairlines are usually left in px on purpose.",
+  },
+];
+
+## What does it do?
+
+It converts CSS lengths between **px, rem and em** using the **root font size** you set (16px by default). Type a single value to see it in every unit, or paste a **whole CSS block** and convert every value at once, leaving `url()` contents and, optionally, 1px borders untouched.
+
+## Formula
+
+`rem = px ÷ root font size`, so with a 16px root: 24px = 1.5rem and 0.875rem = 14px.
+
+## Example
+
+`padding: 24px 32px; margin-bottom: 48px;` becomes `padding: 1.5rem 2rem; margin-bottom: 3rem;`.

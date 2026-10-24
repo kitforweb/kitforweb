@@ -1,0 +1,28 @@
+export const faq = [
+  {
+    q: "Why replace colors with currentColor?",
+    a: "currentColor makes the icon take the CSS color of its parent, so it changes with hover states, dark mode or a text-red-500 class without editing the SVG. For multicolor illustrations, turn the option off.",
+  },
+  {
+    q: "How do I use the component?",
+    a: "Import it and render it like any element: a size prop sets width and height, and every other prop (className, aria-label, onClick…) goes straight to the svg element.",
+  },
+  {
+    q: "Is it the same as SVGR?",
+    a: "It covers the common case SVGR is used for (icons): camelCase attributes, a props spread, size and currentColor. It runs entirely in your browser, without a Node.js build step.",
+  },
+];
+
+## What does it do?
+
+It converts an **SVG into a React component**, in **TypeScript (TSX)** or **JavaScript (JSX)**:
+
+- Attributes renamed for React: `stroke-width` → `strokeWidth`, `class` → `className`, `style` strings → objects.
+- A **size** prop that sets width and height (24 by default).
+- Fill and stroke colors replaced by **currentColor**, so the icon follows the text color.
+- `{...props}` on the root so you can pass `className`, `aria-label` or event handlers.
+- Comments, the XML prolog and `xmlns:xlink` removed; optionally wrapped in `memo`.
+
+## Usage
+
+Render it as `BellIcon` with `size={20}` and `className="text-indigo-600"`: the icon is 20px and indigo.

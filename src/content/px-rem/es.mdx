@@ -1,0 +1,26 @@
+export const faq = [
+  {
+    q: "¿Por qué usar rem en lugar de px?",
+    a: "rem es relativo al tamaño de fuente raíz, que los usuarios pueden cambiar en los ajustes del navegador. Los tamaños en rem siguen esa preferencia; los tamaños en px la ignoran, lo que es un problema de accesibilidad en el texto.",
+  },
+  {
+    q: "¿Qué diferencia hay entre rem y em?",
+    a: "rem es relativo al tamaño de fuente de la raíz (html), así que es igual en todas partes. em es relativo al tamaño de fuente del propio elemento, así que se multiplica al anidar. Usa em para lo que deba escalar con su propio texto, como el padding de un botón.",
+  },
+  {
+    q: "¿Por qué mantener los bordes de 1px en px?",
+    a: "Un borde de 0.0625rem puede redondearse a cero y desaparecer con algunos niveles de zoom. Las líneas finas se suelen dejar en px a propósito.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte medidas CSS entre **px, rem y em** según el **tamaño de fuente raíz** que indiques (16px por defecto). Escribe un valor para verlo en todas las unidades, o pega un **bloque CSS entero** y convierte todos los valores a la vez, sin tocar el contenido de `url()` y, si quieres, los bordes de 1px.
+
+## Fórmula
+
+`rem = px ÷ tamaño de fuente raíz`, así que con una raíz de 16px: 24px = 1.5rem y 0.875rem = 14px.
+
+## Ejemplo
+
+`padding: 24px 32px; margin-bottom: 48px;` pasa a `padding: 1.5rem 2rem; margin-bottom: 3rem;`.

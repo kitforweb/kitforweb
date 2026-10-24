@@ -1,0 +1,47 @@
+export const faq = [
+  {
+    q: "How does it decide which fields are optional?",
+    a: "When you paste an array of objects, a field that is missing in at least one object becomes optional (field?: type). Paste several real examples to get more accurate types.",
+  },
+  {
+    q: "What happens with null values and mixed arrays?",
+    a: "A field that is always null is typed as null, one that is sometimes null becomes a union with null, and an array that mixes numbers and strings becomes Array<number | string>.",
+  },
+  {
+    q: "Interface or type: which one should I use?",
+    a: "Both describe the shape of an object. Interfaces can be extended and merged, which suits public APIs; type aliases can also express unions and mapped types. Pick whatever your codebase already uses.",
+  },
+];
+
+## What does it do?
+
+It reads a **JSON sample** — an API response, a fixture, a config file — and writes the **TypeScript interfaces** that describe it. Nested objects become their own named interfaces, so you get readable, reusable types instead of one giant inline type.
+
+The inference runs with [quicktype](https://quicktype.io) inside a Web Worker, so even large samples never freeze the page, and nothing leaves your browser.
+
+## How to use it
+
+1. Paste a JSON object or, better, an **array with several examples** of the same entity.
+2. Name the **root type** (`User`, `Order`…). Nested types are named after their keys.
+3. Choose `interface` or `type`, and enable `readonly` if your data is immutable.
+4. Copy the result into your project.
+
+## Example
+
+```json
+[{ "id": 1, "email": "ada@example.com" }, { "id": 2 }]
+```
+
+becomes
+
+```ts
+export interface User {
+  id: number;
+  email?: string;
+}
+```
+
+## Tips
+
+- Types are only as good as the sample: include an example of every variant your API can return.
+- For runtime validation, generate a schema with the [JSON to Zod](/en/json-to-zod) tool instead.

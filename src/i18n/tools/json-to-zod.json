@@ -1,0 +1,38 @@
+{
+  "en": {
+    "name": "JSON to Zod",
+    "short": "Generate a ready-to-use Zod validation schema from JSON.",
+    "title": "JSON to Zod schema generator",
+    "description": "Convert a JSON sample into a Zod schema online, with optional fields, nulls and unions inferred, plus the z.infer type. 100% in your browser.",
+    "h1": "JSON to Zod schema",
+    "lead": "Paste a JSON sample and get a Zod schema plus its inferred TypeScript type.",
+    "placeholder": "Paste a JSON object or an array of objects…",
+    "rootName": "Schema name"
+  },
+  "es": {
+    "name": "JSON a Zod",
+    "short": "Genera un esquema de validación Zod listo para usar a partir de un JSON.",
+    "title": "Convertir JSON a esquema Zod",
+    "description": "Convierte un JSON de ejemplo en un esquema Zod online, con campos opcionales, nulos y uniones inferidos, más el tipo z.infer. 100% en tu navegador.",
+    "h1": "JSON a esquema Zod",
+    "lead": "Pega un JSON de ejemplo y obtén un esquema Zod y su tipo de TypeScript inferido.",
+    "placeholder": "Pega un objeto JSON o un array de objetos…",
+    "rootName": "Nombre del esquema"
+  },
+  "fr": {
+    "name": "JSON vers Zod",
+    "short": "Générez un schéma de validation Zod prêt à l'emploi à partir de JSON.",
+    "title": "Générateur de schéma Zod à partir de JSON",
+    "description": "Convertissez un exemple JSON en schéma Zod en ligne, avec champs optionnels, null et unions inférés. 100 % dans votre navigateur.",
+    "h1": "JSON vers schéma Zod",
+    "lead": "Collez un exemple JSON et obtenez un schéma Zod et son type TypeScript."
+  },
+  "pt": {
+    "name": "JSON para Zod",
+    "short": "Gere um schema de validação Zod pronto para usar a partir de JSON.",
+    "title": "Gerador de schema Zod a partir de JSON",
+    "description": "Converta um exemplo JSON em um schema Zod online, com campos opcionais, nulos e uniões inferidos. 100% no seu navegador.",
+    "h1": "JSON para schema Zod",
+    "lead": "Cole um exemplo JSON e obtenha um schema Zod e seu tipo TypeScript."
+  }
+}

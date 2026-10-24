@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "¿Sigo necesitando favicon.ico?",
+    a: "Sí. Algunos navegadores, lectores RSS y herramientas piden /favicon.ico directamente sin leer tu HTML. El .ico generado incluye versiones de 16, 32 y 48px; los navegadores modernos prefieren favicon.svg cuando existe.",
+  },
+  {
+    q: "¿Qué es un icono maskable?",
+    a: "Android recorta los iconos de las PWA en círculos, squircles u otras formas. Un icono maskable tiene fondo sólido y mantiene el logo dentro de la zona segura central, para que no se corte nada importante.",
+  },
+  {
+    q: "¿Se sube mi logo?",
+    a: "No. Los iconos se dibujan en un canvas en tu navegador y el ZIP se crea localmente con JSZip.",
+  },
+];
+
+## ¿Qué hace?
+
+A partir de **una imagen** genera el **juego completo de iconos** que necesita una web moderna, junto con los ficheros que los referencian:
+
+| Fichero | Tamaño | Lo usa |
+| --- | --- | --- |
+| favicon.ico | 16, 32, 48 | Navegadores, herramientas antiguas |
+| favicon.svg | vectorial | Navegadores modernos (si el original es SVG) |
+| apple-touch-icon.png | 180 | Pantalla de inicio de iOS |
+| icon-192.png, icon-512.png | 192, 512 | Android, instalación de PWA |
+| icon-maskable-512.png | 512 | Iconos adaptativos de Android |
+| site.webmanifest | — | Metadatos de la PWA |
+
+También escribe las **etiquetas link** para tu head y te deja descargarlo todo en un **ZIP**.
+
+## Consejos
+
+- Parte de un **SVG** o de un PNG cuadrado de al menos 512px.
+- Los logos con detalles finos son ilegibles a 16px: simplifica las versiones de 16 y 32px si hace falta.

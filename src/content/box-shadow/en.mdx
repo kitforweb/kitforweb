@@ -1,0 +1,26 @@
+export const faq = [
+  {
+    q: "Why use several layers?",
+    a: "Real shadows have a sharp, dark part close to the object and a soft, wide part further away. Combining a small tight shadow with a large blurred one looks far more natural than a single shadow.",
+  },
+  {
+    q: "What do blur and spread do?",
+    a: "Blur softens the edge of the shadow. Spread grows (positive) or shrinks (negative) the shadow before blurring; a negative spread with a large blur gives the subtle elevation used by most design systems.",
+  },
+  {
+    q: "What is an inset shadow?",
+    a: "A shadow drawn inside the element instead of outside, useful for pressed buttons, inputs or a 1px inner highlight (inset 0 0 0 1px).",
+  },
+];
+
+## What does it do?
+
+It lets you **design CSS box-shadows visually**: add as many layers as you need, adjust offset, blur, spread and color of each one, make them **inset**, and see the result on a box and background of your choice.
+
+Start from **Tailwind's presets** (sm to 2xl), or paste an existing `box-shadow` to edit it. Copy the CSS declaration or the Tailwind arbitrary class.
+
+## Anatomy of a layer
+
+`box-shadow: inset? x y blur spread color;`
+
+For example `0 4px 12px -2px rgb(0 0 0 / 0.15)`: 4px down, 12px of blur, slightly smaller than the box, 15% black.

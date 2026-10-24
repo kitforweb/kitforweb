@@ -1,0 +1,28 @@
+export const faq = [
+  {
+    q: "What is the difference between linear, radial and conic gradients?",
+    a: "Linear gradients change color along a straight line at an angle. Radial gradients spread out from a center as a circle or ellipse. Conic gradients rotate around a center, like a color wheel or a pie chart.",
+  },
+  {
+    q: "Why do some gradients look grey in the middle?",
+    a: "Mixing two very different hues in sRGB passes through dull colors. Adding a middle stop with a saturated color avoids it, as does using in oklch interpolation in modern browsers.",
+  },
+  {
+    q: "What does repeating do?",
+    a: "It repeats the stops instead of stretching them over the whole element: with stops at 0% and 10% you get ten stripes. Useful for patterns.",
+  },
+];
+
+## What does it do?
+
+It **creates CSS gradients visually**: choose **linear, radial or conic**, add as many **color stops** as you want, move them and set the angle or center while the preview updates. Paste an existing gradient to keep editing it.
+
+## Example
+
+`linear-gradient(135deg, #0ea5e9 0%, #6366f1 45%, #d946ef 100%)` goes diagonally from sky blue through indigo to fuchsia.
+
+## Tips
+
+- Use the gradient as `background` (or `background-image`), not as `background-color`.
+- Stops at the same position create a hard edge: `red 50%, blue 50%` draws two halves.
+- A conic gradient with hard edges makes a pie chart in pure CSS.

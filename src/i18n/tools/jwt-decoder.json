@@ -1,0 +1,166 @@
+{
+  "en": {
+    "name": "JWT Decoder",
+    "short": "Decode a JWT, check its expiry and verify its signature.",
+    "title": "JWT Decoder & Verifier online (private)",
+    "description": "Decode JSON Web Tokens online: header, payload and signature, with exp, iat and nbf as readable dates and an expiry warning. Verify HS, RS, ES and PS signatures. Runs 100% in your browser.",
+    "h1": "JWT Decoder",
+    "lead": "Paste a token to see its header, payload and expiry. It is never stored or sent anywhere.",
+    "token": "Encoded token",
+    "decoded": "Decoded",
+    "placeholder": "Paste a JWT (eyJ…), with or without “Bearer ”",
+    "secret": "Secret (to verify the signature)",
+    "publicKey": "Public key, certificate or JWK (to verify the signature)",
+    "secretPlaceholder": "your-256-bit-secret",
+    "publicKeyPlaceholder": "-----BEGIN PUBLIC KEY-----  or  '{' \"kty\": \"RSA\", … '}'",
+    "verified": "Signature verified",
+    "verifyError": {
+      "signature": "Invalid signature for this key",
+      "key": "The key could not be read for this algorithm",
+      "alg": "Algorithm not supported or unsafe (alg: none)"
+    },
+    "decodeError": {
+      "parts": "A JWT has 3 parts separated by dots (header.payload.signature).",
+      "header": "The header is not valid Base64URL-encoded JSON.",
+      "payload": "The payload is not valid Base64URL."
+    },
+    "status": {
+      "valid": "Valid · expires {when}",
+      "expired": "Expired {when}",
+      "not-yet-valid": "Not valid yet (nbf)",
+      "no-expiry": "No expiry (exp)"
+    },
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "unsigned": "Unsigned token",
+    "claims": {
+      "iat": "issued at",
+      "nbf": "not before",
+      "exp": "expires"
+    }
+  },
+  "es": {
+    "name": "Decodificador JWT",
+    "short": "Decodifica un JWT, comprueba su caducidad y verifica la firma.",
+    "title": "Decodificar y verificar JWT online (privado)",
+    "description": "Decodifica JSON Web Tokens online: cabecera, payload y firma, con exp, iat y nbf en fecha legible y aviso de caducidad. Verifica firmas HS, RS, ES y PS. 100% en tu navegador.",
+    "h1": "Decodificador JWT",
+    "lead": "Pega un token para ver su cabecera, su payload y su caducidad. Nunca se guarda ni se envía.",
+    "token": "Token codificado",
+    "decoded": "Decodificado",
+    "placeholder": "Pega un JWT (eyJ…), con o sin “Bearer ”",
+    "secret": "Secreto (para verificar la firma)",
+    "publicKey": "Clave pública, certificado o JWK (para verificar la firma)",
+    "secretPlaceholder": "tu-secreto-de-256-bits",
+    "publicKeyPlaceholder": "-----BEGIN PUBLIC KEY-----  o  '{' \"kty\": \"RSA\", … '}'",
+    "verified": "Firma verificada",
+    "verifyError": {
+      "signature": "La firma no es válida para esta clave",
+      "key": "No se ha podido leer la clave para este algoritmo",
+      "alg": "Algoritmo no soportado o inseguro (alg: none)"
+    },
+    "decodeError": {
+      "parts": "Un JWT tiene 3 partes separadas por puntos (cabecera.payload.firma).",
+      "header": "La cabecera no es un JSON válido codificado en Base64URL.",
+      "payload": "El payload no es Base64URL válido."
+    },
+    "status": {
+      "valid": "Válido · caduca {when}",
+      "expired": "Caducado {when}",
+      "not-yet-valid": "Aún no es válido (nbf)",
+      "no-expiry": "Sin caducidad (exp)"
+    },
+    "header": "Cabecera",
+    "payload": "Payload",
+    "signature": "Firma",
+    "unsigned": "Token sin firmar",
+    "claims": {
+      "iat": "emitido",
+      "nbf": "válido desde",
+      "exp": "caduca"
+    }
+  },
+  "fr": {
+    "name": "Décodeur JWT",
+    "short": "Décodez un JWT, vérifiez son expiration et sa signature.",
+    "title": "Décoder et vérifier un JWT en ligne (privé)",
+    "description": "Décodez des JSON Web Tokens en ligne : en-tête, payload et signature, avec exp, iat et nbf en dates lisibles et alerte d'expiration. Vérifiez les signatures HS, RS, ES et PS. 100 % dans votre navigateur.",
+    "h1": "Décodeur JWT",
+    "lead": "Collez un token pour voir son en-tête, son payload et son expiration. Il n'est jamais enregistré ni envoyé.",
+    "token": "Token encodé",
+    "decoded": "Décodé",
+    "placeholder": "Collez un JWT (eyJ…), avec ou sans « Bearer »",
+    "secret": "Secret (pour vérifier la signature)",
+    "publicKey": "Clé publique, certificat ou JWK (pour vérifier la signature)",
+    "secretPlaceholder": "votre-secret-de-256-bits",
+    "publicKeyPlaceholder": "-----BEGIN PUBLIC KEY-----  ou  '{' \"kty\": \"RSA\", … '}'",
+    "verified": "Signature vérifiée",
+    "verifyError": {
+      "signature": "Signature invalide pour cette clé",
+      "key": "Impossible de lire la clé pour cet algorithme",
+      "alg": "Algorithme non pris en charge ou dangereux (alg: none)"
+    },
+    "decodeError": {
+      "parts": "Un JWT comporte 3 parties séparées par des points (en-tête.payload.signature).",
+      "header": "L'en-tête n'est pas un JSON valide encodé en Base64URL.",
+      "payload": "Le payload n'est pas du Base64URL valide."
+    },
+    "status": {
+      "valid": "Valide · expire {when}",
+      "expired": "Expiré {when}",
+      "not-yet-valid": "Pas encore valide (nbf)",
+      "no-expiry": "Sans expiration (exp)"
+    },
+    "header": "En-tête",
+    "payload": "Payload",
+    "signature": "Signature",
+    "unsigned": "Token non signé",
+    "claims": {
+      "iat": "émis",
+      "nbf": "valide à partir de",
+      "exp": "expire"
+    }
+  },
+  "pt": {
+    "name": "Decodificador JWT",
+    "short": "Decodifique um JWT, confira a expiração e verifique a assinatura.",
+    "title": "Decodificar e verificar JWT online (privado)",
+    "description": "Decodifique JSON Web Tokens online: cabeçalho, payload e assinatura, com exp, iat e nbf como datas legíveis e aviso de expiração. Verifique assinaturas HS, RS, ES e PS. 100% no seu navegador.",
+    "h1": "Decodificador JWT",
+    "lead": "Cole um token para ver o cabeçalho, o payload e a expiração. Ele nunca é salvo nem enviado.",
+    "token": "Token codificado",
+    "decoded": "Decodificado",
+    "placeholder": "Cole um JWT (eyJ…), com ou sem “Bearer ”",
+    "secret": "Segredo (para verificar a assinatura)",
+    "publicKey": "Chave pública, certificado ou JWK (para verificar a assinatura)",
+    "secretPlaceholder": "seu-segredo-de-256-bits",
+    "publicKeyPlaceholder": "-----BEGIN PUBLIC KEY-----  ou  '{' \"kty\": \"RSA\", … '}'",
+    "verified": "Assinatura verificada",
+    "verifyError": {
+      "signature": "Assinatura inválida para esta chave",
+      "key": "Não foi possível ler a chave para este algoritmo",
+      "alg": "Algoritmo não suportado ou inseguro (alg: none)"
+    },
+    "decodeError": {
+      "parts": "Um JWT tem 3 partes separadas por pontos (cabeçalho.payload.assinatura).",
+      "header": "O cabeçalho não é um JSON válido codificado em Base64URL.",
+      "payload": "O payload não é Base64URL válido."
+    },
+    "status": {
+      "valid": "Válido · expira {when}",
+      "expired": "Expirado {when}",
+      "not-yet-valid": "Ainda não é válido (nbf)",
+      "no-expiry": "Sem expiração (exp)"
+    },
+    "header": "Cabeçalho",
+    "payload": "Payload",
+    "signature": "Assinatura",
+    "unsigned": "Token sem assinatura",
+    "claims": {
+      "iat": "emitido",
+      "nbf": "válido a partir de",
+      "exp": "expira"
+    }
+  }
+}

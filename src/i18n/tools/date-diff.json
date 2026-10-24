@@ -1,0 +1,102 @@
+{
+  "en": {
+    "name": "Date difference",
+    "short": "Time between two dates (days, hours, business days) and date arithmetic.",
+    "title": "Date difference calculator: days between dates",
+    "description": "Calculate the time between two dates in years, months, days, hours and business days, and add or subtract durations from a date. Calendar-aware: adding a month to 31 January gives the end of February. 100% in your browser.",
+    "h1": "Date difference calculator",
+    "lead": "How long between two dates, and what date is it N days, weeks or months from now.",
+    "between": "Between two dates",
+    "result": "Result",
+    "start": "Start",
+    "end": "End",
+    "shiftTitle": "Add or subtract",
+    "from": "From",
+    "operation": "Operation",
+    "add": "Add",
+    "subtract": "Subtract",
+    "units": {
+      "years": "Years",
+      "months": "Months",
+      "weeks": "Weeks",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes"
+    },
+    "difference": "Difference",
+    "parts": {
+      "years": "{count, plural, one {# year} other {# years}}",
+      "months": "{count, plural, one {# month} other {# months}}",
+      "days": "{count, plural, one {# day} other {# days}}",
+      "hours": "{count, plural, one {# hour} other {# hours}}",
+      "minutes": "{count, plural, one {# minute} other {# minutes}}"
+    },
+    "same": "Same moment",
+    "totalDays": "Total days",
+    "totalWeeks": "Total weeks",
+    "totalHours": "Total hours",
+    "totalMinutes": "Total minutes",
+    "businessDays": "Business days (Mon–Fri)",
+    "pickBoth": "Pick a start and an end date.",
+    "shiftResult": "Resulting date",
+    "summaryDays": "{days} days"
+  },
+  "es": {
+    "name": "Diferencia de fechas",
+    "short": "Tiempo entre dos fechas (días, horas, días laborables) y sumar o restar a una fecha.",
+    "title": "Calcular la diferencia entre dos fechas (días entre fechas)",
+    "description": "Calcula el tiempo entre dos fechas en años, meses, días, horas y días laborables, y suma o resta duraciones a una fecha. Respeta el calendario: sumar un mes al 31 de enero da el final de febrero. 100% en tu navegador.",
+    "h1": "Calculadora de diferencia entre fechas",
+    "lead": "Cuánto tiempo hay entre dos fechas y qué fecha será dentro de N días, semanas o meses.",
+    "between": "Entre dos fechas",
+    "result": "Resultado",
+    "start": "Inicio",
+    "end": "Fin",
+    "shiftTitle": "Sumar o restar",
+    "from": "Desde",
+    "operation": "Operación",
+    "add": "Sumar",
+    "subtract": "Restar",
+    "units": {
+      "years": "Años",
+      "months": "Meses",
+      "weeks": "Semanas",
+      "days": "Días",
+      "hours": "Horas",
+      "minutes": "Minutos"
+    },
+    "difference": "Diferencia",
+    "parts": {
+      "years": "{count, plural, one {# año} other {# años}}",
+      "months": "{count, plural, one {# mes} other {# meses}}",
+      "days": "{count, plural, one {# día} other {# días}}",
+      "hours": "{count, plural, one {# hora} other {# horas}}",
+      "minutes": "{count, plural, one {# minuto} other {# minutos}}"
+    },
+    "same": "El mismo momento",
+    "totalDays": "Días en total",
+    "totalWeeks": "Semanas en total",
+    "totalHours": "Horas en total",
+    "totalMinutes": "Minutos en total",
+    "businessDays": "Días laborables (lun–vie)",
+    "pickBoth": "Elige una fecha de inicio y otra de fin.",
+    "shiftResult": "Fecha resultante",
+    "summaryDays": "{days} días"
+  },
+  "fr": {
+    "name": "Différence de dates",
+    "short": "Temps entre deux dates (jours, heures, jours ouvrés) et calcul de dates.",
+    "title": "Calculer la différence entre deux dates",
+    "description": "Calculez le temps entre deux dates en années, mois, jours, heures et jours ouvrés, et ajoutez ou soustrayez des durées. 100 % dans votre navigateur.",
+    "h1": "Calculateur de différence de dates",
+    "lead": "Combien de temps entre deux dates, et quelle date dans N jours."
+  },
+  "pt": {
+    "name": "Diferença de datas",
+    "short": "Tempo entre duas datas (dias, horas, dias úteis) e cálculo de datas.",
+    "title": "Calcular a diferença entre duas datas",
+    "description": "Calcule o tempo entre duas datas em anos, meses, dias, horas e dias úteis, e some ou subtraia durações. 100% no seu navegador.",
+    "h1": "Calculadora de diferença entre datas",
+    "lead": "Quanto tempo entre duas datas, e que data será daqui a N dias."
+  }
+}

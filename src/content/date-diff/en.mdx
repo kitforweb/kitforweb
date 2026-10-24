@@ -1,0 +1,39 @@
+export const faq = [
+  {
+    q: "What happens when I add one month to 31 January?",
+    a: "You get the last day of February (28 or 29). Months have different lengths, so calendar arithmetic clamps to the end of the month instead of overflowing into March.",
+  },
+  {
+    q: "How are business days counted?",
+    a: "Monday to Friday between both dates, excluding the end date. Public holidays are not taken into account because they depend on the country and region.",
+  },
+  {
+    q: "Why can the number of days differ by one around March or October?",
+    a: "Because of daylight saving time: one day of the year has 23 hours and another 25. Totals are calculated from the exact instants, in your local time zone.",
+  },
+];
+
+## What does it do?
+
+Two calculators in one:
+
+- **Between two dates**: the difference broken down into years, months, days, hours and minutes, plus the totals in days, weeks, hours and minutes and the number of **business days**.
+- **Add or subtract**: the date you get by adding or subtracting years, months, weeks, days, hours or minutes from a given date.
+
+## Examples
+
+| Question | Answer |
+| --- | --- |
+| Days between 1 January and 24 December 2026 | 357 days |
+| 30 days after 15 March | 14 April |
+| 1 month after 31 January 2024 | 29 February 2024 |
+| Business days from Monday to the following Monday | 5 |
+
+## In code
+
+```js
+import { differenceInDays, differenceInBusinessDays, addMonths } from "date-fns";
+
+differenceInDays(new Date("2026-12-24"), new Date("2026-01-01")); // 357
+addMonths(new Date("2024-01-31"), 1); // 2024-02-29
+```

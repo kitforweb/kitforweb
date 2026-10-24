@@ -1,0 +1,68 @@
+{
+  "en": {
+    "name": ".env ↔ JSON",
+    "short": "Convert .env files to JSON and back, catching duplicate keys and bad quotes.",
+    "title": "Convert .env to JSON (and JSON to .env) online",
+    "description": "Convert a .env file to JSON and JSON to .env. Duplicate keys, unclosed or stray quotes, invalid names and spaces around = are reported with their line. Optional typed values and nesting with __. Nothing is stored or shared: 100% in your browser.",
+    "h1": ".env ↔ JSON converter",
+    "lead": "Paste a .env to see how a loader reads it, and what is wrong with it.",
+    "placeholder": "PORT=3000\nDATABASE_URL=postgres://…",
+    "typed": "Numbers and booleans",
+    "nest": "Nest KEY__SUB",
+    "uppercase": "UPPER_CASE keys",
+    "issues": {
+      "duplicate": "Line {line}: {key} is already defined on line {first}; the last value wins.",
+      "unterminated-quote": "Line {line}: the quote of {key} is never closed.",
+      "stray-quote": "Line {line}: {key} has a quote in the middle or text after the closing quote.",
+      "invalid-key": "Line {line}: “{key}” is not a valid variable name.",
+      "missing-equals": "Line {line}: there is no = sign; the line is ignored.",
+      "spaces-around-equals": "Line {line}: spaces around = in {key} break docker --env-file and shells.",
+      "unquoted-spaces": "Line {line}: the value of {key} has spaces; quote it if the file is sourced by a shell."
+    },
+    "errors": {
+      "invalid-json": "The JSON is not valid.",
+      "not-object": "The JSON must be an object of keys and values."
+    }
+  },
+  "es": {
+    "name": ".env ↔ JSON",
+    "short": "Convierte ficheros .env a JSON y al revés, detectando claves duplicadas y comillas mal puestas.",
+    "title": "Convertir .env a JSON (y JSON a .env) online",
+    "description": "Convierte un fichero .env a JSON y JSON a .env. Se indican con su línea las claves duplicadas, las comillas sin cerrar o sueltas, los nombres no válidos y los espacios alrededor del =. Valores tipados y anidación con __ opcionales. No se guarda ni se comparte nada: 100% en tu navegador.",
+    "h1": "Conversor .env ↔ JSON",
+    "lead": "Pega un .env para ver cómo lo lee un cargador y qué tiene mal.",
+    "placeholder": "PORT=3000\nDATABASE_URL=postgres://…",
+    "typed": "Números y booleanos",
+    "nest": "Anidar CLAVE__SUB",
+    "uppercase": "Claves en MAYÚSCULAS",
+    "issues": {
+      "duplicate": "Línea {line}: {key} ya está definida en la línea {first}; gana el último valor.",
+      "unterminated-quote": "Línea {line}: las comillas de {key} no se cierran nunca.",
+      "stray-quote": "Línea {line}: {key} tiene comillas en medio o texto después de cerrarlas.",
+      "invalid-key": "Línea {line}: «{key}» no es un nombre de variable válido.",
+      "missing-equals": "Línea {line}: no hay signo =; la línea se ignora.",
+      "spaces-around-equals": "Línea {line}: los espacios alrededor del = en {key} rompen docker --env-file y las shells.",
+      "unquoted-spaces": "Línea {line}: el valor de {key} tiene espacios; ponlo entre comillas si una shell carga el fichero."
+    },
+    "errors": {
+      "invalid-json": "El JSON no es válido.",
+      "not-object": "El JSON debe ser un objeto de claves y valores."
+    }
+  },
+  "fr": {
+    "name": ".env ↔ JSON",
+    "short": "Convertissez des fichiers .env en JSON et inversement, avec détection des doublons.",
+    "title": "Convertir .env en JSON (et JSON en .env) en ligne",
+    "description": "Convertissez un fichier .env en JSON et inversement. Clés dupliquées et guillemets mal fermés signalés avec leur ligne. 100 % dans votre navigateur.",
+    "h1": "Convertisseur .env ↔ JSON",
+    "lead": "Collez un .env pour voir ce qui ne va pas."
+  },
+  "pt": {
+    "name": ".env ↔ JSON",
+    "short": "Converta arquivos .env em JSON e vice-versa, detectando chaves duplicadas.",
+    "title": "Converter .env para JSON (e JSON para .env) online",
+    "description": "Converta um arquivo .env em JSON e vice-versa. Chaves duplicadas e aspas mal fechadas aparecem com a linha. 100% no seu navegador.",
+    "h1": "Conversor .env ↔ JSON",
+    "lead": "Cole um .env para ver o que está errado."
+  }
+}

@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "What is the difference between ^ and ~?",
+    a: "^1.2.3 accepts any 1.x.x from 1.2.3 (new features, no breaking changes). ~1.2.3 only accepts 1.2.x patches. npm install uses ^ by default.",
+  },
+  {
+    q: "Why does ^0.2.3 not accept 0.3.0?",
+    a: "Below 1.0.0 the minor version is treated as breaking, so ^0.2.3 means >=0.2.3 <0.3.0. And ^0.0.3 only accepts 0.0.3.",
+  },
+  {
+    q: "Are prereleases like 2.0.0-beta.1 included?",
+    a: "Not by default: a range only matches prereleases of the same major.minor.patch it mentions. Enable Include prereleases to match them anyway, as npm does with --include-prerelease.",
+  },
+];
+
+## What does it do?
+
+It answers the question **“does this version satisfy this range?”** using the same rules as npm, and explains the range in plain comparators: `^1.2.3` becomes `>=1.2.3 <2.0.0-0`. It also gives the lowest version that satisfies the range, and **sorts lists of versions semantically**, so `1.10.0` comes after `1.9.0` and not after `1.1.0`.
+
+## Semantic versioning in one line
+
+`MAJOR.MINOR.PATCH`: increase **major** for breaking changes, **minor** for new compatible features and **patch** for fixes. Prereleases add a suffix: `2.0.0-rc.1`.
+
+## Ranges you will see in package.json
+
+| Range | Accepts |
+| --- | --- |
+| `^1.2.3` | `>=1.2.3 <2.0.0` |
+| `~1.2.3` | `>=1.2.3 <1.3.0` |
+| `1.x` | `>=1.0.0 <2.0.0` |
+| `>=18 <21` | Node 18, 19 and 20 |
+| `^16 \|\| ^18` | either major |

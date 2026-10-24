@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "When should I use encodeURIComponent instead of encodeURI?",
+    a: "Use encodeURIComponent for a single piece that goes inside a URL, like a query value or a path segment. Use encodeURI only for a whole URL that already has the right structure.",
+  },
+  {
+    q: "Why is a space sometimes %20 and sometimes +?",
+    a: "%20 is the generic percent-encoding of a space. The + comes from HTML form encoding (application/x-www-form-urlencoded), which URLSearchParams also uses for query strings.",
+  },
+  {
+    q: "What does \"URI malformed\" mean?",
+    a: "There is a % not followed by two hexadecimal digits, or the bytes do not form valid UTF-8. The tool tells you where the problem starts.",
+  },
+];
+
+## What does it do?
+
+It **percent-encodes** text so it can travel safely inside a URL, and **decodes** it back. When encoding, it shows the three variants side by side so you can pick the right one:
+
+| Function | Keeps | Typical use |
+| --- | --- | --- |
+| `encodeURIComponent` | letters, digits and `- _ . ! ~ * ' ( )` | a query value or path segment |
+| `encodeURI` | also `: / ? # & = ,` | a complete URL |
+| form encoding | like the first one, space becomes `+` | HTML forms, URLSearchParams |
+
+## Example
+
+Building `?q=` with the user input `rock & roll` using `encodeURI` gives `?q=rock%20&%20roll`: the `&` starts a new parameter and the search breaks. With `encodeURIComponent` you get `rock%20%26%20roll`, which arrives intact.
+
+## How to use it
+
+1. Type the text to encode, or switch to **Decode** and paste the encoded text.
+2. When decoding form data, enable **+ is a space**.
+3. Press **Swap** to round-trip the result.

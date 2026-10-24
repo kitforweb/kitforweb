@@ -1,0 +1,45 @@
+export const faq = [
+  {
+    q: "Why mix rem and vw instead of using only vw?",
+    a: "A value made only of vw ignores the user's browser font size and does not grow with zoom, which fails WCAG 1.4.4 (Resize text). Adding a rem part keeps the text scalable while still being fluid.",
+  },
+  {
+    q: "What viewport widths should I use?",
+    a: "Use the width where your layout stops shrinking (often 320–375px) as the minimum, and the width where your content stops growing (often 1200–1440px) as the maximum. Outside that range the size stays fixed.",
+  },
+  {
+    q: "Does clamp() work in every browser?",
+    a: "Yes. CSS clamp() is supported by every modern browser (Chrome, Edge, Firefox and Safari) since 2020.",
+  },
+  {
+    q: "Can I use it for something other than font-size?",
+    a: "Yes. Change the CSS property to padding, gap, margin, width or any length. The maths is the same.",
+  },
+];
+
+## What is CSS clamp()?
+
+`clamp(MIN, PREFERRED, MAX)` returns the preferred value but never lets it go below the minimum or above the maximum. With a preferred value that depends on the viewport width, you get **fluid typography**: text that grows smoothly between two screen sizes, with no media queries.
+
+## How to use this generator
+
+1. Enter the size you want on small screens and on large screens, in pixels.
+2. Enter the two viewport widths where the scaling starts and stops.
+3. Copy the CSS declaration, or the Tailwind arbitrary class.
+4. Drag the **viewport width** slider to see exactly how big the text will be at each width.
+
+## The formula
+
+For a size that goes from `minSize` at `minViewport` to `maxSize` at `maxViewport`:
+
+```css
+slope     = (maxSize - minSize) / (maxViewport - minViewport)
+intercept = minSize - slope * minViewport
+font-size: clamp(minSize, intercept + slope * 100vw, maxSize);
+```
+
+The generator converts every pixel value to `rem` using the root font size, so `clamp(1rem, 0.8333rem + 0.8333vw, 1.5rem)` means: 16px on a 320px screen, 24px on a 1280px screen and a straight line in between.
+
+## Accessibility
+
+Because the preferred value contains a `rem` term, the result still respects the user's default font size and browser zoom. Avoid ranges where the maximum is more than about 2.5 times the minimum: text that depends too much on `vw` can stop growing enough when users zoom.

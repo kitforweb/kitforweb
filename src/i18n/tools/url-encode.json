@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "URL Encode",
+    "short": "Encode and decode text for URLs: encodeURIComponent vs encodeURI.",
+    "title": "URL encode and decode online (percent-encoding)",
+    "description": "Encode and decode text for URLs online and see the difference between encodeURIComponent, encodeURI and form encoding. Malformed percent sequences are located. 100% in your browser.",
+    "h1": "URL encode and decode",
+    "lead": "See the three ways to percent-encode a text and when to use each one.",
+    "text": "Text",
+    "encoded": "Encoded",
+    "mode": "Mode",
+    "encode": "Encode",
+    "decode": "Decode",
+    "plusAsSpace": "+ is a space",
+    "placeholderEncode": "Type or paste text to encode…",
+    "placeholderDecode": "Paste percent-encoded text (caf%C3%A9)…",
+    "hint": {
+      "component": "For a single value: a query parameter or a path segment. Encodes & = ? / # too.",
+      "uri": "For a whole URL: keeps : / ? # & = so the URL still works.",
+      "form": "HTML form submissions (application/x-www-form-urlencoded): spaces become +."
+    }
+  },
+  "es": {
+    "name": "URL Encode",
+    "short": "Codifica y decodifica texto para URLs: encodeURIComponent frente a encodeURI.",
+    "title": "Codificar y decodificar URL online (percent-encoding)",
+    "description": "Codifica y decodifica texto para URLs online y mira la diferencia entre encodeURIComponent, encodeURI y la codificación de formularios. Localiza las secuencias % mal formadas. 100% en tu navegador.",
+    "h1": "Codificar y decodificar URL",
+    "lead": "Mira las tres formas de codificar un texto para URL y cuándo usar cada una.",
+    "text": "Texto",
+    "encoded": "Codificado",
+    "mode": "Modo",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "plusAsSpace": "+ es un espacio",
+    "placeholderEncode": "Escribe o pega el texto a codificar…",
+    "placeholderDecode": "Pega texto codificado (caf%C3%A9)…",
+    "hint": {
+      "component": "Para un único valor: un parámetro de la query o un segmento de ruta. También codifica & = ? / #.",
+      "uri": "Para una URL completa: mantiene : / ? # & = para que la URL siga funcionando.",
+      "form": "Envío de formularios HTML (application/x-www-form-urlencoded): los espacios pasan a ser +."
+    }
+  },
+  "fr": {
+    "name": "Encodage URL",
+    "short": "Encodez et décodez du texte pour les URL : encodeURIComponent vs encodeURI.",
+    "title": "Encoder et décoder une URL en ligne",
+    "description": "Encodez et décodez du texte pour les URL et voyez la différence entre encodeURIComponent, encodeURI et l'encodage des formulaires. 100 % dans votre navigateur.",
+    "h1": "Encoder et décoder une URL",
+    "lead": "Les trois façons d'encoder un texte pour une URL et quand les utiliser."
+  },
+  "pt": {
+    "name": "URL Encode",
+    "short": "Codifique e decodifique texto para URLs: encodeURIComponent vs encodeURI.",
+    "title": "Codificar e decodificar URL online",
+    "description": "Codifique e decodifique texto para URLs e veja a diferença entre encodeURIComponent, encodeURI e a codificação de formulários. 100% no seu navegador.",
+    "h1": "Codificar e decodificar URL",
+    "lead": "As três formas de codificar um texto para URL e quando usar cada uma."
+  }
+}

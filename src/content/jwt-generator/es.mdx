@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Puedo usar estos tokens en producción?",
+    a: "Son JWT reales y válidos, pero esta herramienta está pensada para pruebas: los tokens de producción debe emitirlos tu backend con claves que nunca salgan de tus servidores.",
+  },
+  {
+    q: "¿Qué clave necesito para RS256 o ES256?",
+    a: "Una clave privada en formato PEM PKCS#8 (-----BEGIN PRIVATE KEY-----) o como JWK privado. Pulsa Generar par de claves para crear una en local; la clave pública correspondiente aparece debajo del token para que puedas verificarlo.",
+  },
+  {
+    q: "¿Se añaden iat y exp automáticamente?",
+    a: "Solo si el payload no los incluye ya. Desactiva iat o pon exp a 0 para dejar el payload exactamente como lo escribiste.",
+  },
+];
+
+## ¿Qué hace?
+
+Crea y **firma un JSON Web Token** a partir del payload que escribas. Elige el algoritmo —HMAC (`HS256`, `HS384`, `HS512`), RSA (`RS*`, `PS*`), ECDSA (`ES*`) o `EdDSA`—, pega un secreto o una clave privada y copia el token.
+
+La firma usa la librería [jose](https://github.com/panva/jose) y la API Web Crypto del navegador. El payload, la clave y el token nunca salen de tu dispositivo ni se guardan.
+
+## Cómo se usa
+
+1. Escribe el payload como un objeto JSON o carga el ejemplo.
+2. Elige el algoritmo y escribe un secreto, o pulsa **Generar par de claves** para los algoritmos asimétricos.
+3. Si quieres, añade `iat`, una caducidad en minutos (`exp`) y un identificador de clave (`kid`).
+4. Copia el token o pulsa **Abrir en el decodificador JWT** para inspeccionarlo.
+
+## ¿HS256 o RS256?
+
+| | HS256 | RS256 / ES256 |
+| --- | --- | --- |
+| Clave | un único secreto compartido | la privada firma, la pública verifica |
+| Quién puede verificar | quien conozca el secreto | cualquiera con la clave pública |
+| Uso típico | un único backend | proveedores de identidad, microservicios, JWKS |
+
+Usa un secreto largo y aleatorio para HMAC: como mínimo tantos bytes como el tamaño del hash (32 bytes para HS256).

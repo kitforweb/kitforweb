@@ -1,0 +1,26 @@
+export const faq = [
+  {
+    q: "¿Por qué usar varias capas?",
+    a: "Las sombras reales tienen una parte nítida y oscura cerca del objeto y otra suave y amplia más lejos. Combinar una sombra pequeña y ajustada con otra grande y desenfocada queda mucho más natural que una sola sombra.",
+  },
+  {
+    q: "¿Qué hacen el desenfoque y la expansión?",
+    a: "El desenfoque suaviza el borde de la sombra. La expansión agranda (positiva) o encoge (negativa) la sombra antes de desenfocarla; una expansión negativa con mucho desenfoque da la elevación sutil que usan la mayoría de sistemas de diseño.",
+  },
+  {
+    q: "¿Qué es una sombra inset?",
+    a: "Una sombra dibujada dentro del elemento en lugar de fuera, útil para botones pulsados, campos de formulario o un brillo interior de 1px (inset 0 0 0 1px).",
+  },
+];
+
+## ¿Qué hace?
+
+Te permite **diseñar sombras box-shadow de CSS de forma visual**: añade todas las capas que necesites, ajusta el desplazamiento, el desenfoque, la expansión y el color de cada una, hazlas **inset** y mira el resultado sobre la caja y el fondo que elijas.
+
+Parte de los **presets de Tailwind** (de sm a 2xl), o pega un `box-shadow` existente para editarlo. Copia la declaración CSS o la clase arbitraria de Tailwind.
+
+## Anatomía de una capa
+
+`box-shadow: inset? x y desenfoque expansión color;`
+
+Por ejemplo `0 4px 12px -2px rgb(0 0 0 / 0.15)`: 4px hacia abajo, 12px de desenfoque, algo más pequeña que la caja, negro al 15%.

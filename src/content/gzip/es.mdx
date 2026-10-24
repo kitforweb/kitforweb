@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "¿Cómo sé si un texto en Base64 es gzip?",
+    a: "Los datos gzip siempre empiezan por los bytes 1F 8B, así que su Base64 empieza por H4sI. Zlib (deflate) suele empezar por eJ. La detección automática usa esas firmas.",
+  },
+  {
+    q: "¿Qué diferencia hay entre gzip, deflate y deflate-raw?",
+    a: "Los tres usan el mismo algoritmo DEFLATE. gzip añade una cabecera y un checksum CRC32, deflate (zlib) una cabecera más pequeña y un checksum Adler-32, y deflate-raw no tiene cabecera.",
+  },
+  {
+    q: "¿Es la misma compresión que usa el servidor web?",
+    a: "Sí: Content-Encoding: gzip y deflate usan exactamente estos formatos, mediante la API nativa CompressionStream del navegador.",
+  },
+];
+
+## ¿Qué hace?
+
+**Comprime texto** con gzip, deflate (zlib) o deflate sin cabecera y te da el resultado en **Base64**, y **descomprime** payloads en Base64 de vuelta a texto. Usos típicos:
+
+- Leer **payloads de APIs**, **cookies** o **claims de JWT** comprimidos para ahorrar espacio.
+- Inspeccionar valores guardados comprimidos en **bases de datos**, **logs** o **colas de mensajes**.
+- Comprobar **cuánto** se reduciría una respuesta JSON con compresión.
+
+## Cómo se usa
+
+1. Pega un texto para comprimirlo; encima del resultado aparecen los tamaños antes y después y el ahorro.
+2. Pulsa **Intercambiar** para descomprimir Base64. Deja el formato en **Detectar** salvo que lo conozcas.
+3. También se aceptan data URLs y Base64URL.
+
+Los textos muy cortos pueden crecer al comprimirse por las cabeceras del formato: la compresión compensa a partir de unos cientos de bytes de datos repetitivos.

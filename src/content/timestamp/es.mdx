@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "¿Mi timestamp está en segundos o en milisegundos?",
+    a: "Cuenta los dígitos: hoy un tiempo Unix en segundos tiene 10 dígitos y uno en milisegundos tiene 13. La herramienta lo detecta automáticamente y, si hace falta, puedes forzar la unidad.",
+  },
+  {
+    q: "¿Un timestamp Unix tiene zona horaria?",
+    a: "No. Cuenta los segundos desde el 1 de enero de 1970 a las 00:00 UTC, así que es el mismo en todo el mundo. La zona horaria solo importa al mostrarlo como fecha de calendario.",
+  },
+  {
+    q: "¿Qué es el problema del año 2038?",
+    a: "Los sistemas que guardan el tiempo Unix en un entero de 32 bits con signo se desbordan el 19 de enero de 2038 a las 03:14:07 UTC. JavaScript y las bases de datos modernas usan valores de 64 bits y no se ven afectados.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte entre el **tiempo Unix** (epoch) y fechas legibles:
+
+- **Epoch → fecha**: segundos, milisegundos, microsegundos o nanosegundos, detectados por su longitud.
+- **Fecha → epoch**: ISO 8601, RFC 2822 o una fecha elegida en el calendario.
+- Todas las representaciones a la vez: ISO 8601, UTC, tu hora local con su zona horaria, un tiempo relativo («hace 3 horas»), el día de la semana, la semana ISO y el día del año.
+
+Arriba se muestra el timestamp actual en vivo, listo para copiar.
+
+## Obtener el timestamp actual
+
+| Lenguaje | Segundos | Milisegundos |
+| --- | --- | --- |
+| JavaScript | `Math.floor(Date.now() / 1000)` | `Date.now()` |
+| Python | `int(time.time())` | `int(time.time() * 1000)` |
+| PHP | `time()` | `(int) (microtime(true) * 1000)` |
+| Bash | `date +%s` | `date +%s%3N` |
+| SQL (PostgreSQL) | `extract(epoch from now())` | |

@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "JSON Diff",
+    "short": "Compare two JSON documents and list the differences by path.",
+    "title": "JSON Diff: compare two JSON online",
+    "description": "Compare two JSON documents and see what was added, removed or changed, by path (user.address.city), ignoring key order. 100% in your browser.",
+    "h1": "JSON Diff",
+    "lead": "Paste the original and the modified JSON: every difference is listed by path, ignoring key order.",
+    "placeholder": "Paste JSON…",
+    "original": "Original",
+    "modified": "Modified",
+    "differences": "Differences",
+    "hint": "Paste a JSON document in each editor, or load the example.",
+    "errorIn": "The {side} JSON is not valid.",
+    "identical": "Both documents are identical.",
+    "added": "Added",
+    "removed": "Removed",
+    "changed": "Changed",
+    "addedCount": "{count} added",
+    "removedCount": "{count} removed",
+    "changedCount": "{count} changed"
+  },
+  "es": {
+    "name": "Comparar JSON",
+    "short": "Compara dos JSON y muestra las diferencias por ruta.",
+    "title": "Comparar dos JSON online (JSON diff)",
+    "description": "Compara dos documentos JSON y mira qué se ha añadido, eliminado o modificado, por ruta (user.address.city), ignorando el orden de las claves. 100% en tu navegador.",
+    "h1": "Comparar JSON",
+    "lead": "Pega el JSON original y el modificado: cada diferencia aparece por ruta, sin importar el orden de las claves.",
+    "placeholder": "Pega un JSON…",
+    "original": "Original",
+    "modified": "Modificado",
+    "differences": "Diferencias",
+    "hint": "Pega un documento JSON en cada editor o carga el ejemplo.",
+    "errorIn": "El JSON {side} no es válido.",
+    "identical": "Los dos documentos son idénticos.",
+    "added": "Añadido",
+    "removed": "Eliminado",
+    "changed": "Modificado",
+    "addedCount": "{count} añadidos",
+    "removedCount": "{count} eliminados",
+    "changedCount": "{count} modificados"
+  },
+  "fr": {
+    "name": "Comparer JSON",
+    "short": "Comparez deux JSON et listez les différences par chemin.",
+    "title": "Comparer deux JSON en ligne (JSON diff)",
+    "description": "Comparez deux documents JSON et voyez ce qui a été ajouté, supprimé ou modifié, par chemin, sans tenir compte de l'ordre des clés. 100 % dans votre navigateur.",
+    "h1": "Comparer JSON",
+    "lead": "Collez le JSON original et le modifié : chaque différence est listée par chemin."
+  },
+  "pt": {
+    "name": "Comparar JSON",
+    "short": "Compare dois JSON e veja as diferenças por caminho.",
+    "title": "Comparar dois JSON online (JSON diff)",
+    "description": "Compare dois documentos JSON e veja o que foi adicionado, removido ou alterado, por caminho, ignorando a ordem das chaves. 100% no seu navegador.",
+    "h1": "Comparar JSON",
+    "lead": "Cole o JSON original e o modificado: cada diferença aparece por caminho."
+  }
+}

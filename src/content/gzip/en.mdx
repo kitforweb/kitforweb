@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "How do I know if a Base64 string is gzip?",
+    a: "Gzip data always starts with the bytes 1F 8B, so its Base64 starts with H4sI. Zlib (deflate) usually starts with eJ. Auto-detect uses those signatures.",
+  },
+  {
+    q: "What is the difference between gzip, deflate and deflate-raw?",
+    a: "All three use the same DEFLATE algorithm. gzip adds a header and a CRC32 checksum, deflate (zlib) adds a smaller header and an Adler-32 checksum, and deflate-raw has no header at all.",
+  },
+  {
+    q: "Is it the same compression the web server uses?",
+    a: "Yes: Content-Encoding: gzip and deflate use exactly these formats, through the browser's native CompressionStream API.",
+  },
+];
+
+## What does it do?
+
+It **compresses text** with gzip, deflate (zlib) or raw deflate and gives you the result in **Base64**, and it **decompresses** Base64 payloads back to text. Typical uses:
+
+- Reading compressed **API payloads**, **cookies** or **JWT claims** that someone gzipped to save space.
+- Inspecting values stored compressed in **databases**, **logs** or **message queues**.
+- Checking **how much** a JSON response would shrink with compression.
+
+## How to use it
+
+1. Paste text to compress it; the sizes before and after and the savings appear above the result.
+2. Press **Swap** to decompress Base64. Leave the format on **Auto-detect** unless you know it.
+3. Data URLs and Base64URL are accepted too.
+
+Small inputs may grow after compression because of the format's headers: compression pays off from a few hundred bytes of repetitive data.

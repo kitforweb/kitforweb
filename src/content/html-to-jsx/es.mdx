@@ -1,0 +1,29 @@
+export const faq = [
+  {
+    q: "¿Por qué JSX necesita className en lugar de class?",
+    a: "JSX se compila a JavaScript, donde class es una palabra reservada, así que React usa los nombres de las propiedades del DOM: className, htmlFor, tabIndex, readOnly… El conversor los renombra todos, incluidos los atributos SVG como stroke-width (strokeWidth).",
+  },
+  {
+    q: "¿Qué pasa con los onclick en línea?",
+    a: "Se convierten en funciones flecha con el mismo código, por ejemplo onClick={() => { save() }}, y un aviso te recuerda llevar esa lógica al componente.",
+  },
+  {
+    q: "¿Qué hace la opción defaultValue?",
+    a: "En React, value y checked convierten el campo en controlado y necesitan un manejador onChange. Con la opción activada pasan a defaultValue y defaultChecked, que mantienen el comportamiento del HTML.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte **HTML en JSX válido** para React, Preact o Solid, resolviendo lo que suele romperse al pegar HTML en un componente:
+
+- `class` → `className`, `for` → `htmlFor` y el resto de atributos renombrados.
+- Los **estilos en línea** pasan a objetos: `style="margin-top: 4px"` → `style={{ marginTop: "4px" }}`.
+- Las **etiquetas vacías** se autocierran: `<br>` → `<br />`, `<img>` → `<img />`.
+- **Atributos SVG** en camelCase: `stroke-width`, `fill-rule`, `xlink:href`.
+- Los **comentarios** pasan a `{/* … */}` y las **llaves del texto** se escapan.
+- Varios elementos raíz se envuelven en un **fragmento** y, opcionalmente, todo va dentro de un **componente**.
+
+## Ejemplo
+
+`<label for="email" class="label">Email</label>` queda como `<label htmlFor="email" className="label">Email</label>`.

@@ -1,0 +1,36 @@
+export const faq = [
+  {
+    q: "401 or 403?",
+    a: "401 Unauthorized means the request is not authenticated (no token, or an invalid one): logging in may fix it. 403 Forbidden means the user is authenticated but not allowed: logging in again will not help.",
+  },
+  {
+    q: "400 or 422 for validation errors?",
+    a: "Use 400 when the request cannot be parsed (malformed JSON, wrong types) and 422 when it is well formed but breaks business rules. Many APIs simply use 400 for both; be consistent.",
+  },
+  {
+    q: "301 or 308?",
+    a: "Both are permanent. 308 guarantees the method and body are kept, so a POST stays a POST. For web pages 301 is fine; for APIs prefer 308 (and 307 for temporary redirects).",
+  },
+];
+
+## What does it do?
+
+It is a **searchable cheat sheet of every HTTP status code** with a short, practical explanation of what it means and **when your API should return it**. Search by number (`404`), by name (`unauthorized`) or by keyword, and filter by class.
+
+## The five classes
+
+| Class | Meaning | Examples |
+| --- | --- | --- |
+| 1xx | Informational | 101 Switching Protocols |
+| 2xx | Success | 200 OK, 201 Created, 204 No Content |
+| 3xx | Redirection | 301, 304 Not Modified, 308 |
+| 4xx | Client error | 400, 401, 403, 404, 429 |
+| 5xx | Server error | 500, 502, 503, 504 |
+
+## Codes every API should use well
+
+- **201** with a `Location` header after creating a resource.
+- **204** after a delete with nothing to return.
+- **409** for conflicts such as duplicates.
+- **429** with `Retry-After` when rate limiting.
+- **503** with `Retry-After` during maintenance.

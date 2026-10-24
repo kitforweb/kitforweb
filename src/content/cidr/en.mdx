@@ -1,0 +1,36 @@
+export const faq = [
+  {
+    q: "Why are there 254 usable hosts in a /24 and not 256?",
+    a: "In IPv4 the first address of a block identifies the network and the last one is the broadcast address, so neither can be given to a host. The exceptions are /31 (point-to-point links, RFC 3021) and /32 (a single host).",
+  },
+  {
+    q: "What is the wildcard mask?",
+    a: "The inverse of the netmask: 0.0.0.255 for a /24. Cisco ACLs and OSPF configurations use it instead of the netmask.",
+  },
+  {
+    q: "Does it work with IPv6?",
+    a: "Yes. IPv6 has no broadcast, so every address in the block counts. Sizes are computed exactly, even for a /64 with 18 trillion trillion addresses.",
+  },
+];
+
+## What does it do?
+
+It describes a **CIDR block**: netmask, wildcard, network and broadcast addresses, the range of usable hosts and how many there are. It also tells you whether an address is **private, public, loopback or CGNAT**, checks whether an IP **belongs to the block** and **splits the block into smaller subnets**.
+
+## How to use it
+
+- Type a block such as `10.0.0.0/16`, an IP with its mask (`10.0.0.1 255.255.0.0`) or a single IP.
+- Type an IP in the second field to check if it is inside the range: useful for firewall rules, security groups and allowlists.
+- Choose a prefix in **Split into** to plan subnets, for example a `/16` VPC split into `/24` subnets.
+
+## Cheat sheet
+
+| Prefix | Netmask | Addresses |
+| --- | --- | --- |
+| /32 | 255.255.255.255 | 1 |
+| /30 | 255.255.255.252 | 4 |
+| /28 | 255.255.255.240 | 16 |
+| /24 | 255.255.255.0 | 256 |
+| /20 | 255.255.240.0 | 4,096 |
+| /16 | 255.255.0.0 | 65,536 |
+| /8 | 255.0.0.0 | 16,777,216 |

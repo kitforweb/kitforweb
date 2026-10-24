@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "¿Qué es una escala tipográfica modular?",
+    a: "Un conjunto de tamaños de fuente en el que cada paso es el anterior multiplicado por la misma proporción, por ejemplo 1,25 (tercera mayor). Da a los encabezados un ritmo coherente en lugar de tamaños arbitrarios.",
+  },
+  {
+    q: "¿Por qué usar proporciones distintas en pantallas pequeñas y grandes?",
+    a: "En un móvil, los saltos grandes entre tamaños hacen enormes los encabezados. Una proporción menor en móvil y otra mayor en escritorio mantiene la jerarquía clara en ambos, y clamp() interpola entre ellas.",
+  },
+  {
+    q: "¿Respeta el zoom del usuario?",
+    a: "Sí. Cada valor mezcla rem y vw, así que el texto sigue creciendo cuando el usuario cambia el tamaño de fuente por defecto del navegador, algo que los valores solo en vw rompen (WCAG 1.4.4).",
+  },
+];
+
+## ¿Qué hace?
+
+Genera una **escala tipográfica fluida** completa: del texto pequeño al encabezado más grande, cada tamaño es un valor `clamp()` que crece suavemente entre una pantalla pequeña y una grande. Eliges el **tamaño base** y la **proporción** de cada extremo.
+
+## Exportar
+
+- **Variables CSS**: `--step-0`, `--step-1`… listas para `font-size: var(--step-3)`.
+- **Tailwind v4**: un bloque `@theme` que redefine `text-base`, `text-lg`, `text-2xl`…
+- **Tailwind v3**: el objeto `fontSize` para `tailwind.config.js`.
+
+## Proporciones habituales
+
+| Proporción | Nombre | Sensación |
+| --- | --- | --- |
+| 1,125 | Segunda mayor | Densa, interfaces |
+| 1,2 | Tercera menor | Equilibrada, blogs |
+| 1,25 | Tercera mayor | Jerarquía clara |
+| 1,333 | Cuarta justa | Editorial |
+| 1,5 | Quinta justa | Landing pages |

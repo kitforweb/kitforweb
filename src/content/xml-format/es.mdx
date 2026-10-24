@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Valida contra un XSD o DTD?",
+    a: "No. Comprueba que el XML está bien formado (etiquetas cerradas y bien anidadas, atributos entre comillas, una sola raíz, entidades válidas), que es el error más habitual. No se hace validación contra esquema.",
+  },
+  {
+    q: "¿Se conservan los comentarios y el CDATA?",
+    a: "Sí. Los comentarios, las secciones CDATA, la declaración XML y las instrucciones de procesamiento se mantienen al formatear y al minificar.",
+  },
+  {
+    q: "¿Se envía mi XML a algún sitio?",
+    a: "No. El análisis y el formateo se hacen en tu navegador, así que los mensajes SOAP con credenciales o datos de clientes se quedan en tu equipo.",
+  },
+];
+
+## ¿Qué hace?
+
+**Formatea XML** con una sangría coherente, **lo minifica** en una sola línea y **valida que esté bien formado**. Cuando el documento está roto, el error dice **qué falla y en qué línea y columna**: una etiqueta sin cerrar, un atributo sin comillas, un `&` suelto.
+
+## Usos típicos
+
+- Leer una petición o respuesta SOAP copiada de un log.
+- Revisar un SVG, un feed RSS, un sitemap o un `pom.xml` de Maven antes de desplegarlo.
+- Compactar XML para meterlo en una cadena o en un fixture de test.
+
+## Ejemplo
+
+`<order><id>42</id><items><item sku="A1"/></items></order>` queda así
+
+```xml
+<order>
+  <id>42</id>
+  <items>
+    <item sku="A1"/>
+  </items>
+</order>
+```

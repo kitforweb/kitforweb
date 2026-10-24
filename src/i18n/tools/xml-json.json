@@ -1,0 +1,40 @@
+{
+  "en": {
+    "name": "XML ↔ JSON",
+    "short": "Convert XML to JSON and back, keeping attributes. For SOAP and B2B APIs.",
+    "title": "XML to JSON converter (and JSON to XML)",
+    "description": "Convert XML to JSON and JSON to XML online, keeping attributes, text nodes, CDATA and comments. Numbers and booleans can be typed automatically. Ideal for SOAP, B2B integrations and legacy APIs. 100% in your browser.",
+    "h1": "XML ↔ JSON converter",
+    "lead": "Attributes become keys with a prefix (@_id) so nothing is lost on the way back.",
+    "placeholder": "Paste XML (or JSON after pressing Swap)…",
+    "prefix": "Attribute prefix",
+    "parseValues": "Type numbers and booleans"
+  },
+  "es": {
+    "name": "XML ↔ JSON",
+    "short": "Convierte XML a JSON y al revés, conservando atributos. Para APIs SOAP y B2B.",
+    "title": "Convertir XML a JSON (y JSON a XML)",
+    "description": "Convierte XML a JSON y JSON a XML online, conservando atributos, nodos de texto, CDATA y comentarios. Los números y booleanos se pueden tipar automáticamente. Ideal para SOAP, integraciones B2B y APIs antiguas. 100% en tu navegador.",
+    "h1": "Conversor XML ↔ JSON",
+    "lead": "Los atributos pasan a ser claves con un prefijo (@_id) para no perder nada al volver.",
+    "placeholder": "Pega XML (o JSON después de pulsar Intercambiar)…",
+    "prefix": "Prefijo de atributos",
+    "parseValues": "Tipar números y booleanos"
+  },
+  "fr": {
+    "name": "XML ↔ JSON",
+    "short": "Convertissez du XML en JSON et inversement, en gardant les attributs.",
+    "title": "Convertisseur XML vers JSON (et JSON vers XML)",
+    "description": "Convertissez du XML en JSON et du JSON en XML, en conservant attributs, textes, CDATA et commentaires. Idéal pour SOAP et les API B2B. 100 % dans votre navigateur.",
+    "h1": "Convertisseur XML ↔ JSON",
+    "lead": "Les attributs deviennent des clés préfixées."
+  },
+  "pt": {
+    "name": "XML ↔ JSON",
+    "short": "Converta XML em JSON e vice-versa, mantendo os atributos.",
+    "title": "Conversor de XML para JSON (e JSON para XML)",
+    "description": "Converta XML em JSON e JSON em XML, mantendo atributos, textos, CDATA e comentários. Ideal para SOAP e APIs B2B. 100% no seu navegador.",
+    "h1": "Conversor XML ↔ JSON",
+    "lead": "Os atributos viram chaves com prefixo."
+  }
+}

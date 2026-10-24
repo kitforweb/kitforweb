@@ -1,0 +1,45 @@
+export const faq = [
+  {
+    q: "Is it safe to paste a real JWT here?",
+    a: "Yes. Decoding and signature verification happen in your browser with the Web Crypto API. The token is never sent to a server, never saved in localStorage and never put in the URL.",
+  },
+  {
+    q: "Can anyone read the contents of a JWT?",
+    a: "Yes. A standard signed JWT (JWS) is only Base64URL-encoded, not encrypted. Anyone holding it can read the header and payload, so never put passwords or secrets inside a token.",
+  },
+  {
+    q: "Why does the decoder say the token is expired?",
+    a: "Because the exp claim, a Unix timestamp in seconds, is earlier than your device's current time. The decoder shows exp, iat and nbf as readable dates in your language so you can see exactly when it expired.",
+  },
+  {
+    q: "Which signature algorithms can it verify?",
+    a: "HMAC (HS256, HS384, HS512) with a shared secret, and RSA, RSA-PSS and ECDSA (RS*, PS*, ES*) or EdDSA with a public key in PEM format, an X.509 certificate or a JWK.",
+  },
+];
+
+## What is a JWT?
+
+A **JSON Web Token** is a compact string made of three Base64URL parts separated by dots: `header.payload.signature`. The header says which algorithm signed the token, the payload carries the *claims* (who the user is, when the token expires…) and the signature lets the server check that nobody tampered with it.
+
+## How to use this JWT decoder
+
+1. Paste the token on the left. A leading `Bearer ` is removed automatically, so you can copy the whole `Authorization` header from DevTools.
+2. The header, payload and signature appear on the right, with the **expiry status** at the top: valid, expired, or not valid yet.
+3. Time claims (`exp`, `iat`, `nbf`) are shown as dates in your language, with how long ago or how soon they happen.
+4. To **verify the signature**, paste the secret (HS256…) or the public key (RS256, ES256…) under the token.
+
+## Registered claims
+
+| Claim | Meaning |
+| --- | --- |
+| `iss` | Issuer: who created the token |
+| `sub` | Subject: usually the user ID |
+| `aud` | Audience: who the token is for |
+| `exp` | Expiration time (Unix seconds) |
+| `nbf` | Not before: the token is invalid until this time |
+| `iat` | Issued at |
+| `jti` | Unique token ID, useful to revoke it |
+
+## Why decoding is not the same as verifying
+
+Anyone can decode a JWT, but only the right key can produce a valid signature. Your backend must **always verify** the signature and reject `alg: none` before trusting any claim. This tool refuses unsigned tokens when you ask it to verify them.

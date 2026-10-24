@@ -1,0 +1,39 @@
+export const faq = [
+  {
+    q: "How are XML attributes represented in JSON?",
+    a: "As keys with a prefix, @_ by default: an element with id=\"7\" gets a key @_id. The prefix can be changed. Text next to attributes or child elements goes into #text.",
+  },
+  {
+    q: "What happens with repeated elements?",
+    a: "Repeated sibling elements become an array. A single element stays an object, so if a list can have one item, check the shape your code expects.",
+  },
+  {
+    q: "Is the conversion reversible?",
+    a: "Yes, with the same prefix the JSON produced converts back to equivalent XML, attributes included. Whitespace-only formatting and the order of attributes may change.",
+  },
+];
+
+## What does it do?
+
+It **converts XML to JSON** and **JSON to XML** while keeping the information that simple converters lose: attributes, text mixed with child elements, CDATA sections and comments. Optionally, values like `42` or `true` are typed as numbers and booleans.
+
+It is meant for **SOAP services, B2B integrations, RSS feeds and legacy APIs**, where you receive XML but your code speaks JSON.
+
+## Example
+
+```xml
+<invoice number="INV-2026-042">
+  <total currency="EUR">1250.50</total>
+</invoice>
+```
+
+becomes
+
+```json
+{
+  "invoice": {
+    "@_number": "INV-2026-042",
+    "total": { "@_currency": "EUR", "#text": 1250.5 }
+  }
+}
+```

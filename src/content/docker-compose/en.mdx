@@ -1,0 +1,46 @@
+export const faq = [
+  {
+    q: "Which flags are converted?",
+    a: "The ones with a Compose equivalent: --name, -p, -e, --env-file, -v, --mount, --network, --restart, -w, -u, --entrypoint, -h, labels, --add-host, DNS, capabilities, devices, tmpfs, memory and CPU limits, healthcheck, logging, ulimits, sysctls, --gpus and more. Flags like -d or --rm have no meaning in a compose file and are skipped.",
+  },
+  {
+    q: "Can I convert several containers at once?",
+    a: "Yes. Paste one docker run per line (or joined with &&) and each one becomes a service. Named volumes and custom networks are declared at the top level.",
+  },
+  {
+    q: "Why are networks marked as external?",
+    a: "A docker run with --network uses a network that already exists. Marking it external keeps that behaviour; remove external: true if you want Compose to create it.",
+  },
+];
+
+## What does it do?
+
+It converts **docker run** commands, the ones you find in READMEs and blog posts, into the equivalent **docker-compose.yml**. Each command becomes a service, with its ports, environment variables, volumes, networks, restart policy and the rest of its options mapped to Compose keys.
+
+## How to use it
+
+1. Paste one or more `docker run` commands. Line continuations with `\` are fine.
+2. Copy or download the YAML and run `docker compose up -d`.
+3. Check the warning list: flags with no Compose equivalent are listed so nothing is lost silently.
+
+## Example
+
+```bash
+docker run -d --name web -p 8080:80 -v ./site:/usr/share/nginx/html:ro --restart unless-stopped nginx:1.27
+```
+
+becomes
+
+```yaml
+services:
+  web:
+    image: nginx:1.27
+    container_name: web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+```
+
+Ports are always quoted: unquoted, YAML 1.1 reads values such as `22:22` as base-60 numbers.

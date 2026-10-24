@@ -1,0 +1,40 @@
+export const faq = [
+  {
+    q: "¿Cómo sabe qué tipo de dato falso generar?",
+    a: "Mira cada clave y su valor de ejemplo. Claves como email, firstName, city, price o createdAt reciben valores realistas acordes; las fechas ISO, los UUID y las URL del ejemplo se reconocen por su formato.",
+  },
+  {
+    q: "¿Puedo obtener los mismos datos siempre?",
+    a: "Sí. La semilla hace que el resultado sea reproducible: el mismo ejemplo, el mismo número de registros y la misma semilla generan siempre los mismos datos, ideal para tests de snapshot. Pulsa Regenerar para una semilla nueva.",
+  },
+  {
+    q: "¿Los datos son reales?",
+    a: "No. Todos los valores se generan al azar con Faker. Los nombres, emails y direcciones parecen reales pero no pertenecen a nadie.",
+  },
+];
+
+## ¿Qué hace?
+
+A partir de **un registro de ejemplo** genera **N registros falsos pero realistas** con exactamente la misma estructura: mismas claves, mismo anidamiento, mismos tipos. Perfecto para poblar una base de datos, montar la interfaz antes de que exista la API o escribir tests.
+
+## Cómo se usa
+
+1. Pega un objeto de ejemplo (o un array; todas sus claves se combinan en una plantilla).
+2. Elige cuántos **registros** necesitas (hasta 1.000).
+3. Mantén la **semilla** para obtener los mismos datos otra vez, o pulsa **Regenerar**.
+4. Copia el array o llévalo a la entrada con Intercambiar para afinarlo.
+
+## Campos reconocidos
+
+| Nombre del campo o valor | Valor generado |
+| --- | --- |
+| `id` | 1, 2, 3… |
+| `email`, `mail` | email realista |
+| `firstName`, `lastName`, `name` | nombres de persona |
+| `createdAt`, fechas ISO | fecha aleatoria de los últimos 3 años |
+| `price`, `amount`, `total` | precio con los mismos decimales |
+| `city`, `country`, `zip`, `address` | datos de ubicación |
+| `avatar`, `image`, URLs | URL de imagen o web |
+| booleanos, otros números y textos | valor aleatorio del mismo tipo |
+
+Los arrays tienen hasta cinco elementos creados a partir del primero, y `null` sigue siendo `null`.

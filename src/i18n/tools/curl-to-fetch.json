@@ -1,0 +1,54 @@
+{
+  "en": {
+    "name": "cURL → fetch",
+    "short": "Convert a cURL command (Copy as cURL) to fetch, axios or Angular HttpClient.",
+    "title": "Convert cURL to fetch, axios or Angular HttpClient",
+    "description": "Paste the cURL command you copied from DevTools (“Copy as cURL”, bash or cmd) and get the equivalent JavaScript fetch, axios or Angular HttpClient code, with headers, JSON body, forms and basic auth. 100% in your browser.",
+    "h1": "cURL to fetch converter",
+    "lead": "Right-click a request in DevTools → Copy → Copy as cURL, paste it here and get the code.",
+    "placeholder": "curl 'https://api.example.com/…' -H '…' --data-raw '…'",
+    "target": "Generate",
+    "errors": {
+      "not-curl": "The command must start with curl.",
+      "no-url": "No URL found in the command.",
+      "quotes": "A quote is not closed: check the command was copied completely."
+    },
+    "warnings": {
+      "insecure": "The command uses -k/--insecure: the browser always verifies TLS certificates, so this option has no equivalent."
+    }
+  },
+  "es": {
+    "name": "cURL → fetch",
+    "short": "Convierte un comando cURL (Copiar como cURL) a fetch, axios o HttpClient de Angular.",
+    "title": "Convertir cURL a fetch, axios o HttpClient de Angular",
+    "description": "Pega el comando cURL que copiaste de las DevTools («Copiar como cURL», bash o cmd) y obtén el código equivalente con fetch, axios o HttpClient de Angular, con cabeceras, cuerpo JSON, formularios y autenticación básica. 100% en tu navegador.",
+    "h1": "Conversor de cURL a fetch",
+    "lead": "Clic derecho en una petición de las DevTools → Copiar → Copiar como cURL, pégala aquí y obtén el código.",
+    "placeholder": "curl 'https://api.example.com/…' -H '…' --data-raw '…'",
+    "target": "Generar",
+    "errors": {
+      "not-curl": "El comando debe empezar por curl.",
+      "no-url": "No hay ninguna URL en el comando.",
+      "quotes": "Hay unas comillas sin cerrar: comprueba que copiaste el comando completo."
+    },
+    "warnings": {
+      "insecure": "El comando usa -k/--insecure: el navegador siempre verifica los certificados TLS, así que esta opción no tiene equivalente."
+    }
+  },
+  "fr": {
+    "name": "cURL → fetch",
+    "short": "Convertissez une commande cURL en fetch, axios ou HttpClient d'Angular.",
+    "title": "Convertir cURL en fetch, axios ou HttpClient d'Angular",
+    "description": "Collez la commande cURL copiée depuis les DevTools et obtenez le code fetch, axios ou HttpClient d'Angular équivalent. 100 % dans votre navigateur.",
+    "h1": "Convertisseur cURL vers fetch",
+    "lead": "Copiez une requête « en tant que cURL » et obtenez le code."
+  },
+  "pt": {
+    "name": "cURL → fetch",
+    "short": "Converta um comando cURL em fetch, axios ou HttpClient do Angular.",
+    "title": "Converter cURL em fetch, axios ou HttpClient do Angular",
+    "description": "Cole o comando cURL copiado das DevTools e obtenha o código equivalente com fetch, axios ou HttpClient do Angular. 100% no seu navegador.",
+    "h1": "Conversor de cURL para fetch",
+    "lead": "Copie uma requisição como cURL e obtenha o código."
+  }
+}

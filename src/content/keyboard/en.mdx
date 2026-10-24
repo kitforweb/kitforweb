@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "What is the difference between event.key and event.code?",
+    a: "event.key is the character or action produced, and depends on the keyboard layout and Shift: on a French AZERTY keyboard the key next to Tab gives a. event.code is the physical position, always KeyQ for that key. Use key for text shortcuts (Ctrl+S) and code for games or position-based controls (WASD).",
+  },
+  {
+    q: "Should I still use keyCode?",
+    a: "No. keyCode and which are deprecated and inconsistent between browsers and layouts. They are shown only to help when maintaining old code.",
+  },
+  {
+    q: "Why does Ctrl+W or Cmd+Q still close the tab?",
+    a: "Some shortcuts are reserved by the browser or the operating system and never reach the page, even with Block browser shortcuts enabled.",
+  },
+];
+
+## What does it do?
+
+Press any key or combination inside the box and it shows the properties of the **keydown event**: `event.key`, `event.code`, the deprecated `keyCode`, the **location** (left or right Shift, numeric keypad) and the state of the **modifier keys**.
+
+It also writes a **ready-to-paste listener** for that shortcut, comparing `key` case-insensitively so it works with Shift and with any layout.
+
+## Example
+
+Pressing Ctrl+Shift+K gives:
+
+| Property | Value |
+| --- | --- |
+| event.key | "K" |
+| event.code | "KeyK" |
+| event.keyCode | 75 |
+| ctrlKey, shiftKey | true |

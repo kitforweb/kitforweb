@@ -1,0 +1,29 @@
+export const faq = [
+  {
+    q: "¿El SVG optimizado se verá igual?",
+    a: "Sí, siempre que la precisión sea suficiente para su tamaño. Dos decimales sobran para iconos; usa tres o más para ilustraciones grandes con detalle fino. Compara las vistas previas antes y después para asegurarte.",
+  },
+  {
+    q: "¿Por qué conservar el viewBox?",
+    a: "Sin viewBox el SVG no se puede redimensionar con CSS: cambiar width o height lo recorta en lugar de escalarlo. Quítalo solo si sabes que el SVG siempre se usa a su tamaño original.",
+  },
+  {
+    q: "¿Se sube mi fichero?",
+    a: "No. SVGO se ejecuta en un Web Worker en tu navegador, así que los logos e ilustraciones sin publicar se quedan en tu equipo.",
+  },
+];
+
+## ¿Qué hace?
+
+Optimiza ficheros SVG con **SVGO**, el mismo motor que usan la mayoría de herramientas de build. Las aplicaciones de diseño exportan muchas cosas que el navegador no necesita: metadatos del editor, comentarios, grupos vacíos, atributos por defecto, coordenadas con seis decimales. Quitarlas suele dejar el fichero **entre un 50 y un 80% más pequeño**.
+
+## Opciones
+
+- **Precisión**: decimales que se conservan en las coordenadas.
+- **Multipass**: repite la optimización hasta que no se pueda quitar nada más.
+- **Indentar**: salida legible en lugar de una sola línea.
+- **viewBox** y **title**: se conservan por defecto, porque importan para redimensionar y para la accesibilidad.
+
+## Ahorro típico
+
+Un icono exportado de Inkscape con metadatos y grupos anidados puede pasar de unos 2 KB a 300 bytes, algo que se nota cuando una página incluye decenas de iconos en línea.

@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Qué longitud deben tener el título y la descripción?",
+    a: "Google muestra unos 50–60 caracteres del título y 150–160 de la descripción, según su ancho en píxeles. Pon las palabras importantes al principio para que un corte no las oculte.",
+  },
+  {
+    q: "¿Por qué mi enlace muestra una imagen antigua en redes sociales?",
+    a: "LinkedIn, Facebook y WhatsApp guardan en caché las vistas previas. Usa sus herramientas de depuración (Post Inspector de LinkedIn, Sharing Debugger de Facebook) para refrescarla, o cambia la URL de la imagen.",
+  },
+  {
+    q: "¿Qué tamaño debe tener la imagen Open Graph?",
+    a: "1200 × 630 píxeles (1,91:1), por debajo de unos 5 MB, en JPG o PNG. Aleja el texto importante de los bordes, porque algunas apps la recortan en cuadrado.",
+  },
+];
+
+## ¿Qué hace?
+
+Rellenas el **título**, la **descripción**, la **URL** y la **imagen** de una página y ves, en vivo, cómo quedará en:
+
+- Los resultados de **Google**.
+- Las tarjetas de enlace de **LinkedIn** y Facebook.
+- Las tarjetas de **X (Twitter)**.
+- Las vistas previas de enlaces de **WhatsApp**.
+
+Los contadores de caracteres te avisan si el título o la descripción se quedan cortos o se van a cortar. Debajo de las vistas previas tienes las etiquetas listas para pegar en el `head` de tu página: `title`, `description`, `canonical`, **Open Graph** y **Twitter Card**.
+
+## En Next.js
+
+```ts
+export const metadata = {
+  title: "Mi página",
+  description: "De qué trata la página.",
+  openGraph: { images: ["https://example.com/og.png"] },
+};
+```
+
+Next.js genera las mismas etiquetas a partir del objeto `metadata` de cada página.

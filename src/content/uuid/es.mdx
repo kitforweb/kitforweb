@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Uso UUID v4 o v7?",
+    a: "Usa v7 para claves primarias de base de datos: empieza por una marca de tiempo, así que las filas nuevas se insertan en orden y los índices se mantienen compactos. Usa v4 cuando no quieras que se vea la fecha de creación.",
+  },
+  {
+    q: "¿Pueden coincidir dos UUID?",
+    a: "En teoría sí, en la práctica no: un v4 tiene 122 bits aleatorios. Tendrías que generar unos 2,7 trillones para tener un 50% de probabilidad de un solo duplicado.",
+  },
+  {
+    q: "¿Los UUID generados son seguros?",
+    a: "Usan crypto.getRandomValues, un generador criptográficamente seguro. Aun así, un UUID es un identificador, no un secreto: no lo uses como contraseña ni como clave de API.",
+  },
+];
+
+## ¿Qué hace?
+
+**Genera UUID** (identificadores únicos universales) en versión 4 (aleatoria) o versión 7 (ordenada por tiempo), de uno en uno o hasta 1.000 a la vez, e **inspecciona** cualquier UUID que pegues: lo valida y te dice su versión, su variante y, en las versiones basadas en tiempo (1, 6 y 7), cuándo se creó.
+
+## Cómo se usa
+
+1. Elige **v4** o **v7** y cuántos necesitas. Activa mayúsculas, guiones o llaves según tu proyecto.
+2. Copia la lista o pulsa **Regenerar** para obtener otra tanda.
+3. Pega cualquier UUID a la izquierda para inspeccionarlo.
+
+## Anatomía de un UUID v7
+
+```
+0190a5b8-6e1f-7c3a-9b2d-4e5f6a7b8c9d
+└──────┬─────┘ │ └┬┘ │
+ ms Unix (48 bits) │  │  └ variante (10xx)
+             versión 7  aleatorio
+```

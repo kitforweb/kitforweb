@@ -1,0 +1,98 @@
+{
+  "en": {
+    "name": "QR Code Generator",
+    "short": "Create QR codes for text, URLs, WiFi or contacts, with colors and a logo.",
+    "title": "QR code generator: URL, WiFi and contact, with logo (PNG/SVG)",
+    "description": "Generate QR codes for any text or URL, to join a WiFi network or to save a contact (vCard). Choose colors, error correction and a center logo, and download as PNG or SVG. Free, without tracking redirects: the QR contains exactly your data.",
+    "h1": "QR Code Generator",
+    "lead": "The code contains your data directly, not a redirect through someone else's server.",
+    "content": "Content",
+    "type": "Type",
+    "modes": { "text": "Text / URL", "contact": "Contact" },
+    "correction": "Error correction",
+    "levels": { "L": "L · 7%", "M": "M · 15%", "Q": "Q · 25%", "H": "H · 30%" },
+    "textLabel": "Text or URL",
+    "ssid": "Network name (SSID)",
+    "password": "Password",
+    "security": "Security",
+    "open": "Open",
+    "hidden": "Hidden network",
+    "contact": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "email": "Email",
+      "org": "Company",
+      "url": "Website"
+    },
+    "foreground": "Color",
+    "background": "Background",
+    "margin": "Quiet zone (recommended)",
+    "logo": "Logo in the center (optional)",
+    "removeLogo": "Remove logo",
+    "chooseLogo": "Choose a logo",
+    "hint": "Type a text or URL, or fill in a WiFi network or a contact.",
+    "errors": {
+      "empty": "There is nothing to encode.",
+      "too-long": "Too much data for a QR code: shorten it or lower the error correction."
+    },
+    "alt": "Generated QR code",
+    "info": "Version {version} · {size}×{size} modules · level {level}"
+  },
+  "es": {
+    "name": "Generador de códigos QR",
+    "short": "Crea códigos QR de texto, URL, WiFi o contacto, con colores y logo.",
+    "title": "Generador de códigos QR: URL, WiFi y contacto, con logo (PNG/SVG)",
+    "description": "Genera códigos QR de cualquier texto o URL, para conectarse a una red WiFi o para guardar un contacto (vCard). Elige colores, nivel de corrección de errores y un logo en el centro, y descárgalo en PNG o SVG. Gratis y sin redirecciones de seguimiento: el QR contiene exactamente tus datos.",
+    "h1": "Generador de códigos QR",
+    "lead": "El código contiene tus datos directamente, no una redirección a través del servidor de otro.",
+    "content": "Contenido",
+    "type": "Tipo",
+    "modes": { "text": "Texto / URL", "contact": "Contacto" },
+    "correction": "Corrección de errores",
+    "levels": { "L": "L · 7%", "M": "M · 15%", "Q": "Q · 25%", "H": "H · 30%" },
+    "textLabel": "Texto o URL",
+    "ssid": "Nombre de la red (SSID)",
+    "password": "Contraseña",
+    "security": "Seguridad",
+    "open": "Abierta",
+    "hidden": "Red oculta",
+    "contact": {
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "phone": "Teléfono",
+      "email": "Email",
+      "org": "Empresa",
+      "url": "Web"
+    },
+    "foreground": "Color",
+    "background": "Fondo",
+    "margin": "Margen de silencio (recomendado)",
+    "logo": "Logo en el centro (opcional)",
+    "removeLogo": "Quitar logo",
+    "chooseLogo": "Elige un logo",
+    "hint": "Escribe un texto o una URL, o rellena una red WiFi o un contacto.",
+    "errors": {
+      "empty": "No hay nada que codificar.",
+      "too-long": "Demasiados datos para un código QR: acórtalos o baja la corrección de errores."
+    },
+    "alt": "Código QR generado",
+    "info": "Versión {version} · {size}×{size} módulos · nivel {level}"
+  },
+  "fr": {
+    "name": "Générateur de QR code",
+    "short": "Créez des QR codes pour du texte, des URL, le WiFi ou des contacts.",
+    "title": "Générateur de QR code : URL, WiFi et contact, avec logo",
+    "description": "Générez des QR codes pour du texte, une URL, un réseau WiFi ou un contact (vCard), avec couleurs et logo. Export PNG ou SVG, sans redirection.",
+    "h1": "Générateur de QR code",
+    "lead": "Le code contient directement vos données."
+  },
+  "pt": {
+    "name": "Gerador de QR code",
+    "short": "Crie QR codes para texto, URLs, WiFi ou contatos.",
+    "title": "Gerador de QR code: URL, WiFi e contato, com logo",
+    "description": "Gere QR codes para texto, URL, rede WiFi ou contato (vCard), com cores e logo. Exporte em PNG ou SVG, sem redirecionamento.",
+    "h1": "Gerador de QR code",
+    "lead": "O código contém diretamente os seus dados."
+  }
+}

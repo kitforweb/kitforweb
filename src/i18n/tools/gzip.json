@@ -1,0 +1,58 @@
+{
+  "en": {
+    "name": "Gzip",
+    "short": "Compress or decompress text with gzip/deflate, as Base64.",
+    "title": "Gzip compress and decompress online (Base64)",
+    "description": "Compress text with gzip, deflate (zlib) or raw deflate and get it in Base64, or decompress Base64 payloads from APIs, cookies or logs. Format detected automatically. 100% in your browser.",
+    "h1": "Gzip compress and decompress",
+    "lead": "Dissect compressed payloads from APIs or cookies, or check how much your data compresses.",
+    "text": "Text",
+    "compress": "Compress",
+    "decompress": "Decompress",
+    "format": "Format",
+    "auto": "Auto-detect",
+    "placeholder": "Paste text (or Base64 after pressing Swap)…",
+    "saved": "{percent}% smaller",
+    "errors": {
+      "base64": "The input is not valid Base64.",
+      "data": "The data is not valid compressed data in this format.",
+      "utf8": "The decompressed data is binary, not text."
+    }
+  },
+  "es": {
+    "name": "Gzip",
+    "short": "Comprime o descomprime texto con gzip/deflate, en Base64.",
+    "title": "Comprimir y descomprimir gzip online (Base64)",
+    "description": "Comprime texto con gzip, deflate (zlib) o deflate sin cabecera y obtenlo en Base64, o descomprime payloads en Base64 de APIs, cookies o logs. El formato se detecta solo. 100% en tu navegador.",
+    "h1": "Comprimir y descomprimir gzip",
+    "lead": "Destripa payloads comprimidos de APIs o cookies, o comprueba cuánto se comprimen tus datos.",
+    "text": "Texto",
+    "compress": "Comprimir",
+    "decompress": "Descomprimir",
+    "format": "Formato",
+    "auto": "Detectar",
+    "placeholder": "Pega texto (o Base64 después de pulsar Intercambiar)…",
+    "saved": "{percent}% más pequeño",
+    "errors": {
+      "base64": "La entrada no es Base64 válido.",
+      "data": "No son datos comprimidos válidos en este formato.",
+      "utf8": "Los datos descomprimidos son binarios, no texto."
+    }
+  },
+  "fr": {
+    "name": "Gzip",
+    "short": "Compressez ou décompressez du texte avec gzip/deflate, en Base64.",
+    "title": "Compresser et décompresser gzip en ligne (Base64)",
+    "description": "Compressez du texte avec gzip ou deflate et obtenez du Base64, ou décompressez des payloads d'API ou de cookies. 100 % dans votre navigateur.",
+    "h1": "Compresser et décompresser gzip",
+    "lead": "Inspectez des payloads compressés d'API ou de cookies."
+  },
+  "pt": {
+    "name": "Gzip",
+    "short": "Comprima ou descomprima texto com gzip/deflate, em Base64.",
+    "title": "Comprimir e descomprimir gzip online (Base64)",
+    "description": "Comprima texto com gzip ou deflate e obtenha Base64, ou descomprima payloads de APIs ou cookies. 100% no seu navegador.",
+    "h1": "Comprimir e descomprimir gzip",
+    "lead": "Inspecione payloads comprimidos de APIs ou cookies."
+  }
+}

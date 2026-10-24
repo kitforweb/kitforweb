@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "Which cost should I choose?",
+    a: "The highest your servers can afford, usually so that one hash takes around 100–300 ms. Today that is often a cost of 10 to 12. Each step doubles the time, for you and for an attacker.",
+  },
+  {
+    q: "Why does the same password give a different hash every time?",
+    a: "Because bcrypt generates a random salt for each hash and stores it inside the hash itself. That is why you compare with bcrypt.compare instead of hashing again and comparing strings.",
+  },
+  {
+    q: "What do $2a$, $2b$ and $2y$ mean?",
+    a: "They are revisions of the format that fixed bugs in some implementations. They are compatible for normal passwords; $2b$ is the current one.",
+  },
+];
+
+## What does it do?
+
+It generates the **bcrypt** hash of a password with the cost factor you choose, and checks whether a password **matches** an existing bcrypt hash — for example, one copied from your users table while debugging a login.
+
+bcrypt runs in your browser with bcryptjs. Passwords are not stored, not put in the URL and never sent anywhere.
+
+## Anatomy of a bcrypt hash
+
+```
+$2b$10$WDHsS2e05u6fibtdF4fGpOLaoZCbgsENgQwk5ytDhrADLa89sOyYa
+ │   │  └──────── salt (22) ───────┘└──────── hash (31) ────────┘
+ │   └ cost: 2^10 = 1024 rounds
+ └ version
+```
+
+## Limits
+
+bcrypt only uses the **first 72 bytes** of a password. Longer passphrases, or text with many multi-byte characters, are silently truncated; the tool warns you when that happens.

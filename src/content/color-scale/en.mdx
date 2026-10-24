@@ -1,0 +1,24 @@
+export const faq = [
+  {
+    q: "Is my exact brand color in the scale?",
+    a: "Yes. It is placed, unchanged, on the step whose lightness is closest (often 500 or 600), and the rest of the scale is built around it.",
+  },
+  {
+    q: "Why is it computed in OKLCH?",
+    a: "In HSL, yellow at 50% lightness looks much lighter than blue at 50%. OKLCH lightness matches perception, so every step of the scale looks evenly spaced whatever the hue, which is how Tailwind v4 builds its own palette.",
+  },
+  {
+    q: "Which steps should I use for what?",
+    a: "A common convention: 50–100 for backgrounds, 200–300 for borders, 500–600 for buttons and accents, 700–900 for text on light backgrounds, and 950 for dark-mode surfaces.",
+  },
+];
+
+## What does it do?
+
+From **one base color** it generates the **eleven shades 50–950** that Tailwind uses, ready for backgrounds, borders, buttons and text. The scale is computed in **OKLCH**, keeping your hue and lowering the chroma at the extremes, so pale and dark shades do not look washed out or neon.
+
+## Export
+
+- **Tailwind v4**: `--color-brand-500` variables inside `@theme`, so `bg-brand-500` just works.
+- **Tailwind v3**: an object for `theme.extend.colors`.
+- **CSS variables** and **SCSS** variables, in OKLCH or HEX.

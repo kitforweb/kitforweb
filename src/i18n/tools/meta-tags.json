@@ -1,0 +1,74 @@
+{
+  "en": {
+    "name": "Meta tags",
+    "short": "Preview your page in Google, LinkedIn, X and WhatsApp and get the meta tags.",
+    "title": "Meta tags generator with Google and social previews",
+    "description": "Fill in the title, description and image and see how your page will look in Google, LinkedIn, X (Twitter) and WhatsApp, with a warning when text will be cut. Generates the '<'meta'>', Open Graph and Twitter Card tags ready to paste.",
+    "h1": "Meta tags and Open Graph generator",
+    "lead": "Write your title and description once and check how every platform will show them.",
+    "page": "Page",
+    "previews": "Previews",
+    "code": "Tags to paste in '<'head'>'",
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "url": "Page URL",
+      "image": "Image URL (1200 × 630)",
+      "siteName": "Site name",
+      "twitter": "X / Twitter account",
+      "locale": "Locale (es_ES)",
+      "type": "Type"
+    },
+    "imageHint": "Previews load the image from its URL. Use an absolute HTTPS URL; 1200 × 630 px works everywhere.",
+    "status": {
+      "short": "a bit short",
+      "long": "will be cut"
+    },
+    "placeholderTitle": "Your page title",
+    "placeholderDescription": "A short summary of the page that makes people want to click."
+  },
+  "es": {
+    "name": "Meta tags",
+    "short": "Previsualiza tu página en Google, LinkedIn, X y WhatsApp y obtén las meta etiquetas.",
+    "title": "Generador de meta tags con vista previa de Google y redes",
+    "description": "Rellena el título, la descripción y la imagen y mira cómo quedará tu página en Google, LinkedIn, X (Twitter) y WhatsApp, con aviso si el texto se va a cortar. Genera las etiquetas '<'meta'>', Open Graph y Twitter Card listas para pegar.",
+    "h1": "Generador de meta tags y Open Graph",
+    "lead": "Escribe tu título y tu descripción una vez y comprueba cómo los mostrará cada plataforma.",
+    "page": "Página",
+    "previews": "Vistas previas",
+    "code": "Etiquetas para pegar en '<'head'>'",
+    "fields": {
+      "title": "Título",
+      "description": "Descripción",
+      "url": "URL de la página",
+      "image": "URL de la imagen (1200 × 630)",
+      "siteName": "Nombre del sitio",
+      "twitter": "Cuenta de X / Twitter",
+      "locale": "Idioma (es_ES)",
+      "type": "Tipo"
+    },
+    "imageHint": "Las vistas previas cargan la imagen desde su URL. Usa una URL HTTPS absoluta; 1200 × 630 px funciona en todas partes.",
+    "status": {
+      "short": "algo corto",
+      "long": "se cortará"
+    },
+    "placeholderTitle": "El título de tu página",
+    "placeholderDescription": "Un resumen breve de la página que invite a hacer clic."
+  },
+  "fr": {
+    "name": "Meta tags",
+    "short": "Prévisualisez votre page dans Google, LinkedIn, X et WhatsApp et obtenez les balises.",
+    "title": "Générateur de meta tags avec aperçus Google et réseaux sociaux",
+    "description": "Saisissez le titre, la description et l'image et voyez votre page dans Google, LinkedIn, X et WhatsApp. Génère les balises meta, Open Graph et Twitter Card.",
+    "h1": "Générateur de meta tags et Open Graph",
+    "lead": "Écrivez votre titre et votre description et vérifiez chaque aperçu."
+  },
+  "pt": {
+    "name": "Meta tags",
+    "short": "Veja sua página no Google, LinkedIn, X e WhatsApp e obtenha as meta tags.",
+    "title": "Gerador de meta tags com prévia do Google e redes sociais",
+    "description": "Preencha título, descrição e imagem e veja como sua página aparecerá no Google, LinkedIn, X e WhatsApp. Gera as tags meta, Open Graph e Twitter Card.",
+    "h1": "Gerador de meta tags e Open Graph",
+    "lead": "Escreva o título e a descrição e confira cada prévia."
+  }
+}

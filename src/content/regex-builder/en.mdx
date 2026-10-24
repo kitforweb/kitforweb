@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "Can I edit an existing regex visually?",
+    a: "Yes. Paste it in the field above the canvas and press Convert: it becomes blocks you can rearrange. Constructs the builder has no block for, such as lookaheads or back-references, are kept as “Regex code” blocks so nothing is lost.",
+  },
+  {
+    q: "Does it work on a phone?",
+    a: "Yes. Tap a block in the palette to add it at the end of your pattern, and use the grip to reorder blocks by dragging.",
+  },
+  {
+    q: "Which regex flavour does it produce?",
+    a: "JavaScript (ECMAScript) syntax, which is also valid for the HTML pattern attribute, Zod and Angular. The Python export works for most patterns; named groups use a different syntax in Python.",
+  },
+];
+
+## What does it do?
+
+It lets you **build a regular expression without writing it**. Drag blocks written in plain language onto the canvas — *starts with*, *digit*, *one of*, *either*, *repeat 2 to 4 times* — and the regex is written for you as you go, with an explanation of every part.
+
+## How to use it
+
+1. **Drag** blocks from the palette to the canvas, or **tap** them to append them.
+2. Put blocks inside a **Group** or an **Either** block to nest them.
+3. **Select** a block to change its text, its characters or how many times it repeats.
+4. Test it right away in **Quick test**, one case per line.
+5. Copy it as a literal or **export** it for JavaScript, TypeScript, HTML `pattern`, Zod or Angular.
+
+Undo and redo with the buttons or with **Ctrl+Z** and **Ctrl+Shift+Z**.
+
+## Example
+
+| Blocks | Regex |
+| --- | --- |
+| Starts with · Digit ×3 · Exact text “-” · Digit ×4 · Ends here | `^\d{3}-\d{4}$` |
+| Starts with · Either (“http” / “https”) · Exact text “://” | `^(?:http|https):\/\/` |
+
+The **Share** button stores the pattern in the link (after the `#`), so you can send it to a colleague.

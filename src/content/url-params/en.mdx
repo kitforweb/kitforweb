@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "What happens with repeated parameters like tag=a&tag=b?",
+    a: "Each one is shown in its own row, numbered, and kept in the same order when the URL is rebuilt. Many frameworks read them as an array.",
+  },
+  {
+    q: "Why are there parameters after the #?",
+    a: "The fragment is never sent to the server, so OAuth implicit flows and single-page apps use it to pass data such as access_token. The tool parses it like a query string.",
+  },
+  {
+    q: "Is a + a space?",
+    a: "In the query string, yes: the application/x-www-form-urlencoded format reads + as a space, and that is how browsers and URLSearchParams decode it.",
+  },
+];
+
+## What does it do?
+
+It breaks a URL — no matter how long — into a **table of decoded parameters**. Tracking links, OAuth redirects and search URLs become readable in a second:
+
+- `%C3%A9` and `+` are decoded, so `caf%C3%A9+con+leche` reads `café con leche`.
+- Repeated keys are listed one by one.
+- Parameters in the **fragment** (`#access_token=…`) get their own section.
+- Values that are **JSON**, **JWT**, **Base64** or **nested URLs** (`redirect_uri`) are recognised and decoded below the value.
+
+## How to use it
+
+1. Paste a URL. The scheme is optional: `example.com/?a=1` works too.
+2. Use the search box to find a parameter among dozens.
+3. Edit any value: the **rebuilt URL** appears at the bottom, correctly encoded.
+
+## Anatomy of a URL
+
+```
+https://shop.example.com/search?q=coffee&page=2#reviews
+└─┬─┘   └──────┬───────┘└──┬──┘└──────┬──────┘└──┬───┘
+scheme       host        path      query       fragment
+```

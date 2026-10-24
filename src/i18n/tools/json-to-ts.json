@@ -1,0 +1,40 @@
+{
+  "en": {
+    "name": "JSON to TypeScript",
+    "short": "Generate TypeScript interfaces or types from a JSON sample.",
+    "title": "JSON to TypeScript interface generator",
+    "description": "Convert JSON to TypeScript interfaces or types online. Detects optional fields, nulls and arrays of mixed types. Name the root type. 100% in your browser.",
+    "h1": "JSON to TypeScript",
+    "lead": "Paste a JSON sample and get ready-to-use TypeScript interfaces, with optional and null fields detected.",
+    "placeholder": "Paste a JSON object or an array of objects…",
+    "rootName": "Root type",
+    "declaration": "Declaration"
+  },
+  "es": {
+    "name": "JSON a TypeScript",
+    "short": "Genera interfaces o types de TypeScript a partir de un JSON de ejemplo.",
+    "title": "Convertir JSON a interfaces de TypeScript",
+    "description": "Convierte JSON a interfaces o types de TypeScript online. Detecta campos opcionales, nulos y arrays de tipos mixtos. Elige el nombre del tipo raíz. 100% en tu navegador.",
+    "h1": "JSON a TypeScript",
+    "lead": "Pega un JSON de ejemplo y obtén interfaces de TypeScript listas para usar, con los campos opcionales y nulos detectados.",
+    "placeholder": "Pega un objeto JSON o un array de objetos…",
+    "rootName": "Tipo raíz",
+    "declaration": "Declaración"
+  },
+  "fr": {
+    "name": "JSON vers TypeScript",
+    "short": "Générez des interfaces ou des types TypeScript à partir d'un exemple JSON.",
+    "title": "Générateur d'interfaces TypeScript à partir de JSON",
+    "description": "Convertissez du JSON en interfaces ou types TypeScript en ligne. Détecte les champs optionnels, les null et les tableaux de types mixtes. 100 % dans votre navigateur.",
+    "h1": "JSON vers TypeScript",
+    "lead": "Collez un exemple JSON et obtenez des interfaces TypeScript prêtes à l'emploi."
+  },
+  "pt": {
+    "name": "JSON para TypeScript",
+    "short": "Gere interfaces ou types TypeScript a partir de um exemplo JSON.",
+    "title": "Gerador de interfaces TypeScript a partir de JSON",
+    "description": "Converta JSON em interfaces ou types TypeScript online. Detecta campos opcionais, nulos e arrays de tipos mistos. 100% no seu navegador.",
+    "h1": "JSON para TypeScript",
+    "lead": "Cole um exemplo JSON e obtenha interfaces TypeScript prontas para usar."
+  }
+}

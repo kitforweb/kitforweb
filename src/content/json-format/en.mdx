@@ -1,0 +1,45 @@
+export const faq = [
+  {
+    q: "Is it safe to paste production JSON here?",
+    a: "Yes. The formatter runs entirely in your browser with JavaScript. Nothing you paste is uploaded, logged or stored on any server. You can check it in the Network tab of your browser's DevTools.",
+  },
+  {
+    q: "Why does it say my JSON is invalid when it works in JavaScript?",
+    a: "JavaScript object literals are more permissive than JSON. JSON requires double quotes around keys and strings, and does not allow comments, trailing commas, single quotes, undefined, NaN or Infinity.",
+  },
+  {
+    q: "Does it show every error or only the first one?",
+    a: "Every error. The parser keeps going after the first problem, underlines each one at its exact line and column and lists them all in the result panel. Hover an underline to read the reason.",
+  },
+  {
+    q: "Can I format very large JSON files?",
+    a: "Yes. Files of several megabytes work fine because nothing has to be uploaded. The tree view only renders the branches you expand, so it stays fast with big documents.",
+  },
+];
+
+## What does this JSON formatter do?
+
+It takes any JSON text and gives it back **validated, indented and readable**, or **minified** into a single line to save bytes. Validation happens as you type: when something is wrong, the exact spot is underlined in the editor, the same way your code editor would do it.
+
+Unlike most online formatters, it reports **all** the errors at once — a missing comma on line 3 and an unclosed brace on line 40 — so you can fix everything in one go instead of playing whack-a-mole.
+
+## How to use it
+
+1. Paste your JSON on the left, drop a `.json` file onto the editor or click **Open file**.
+2. The formatted result appears on the right instantly. Switch between **Format** and **Minify**, choose 2 spaces, 4 spaces or tabs, and optionally **sort keys** alphabetically.
+3. Use the **Tree** view to explore deeply nested data, collapsing the branches you don't need.
+4. Click **Copy**, or **Swap** to send the result back to the input.
+
+## Common JSON errors
+
+| Error | Example | Fix |
+| --- | --- | --- |
+| Trailing comma | `{"a": 1,}` | Remove the last comma |
+| Single quotes | `{'a': 1}` | Use double quotes: `{"a": 1}` |
+| Unquoted key | `{a: 1}` | Quote the key: `{"a": 1}` |
+| Comments | `{"a": 1 // id}` | JSON has no comments: remove them |
+| Missing comma | `{"a": 1 "b": 2}` | Add a comma between members |
+
+## Format vs. minify
+
+Formatted JSON is for humans: code reviews, debugging an API response, reading a config file. Minified JSON is for machines: it removes every unnecessary space and line break, which makes payloads and fixtures smaller. Both produce exactly the same data.

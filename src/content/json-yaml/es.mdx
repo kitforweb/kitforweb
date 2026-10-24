@@ -1,0 +1,44 @@
+export const faq = [
+  {
+    q: "¿YAML es un superconjunto de JSON?",
+    a: "En la práctica sí: un JSON válido es YAML 1.2 válido. Por eso pasar de JSON a YAML nunca pierde información, mientras que al volver a JSON se resuelven funciones propias de YAML como los comentarios o los anchors.",
+  },
+  {
+    q: "¿Por qué mi YAML falla con un error de indentación?",
+    a: "YAML usa la indentación para expresar el anidamiento y no admite tabuladores. Las claves de un mismo objeto deben estar alineadas exactamente. El mensaje de error indica la línea y la columna en la que se perdió el analizador.",
+  },
+  {
+    q: "¿Qué pasa con varios documentos YAML separados por ---?",
+    a: "Se convierten en un array JSON con un elemento por documento, muy útil para manifiestos de Kubernetes.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte **JSON a YAML** y **YAML a JSON**. YAML es el formato de GitHub Actions, GitLab CI, docker-compose, Kubernetes, Ansible y muchas especificaciones OpenAPI, mientras que JSON es el que hablan tu código y tus APIs.
+
+## Cómo se usa
+
+1. Pega JSON a la izquierda: la versión YAML aparece a la derecha.
+2. Pulsa **Intercambiar** para pasar a YAML → JSON (el resultado actual pasa a la entrada).
+3. Elige 2 o 4 espacios de sangría.
+
+## Ejemplo
+
+```yaml
+on:
+  push:
+    branches: [main]
+```
+
+equivale a
+
+```json
+{ "on": { "push": { "branches": ["main"] } } }
+```
+
+## Trampas habituales de YAML
+
+- No se pueden usar **tabuladores** para indentar: usa espacios.
+- `on`, `yes` o `no` pueden leerse como booleanos en analizadores antiguos de YAML 1.1; ponlos entre comillas si tienes dudas.
+- Los textos con `:` seguido de espacio, o que empiezan por `*`, `&` o `!`, necesitan comillas.

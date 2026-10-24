@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Cómo se convierten los objetos anidados en columnas?",
+    a: "Se aplanan con notación de punto: { \"address\": { \"city\": \"Madrid\" } } se convierte en una columna llamada address.city. Los arrays usan el índice, como tags.0 y tags.1. Al volver a JSON se reconstruye la estructura original.",
+  },
+  {
+    q: "Excel abre mi CSV en una sola columna. ¿Qué hago?",
+    a: "Excel usa el separador de listas de tu configuración regional: en España es el punto y coma. Elige el punto y coma como separador antes de descargar.",
+  },
+  {
+    q: "¿Se mantienen los números y booleanos al pasar de CSV a JSON?",
+    a: "Sí. Las celdas que parecen números o true/false se tipan automáticamente, y las celdas vacías pasan a ser null.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte un **array de objetos JSON a CSV** —listo para abrir en Excel, Google Sheets o Numbers— y **CSV de vuelta a JSON**. Admite filas con claves distintas: las columnas son la unión de todas las claves encontradas.
+
+## Cómo se usa
+
+1. Pega un array JSON a la izquierda para obtener el CSV a la derecha.
+2. Elige el **separador**: coma, punto y coma, tabulador o barra vertical.
+3. Pulsa **Intercambiar** para convertir CSV a JSON. En este sentido, **Automático** detecta el separador por ti.
+
+## Ejemplo
+
+```json
+[{ "id": 1, "address": { "city": "Madrid" }, "tags": ["a", "b"] }]
+```
+
+```csv
+id,address.city,tags.0,tags.1
+1,Madrid,a,b
+```
+
+Los valores que contienen el separador, comillas o saltos de línea se entrecomillan automáticamente, siguiendo el RFC 4180.

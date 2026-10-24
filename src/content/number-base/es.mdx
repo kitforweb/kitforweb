@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Hay un límite de tamaño?",
+    a: "En la práctica no: los números se tratan como BigInt, así que valores de 64 bits, hashes o claves de 256 bits se convierten exactos, sin la pérdida de precisión de los números normales de JavaScript.",
+  },
+  {
+    q: "¿Puedo pegar números con prefijo como 0xFF?",
+    a: "Sí. Los prefijos 0x, 0b y 0o se reconocen en cualquier campo y el valor pasa a la base correcta. Se ignoran los guiones bajos y espacios usados como separadores.",
+  },
+  {
+    q: "¿Cómo se convierte un texto a binario?",
+    a: "El texto se codifica en UTF-8 y cada byte se escribe en la base elegida, así que una tilde o un emoji ocupan de dos a cuatro bytes.",
+  },
+];
+
+## ¿Qué hace?
+
+Tiene dos modos:
+
+- **Números:** escribe un valor en decimal, hexadecimal, binario u octal y míralo en todas las demás bases a la vez. Admite negativos y números de cualquier tamaño.
+- **Texto ↔ bytes:** convierte un texto en sus bytes UTF-8 escritos en hex, binario o decimal, y al revés. Útil con protocolos, volcados de red o retos CTF.
+
+## Referencia rápida
+
+| Decimal | Hex | Binario | Octal |
+| --- | --- | --- | --- |
+| 10 | `0xA` | `0b1010` | `0o12` |
+| 255 | `0xFF` | `0b1111 1111` | `0o377` |
+| 4096 | `0x1000` | `0b1 0000 0000 0000` | `0o10000` |
+
+## Ejemplo con texto
+
+`Hola` en UTF-8 es `48 6f 6c 61` en hex, o `01001000 01101111 01101100 01100001` en binario.

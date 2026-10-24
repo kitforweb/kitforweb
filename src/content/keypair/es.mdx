@@ -1,0 +1,36 @@
+export const faq = [
+  {
+    q: "¿RSA, EC o Ed25519?",
+    a: "Para sistemas nuevos, mejor EC P-256 (ES256) o Ed25519: claves más pequeñas, firmas más rápidas y seguridad equivalente a RSA 3072. Elige RSA 2048 o más cuando necesites compatibilidad con software antiguo.",
+  },
+  {
+    q: "¿Qué diferencia hay entre PEM y JWK?",
+    a: "Contienen la misma clave en envoltorios distintos. PEM es DER en Base64 entre líneas BEGIN/END, el que usan OpenSSL, nginx o Node. JWK es JSON, el que usan los endpoints JWKS, OAuth y las librerías jose.",
+  },
+  {
+    q: "¿Puedo usar estas claves en producción?",
+    a: "Se generan con la API Web Crypto segura del navegador, así que son claves reales. Para producción, muchos equipos prefieren generarlas en el servidor o en un KMS para que la clave privada nunca exista en un portátil.",
+  },
+];
+
+## ¿Qué hace?
+
+Tiene dos modos:
+
+- **Generar** un par de claves **RSA** (2048, 3072 o 4096 bits), de **curva elíptica** (P-256, P-384, P-521) o **Ed25519** y exportarlo en **PEM** (clave privada PKCS#8, pública SPKI) y **JWK**.
+- **Convertir** una clave existente de PEM a JWK o de JWK a PEM. Admite claves públicas y privadas.
+
+## Generar las mismas claves con OpenSSL
+
+```bash
+openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:P-256 -out private.pem
+openssl pkey -in private.pem -pubout -out public.pem
+```
+
+## Cabeceras PEM
+
+| Cabecera | Contenido |
+| --- | --- |
+| `BEGIN PUBLIC KEY` | clave pública, SPKI |
+| `BEGIN PRIVATE KEY` | clave privada, PKCS#8 |
+| `BEGIN RSA PRIVATE KEY` | clave RSA PKCS#1 antigua: conviértela con `openssl pkcs8 -topk8 -nocrypt` |

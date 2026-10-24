@@ -1,0 +1,47 @@
+export const faq = [
+  {
+    q: "¿Cómo decide qué campos son opcionales?",
+    a: "Cuando pegas un array de objetos, un campo que falta en al menos uno de ellos se vuelve opcional (campo?: tipo). Pega varios ejemplos reales para obtener tipos más precisos.",
+  },
+  {
+    q: "¿Qué pasa con los valores null y los arrays mixtos?",
+    a: "Un campo que siempre es null se tipa como null, uno que a veces es null se convierte en una unión con null, y un array que mezcla números y textos pasa a ser Array<number | string>.",
+  },
+  {
+    q: "¿Interface o type? ¿Cuál uso?",
+    a: "Los dos describen la forma de un objeto. Las interfaces se pueden extender y fusionar, lo que encaja con APIs públicas; los type alias también expresan uniones y tipos mapeados. Usa el que ya utilice tu proyecto.",
+  },
+];
+
+## ¿Qué hace?
+
+Lee un **JSON de ejemplo** —la respuesta de una API, un fixture, un archivo de configuración— y escribe las **interfaces de TypeScript** que lo describen. Los objetos anidados se convierten en interfaces con su propio nombre, así que obtienes tipos legibles y reutilizables en lugar de un tipo gigante en línea.
+
+La inferencia se hace con [quicktype](https://quicktype.io) dentro de un Web Worker, así que ni siquiera los ejemplos grandes congelan la página, y nada sale de tu navegador.
+
+## Cómo se usa
+
+1. Pega un objeto JSON o, mejor, un **array con varios ejemplos** de la misma entidad.
+2. Pon nombre al **tipo raíz** (`User`, `Order`…). Los tipos anidados se nombran según su clave.
+3. Elige `interface` o `type` y activa `readonly` si tus datos son inmutables.
+4. Copia el resultado en tu proyecto.
+
+## Ejemplo
+
+```json
+[{ "id": 1, "email": "ada@example.com" }, { "id": 2 }]
+```
+
+se convierte en
+
+```ts
+export interface User {
+  id: number;
+  email?: string;
+}
+```
+
+## Consejos
+
+- Los tipos son tan buenos como el ejemplo: incluye un caso de cada variante que pueda devolver tu API.
+- Si necesitas validar en tiempo de ejecución, genera un esquema con la herramienta [JSON a Zod](/es/json-a-zod).

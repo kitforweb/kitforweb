@@ -1,0 +1,19 @@
+/**
+ * Single source of truth for the site's name, domain and external links.
+ * No other file should hard-code any of these values.
+ */
+export const site = {
+  name: "kitforweb",
+  /** Production origin, without trailing slash. Override with NEXT_PUBLIC_SITE_URL. */
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://kitforweb.com").replace(/\/$/, ""),
+  author: {
+    name: "kitforweb",
+    github: "https://github.com/kitforweb",
+    linkedin: "https://www.linkedin.com/",
+    portfolio: "",
+  },
+  repository: "https://github.com/kitforweb/kitforweb",
+  kofi: "https://ko-fi.com/kitforweb",
+} as const;
+
+export type Site = typeof site;

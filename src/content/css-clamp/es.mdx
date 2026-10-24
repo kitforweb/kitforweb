@@ -1,0 +1,45 @@
+export const faq = [
+  {
+    q: "¿Por qué mezclar rem y vw en lugar de usar solo vw?",
+    a: "Un valor hecho solo de vw ignora el tamaño de letra del navegador del usuario y no crece con el zoom, lo que incumple WCAG 1.4.4 (cambio de tamaño del texto). Añadir una parte en rem mantiene el texto escalable sin dejar de ser fluido.",
+  },
+  {
+    q: "¿Qué anchos de pantalla debo usar?",
+    a: "Usa como mínimo el ancho en el que tu diseño deja de encogerse (a menudo 320–375px) y como máximo el ancho en el que tu contenido deja de crecer (a menudo 1200–1440px). Fuera de ese rango el tamaño se queda fijo.",
+  },
+  {
+    q: "¿clamp() funciona en todos los navegadores?",
+    a: "Sí. clamp() de CSS está soportado en todos los navegadores modernos (Chrome, Edge, Firefox y Safari) desde 2020.",
+  },
+  {
+    q: "¿Puedo usarlo para algo que no sea font-size?",
+    a: "Sí. Cambia la propiedad CSS por padding, gap, margin, width o cualquier longitud. Las cuentas son las mismas.",
+  },
+];
+
+## ¿Qué es clamp() en CSS?
+
+`clamp(MÍN, PREFERIDO, MÁX)` devuelve el valor preferido, pero nunca lo deja bajar del mínimo ni subir del máximo. Si el valor preferido depende del ancho de la pantalla, obtienes **tipografía fluida**: texto que crece con suavidad entre dos tamaños de pantalla, sin media queries.
+
+## Cómo usar este generador
+
+1. Escribe el tamaño que quieres en pantallas pequeñas y en pantallas grandes, en píxeles.
+2. Indica los dos anchos de pantalla en los que empieza y termina el escalado.
+3. Copia la declaración CSS o la clase arbitraria de Tailwind.
+4. Arrastra el control de **ancho de pantalla** para ver exactamente qué tamaño tendrá el texto en cada ancho.
+
+## La fórmula
+
+Para un tamaño que va de `minSize` en `minViewport` a `maxSize` en `maxViewport`:
+
+```css
+pendiente = (maxSize - minSize) / (maxViewport - minViewport)
+ordenada  = minSize - pendiente * minViewport
+font-size: clamp(minSize, ordenada + pendiente * 100vw, maxSize);
+```
+
+El generador convierte cada valor en píxeles a `rem` usando el tamaño de fuente raíz, así que `clamp(1rem, 0.8333rem + 0.8333vw, 1.5rem)` significa: 16px en una pantalla de 320px, 24px en una de 1280px y una línea recta entre medias.
+
+## Accesibilidad
+
+Como el valor preferido incluye un término en `rem`, el resultado sigue respetando el tamaño de letra por defecto del usuario y el zoom del navegador. Evita rangos en los que el máximo sea más de unas 2,5 veces el mínimo: un texto que depende demasiado de `vw` puede dejar de crecer lo suficiente cuando el usuario hace zoom.

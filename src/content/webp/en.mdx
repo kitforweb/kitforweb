@@ -1,0 +1,28 @@
+export const faq = [
+  {
+    q: "WebP or AVIF?",
+    a: "AVIF usually compresses 20–30% more than WebP at the same quality, but encodes more slowly and is not available in every browser's encoder. WebP is supported everywhere today and is a safe default for photos and screenshots.",
+  },
+  {
+    q: "What quality should I use?",
+    a: "Between 70 and 85 is a good range for photos: the difference is hard to see and the file is much smaller. For screenshots with text, try 85–90 or PNG.",
+  },
+  {
+    q: "Are my images uploaded?",
+    a: "No. Decoding and encoding happen in your browser with the canvas API, so private photos never leave your device.",
+  },
+];
+
+## What does it do?
+
+It converts images to **WebP**, **AVIF** (if your browser can encode it), **JPEG** or **PNG**, with **adjustable quality** and an optional **maximum width**, and shows the new size next to the original so you can see how much you save.
+
+## Why it matters
+
+Images are usually the heaviest part of a page. Serving WebP or AVIF instead of JPEG and PNG often halves their weight, which improves Largest Contentful Paint and saves mobile data.
+
+## Tips
+
+- Resize before compressing: a 4000px photo shown at 800px wastes most of its bytes.
+- Keep PNG for images that need exact pixels, such as diagrams with fine lines.
+- Transparent images become a white background when converted to JPEG.

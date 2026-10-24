@@ -1,0 +1,41 @@
+export const faq = [
+  {
+    q: "¿Cómo verifico un archivo descargado?",
+    a: "Pulsa Calcular de un archivo, elige el archivo y pega el checksum que publica el fabricante en Hash esperado. La herramienta te dice con qué algoritmo coincide, o que no coincide con ninguno.",
+  },
+  {
+    q: "¿MD5 sigue siendo seguro?",
+    a: "No para seguridad: se pueden fabricar colisiones a propósito. MD5 y SHA-1 siguen sirviendo para detectar corrupción accidental, pero usa SHA-256 o superior para todo lo que un atacante pueda manipular.",
+  },
+  {
+    q: "¿Puedo guardar contraseñas con SHA-256?",
+    a: "No. Los hashes de propósito general son rápidos, lo que facilita la fuerza bruta. Guarda las contraseñas con un algoritmo lento y con sal, como bcrypt, scrypt o Argon2.",
+  },
+];
+
+## ¿Qué hace?
+
+Calcula a la vez los hashes **MD5, SHA-1, SHA-256, SHA-384 y SHA-512** de un texto o un archivo, en hexadecimal o Base64. Los SHA usan la API Web Crypto del navegador; MD5, que Web Crypto no incluye, usa spark-md5. Los archivos se leen en local, así que puedes calcular el hash de una ISO de varios gigas sin subir nada.
+
+## Cómo se usa
+
+1. Escribe o pega un texto, o pulsa **Calcular de un archivo**.
+2. Cambia la salida entre **Hex** y **Base64**. En Base64 también obtienes el valor **SRI** para atributos `integrity`.
+3. Pega un checksum publicado en **Hash esperado** para verificarlo.
+
+## Vectores de prueba
+
+| Entrada | SHA-256 |
+| --- | --- |
+| (vacío) | `e3b0c442…7852b855` |
+| `abc` | `ba7816bf…f20015ad` |
+
+## Subresource Integrity
+
+```html
+<script src="https://cdn.example.com/lib.js"
+        integrity="sha384-…"
+        crossorigin="anonymous"></script>
+```
+
+El navegador se niega a ejecutar el archivo si su SHA-384 no coincide, lo que te protege de un CDN comprometido.

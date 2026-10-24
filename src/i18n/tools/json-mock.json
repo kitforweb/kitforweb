@@ -1,0 +1,42 @@
+{
+  "en": {
+    "name": "JSON Mock Generator",
+    "short": "Generate realistic fake records with the structure of your JSON.",
+    "title": "JSON mock data generator (fake test data)",
+    "description": "Generate N realistic fake records from a JSON sample: names, emails, dates, IDs, prices and addresses, keeping the same structure. Reproducible with a seed. 100% in your browser.",
+    "h1": "JSON Mock Data Generator",
+    "lead": "Paste one example record and get as many realistic fake records as you need for tests and prototypes.",
+    "placeholder": "Paste an example record (object or array of objects)…",
+    "count": "Records",
+    "seed": "Seed",
+    "regenerate": "Regenerate"
+  },
+  "es": {
+    "name": "JSON a Mock",
+    "short": "Genera registros falsos pero realistas con la estructura de tu JSON.",
+    "title": "Generador de datos falsos JSON (datos de prueba)",
+    "description": "Genera N registros falsos pero realistas a partir de un JSON de ejemplo: nombres, emails, fechas, IDs, precios y direcciones, respetando la estructura. Reproducible con una semilla. 100% en tu navegador.",
+    "h1": "Generador de datos falsos JSON",
+    "lead": "Pega un registro de ejemplo y obtén tantos registros falsos y realistas como necesites para tests y prototipos.",
+    "placeholder": "Pega un registro de ejemplo (objeto o array de objetos)…",
+    "count": "Registros",
+    "seed": "Semilla",
+    "regenerate": "Regenerar"
+  },
+  "fr": {
+    "name": "Générateur de données JSON",
+    "short": "Générez des enregistrements fictifs réalistes avec la structure de votre JSON.",
+    "title": "Générateur de données fictives JSON",
+    "description": "Générez N enregistrements fictifs réalistes à partir d'un exemple JSON : noms, e-mails, dates, identifiants et adresses. 100 % dans votre navigateur.",
+    "h1": "Générateur de données fictives JSON",
+    "lead": "Collez un enregistrement d'exemple et obtenez autant de données de test que nécessaire."
+  },
+  "pt": {
+    "name": "Gerador de mock JSON",
+    "short": "Gere registros falsos realistas com a estrutura do seu JSON.",
+    "title": "Gerador de dados falsos JSON",
+    "description": "Gere N registros falsos realistas a partir de um exemplo JSON: nomes, e-mails, datas, IDs e endereços, mantendo a estrutura. 100% no seu navegador.",
+    "h1": "Gerador de dados falsos JSON",
+    "lead": "Cole um registro de exemplo e obtenha quantos dados de teste precisar."
+  }
+}

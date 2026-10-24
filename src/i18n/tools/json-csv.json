@@ -1,0 +1,48 @@
+{
+  "en": {
+    "name": "JSON ↔ CSV",
+    "short": "Convert a JSON array to CSV for Excel, and back. Nested objects flattened.",
+    "title": "JSON to CSV converter (and CSV to JSON)",
+    "description": "Convert an array of JSON objects to CSV to open in Excel, and CSV back to JSON. Nested objects are flattened with dot notation (address.city) and rebuilt on the way back. Choose the delimiter. 100% in your browser.",
+    "h1": "JSON ↔ CSV converter",
+    "lead": "Nested objects become columns like address.city and are rebuilt when you convert back.",
+    "placeholder": "Paste a JSON array (or CSV after pressing Swap)…",
+    "delimiter": "Delimiter",
+    "auto": "Auto",
+    "comma": "Comma ,",
+    "semicolon": "Semicolon ;",
+    "tab": "Tab",
+    "pipe": "Pipe |"
+  },
+  "es": {
+    "name": "JSON ↔ CSV",
+    "short": "Convierte un array JSON a CSV para Excel y al revés, aplanando objetos anidados.",
+    "title": "Convertir JSON a CSV (y CSV a JSON)",
+    "description": "Convierte un array de objetos JSON a CSV para abrirlo en Excel, y CSV a JSON. Los objetos anidados se aplanan con notación de punto (address.city) y se reconstruyen al volver. Elige el separador. 100% en tu navegador.",
+    "h1": "Conversor JSON ↔ CSV",
+    "lead": "Los objetos anidados se convierten en columnas como address.city y se reconstruyen al volver.",
+    "placeholder": "Pega un array JSON (o CSV después de pulsar Intercambiar)…",
+    "delimiter": "Separador",
+    "auto": "Automático",
+    "comma": "Coma ,",
+    "semicolon": "Punto y coma ;",
+    "tab": "Tabulador",
+    "pipe": "Barra |"
+  },
+  "fr": {
+    "name": "JSON ↔ CSV",
+    "short": "Convertissez un tableau JSON en CSV pour Excel, et inversement.",
+    "title": "Convertisseur JSON vers CSV (et CSV vers JSON)",
+    "description": "Convertissez un tableau d'objets JSON en CSV pour Excel, et du CSV en JSON. Les objets imbriqués sont aplatis (address.city) puis reconstruits. 100 % dans votre navigateur.",
+    "h1": "Convertisseur JSON ↔ CSV",
+    "lead": "Les objets imbriqués deviennent des colonnes comme address.city."
+  },
+  "pt": {
+    "name": "JSON ↔ CSV",
+    "short": "Converta um array JSON em CSV para o Excel, e vice-versa.",
+    "title": "Conversor de JSON para CSV (e CSV para JSON)",
+    "description": "Converta um array de objetos JSON em CSV para abrir no Excel, e CSV em JSON. Objetos aninhados viram colunas (address.city) e são reconstruídos na volta. 100% no seu navegador.",
+    "h1": "Conversor JSON ↔ CSV",
+    "lead": "Objetos aninhados viram colunas como address.city."
+  }
+}

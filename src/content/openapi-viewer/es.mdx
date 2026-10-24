@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "¿Qué versiones admite?",
+    a: "OpenAPI 3.0 y 3.1, y Swagger 2.0, en YAML o JSON. Las referencias locales ($ref a #/components/…) se resuelven; las referencias a ficheros externos se indican como no resueltas.",
+  },
+  {
+    q: "¿Qué problemas detecta?",
+    a: "Campos obligatorios ausentes (info, title, version, paths), referencias $ref rotas, parámetros de ruta usados en la URL pero no declarados (o declarados y no usados), operationId duplicados y operaciones sin respuestas.",
+  },
+  {
+    q: "¿Se sube mi especificación a algún sitio?",
+    a: "No. El documento se analiza en tu navegador, así que las APIs internas o sin publicar siguen siendo privadas.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte un fichero **OpenAPI** (o Swagger) en **documentación legible**: endpoints agrupados por etiqueta con su método HTTP, parámetros, cuerpo de la petición y respuestas, con los esquemas referenciados desplegados. Un filtro encuentra un endpoint por ruta, método o resumen.
+
+A la vez **revisa la especificación** y enumera sus problemas, para que los corrijas antes de publicarla o de generar un cliente a partir de ella.
+
+## Cómo se usa
+
+1. Pega el YAML o el JSON, o suelta el fichero.
+2. Recorre la pestaña **Documentación**, o abre **Problemas** para ver qué falla.
+
+## Errores habituales que detecta
+
+- Una ruta como `/books/{id}` sin un parámetro `id` con `in: path`.
+- Un `$ref` que apunta a un esquema renombrado o borrado.
+- Dos operaciones con el mismo `operationId`, lo que rompe los generadores de código.

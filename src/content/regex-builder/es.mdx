@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Puedo editar visualmente una regex que ya tengo?",
+    a: "Sí. Pégala en el campo de encima del lienzo y pulsa Convertir: se transforma en bloques que puedes reordenar. Las construcciones que no tienen bloque, como los lookaheads o las referencias hacia atrás, se conservan como bloques de «Código regex» para no perder nada.",
+  },
+  {
+    q: "¿Funciona en el móvil?",
+    a: "Sí. Toca un bloque de la paleta para añadirlo al final del patrón y usa el asa para reordenar los bloques arrastrándolos.",
+  },
+  {
+    q: "¿Qué sabor de regex genera?",
+    a: "Sintaxis de JavaScript (ECMAScript), que también vale para el atributo pattern de HTML, Zod y Angular. La exportación a Python sirve para la mayoría de patrones; los grupos con nombre usan otra sintaxis en Python.",
+  },
+];
+
+## ¿Qué hace?
+
+Te permite **construir una expresión regular sin escribirla**. Arrastra al lienzo bloques escritos en lenguaje natural —*empieza por*, *dígito*, *uno de*, *o bien*, *repetir de 2 a 4 veces*— y la regex se escribe sola mientras tanto, con una explicación de cada parte.
+
+## Cómo se usa
+
+1. **Arrastra** bloques de la paleta al lienzo, o **tócalos** para añadirlos al final.
+2. Mete bloques dentro de un **Grupo** o de un bloque **O bien** para anidarlos.
+3. **Selecciona** un bloque para cambiar su texto, sus caracteres o cuántas veces se repite.
+4. Pruébala al momento en **Prueba rápida**, un caso por línea.
+5. Cópiala como literal o **expórtala** para JavaScript, TypeScript, el `pattern` de HTML, Zod o Angular.
+
+Deshaz y rehaz con los botones o con **Ctrl+Z** y **Ctrl+Mayús+Z**.
+
+## Ejemplo
+
+| Bloques | Regex |
+| --- | --- |
+| Empieza por · Dígito ×3 · Texto exacto «-» · Dígito ×4 · Termina aquí | `^\d{3}-\d{4}$` |
+| Empieza por · O bien («http» / «https») · Texto exacto «://» | `^(?:http|https):\/\/` |
+
+El botón **Compartir** guarda el patrón en el enlace (después de la `#`), así que puedes mandárselo a un compañero.

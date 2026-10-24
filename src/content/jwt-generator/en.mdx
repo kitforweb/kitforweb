@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "Can I use these tokens in production?",
+    a: "They are real, valid JWTs, but this tool is meant for testing: production tokens should be issued by your backend with keys that never leave your servers.",
+  },
+  {
+    q: "Which key do I need for RS256 or ES256?",
+    a: "A private key in PKCS#8 PEM format (-----BEGIN PRIVATE KEY-----) or as a private JWK. Press Generate key pair to create one locally; the matching public key appears below the token so you can verify it.",
+  },
+  {
+    q: "Are iat and exp added automatically?",
+    a: "Only if the payload does not already contain them. Disable iat or set exp to 0 to leave the payload exactly as you wrote it.",
+  },
+];
+
+## What does it do?
+
+It creates and **signs a JSON Web Token** from a payload you write. Choose the algorithm — HMAC (`HS256`, `HS384`, `HS512`), RSA (`RS*`, `PS*`), ECDSA (`ES*`) or `EdDSA` — paste a secret or a private key, and copy the token.
+
+Signing uses the [jose](https://github.com/panva/jose) library and the browser's Web Crypto API. The payload, the key and the token never leave your device and are never saved.
+
+## How to use it
+
+1. Write the payload as a JSON object, or load the example.
+2. Pick the algorithm and type a secret, or press **Generate key pair** for asymmetric algorithms.
+3. Optionally add `iat`, an expiry in minutes (`exp`) and a key id (`kid`).
+4. Copy the token or press **Open in JWT Decoder** to inspect it.
+
+## HS256 or RS256?
+
+| | HS256 | RS256 / ES256 |
+| --- | --- | --- |
+| Key | one shared secret | private key signs, public key verifies |
+| Who can verify | whoever knows the secret | anyone with the public key |
+| Typical use | a single backend | identity providers, microservices, JWKS |
+
+Use a long random secret for HMAC: at least as many bytes as the hash size (32 bytes for HS256).

@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "Is my timestamp in seconds or milliseconds?",
+    a: "Count the digits: today a Unix time in seconds has 10 digits and one in milliseconds has 13. The tool detects it automatically, and you can force the unit if needed.",
+  },
+  {
+    q: "Does a Unix timestamp have a time zone?",
+    a: "No. It counts seconds since 1 January 1970 at 00:00 UTC, so it is the same everywhere. Time zones only matter when you display it as a calendar date.",
+  },
+  {
+    q: "What is the year 2038 problem?",
+    a: "Systems that store Unix time in a signed 32-bit integer overflow on 19 January 2038 at 03:14:07 UTC. JavaScript and modern databases use 64-bit values and are not affected.",
+  },
+];
+
+## What does it do?
+
+It converts between **Unix time** (epoch) and human dates:
+
+- **Epoch → date**: seconds, milliseconds, microseconds or nanoseconds, detected by their length.
+- **Date → epoch**: ISO 8601, RFC 2822 or a date picked in the calendar.
+- Every representation at once: ISO 8601, UTC, your local time with its time zone, a relative time ("3 hours ago"), weekday, ISO week and day of the year.
+
+The current timestamp is shown live at the top, ready to copy.
+
+## Getting the current timestamp
+
+| Language | Seconds | Milliseconds |
+| --- | --- | --- |
+| JavaScript | `Math.floor(Date.now() / 1000)` | `Date.now()` |
+| Python | `int(time.time())` | `int(time.time() * 1000)` |
+| PHP | `time()` | `(int) (microtime(true) * 1000)` |
+| Bash | `date +%s` | `date +%s%3N` |
+| SQL (PostgreSQL) | `extract(epoch from now())` | |

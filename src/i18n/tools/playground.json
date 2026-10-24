@@ -1,0 +1,72 @@
+{
+  "en": {
+    "name": "HTML/CSS/JS Playground",
+    "short": "Edit HTML, CSS and JS with a live sandboxed preview, console and CDN libraries.",
+    "title": "HTML, CSS and JavaScript playground online with console",
+    "description": "Write HTML, CSS and JavaScript and see the result live in an isolated sandbox, with a console that captures console.log and errors. Add libraries from jsDelivr, unpkg or cdnjs in one click, import npm packages through esm.sh and share your code by link.",
+    "h1": "HTML, CSS and JS Playground",
+    "lead": "A quick place to try an idea: no account, no build step, and the code never leaves your browser.",
+    "code": "Code",
+    "preview": "Preview",
+    "run": "Run",
+    "autoRun": "Auto-run",
+    "module": "ES module",
+    "libraries": "Libraries",
+    "quick": "Popular libraries",
+    "customUrl": "Library URL (jsDelivr, unpkg, cdnjs, esm.sh)",
+    "add": "Add",
+    "remove": "Remove",
+    "imports": "Import map (npm packages via esm.sh)",
+    "importsHint": "Then write import confetti from \"canvas-confetti\" in the JS: module mode turns on by itself.",
+    "console": "Console",
+    "clear": "Clear",
+    "errors": {
+      "url": "This is not a valid URL.",
+      "https": "Use an https URL.",
+      "host": "Only jsDelivr, unpkg, cdnjs and esm.sh are allowed."
+    }
+  },
+  "es": {
+    "name": "Playground HTML/CSS/JS",
+    "short": "Edita HTML, CSS y JS con vista previa aislada en vivo, consola y librerías por CDN.",
+    "title": "Playground de HTML, CSS y JavaScript online con consola",
+    "description": "Escribe HTML, CSS y JavaScript y mira el resultado en vivo en un sandbox aislado, con una consola que captura console.log y los errores. Añade librerías de jsDelivr, unpkg o cdnjs con un clic, importa paquetes de npm a través de esm.sh y comparte tu código por enlace.",
+    "h1": "Playground de HTML, CSS y JS",
+    "lead": "Un sitio rápido para probar una idea: sin cuenta, sin build y sin que el código salga de tu navegador.",
+    "code": "Código",
+    "preview": "Vista previa",
+    "run": "Ejecutar",
+    "autoRun": "Auto",
+    "module": "Módulo ES",
+    "libraries": "Librerías",
+    "quick": "Librerías populares",
+    "customUrl": "URL de una librería (jsDelivr, unpkg, cdnjs, esm.sh)",
+    "add": "Añadir",
+    "remove": "Quitar",
+    "imports": "Import map (paquetes npm vía esm.sh)",
+    "importsHint": "Después escribe import confetti from \"canvas-confetti\" en el JS: el modo módulo se activa solo.",
+    "console": "Consola",
+    "clear": "Limpiar",
+    "errors": {
+      "url": "No es una URL válida.",
+      "https": "Usa una URL https.",
+      "host": "Solo se admiten jsDelivr, unpkg, cdnjs y esm.sh."
+    }
+  },
+  "fr": {
+    "name": "Playground HTML/CSS/JS",
+    "short": "Éditez HTML, CSS et JS avec un aperçu isolé en direct et une console.",
+    "title": "Playground HTML, CSS et JavaScript en ligne",
+    "description": "Écrivez du HTML, du CSS et du JavaScript avec aperçu en direct dans un sandbox isolé, console, bibliothèques CDN et import maps via esm.sh. Partage par lien.",
+    "h1": "Playground HTML, CSS et JS",
+    "lead": "Testez une idée sans compte ni build."
+  },
+  "pt": {
+    "name": "Playground HTML/CSS/JS",
+    "short": "Edite HTML, CSS e JS com pré-visualização isolada ao vivo e console.",
+    "title": "Playground de HTML, CSS e JavaScript online",
+    "description": "Escreva HTML, CSS e JavaScript com pré-visualização ao vivo em um sandbox isolado, console, bibliotecas via CDN e import maps via esm.sh. Compartilhe por link.",
+    "h1": "Playground de HTML, CSS e JS",
+    "lead": "Teste uma ideia sem conta nem build."
+  }
+}

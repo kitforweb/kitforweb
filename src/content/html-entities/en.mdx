@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "Which characters must always be escaped in HTML?",
+    a: "The ampersand (&) and the less-than sign (<) in text, plus the quote that delimits an attribute value. Escaping > and both quotes as well is the safe default.",
+  },
+  {
+    q: "Do I need entities for accents like é?",
+    a: "Not if your page is served as UTF-8, which is the norm. Encode all non-ASCII only for legacy systems or emails that may mangle the encoding.",
+  },
+  {
+    q: "Does escaping protect against XSS?",
+    a: "Escaping text before inserting it into HTML is the core defence, but context matters: values inside URLs, JavaScript or CSS need their own escaping.",
+  },
+];
+
+## What does it do?
+
+It **converts special characters into HTML entities** so they display as text instead of being interpreted as markup, and **decodes** entities back into characters.
+
+| Character | Named | Decimal | Hex |
+| --- | --- | --- | --- |
+| `&` | `&amp;` | `&#38;` | `&#x26;` |
+| `<` | `&lt;` | `&#60;` | `&#x3C;` |
+| `"` | `&quot;` | `&#34;` | `&#x22;` |
+| `é` | `&eacute;` | `&#233;` | `&#xE9;` |
+
+## How to use it
+
+1. Paste text or HTML to encode it. Choose named, decimal or hexadecimal references.
+2. Enable **Encode all non-ASCII** to turn accents and emoji into references too.
+3. Press **Swap** to decode entities found in a page, a database or an API response.
+
+The decoder understands the full list of HTML5 named references, such as `&nbsp;`, `&mdash;` or `&hellip;`.

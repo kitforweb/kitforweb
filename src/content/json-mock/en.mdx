@@ -1,0 +1,40 @@
+export const faq = [
+  {
+    q: "How does it know what kind of fake data to generate?",
+    a: "It looks at each key and its example value. Keys like email, firstName, city, price or createdAt get matching realistic values; ISO dates, UUIDs and URLs in your sample are recognised by their format.",
+  },
+  {
+    q: "Can I get the same data every time?",
+    a: "Yes. The seed makes the output reproducible: the same sample, count and seed always produce the same records, which is ideal for snapshot tests. Press Regenerate for a new random seed.",
+  },
+  {
+    q: "Is the data real?",
+    a: "No. Every value is randomly generated with Faker. Names, emails and addresses look real but do not belong to anyone.",
+  },
+];
+
+## What does it do?
+
+From **one example record** it generates **N fake but realistic records** with exactly the same structure: same keys, same nesting, same types. Perfect for seeding a database, building a UI before the API exists or writing tests.
+
+## How to use it
+
+1. Paste an example object (or an array; all its keys are merged into one template).
+2. Choose how many **records** you need (up to 1,000).
+3. Keep the **seed** to get the same data again, or press **Regenerate**.
+4. Copy the array or swap it into the input to refine it.
+
+## Recognised fields
+
+| Field name or value | Generated value |
+| --- | --- |
+| `id` | 1, 2, 3… |
+| `email`, `mail` | realistic email address |
+| `firstName`, `lastName`, `name` | person names |
+| `createdAt`, ISO dates | random date in the last 3 years |
+| `price`, `amount`, `total` | price with the same decimals |
+| `city`, `country`, `zip`, `address` | location data |
+| `avatar`, `image`, URLs | image or website URLs |
+| booleans, other numbers and strings | random value of the same type |
+
+Arrays keep up to five items built from their first element, and `null` stays `null`.

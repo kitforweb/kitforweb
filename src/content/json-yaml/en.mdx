@@ -1,0 +1,44 @@
+export const faq = [
+  {
+    q: "Is YAML a superset of JSON?",
+    a: "Practically yes: valid JSON is valid YAML 1.2. That is why converting JSON to YAML never loses information, while YAML features such as comments and anchors are resolved when going back to JSON.",
+  },
+  {
+    q: "Why does my YAML fail with an indentation error?",
+    a: "YAML uses indentation to express nesting and does not allow tabs. Keys of the same object must be aligned exactly. The error message shows the line and column where the parser got lost.",
+  },
+  {
+    q: "What happens with several YAML documents separated by ---?",
+    a: "They are converted into a JSON array with one element per document, which is handy for Kubernetes manifests.",
+  },
+];
+
+## What does it do?
+
+It converts **JSON to YAML** and **YAML to JSON**. YAML is the format of GitHub Actions, GitLab CI, docker-compose, Kubernetes, Ansible and many OpenAPI specs, while JSON is what your code and APIs speak.
+
+## How to use it
+
+1. Paste JSON on the left: the YAML version appears on the right.
+2. Press **Swap** to switch to YAML → JSON (the current result moves to the input).
+3. Choose 2 or 4 spaces of indentation.
+
+## Example
+
+```yaml
+on:
+  push:
+    branches: [main]
+```
+
+is the same as
+
+```json
+{ "on": { "push": { "branches": ["main"] } } }
+```
+
+## Common YAML pitfalls
+
+- **Tabs** are not allowed for indentation: use spaces.
+- `on`, `yes` or `no` may be read as booleans by old YAML 1.1 parsers; quote them if in doubt.
+- Strings with `:` followed by a space, or starting with `*`, `&` or `!`, need quotes.

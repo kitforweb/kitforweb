@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Qué coste elijo?",
+    a: "El más alto que tus servidores puedan permitirse, normalmente para que un hash tarde unos 100–300 ms. Hoy suele ser un coste de 10 a 12. Cada punto duplica el tiempo, para ti y para un atacante.",
+  },
+  {
+    q: "¿Por qué la misma contraseña da un hash distinto cada vez?",
+    a: "Porque bcrypt genera una sal aleatoria para cada hash y la guarda dentro del propio hash. Por eso se compara con bcrypt.compare en lugar de volver a calcular el hash y comparar textos.",
+  },
+  {
+    q: "¿Qué significan $2a$, $2b$ y $2y$?",
+    a: "Son revisiones del formato que corrigieron fallos de algunas implementaciones. Son compatibles para contraseñas normales; $2b$ es la actual.",
+  },
+];
+
+## ¿Qué hace?
+
+Genera el hash **bcrypt** de una contraseña con el factor de coste que elijas, y comprueba si una contraseña **coincide** con un hash bcrypt existente —por ejemplo, uno copiado de tu tabla de usuarios mientras depuras un login.
+
+bcrypt se ejecuta en tu navegador con bcryptjs. Las contraseñas no se guardan, no van en la URL y nunca se envían a ningún sitio.
+
+## Anatomía de un hash bcrypt
+
+```
+$2b$10$WDHsS2e05u6fibtdF4fGpOLaoZCbgsENgQwk5ytDhrADLa89sOyYa
+ │   │  └──────── sal (22) ────────┘└──────── hash (31) ────────┘
+ │   └ coste: 2^10 = 1024 rondas
+ └ versión
+```
+
+## Límites
+
+bcrypt solo usa los **primeros 72 bytes** de la contraseña. Las frases más largas, o los textos con muchos caracteres multibyte, se truncan sin avisar; la herramienta te avisa cuando ocurre.

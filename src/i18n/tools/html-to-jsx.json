@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "HTML → JSX",
+    "short": "Convert HTML into valid JSX for React: className, style objects, self-closing tags.",
+    "title": "HTML to JSX converter for React online",
+    "description": "Convert HTML to valid JSX: class to className, for to htmlFor, inline styles to objects, self-closing void tags, SVG attributes in camelCase, comments and escaped braces. Optionally wrapped in a React component. 100% in your browser.",
+    "h1": "HTML to JSX converter",
+    "lead": "Paste a template, a snippet from a UI kit or an SVG and get JSX you can drop into a component.",
+    "placeholder": "Paste HTML or SVG…",
+    "wrap": "Component",
+    "name": "Name",
+    "uncontrolled": "defaultValue",
+    "errors": { "empty": "There is no HTML to convert." },
+    "warnings": {
+      "event-handlers": "Inline event handlers were wrapped in arrow functions: move their code into the component.",
+      "script": "The HTML has script tags: React does not run them when rendered."
+    }
+  },
+  "es": {
+    "name": "HTML → JSX",
+    "short": "Convierte HTML en JSX válido para React: className, estilos como objeto, etiquetas autocerradas.",
+    "title": "Convertir HTML a JSX para React online",
+    "description": "Convierte HTML a JSX válido: class a className, for a htmlFor, estilos en línea a objetos, etiquetas vacías autocerradas, atributos SVG en camelCase, comentarios y llaves escapadas. Opcionalmente envuelto en un componente de React. 100% en tu navegador.",
+    "h1": "Conversor de HTML a JSX",
+    "lead": "Pega una plantilla, un fragmento de un kit de UI o un SVG y obtén JSX listo para meter en un componente.",
+    "placeholder": "Pega HTML o SVG…",
+    "wrap": "Componente",
+    "name": "Nombre",
+    "uncontrolled": "defaultValue",
+    "errors": { "empty": "No hay HTML que convertir." },
+    "warnings": {
+      "event-handlers": "Los manejadores de eventos en línea se han envuelto en funciones flecha: lleva su código al componente.",
+      "script": "El HTML tiene etiquetas script: React no las ejecuta al renderizar."
+    }
+  },
+  "fr": {
+    "name": "HTML → JSX",
+    "short": "Convertissez du HTML en JSX valide pour React.",
+    "title": "Convertisseur HTML vers JSX pour React en ligne",
+    "description": "Convertissez du HTML en JSX valide : class en className, styles en objets, balises auto-fermantes, attributs SVG en camelCase. 100 % dans votre navigateur.",
+    "h1": "Convertisseur HTML vers JSX",
+    "lead": "Collez du HTML et obtenez du JSX."
+  },
+  "pt": {
+    "name": "HTML → JSX",
+    "short": "Converta HTML em JSX válido para React.",
+    "title": "Conversor de HTML para JSX para React online",
+    "description": "Converta HTML em JSX válido: class em className, estilos em objetos, tags autofechadas, atributos SVG em camelCase. 100% no seu navegador.",
+    "h1": "Conversor de HTML para JSX",
+    "lead": "Cole HTML e obtenha JSX."
+  }
+}

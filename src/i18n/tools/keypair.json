@@ -1,0 +1,82 @@
+{
+  "en": {
+    "name": "RSA/EC keys",
+    "short": "Generate RSA or elliptic-curve key pairs and convert PEM ↔ JWK.",
+    "title": "RSA and EC key pair generator, PEM to JWK converter",
+    "description": "Generate RSA (2048–4096), elliptic curve (P-256, P-384, P-521) or Ed25519 key pairs and export them as PEM and JWK, or convert existing keys between PEM and JWK. Keys are created with Web Crypto in your browser.",
+    "h1": "RSA / EC key generator",
+    "lead": "Create key pairs for JWT, TLS tests or signing, or convert a key between PEM and JWK.",
+    "options": "Options",
+    "pemOrJwk": "PEM or JWK",
+    "keys": "Keys",
+    "converted": "Converted key",
+    "mode": "Mode",
+    "generate": "Generate",
+    "convert": "Convert PEM ↔ JWK",
+    "type": "Key type",
+    "size": "Size",
+    "curve": "Curve",
+    "generateButton": "Generate key pair",
+    "generateHint": "The private key is created in this tab and never leaves your device. Copy it now: it is not stored.",
+    "placeholder": "Paste a PEM key (BEGIN PUBLIC KEY / BEGIN PRIVATE KEY) or a JWK…",
+    "publicPem": "Public key · PEM (SPKI)",
+    "privatePem": "Private key · PEM (PKCS#8)",
+    "publicJwk": "Public key · JWK",
+    "privateJwk": "Private key · JWK",
+    "pressGenerate": "Choose the key type and press Generate key pair.",
+    "errors": {
+      "format": "Paste a PEM block (PUBLIC KEY or PRIVATE KEY) or a JSON Web Key.",
+      "key": "The key could not be read. Only RSA, EC (P-256/384/521) and Ed25519 keys are supported."
+    },
+    "public": "public",
+    "private": "private"
+  },
+  "es": {
+    "name": "Claves RSA/EC",
+    "short": "Genera pares de claves RSA o de curva elíptica y convierte PEM ↔ JWK.",
+    "title": "Generador de claves RSA y EC, conversor de PEM a JWK",
+    "description": "Genera pares de claves RSA (2048–4096), de curva elíptica (P-256, P-384, P-521) o Ed25519 y expórtalos en PEM y JWK, o convierte claves existentes entre PEM y JWK. Las claves se crean con Web Crypto en tu navegador.",
+    "h1": "Generador de claves RSA / EC",
+    "lead": "Crea pares de claves para JWT, pruebas de TLS o firmas, o convierte una clave entre PEM y JWK.",
+    "options": "Opciones",
+    "pemOrJwk": "PEM o JWK",
+    "keys": "Claves",
+    "converted": "Clave convertida",
+    "mode": "Modo",
+    "generate": "Generar",
+    "convert": "Convertir PEM ↔ JWK",
+    "type": "Tipo de clave",
+    "size": "Tamaño",
+    "curve": "Curva",
+    "generateButton": "Generar par de claves",
+    "generateHint": "La clave privada se crea en esta pestaña y nunca sale de tu dispositivo. Cópiala ahora: no se guarda.",
+    "placeholder": "Pega una clave PEM (BEGIN PUBLIC KEY / BEGIN PRIVATE KEY) o un JWK…",
+    "publicPem": "Clave pública · PEM (SPKI)",
+    "privatePem": "Clave privada · PEM (PKCS#8)",
+    "publicJwk": "Clave pública · JWK",
+    "privateJwk": "Clave privada · JWK",
+    "pressGenerate": "Elige el tipo de clave y pulsa Generar par de claves.",
+    "errors": {
+      "format": "Pega un bloque PEM (PUBLIC KEY o PRIVATE KEY) o un JSON Web Key.",
+      "key": "No se ha podido leer la clave. Solo se admiten claves RSA, EC (P-256/384/521) y Ed25519."
+    },
+    "public": "pública",
+    "private": "privada"
+  },
+  "fr": {
+    "name": "Clés RSA/EC",
+    "short": "Générez des paires de clés RSA ou à courbe elliptique et convertissez PEM ↔ JWK.",
+    "title": "Générateur de clés RSA et EC, convertisseur PEM vers JWK",
+    "description": "Générez des paires de clés RSA, à courbe elliptique ou Ed25519 en PEM et JWK, ou convertissez des clés entre PEM et JWK. 100 % dans votre navigateur.",
+    "h1": "Générateur de clés RSA / EC",
+    "lead": "Créez des paires de clés ou convertissez une clé entre PEM et JWK."
+  },
+  "pt": {
+    "name": "Chaves RSA/EC",
+    "short": "Gere pares de chaves RSA ou de curva elíptica e converta PEM ↔ JWK.",
+    "title": "Gerador de chaves RSA e EC, conversor de PEM para JWK",
+    "description": "Gere pares de chaves RSA, de curva elíptica ou Ed25519 em PEM e JWK, ou converta chaves entre PEM e JWK. 100% no seu navegador.",
+    "h1": "Gerador de chaves RSA / EC",
+    "lead": "Crie pares de chaves ou converta uma chave entre PEM e JWK."
+  }
+}

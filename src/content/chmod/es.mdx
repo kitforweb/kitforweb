@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "¿Cómo se calcula 755?",
+    a: "Cada dígito es la suma de lectura (4), escritura (2) y ejecución (1) para una clase: propietario, grupo y otros. 7 = 4+2+1 (rwx), 5 = 4+1 (r-x). Así que 755 es rwxr-xr-x.",
+  },
+  {
+    q: "¿Qué significa ejecución en un directorio?",
+    a: "Permiso para entrar y llegar a los ficheros de dentro (cd, abrir un fichero por su ruta). Lectura solo permite listar los nombres. Por eso los directorios suelen ser 755 y los ficheros 644.",
+  },
+  {
+    q: "¿Qué son el cuarto dígito y las letras s y t?",
+    a: "Bits especiales: 4 es setuid (se ejecuta con los privilegios del propietario), 2 es setgid (los ficheros nuevos heredan el grupo del directorio) y 1 es el sticky bit (en /tmp, solo el propietario puede borrar sus ficheros). ls los muestra como s o t en la posición de ejecución, en mayúscula si no hay permiso de ejecución.",
+  },
+];
+
+## ¿Qué hace?
+
+Traduce permisos Unix entre las tres formas en que te los encuentras: **casillas** (lectura, escritura y ejecución para propietario, grupo y otros), el **modo octal** que recibe `chmod` (`755`) y la **cadena simbólica** que imprime `ls -l` (`rwxr-xr-x`). Cambia cualquiera y las demás se actualizan.
+
+También puedes pegar un comando completo (`chmod -R 750 /srv/app`), una línea de `ls -l` (`-rw-r--r--`) o aplicar una expresión simbólica como `u+x,go-w` para ver el modo resultante.
+
+## Modos habituales
+
+| Modo | Simbólico | Uso típico |
+| --- | --- | --- |
+| 644 | rw-r--r-- | Ficheros normales |
+| 755 | rwxr-xr-x | Scripts y directorios |
+| 600 | rw------- | Claves SSH, ficheros .env |
+| 700 | rwx------ | ~/.ssh |
+| 1777 | rwxrwxrwt | /tmp |
+
+Evita `777`: cualquier usuario o proceso comprometido de la máquina podría modificar el fichero.

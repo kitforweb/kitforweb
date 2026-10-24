@@ -1,0 +1,35 @@
+export const faq = [
+  {
+    q: "Which regex engine is used?",
+    a: "Your browser's JavaScript engine, so the results are exactly what you will get in JavaScript, TypeScript and Node.js, including named groups, lookbehind and the d, s, u and v flags.",
+  },
+  {
+    q: "What happens if my regex freezes?",
+    a: "Tests run in a Web Worker that is stopped after 1.5 seconds. If that happens, the pattern probably has catastrophic backtracking, for example nested quantifiers like (a+)+ or (.*)*.",
+  },
+  {
+    q: "Each line or whole text?",
+    a: "Each line treats every line as a separate test case, ideal for checking validation patterns. Whole text runs the regex over all the text at once, ideal with the g and m flags to find matches inside a document.",
+  },
+];
+
+## What does it do?
+
+It runs a regular expression against a **list of test cases** and shows, for each one, whether it **matches** (green) or **not** (red), with the matched part highlighted and every **capture group**, numbered or named, listed underneath. Below, the regex is **explained part by part** in plain language.
+
+## How to use it
+
+1. Type the pattern without slashes, or paste a literal like `/^\d+$/i`: the flags are picked up automatically.
+2. Add the **flags** you need: `g` global, `i` ignore case, `m` multiline, `s` dot matches newlines, `u` Unicode.
+3. Write one test case per line, mixing strings that should and should not match.
+4. Press **Share** to send the pattern and the test cases in a link.
+
+## Common flags
+
+| Flag | Effect |
+| --- | --- |
+| `g` | find every match, not only the first |
+| `i` | ignore upper and lower case |
+| `m` | `^` and `$` match at every line |
+| `s` | `.` also matches line breaks |
+| `u` | full Unicode: emoji and `\p{…}` classes |

@@ -1,0 +1,41 @@
+export const faq = [
+  {
+    q: "Which SQL does it understand?",
+    a: "CREATE TABLE statements from PostgreSQL, MySQL, SQLite and SQL Server dumps or migrations: column types, PRIMARY KEY, inline REFERENCES, table-level FOREIGN KEY constraints and ALTER TABLE … ADD FOREIGN KEY. Other statements are ignored.",
+  },
+  {
+    q: "How is the cardinality decided?",
+    a: "A foreign key draws a many-to-one relation. If the foreign key column is also unique or the primary key, the relation is drawn as one-to-one. Nullable foreign keys are drawn as optional.",
+  },
+  {
+    q: "Can I edit the diagram?",
+    a: "Yes. Switch to the Mermaid view to copy the erDiagram source, or open it in the Mermaid editor to change it and export it.",
+  },
+];
+
+## What does it do?
+
+It reads your **CREATE TABLE** statements and draws the **entity-relationship diagram**: each table with its columns and types, primary keys (PK) and foreign keys (FK) marked, and lines between tables for every relation. Useful to understand an inherited database, document a schema or review a migration.
+
+## How to use it
+
+1. Paste a schema dump (`pg_dump --schema-only`, `mysqldump --no-data`) or your migrations.
+2. The diagram updates as you type.
+3. Export it as **SVG** or **PNG**, copy the **Mermaid** source, or open it in the Mermaid editor.
+
+## Example
+
+```sql
+CREATE TABLE authors (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  author_id INT NOT NULL REFERENCES authors(id),
+  title TEXT NOT NULL
+);
+```
+
+draws two tables joined by a one-to-many relation: an author has many books.

@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "¿Cuándo uso encodeURIComponent en vez de encodeURI?",
+    a: "Usa encodeURIComponent para una pieza que va dentro de una URL, como el valor de un parámetro o un segmento de ruta. Usa encodeURI solo para una URL completa que ya tiene la estructura correcta.",
+  },
+  {
+    q: "¿Por qué un espacio a veces es %20 y a veces +?",
+    a: "%20 es la codificación genérica del espacio. El + viene de la codificación de formularios HTML (application/x-www-form-urlencoded), que también usa URLSearchParams en las query strings.",
+  },
+  {
+    q: "¿Qué significa \"URI malformed\"?",
+    a: "Hay un % que no va seguido de dos dígitos hexadecimales, o los bytes no forman UTF-8 válido. La herramienta te dice dónde empieza el problema.",
+  },
+];
+
+## ¿Qué hace?
+
+**Codifica con porcentajes** un texto para que viaje sin problemas dentro de una URL, y lo **decodifica**. Al codificar muestra las tres variantes una al lado de otra para que elijas la correcta:
+
+| Función | Respeta | Uso típico |
+| --- | --- | --- |
+| `encodeURIComponent` | letras, dígitos y `- _ . ! ~ * ' ( )` | el valor de un parámetro o un segmento de ruta |
+| `encodeURI` | además `: / ? # & = ,` | una URL completa |
+| codificación de formulario | como la primera, el espacio pasa a `+` | formularios HTML, URLSearchParams |
+
+## Ejemplo
+
+Si construyes `?q=` con lo que escribe el usuario, `rock & roll`, usando `encodeURI` obtienes `?q=rock%20&%20roll`: el `&` empieza un parámetro nuevo y la búsqueda se rompe. Con `encodeURIComponent` sale `rock%20%26%20roll`, que llega intacto.
+
+## Cómo se usa
+
+1. Escribe el texto a codificar, o cambia a **Decodificar** y pega el texto codificado.
+2. Si decodificas datos de un formulario, activa **+ es un espacio**.
+3. Pulsa **Intercambiar** para hacer el camino de vuelta.

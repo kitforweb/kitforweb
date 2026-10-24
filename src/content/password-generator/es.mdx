@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Qué longitud debe tener una contraseña?",
+    a: "Con un gestor de contraseñas, 20 caracteres aleatorios o más. Unos 80 bits de entropía son fuertes para cuentas online, y 128 bits son de sobra para secretos que podrían atacarse sin conexión.",
+  },
+  {
+    q: "¿Es realmente aleatoria?",
+    a: "Sí. Los caracteres se eligen con crypto.getRandomValues usando muestreo por rechazo, así que todos tienen exactamente la misma probabilidad, y el resultado se baraja con Fisher–Yates.",
+  },
+  {
+    q: "¿Para qué sirve el secreto para .env?",
+    a: "Para valores como SESSION_SECRET, claves de firma de JWT o secretos de webhooks. 32 bytes aleatorios (256 bits) en hex o Base64 es el tamaño habitual.",
+  },
+];
+
+## ¿Qué hace?
+
+Genera **contraseñas aleatorias seguras** y **secretos** directamente en tu navegador. Nada se guarda ni se envía, ni siquiera a la analítica.
+
+- Elige la **longitud** (de 4 a 128) y los tipos de carácter: minúsculas, mayúsculas, dígitos y símbolos.
+- **Excluye los caracteres ambiguos** como `0`, `O`, `1`, `l` e `I` para contraseñas que alguien tenga que leer o teclear.
+- Mira la **entropía** en bits y una valoración de su fortaleza.
+- Obtén una línea de `.env` lista para pegar con un secreto aleatorio en hex, Base64 o Base64URL.
+
+## Entropía
+
+La entropía mide cuántos intentos necesita un atacante: `longitud × log2(tamaño del conjunto)`.
+
+| Contraseña | Conjunto | Entropía |
+| --- | --- | --- |
+| 8 minúsculas | 26 | 38 bits — débil |
+| 12 caracteres variados | 88 | 77 bits — aceptable |
+| 20 caracteres variados | 88 | 129 bits — muy fuerte |

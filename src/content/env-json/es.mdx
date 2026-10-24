@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "¿Se guarda o se envía mi .env a algún sitio?",
+    a: "No. Esta herramienta está marcada como sensible: el contenido no se guarda en tu navegador, no se puede compartir por enlace y nunca sale de la página.",
+  },
+  {
+    q: "¿Qué valor gana cuando una clave se repite?",
+    a: "El último, como en dotenv, Docker Compose y la mayoría de cargadores. La herramienta te avisa porque la primera definición suele ser un resto que alguien acabará editando por error.",
+  },
+  {
+    q: "¿Qué hace anidar con __?",
+    a: "Convierte DB__HOST y DB__PORT en { DB: { HOST, PORT } }, la convención de ASP.NET Core y de muchas librerías de configuración. De JSON a .env hace lo contrario: los objetos anidados se aplanan con __.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte un **fichero .env a JSON** y **JSON a .env**, con las mismas reglas que `dotenv`: prefijos `export`, comentarios, comillas simples (literales), comillas dobles (con escapes `\n` y valores en varias líneas) y comentarios al final de valores sin comillas.
+
+Mientras convierte, **avisa de lo que los cargadores suelen aceptar sin decir nada**:
+
+- **Claves duplicadas**, con la línea de la primera definición.
+- **Comillas sin cerrar** y **comillas sueltas** en medio de un valor.
+- **Espacios alrededor del =**, que rompen `docker run --env-file` y las shells.
+- **Valores con espacios sin comillas** y **nombres de variable no válidos**.
+
+## Opciones
+
+- **Números y booleanos**: `PORT=3000` pasa a `3000` en lugar de `"3000"`.
+- **Anidar CLAVE__SUB**: crea objetos anidados a partir de dobles guiones bajos.
+- **Claves en MAYÚSCULAS** (de JSON a .env): `apiUrl` pasa a `APIURL`; las claves anidadas se unen con `__`.

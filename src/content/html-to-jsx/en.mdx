@@ -1,0 +1,29 @@
+export const faq = [
+  {
+    q: "Why does JSX need className instead of class?",
+    a: "JSX compiles to JavaScript, where class is a reserved word, so React uses the DOM property names: className, htmlFor, tabIndex, readOnly… The converter renames all of them, including SVG attributes such as stroke-width (strokeWidth).",
+  },
+  {
+    q: "What happens to inline onclick handlers?",
+    a: "They become arrow functions with the same code, for example onClick={() => { save() }}, and a warning reminds you to move that logic into the component.",
+  },
+  {
+    q: "What does the defaultValue option do?",
+    a: "In React, value and checked make a field controlled and need an onChange handler. With the option enabled they become defaultValue and defaultChecked, which keep the HTML behaviour.",
+  },
+];
+
+## What does it do?
+
+It converts **HTML into valid JSX** for React, Preact or Solid, handling what usually breaks when you paste HTML into a component:
+
+- `class` → `className`, `for` → `htmlFor` and the other renamed attributes.
+- **Inline styles** become objects: `style="margin-top: 4px"` → `style={{ marginTop: "4px" }}`.
+- **Void elements** are self-closed: `<br>` → `<br />`, `<img>` → `<img />`.
+- **SVG attributes** in camelCase: `stroke-width`, `fill-rule`, `xlink:href`.
+- **Comments** become `{/* … */}` and **braces in text** are escaped.
+- Several root elements are wrapped in a **fragment**, and optionally everything goes inside a **component**.
+
+## Example
+
+`<label for="email" class="label">Email</label>` becomes `<label htmlFor="email" className="label">Email</label>`.

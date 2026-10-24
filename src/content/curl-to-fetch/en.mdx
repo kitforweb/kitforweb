@@ -1,0 +1,44 @@
+export const faq = [
+  {
+    q: "How do I copy a request as cURL?",
+    a: "Open DevTools, go to the Network tab, right-click the request and choose Copy → Copy as cURL. Both the bash and the cmd (Windows) versions are supported.",
+  },
+  {
+    q: "Are cookies and tokens sent anywhere?",
+    a: "No. The command is parsed and converted in your browser; nothing is executed or uploaded. Still, remember that a copied request contains your session cookies and Authorization header.",
+  },
+  {
+    q: "Why is there no Content-Type with -F forms?",
+    a: "Because FormData sets the multipart Content-Type itself, including the boundary. Setting it by hand would break the request.",
+  },
+];
+
+## What does it do?
+
+It turns a **cURL command** into ready-to-use code for **fetch**, **axios** or **Angular HttpClient**: method, URL, headers, JSON or form bodies, multipart uploads and basic authentication.
+
+It is the fastest way to reproduce in your frontend a request you saw in DevTools, Postman or an API's documentation.
+
+## Supported options
+
+| Option | Meaning |
+| --- | --- |
+| `-X`, `--request` | HTTP method |
+| `-H`, `--header` | header |
+| `-d`, `--data`, `--data-raw`, `--data-binary` | request body |
+| `--json` | JSON body with its Content-Type and Accept |
+| `-F`, `--form` | multipart form field or file |
+| `-u`, `--user` | basic authentication |
+| `-b`, `--cookie` | cookies |
+| `-G` | send the data as query string |
+
+## Example output
+
+```js
+const response = await fetch("https://api.example.com/v1/orders", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ "productId": 42 }),
+});
+const data = await response.json();
+```

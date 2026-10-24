@@ -1,0 +1,47 @@
+export const faq = [
+  {
+    q: "¿Se envía mi consulta a algún servidor?",
+    a: "No. El formateo se hace en tu navegador con la librería sql-formatter, así que las consultas con nombres de tablas o datos reales no salen de tu equipo.",
+  },
+  {
+    q: "¿Por qué importa el dialecto?",
+    a: "Cada base de datos tiene su sintaxis: identificadores con comillas invertidas en MySQL, corchetes en SQL Server, conversiones :: y parámetros $1 en PostgreSQL. Elegir el dialecto correcto evita partir los tokens donde no toca.",
+  },
+  {
+    q: "¿Cambia lo que hace la consulta?",
+    a: "No. Solo cambian los espacios y, si lo eliges, las mayúsculas de las palabras clave. Las cadenas, los identificadores y los comentarios se mantienen.",
+  },
+];
+
+## ¿Qué hace?
+
+Coge una consulta SQL escrita en una línea (la que copias de un log, de un ORM o de un informe de consultas lentas) y **pone cada cláusula en su propia línea**, con una sangría coherente y las palabras clave en mayúsculas. También hace lo contrario: **compacta una consulta en una línea** para pegarla en código o en un fichero de configuración.
+
+## Opciones
+
+- **Dialecto**: PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, Oracle PL/SQL, BigQuery, Snowflake o SQL estándar.
+- **Palabras clave**: mayúsculas, minúsculas o como están.
+- **Sangría**: 2 o 4 espacios.
+
+## Ejemplo
+
+```sql
+select u.id,u.email,count(o.id) as orders from users u left join orders o on o.user_id=u.id where u.active=true group by u.id,u.email
+```
+
+queda así
+
+```sql
+SELECT
+  u.id,
+  u.email,
+  count(o.id) AS orders
+FROM
+  users u
+  LEFT JOIN orders o ON o.user_id = u.id
+WHERE
+  u.active = TRUE
+GROUP BY
+  u.id,
+  u.email
+```

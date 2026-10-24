@@ -1,0 +1,112 @@
+{
+  "en": {
+    "name": "CIDR Calculator",
+    "short": "Netmask, first and last IP, hosts and membership of a subnet.",
+    "title": "CIDR and subnet calculator (IPv4 and IPv6)",
+    "description": "Enter a CIDR block such as 10.0.0.0/24 and get the netmask, wildcard, network and broadcast addresses, first and last usable IP and number of hosts. Check whether an IP belongs to the range and split it into smaller subnets. IPv4 and IPv6.",
+    "h1": "CIDR and Subnet Calculator",
+    "lead": "Type a block to see its range, check an IP against it or split it into subnets.",
+    "block": "CIDR block or IP",
+    "details": "Details",
+    "hint": "Type a block like 192.168.1.0/24, an IP with a mask (10.0.0.1 255.255.0.0) or an IPv6 prefix.",
+    "contains": "Does this IP belong to the block?",
+    "inside": "{ip} is inside the block.",
+    "outside": "{ip} is outside the block.",
+    "split": "Split into",
+    "subnets": "{count, plural, one {# subnet} other {# subnets}}{truncated, select, yes { (first {shown} shown)} other {}}",
+    "normalized": "The address had host bits set: the network is {network}.",
+    "fields": {
+      "cidr": "Network",
+      "netmask": "Netmask",
+      "wildcard": "Wildcard",
+      "first": "First host",
+      "last": "Last host",
+      "broadcast": "Broadcast",
+      "total": "Addresses",
+      "usable": "Usable hosts",
+      "scope": "Type",
+      "binary": "Mask in binary"
+    },
+    "scopes": {
+      "private": "Private (RFC 1918)",
+      "public": "Public",
+      "loopback": "Loopback",
+      "link-local": "Link-local",
+      "multicast": "Multicast",
+      "cgnat": "Carrier-grade NAT (RFC 6598)",
+      "documentation": "Documentation (not routable)",
+      "unspecified": "Unspecified",
+      "unique-local": "Unique local (private IPv6)",
+      "broadcast": "Broadcast"
+    },
+    "errors": {
+      "empty": "Type an address.",
+      "invalid-address": "This is not a valid IP address.",
+      "invalid-prefix": "The prefix or mask is not valid.",
+      "version-mismatch": "The IP and the block are different IP versions."
+    }
+  },
+  "es": {
+    "name": "Calculadora CIDR",
+    "short": "Máscara, primera y última IP, hosts y pertenencia de una subred.",
+    "title": "Calculadora CIDR y de subredes (IPv4 e IPv6)",
+    "description": "Introduce un bloque CIDR como 10.0.0.0/24 y obtén la máscara, la wildcard, las direcciones de red y broadcast, la primera y la última IP utilizables y el número de hosts. Comprueba si una IP pertenece al rango y divídelo en subredes más pequeñas. IPv4 e IPv6.",
+    "h1": "Calculadora CIDR y de subredes",
+    "lead": "Escribe un bloque para ver su rango, comprobar una IP o dividirlo en subredes.",
+    "block": "Bloque CIDR o IP",
+    "details": "Detalles",
+    "hint": "Escribe un bloque como 192.168.1.0/24, una IP con máscara (10.0.0.1 255.255.0.0) o un prefijo IPv6.",
+    "contains": "¿Pertenece esta IP al bloque?",
+    "inside": "{ip} está dentro del bloque.",
+    "outside": "{ip} está fuera del bloque.",
+    "split": "Dividir en",
+    "subnets": "{count, plural, one {# subred} other {# subredes}}{truncated, select, yes { (se muestran las {shown} primeras)} other {}}",
+    "normalized": "La dirección tenía bits de host: la red es {network}.",
+    "fields": {
+      "cidr": "Red",
+      "netmask": "Máscara",
+      "wildcard": "Wildcard",
+      "first": "Primer host",
+      "last": "Último host",
+      "broadcast": "Broadcast",
+      "total": "Direcciones",
+      "usable": "Hosts utilizables",
+      "scope": "Tipo",
+      "binary": "Máscara en binario"
+    },
+    "scopes": {
+      "private": "Privada (RFC 1918)",
+      "public": "Pública",
+      "loopback": "Loopback",
+      "link-local": "Enlace local",
+      "multicast": "Multicast",
+      "cgnat": "NAT de operador (RFC 6598)",
+      "documentation": "Documentación (no enrutable)",
+      "unspecified": "Sin especificar",
+      "unique-local": "Local única (IPv6 privada)",
+      "broadcast": "Broadcast"
+    },
+    "errors": {
+      "empty": "Escribe una dirección.",
+      "invalid-address": "No es una dirección IP válida.",
+      "invalid-prefix": "El prefijo o la máscara no son válidos.",
+      "version-mismatch": "La IP y el bloque son de versiones de IP distintas."
+    }
+  },
+  "fr": {
+    "name": "Calculateur CIDR",
+    "short": "Masque, première et dernière IP, hôtes et appartenance d'un sous-réseau.",
+    "title": "Calculateur CIDR et de sous-réseaux (IPv4 et IPv6)",
+    "description": "Saisissez un bloc CIDR et obtenez masque, adresses réseau et broadcast, plage d'hôtes et nombre d'hôtes. Vérifiez si une IP appartient au bloc. IPv4 et IPv6.",
+    "h1": "Calculateur CIDR",
+    "lead": "Saisissez un bloc pour voir sa plage."
+  },
+  "pt": {
+    "name": "Calculadora CIDR",
+    "short": "Máscara, primeiro e último IP, hosts e pertencimento de uma sub-rede.",
+    "title": "Calculadora CIDR e de sub-redes (IPv4 e IPv6)",
+    "description": "Digite um bloco CIDR e obtenha máscara, endereços de rede e broadcast, faixa e número de hosts. Verifique se um IP pertence ao bloco. IPv4 e IPv6.",
+    "h1": "Calculadora CIDR",
+    "lead": "Digite um bloco para ver sua faixa."
+  }
+}

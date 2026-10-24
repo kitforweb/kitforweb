@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "¿Cómo se tratan los acrónimos como HTTP o XML?",
+    a: "Se mantienen como una sola palabra: XMLHttpRequest pasa a xml_http_request y getHTTPResponseCode a get-http-response-code. Los números se quedan unidos a la palabra anterior.",
+  },
+  {
+    q: "¿Puedo convertir muchos nombres a la vez?",
+    a: "Sí. Pega un identificador por línea, por ejemplo las columnas de una tabla o las claves de la respuesta de una API, y cada estilo muestra la lista entera convertida.",
+  },
+  {
+    q: "¿Qué estilo debo usar?",
+    a: "Depende del ecosistema: camelCase para variables de JavaScript y JSON de APIs en JS, PascalCase para clases y componentes de React, snake_case para Python y columnas SQL, kebab-case para URLs, clases CSS y nombres de fichero, y CONSTANT_CASE para constantes y variables de entorno.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte identificadores y texto entre las **convenciones de nombres** del código: `camelCase`, `PascalCase`, `snake_case`, `kebab-case`, `CONSTANT_CASE`, `Title Case`, `Sentence case`, `dot.case`, `path/case` y `Train-Case`. Las palabras se detectan desde cualquier estilo, así que puedes pegar una mezcla.
+
+## Usos típicos
+
+- Pasar columnas de base de datos (`created_at`) a propiedades de TypeScript (`createdAt`).
+- Convertir el nombre de un componente en nombre de fichero (`UserProfileCard` → `user-profile-card`).
+- Crear nombres de variables de entorno (`apiBaseUrl` → `API_BASE_URL`).
+
+## Ejemplo
+
+| Entrada | camelCase | snake_case | kebab-case |
+| --- | --- | --- | --- |
+| user first name | userFirstName | user_first_name | user-first-name |
+| XMLHttpRequest | xmlHttpRequest | xml_http_request | xml-http-request |

@@ -1,0 +1,45 @@
+export const faq = [
+  {
+    q: "¿Es seguro pegar aquí un JSON de producción?",
+    a: "Sí. El formateador se ejecuta entero en tu navegador con JavaScript. Nada de lo que pegas se sube, se registra ni se guarda en ningún servidor. Puedes comprobarlo en la pestaña Red de las DevTools de tu navegador.",
+  },
+  {
+    q: "¿Por qué dice que mi JSON no es válido si funciona en JavaScript?",
+    a: "Los objetos literales de JavaScript son más permisivos que JSON. JSON exige comillas dobles en claves y textos, y no admite comentarios, comas finales, comillas simples, undefined, NaN ni Infinity.",
+  },
+  {
+    q: "¿Muestra todos los errores o solo el primero?",
+    a: "Todos. El analizador sigue después del primer problema, subraya cada uno en su línea y columna exactas y los enumera en el panel de resultado. Pasa el ratón por un subrayado para leer el motivo.",
+  },
+  {
+    q: "¿Puedo formatear archivos JSON muy grandes?",
+    a: "Sí. Archivos de varios megas funcionan sin problema porque no hay que subir nada. La vista en árbol solo dibuja las ramas que despliegas, así que sigue siendo rápida con documentos grandes.",
+  },
+];
+
+## ¿Qué hace este formateador de JSON?
+
+Recibe cualquier texto JSON y te lo devuelve **validado, indentado y legible**, o **minificado** en una sola línea para ahorrar bytes. La validación ocurre mientras escribes: si algo falla, el punto exacto se subraya en el editor, igual que haría tu editor de código.
+
+A diferencia de la mayoría de formateadores online, muestra **todos** los errores a la vez —una coma que falta en la línea 3 y una llave sin cerrar en la línea 40—, así que puedes arreglarlo todo de una vez en lugar de ir error por error.
+
+## Cómo se usa
+
+1. Pega tu JSON a la izquierda, arrastra un archivo `.json` al editor o pulsa **Abrir archivo**.
+2. El resultado formateado aparece al instante a la derecha. Cambia entre **Formatear** y **Minificar**, elige 2 espacios, 4 espacios o tabuladores y, si quieres, **ordena las claves** alfabéticamente.
+3. Usa la vista **Árbol** para explorar datos muy anidados, plegando las ramas que no necesitas.
+4. Pulsa **Copiar**, o **Intercambiar** para llevar el resultado de vuelta a la entrada.
+
+## Errores de JSON más comunes
+
+| Error | Ejemplo | Solución |
+| --- | --- | --- |
+| Coma final | `{"a": 1,}` | Quita la última coma |
+| Comillas simples | `{'a': 1}` | Usa comillas dobles: `{"a": 1}` |
+| Clave sin comillas | `{a: 1}` | Pon la clave entre comillas: `{"a": 1}` |
+| Comentarios | `{"a": 1 // id}` | JSON no admite comentarios: elimínalos |
+| Falta una coma | `{"a": 1 "b": 2}` | Añade una coma entre los miembros |
+
+## Formatear o minificar
+
+El JSON formateado es para personas: revisiones de código, depurar la respuesta de una API, leer un archivo de configuración. El JSON minificado es para máquinas: elimina todos los espacios y saltos de línea innecesarios, así que los payloads y los datos de prueba ocupan menos. Los dos contienen exactamente los mismos datos.

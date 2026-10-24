@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "SQL Formatter",
+    "short": "Format unreadable SQL queries or compact them into one line.",
+    "title": "SQL formatter and beautifier online",
+    "description": "Format unreadable SQL queries with upper-case keywords and one clause per line, or compact them into a single line. Dialects: PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, Oracle PL/SQL, BigQuery and Snowflake.",
+    "h1": "SQL Formatter",
+    "lead": "Paste a query from a log or an ORM and get it readable again.",
+    "placeholder": "Paste one or more SQL statements…",
+    "mode": "Mode",
+    "format": "Format",
+    "minify": "One line",
+    "dialect": "Dialect",
+    "keywordCase": "Keywords",
+    "preserve": "As written",
+    "indent": "Indentation",
+    "spaces": "{n} spaces"
+  },
+  "es": {
+    "name": "Formatear SQL",
+    "short": "Formatea consultas SQL ilegibles o compáctalas en una línea.",
+    "title": "Formatear SQL online (SQL formatter)",
+    "description": "Formatea consultas SQL ilegibles con las palabras clave en mayúsculas y una cláusula por línea, o compáctalas en una sola línea. Dialectos: PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, Oracle PL/SQL, BigQuery y Snowflake.",
+    "h1": "Formatear SQL",
+    "lead": "Pega una consulta de un log o de un ORM y vuelve a hacerla legible.",
+    "placeholder": "Pega una o varias sentencias SQL…",
+    "mode": "Modo",
+    "format": "Formatear",
+    "minify": "Una línea",
+    "dialect": "Dialecto",
+    "keywordCase": "Palabras clave",
+    "preserve": "Como están",
+    "indent": "Sangría",
+    "spaces": "{n} espacios"
+  },
+  "fr": {
+    "name": "Formater SQL",
+    "short": "Formatez des requêtes SQL illisibles ou compactez-les en une ligne.",
+    "title": "Formateur SQL en ligne",
+    "description": "Formatez des requêtes SQL avec mots-clés en majuscules et une clause par ligne, ou compactez-les. PostgreSQL, MySQL, SQL Server, SQLite et plus.",
+    "h1": "Formater SQL",
+    "lead": "Collez une requête et rendez-la lisible."
+  },
+  "pt": {
+    "name": "Formatar SQL",
+    "short": "Formate consultas SQL ilegíveis ou compacte-as em uma linha.",
+    "title": "Formatador de SQL online",
+    "description": "Formate consultas SQL com palavras-chave em maiúsculas e uma cláusula por linha, ou compacte-as. PostgreSQL, MySQL, SQL Server, SQLite e mais.",
+    "h1": "Formatar SQL",
+    "lead": "Cole uma consulta e deixe-a legível."
+  }
+}

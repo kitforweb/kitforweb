@@ -1,0 +1,35 @@
+export const faq = [
+  {
+    q: "¿Qué motor de regex se usa?",
+    a: "El motor de JavaScript de tu navegador, así que los resultados son exactamente los que obtendrás en JavaScript, TypeScript y Node.js, incluidos los grupos con nombre, el lookbehind y los flags d, s, u y v.",
+  },
+  {
+    q: "¿Qué pasa si mi regex se queda colgada?",
+    a: "Las pruebas se ejecutan en un Web Worker que se detiene a los 1,5 segundos. Si ocurre, probablemente el patrón tiene backtracking catastrófico, por ejemplo cuantificadores anidados como (a+)+ o (.*)*.",
+  },
+  {
+    q: "¿Cada línea o texto completo?",
+    a: "Cada línea trata cada línea como un caso de prueba independiente, ideal para revisar patrones de validación. Texto completo ejecuta la regex sobre todo el texto a la vez, ideal con los flags g y m para encontrar coincidencias dentro de un documento.",
+  },
+];
+
+## ¿Qué hace?
+
+Ejecuta una expresión regular contra una **lista de casos de prueba** y muestra, para cada uno, si **coincide** (verde) o **no** (rojo), con la parte que coincide resaltada y todos los **grupos capturados**, numerados o con nombre, debajo. Más abajo, la regex se **explica parte por parte** en lenguaje natural.
+
+## Cómo se usa
+
+1. Escribe el patrón sin barras, o pega un literal como `/^\d+$/i`: los flags se recogen solos.
+2. Añade los **flags** que necesites: `g` global, `i` sin distinguir mayúsculas, `m` multilínea, `s` el punto incluye saltos de línea, `u` Unicode.
+3. Escribe un caso de prueba por línea, mezclando textos que deben coincidir y que no.
+4. Pulsa **Compartir** para enviar el patrón y los casos en un enlace.
+
+## Flags habituales
+
+| Flag | Efecto |
+| --- | --- |
+| `g` | encuentra todas las coincidencias, no solo la primera |
+| `i` | no distingue mayúsculas y minúsculas |
+| `m` | `^` y `$` funcionan en cada línea |
+| `s` | `.` también coincide con saltos de línea |
+| `u` | Unicode completo: emojis y clases `\p{…}` |

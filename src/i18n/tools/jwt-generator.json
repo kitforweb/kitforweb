@@ -1,0 +1,68 @@
+{
+  "en": {
+    "name": "JWT Generator",
+    "short": "Create and sign test JWTs with HS256, RS256, ES256 and more.",
+    "title": "JWT Generator: create and sign test tokens online",
+    "description": "Create and sign JSON Web Tokens online: choose the algorithm (HS256, RS256, PS256, ES256, EdDSA…), write the payload and the key, and get the token. Generates demo keys locally. 100% in your browser.",
+    "h1": "JWT Generator",
+    "lead": "Write a payload, pick an algorithm and a key, and get a signed token. Nothing is stored or sent.",
+    "payload": "Payload (JSON)",
+    "token": "Signed token",
+    "placeholder": "'{' \"sub\": \"123\", \"role\": \"admin\" '}'",
+    "algorithm": "Algorithm",
+    "expMinutes": "exp (min)",
+    "secret": "Secret",
+    "privateKey": "Private key (PKCS#8 PEM or JWK)",
+    "generateSecret": "Generate secret",
+    "generateKeys": "Generate key pair",
+    "errors": {
+      "payload": "The payload must be a valid JSON object.",
+      "key": "The key could not be used with this algorithm.",
+      "secret": "Write a secret to sign the token."
+    },
+    "openDecoder": "Open in JWT Decoder",
+    "publicKey": "Public key",
+    "publicKeyHint": "Use this public key to verify the token. The pair was generated in your browser and is only kept in this tab."
+  },
+  "es": {
+    "name": "Generador JWT",
+    "short": "Crea y firma JWT de prueba con HS256, RS256, ES256 y más.",
+    "title": "Generador de JWT: crear y firmar tokens de prueba online",
+    "description": "Crea y firma JSON Web Tokens online: elige el algoritmo (HS256, RS256, PS256, ES256, EdDSA…), escribe el payload y la clave, y obtén el token. Genera claves de prueba en local. 100% en tu navegador.",
+    "h1": "Generador de JWT",
+    "lead": "Escribe un payload, elige un algoritmo y una clave, y obtén un token firmado. Nada se guarda ni se envía.",
+    "payload": "Payload (JSON)",
+    "token": "Token firmado",
+    "placeholder": "'{' \"sub\": \"123\", \"role\": \"admin\" '}'",
+    "algorithm": "Algoritmo",
+    "expMinutes": "exp (min)",
+    "secret": "Secreto",
+    "privateKey": "Clave privada (PEM PKCS#8 o JWK)",
+    "generateSecret": "Generar secreto",
+    "generateKeys": "Generar par de claves",
+    "errors": {
+      "payload": "El payload debe ser un objeto JSON válido.",
+      "key": "La clave no se puede usar con este algoritmo.",
+      "secret": "Escribe un secreto para firmar el token."
+    },
+    "openDecoder": "Abrir en el decodificador JWT",
+    "publicKey": "Clave pública",
+    "publicKeyHint": "Usa esta clave pública para verificar el token. El par se ha generado en tu navegador y solo existe en esta pestaña."
+  },
+  "fr": {
+    "name": "Générateur JWT",
+    "short": "Créez et signez des JWT de test avec HS256, RS256, ES256 et plus.",
+    "title": "Générateur de JWT : créer et signer des tokens de test",
+    "description": "Créez et signez des JSON Web Tokens en ligne : choisissez l'algorithme, écrivez le payload et la clé, et obtenez le token. 100 % dans votre navigateur.",
+    "h1": "Générateur de JWT",
+    "lead": "Écrivez un payload, choisissez un algorithme et une clé, et obtenez un token signé."
+  },
+  "pt": {
+    "name": "Gerador JWT",
+    "short": "Crie e assine JWT de teste com HS256, RS256, ES256 e mais.",
+    "title": "Gerador de JWT: criar e assinar tokens de teste online",
+    "description": "Crie e assine JSON Web Tokens online: escolha o algoritmo, escreva o payload e a chave, e obtenha o token. 100% no seu navegador.",
+    "h1": "Gerador de JWT",
+    "lead": "Escreva um payload, escolha um algoritmo e uma chave, e obtenha um token assinado."
+  }
+}

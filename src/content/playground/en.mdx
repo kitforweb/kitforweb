@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "Is it safe to run code here?",
+    a: "The preview runs in an iframe with sandbox=\"allow-scripts\" and without allow-same-origin, so the code gets an opaque origin: it cannot read this site's cookies, storage or page, and it cannot navigate the page you are on.",
+  },
+  {
+    q: "How do I use npm packages?",
+    a: "Add the package name (optionally with a version, like canvas-confetti@1) to the import map, then import it in the JS. The playground maps it to esm.sh and runs your script as an ES module.",
+  },
+  {
+    q: "How do I share a pen?",
+    a: "Press Share: the HTML, CSS, JS and libraries are compressed into the # of the link, which never reaches any server. Whoever opens it sees exactly your code.",
+  },
+];
+
+## What does it do?
+
+It is a **live editor for HTML, CSS and JavaScript**: write in the three tabs and the preview updates as you type, or turn off auto-run and press **Run**. A built-in **console** shows `console.log`, warnings, errors and unhandled promise rejections with readable objects.
+
+## Libraries
+
+- **Popular libraries** in one click: Tailwind, Pico, Bootstrap, jQuery, Lodash, Alpine.js, Chart.js, GSAP and more.
+- Any **script or stylesheet URL** from jsDelivr, unpkg, cdnjs or esm.sh.
+- **Import maps**: add `react`, `vue` or any npm package and write `import` statements as in a real project.
+
+## Good for
+
+- Reproducing a bug in isolation before filing an issue.
+- Trying a CSS layout or an animation quickly.
+- Sharing a small example with a colleague by link.

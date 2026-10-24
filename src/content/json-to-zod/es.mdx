@@ -1,0 +1,43 @@
+export const faq = [
+  {
+    q: "¿Por qué usar Zod en lugar de tipos de TypeScript?",
+    a: "Los tipos de TypeScript desaparecen en tiempo de ejecución. Un esquema Zod comprueba de verdad los datos que recibes de una API, un formulario o localStorage, y te da el tipo de TypeScript gratis con z.infer.",
+  },
+  {
+    q: "¿Para qué versión de Zod es el resultado?",
+    a: "El esquema usa las APIs estándar z.object, z.array, z.union y .optional(), disponibles en Zod 3 y Zod 4, importadas como import * as z from \"zod\".",
+  },
+  {
+    q: "¿Puedo añadir reglas más estrictas, como email o longitud mínima?",
+    a: "Sí. El esquema generado es un punto de partida: encadena validaciones como .email(), .min(1) o .int() en los campos que lo necesiten.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte un **JSON de ejemplo** en un **esquema de [Zod](https://zod.dev)** que valida datos con la misma forma, más el tipo de TypeScript inferido. Los campos opcionales, los nulos y las uniones se detectan a partir de tu ejemplo.
+
+## Cómo se usa
+
+1. Pega un objeto JSON o un array de objetos (con varios ejemplos el resultado es mejor).
+2. Pon nombre al esquema: `Task` genera `TaskSchema` y `type Task`.
+3. Copia el código y afínalo con los validadores de Zod.
+
+## Ejemplo
+
+```ts
+import * as z from "zod";
+
+export const TaskSchema = z.object({
+  "title": z.string(),
+  "done": z.boolean(),
+  "dueDate": z.null(),
+});
+export type Task = z.infer<typeof TaskSchema>;
+
+const task = TaskSchema.parse(await res.json()); // lanza un error si la API ha cambiado
+```
+
+## Cuando la raíz es un array
+
+Si tu ejemplo es un array, la herramienta genera el esquema de un elemento y otro `z.array(...)` para la lista completa.

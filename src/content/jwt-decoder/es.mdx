@@ -1,0 +1,45 @@
+export const faq = [
+  {
+    q: "¿Es seguro pegar aquí un JWT real?",
+    a: "Sí. La decodificación y la verificación de la firma se hacen en tu navegador con la API Web Crypto. El token nunca se envía a un servidor, nunca se guarda en localStorage y nunca va en la URL.",
+  },
+  {
+    q: "¿Cualquiera puede leer el contenido de un JWT?",
+    a: "Sí. Un JWT firmado estándar (JWS) solo está codificado en Base64URL, no cifrado. Quien lo tenga puede leer la cabecera y el payload, así que nunca guardes contraseñas ni secretos dentro de un token.",
+  },
+  {
+    q: "¿Por qué dice que el token está caducado?",
+    a: "Porque el claim exp, un timestamp Unix en segundos, es anterior a la hora actual de tu dispositivo. El decodificador muestra exp, iat y nbf como fechas legibles en tu idioma para que veas exactamente cuándo caducó.",
+  },
+  {
+    q: "¿Qué algoritmos de firma puede verificar?",
+    a: "HMAC (HS256, HS384, HS512) con un secreto compartido, y RSA, RSA-PSS y ECDSA (RS*, PS*, ES*) o EdDSA con una clave pública en formato PEM, un certificado X.509 o un JWK.",
+  },
+];
+
+## ¿Qué es un JWT?
+
+Un **JSON Web Token** es una cadena compacta formada por tres partes en Base64URL separadas por puntos: `cabecera.payload.firma`. La cabecera indica qué algoritmo firmó el token, el payload lleva los *claims* (quién es el usuario, cuándo caduca el token…) y la firma permite al servidor comprobar que nadie lo ha manipulado.
+
+## Cómo usar este decodificador de JWT
+
+1. Pega el token a la izquierda. Si empieza por `Bearer ` se quita solo, así que puedes copiar la cabecera `Authorization` entera desde las DevTools.
+2. A la derecha verás la cabecera, el payload y la firma, con el **estado de caducidad** arriba: válido, caducado o aún no válido.
+3. Los claims de tiempo (`exp`, `iat`, `nbf`) se muestran como fechas en tu idioma, indicando hace cuánto o dentro de cuánto ocurren.
+4. Para **verificar la firma**, pega el secreto (HS256…) o la clave pública (RS256, ES256…) debajo del token.
+
+## Claims registrados
+
+| Claim | Significado |
+| --- | --- |
+| `iss` | Emisor: quién creó el token |
+| `sub` | Sujeto: normalmente el ID del usuario |
+| `aud` | Audiencia: para quién es el token |
+| `exp` | Fecha de caducidad (segundos Unix) |
+| `nbf` | No antes de: el token no es válido hasta esa fecha |
+| `iat` | Fecha de emisión |
+| `jti` | ID único del token, útil para revocarlo |
+
+## Decodificar no es lo mismo que verificar
+
+Cualquiera puede decodificar un JWT, pero solo la clave correcta produce una firma válida. Tu backend debe **verificar siempre** la firma y rechazar `alg: none` antes de fiarse de ningún claim. Esta herramienta rechaza los tokens sin firma cuando le pides verificarlos.

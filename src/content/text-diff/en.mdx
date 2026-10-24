@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "Are my texts uploaded to compare them?",
+    a: "No. The comparison runs in a Web Worker inside your browser, so even long files are compared without freezing the page and without leaving your device.",
+  },
+  {
+    q: "What do the two colours of highlight mean?",
+    a: "The light background marks lines that changed; the stronger one marks the exact words that differ inside those lines, so a one-character change is easy to spot.",
+  },
+  {
+    q: "Can I get the result as a patch?",
+    a: "Yes. The Copy action copies a unified diff, the format git diff prints, which you can paste into a review, an issue or apply with git apply.",
+  },
+];
+
+## What does it do?
+
+It **compares two texts** (code, configuration, contracts, SQL…) and shows what changed **line by line and word by word**, either **side by side** or **inline** like a pull request.
+
+## Options
+
+- **Ignore whitespace**: indentation or trailing spaces do not count as changes.
+- **Ignore case**: `SELECT` and `select` are the same.
+- **Only changes**: hides long unchanged regions and keeps three lines of context.
+- **Swap**: exchanges the original and the modified text.
+
+## Typical uses
+
+- Check what a formatter or a refactor really changed.
+- Compare two versions of a config file between environments.
+- Review a text before and after an edit when there is no version control.

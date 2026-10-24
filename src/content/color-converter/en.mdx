@@ -1,0 +1,27 @@
+export const faq = [
+  {
+    q: "Why use OKLCH?",
+    a: "OKLCH describes color as lightness, chroma and hue in a way that matches perception: two colors with the same L look equally light. That makes palettes and hover states predictable, and it can express the wider colors of modern screens. All current browsers support it.",
+  },
+  {
+    q: "What does outside the sRGB gamut mean?",
+    a: "Some OKLCH or Display P3 colors are more saturated than sRGB, the space of HEX and rgb(). Screens that cannot show them use the closest color; the converter shows that fallback in HEX, RGB and HSL.",
+  },
+  {
+    q: "Does it keep transparency?",
+    a: "Yes. Alpha is kept in every format: 8-digit HEX, and the slash syntax in rgb(), hsl() and oklch().",
+  },
+];
+
+## What does it do?
+
+It converts any **CSS color** between **HEX, RGB, HSL, OKLCH** and its **CSS name**, and shows the closest named color when there is no exact one. Use the picker or paste any value: `#3b82f6`, `rgb(59 130 246)`, `hsl(217 91% 60%)`, `oklch(62% 0.19 260)` or `cornflowerblue`.
+
+## Example
+
+| Format | Value |
+| --- | --- |
+| HEX | #3b82f6 |
+| RGB | rgb(59 130 246) |
+| HSL | hsl(217.2 91.2% 59.8%) |
+| OKLCH | oklch(62.31% 0.188 259.81) |

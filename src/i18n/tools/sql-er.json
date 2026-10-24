@@ -1,0 +1,46 @@
+{
+  "en": {
+    "name": "SQL → ER diagram",
+    "short": "Draw the entity-relationship diagram of your CREATE TABLE statements.",
+    "title": "SQL to ER diagram: generate an ERD from CREATE TABLE",
+    "description": "Paste CREATE TABLE statements and get the entity-relationship diagram with tables, columns, primary and foreign keys and relations, drawn with Mermaid. Export it to SVG or PNG, or open it in the Mermaid editor.",
+    "h1": "SQL to ER diagram",
+    "lead": "Paste your schema (a dump or migrations) and see how the tables relate.",
+    "placeholder": "CREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  …\n);",
+    "diagram": "Diagram",
+    "view": "View",
+    "openMermaid": "Open in Mermaid editor",
+    "noTables": "No CREATE TABLE statements found.",
+    "summary": "{tables, plural, one {# table} other {# tables}} · {relations, plural, one {# relation} other {# relations}}"
+  },
+  "es": {
+    "name": "SQL → Diagrama ER",
+    "short": "Dibuja el diagrama entidad-relación de tus sentencias CREATE TABLE.",
+    "title": "SQL a diagrama ER: generar el diagrama entidad-relación",
+    "description": "Pega sentencias CREATE TABLE y obtén el diagrama entidad-relación con tablas, columnas, claves primarias y foráneas y relaciones, dibujado con Mermaid. Expórtalo a SVG o PNG, o ábrelo en el editor de Mermaid.",
+    "h1": "SQL a diagrama entidad-relación",
+    "lead": "Pega tu esquema (un dump o tus migraciones) y mira cómo se relacionan las tablas.",
+    "placeholder": "CREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  …\n);",
+    "diagram": "Diagrama",
+    "view": "Vista",
+    "openMermaid": "Abrir en el editor de Mermaid",
+    "noTables": "No hay ninguna sentencia CREATE TABLE.",
+    "summary": "{tables, plural, one {# tabla} other {# tablas}} · {relations, plural, one {# relación} other {# relaciones}}"
+  },
+  "fr": {
+    "name": "SQL → Diagramme ER",
+    "short": "Dessinez le diagramme entité-relation de vos instructions CREATE TABLE.",
+    "title": "SQL vers diagramme ER : générer un diagramme entité-relation",
+    "description": "Collez des instructions CREATE TABLE et obtenez le diagramme entité-relation avec tables, clés et relations, dessiné avec Mermaid. Export SVG ou PNG.",
+    "h1": "SQL vers diagramme entité-relation",
+    "lead": "Collez votre schéma et voyez les relations entre les tables."
+  },
+  "pt": {
+    "name": "SQL → Diagrama ER",
+    "short": "Desenhe o diagrama entidade-relacionamento das suas instruções CREATE TABLE.",
+    "title": "SQL para diagrama ER: gerar diagrama entidade-relacionamento",
+    "description": "Cole instruções CREATE TABLE e obtenha o diagrama entidade-relacionamento com tabelas, chaves e relações, desenhado com Mermaid. Exporte para SVG ou PNG.",
+    "h1": "SQL para diagrama entidade-relacionamento",
+    "lead": "Cole seu esquema e veja como as tabelas se relacionam."
+  }
+}

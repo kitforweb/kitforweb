@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "What is a modular type scale?",
+    a: "A set of font sizes where each step is the previous one multiplied by the same ratio, such as 1.25 (major third). It gives headings a consistent rhythm instead of arbitrary sizes.",
+  },
+  {
+    q: "Why use different ratios for small and large screens?",
+    a: "On a phone, big jumps between sizes make headings huge. A smaller ratio on mobile and a larger one on desktop keeps the hierarchy clear on both, and clamp() interpolates between them.",
+  },
+  {
+    q: "Does it respect the user's zoom?",
+    a: "Yes. Every value mixes rem and vw, so text still grows when the user changes the browser's default font size, which pure vw values would break (WCAG 1.4.4).",
+  },
+];
+
+## What does it do?
+
+It generates a complete **fluid type scale**: from small text to the largest heading, every size is a `clamp()` value that grows smoothly between a small and a large screen. You choose the **base size** and the **ratio** for each end.
+
+## Export
+
+- **CSS variables**: `--step-0`, `--step-1`… ready for `font-size: var(--step-3)`.
+- **Tailwind v4**: an `@theme` block that redefines `text-base`, `text-lg`, `text-2xl`…
+- **Tailwind v3**: the `fontSize` object for `tailwind.config.js`.
+
+## Common ratios
+
+| Ratio | Name | Feel |
+| --- | --- | --- |
+| 1.125 | Major second | Dense, interfaces |
+| 1.2 | Minor third | Balanced, blogs |
+| 1.25 | Major third | Clear hierarchy |
+| 1.333 | Perfect fourth | Editorial |
+| 1.5 | Perfect fifth | Landing pages |

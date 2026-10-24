@@ -1,0 +1,41 @@
+export const faq = [
+  {
+    q: "How do I verify a downloaded file?",
+    a: "Press Hash a file, choose the file and paste the checksum published by the vendor into Expected hash. The tool tells you which algorithm it matches, or that it does not match any.",
+  },
+  {
+    q: "Is MD5 still safe?",
+    a: "Not for security: collisions can be produced on purpose. MD5 and SHA-1 are still fine for detecting accidental corruption, but use SHA-256 or better for anything an attacker could tamper with.",
+  },
+  {
+    q: "Can I hash passwords with SHA-256?",
+    a: "No. General-purpose hashes are fast, which makes brute-forcing easy. Store passwords with a slow, salted algorithm such as bcrypt, scrypt or Argon2.",
+  },
+];
+
+## What does it do?
+
+It calculates the **MD5, SHA-1, SHA-256, SHA-384 and SHA-512** hashes of a text or a file at the same time, in hexadecimal or Base64. SHA hashes use the browser's Web Crypto API; MD5, which Web Crypto does not include, uses spark-md5. Files are read locally, so you can hash gigabyte ISO images without uploading anything.
+
+## How to use it
+
+1. Type or paste text, or press **Hash a file**.
+2. Switch the output between **Hex** and **Base64**. In Base64 mode you also get the **SRI** value for `integrity` attributes.
+3. Paste a published checksum in **Expected hash** to verify it.
+
+## Test vectors
+
+| Input | SHA-256 |
+| --- | --- |
+| (empty) | `e3b0c442…7852b855` |
+| `abc` | `ba7816bf…f20015ad` |
+
+## Subresource Integrity
+
+```html
+<script src="https://cdn.example.com/lib.js"
+        integrity="sha384-…"
+        crossorigin="anonymous"></script>
+```
+
+The browser refuses to run the file if its SHA-384 does not match, protecting you from a compromised CDN.

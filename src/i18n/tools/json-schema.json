@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "JSON Schema Validator",
+    "short": "Validate JSON against a JSON Schema and see exactly which field fails.",
+    "title": "JSON Schema validator online (draft-07, 2020-12)",
+    "description": "Validate a JSON document against a JSON Schema (draft-07, 2019-09 or 2020-12) and see exactly which field fails and why, underlined in the data. Can also generate a schema from an example JSON. Powered by Ajv, 100% in your browser.",
+    "h1": "JSON Schema Validator",
+    "lead": "Paste a schema and some data: every error is listed by path and underlined in the data.",
+    "schema": "Schema",
+    "data": "Data",
+    "result": "Validation",
+    "generate": "Generate schema from data",
+    "schemaPlaceholder": "Paste a JSON Schema…",
+    "dataPlaceholder": "Paste the JSON to validate…",
+    "hint": "Paste a schema on top and the data below, or load the example.",
+    "valid": "The data is valid against the schema.",
+    "invalid": "{count, plural, one {# error} other {# errors}}",
+    "errors": {
+      "schema": "The schema is not valid.",
+      "data": "The data is not valid JSON."
+    }
+  },
+  "es": {
+    "name": "Validar JSON Schema",
+    "short": "Valida un JSON contra un JSON Schema y mira exactamente qué campo falla.",
+    "title": "Validador de JSON Schema online (draft-07, 2020-12)",
+    "description": "Valida un documento JSON contra un JSON Schema (draft-07, 2019-09 o 2020-12) y mira exactamente qué campo falla y por qué, subrayado en los datos. También genera un esquema a partir de un JSON de ejemplo. Con Ajv, 100% en tu navegador.",
+    "h1": "Validador de JSON Schema",
+    "lead": "Pega un esquema y unos datos: cada error aparece por ruta y subrayado en los datos.",
+    "schema": "Esquema",
+    "data": "Datos",
+    "result": "Validación",
+    "generate": "Generar esquema a partir de los datos",
+    "schemaPlaceholder": "Pega un JSON Schema…",
+    "dataPlaceholder": "Pega el JSON a validar…",
+    "hint": "Pega un esquema arriba y los datos abajo, o carga el ejemplo.",
+    "valid": "Los datos cumplen el esquema.",
+    "invalid": "{count, plural, one {# error} other {# errores}}",
+    "errors": {
+      "schema": "El esquema no es válido.",
+      "data": "Los datos no son un JSON válido."
+    }
+  },
+  "fr": {
+    "name": "Valider JSON Schema",
+    "short": "Validez un JSON avec un JSON Schema et voyez quel champ échoue.",
+    "title": "Validateur JSON Schema en ligne",
+    "description": "Validez un document JSON avec un JSON Schema et voyez exactement quel champ échoue et pourquoi. Peut aussi générer un schéma à partir d'un exemple. 100 % dans votre navigateur.",
+    "h1": "Validateur JSON Schema",
+    "lead": "Collez un schéma et des données pour voir chaque erreur."
+  },
+  "pt": {
+    "name": "Validar JSON Schema",
+    "short": "Valide um JSON com um JSON Schema e veja exatamente qual campo falha.",
+    "title": "Validador de JSON Schema online",
+    "description": "Valide um documento JSON com um JSON Schema e veja exatamente qual campo falha e por quê. Também gera um schema a partir de um exemplo. 100% no seu navegador.",
+    "h1": "Validador de JSON Schema",
+    "lead": "Cole um schema e dados para ver cada erro."
+  }
+}

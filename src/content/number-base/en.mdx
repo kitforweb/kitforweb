@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "Is there a size limit?",
+    a: "No practical one: numbers are handled as BigInt, so 64-bit values, hashes or 256-bit keys convert exactly, without the precision loss of regular JavaScript numbers.",
+  },
+  {
+    q: "Can I paste numbers with a prefix like 0xFF?",
+    a: "Yes. 0x, 0b and 0o prefixes are recognised in any field and the value is moved to the right base. Underscores and spaces used as separators are ignored.",
+  },
+  {
+    q: "How is text converted to binary?",
+    a: "The text is encoded as UTF-8 and every byte is written in the chosen base, so an accent or an emoji takes two to four bytes.",
+  },
+];
+
+## What does it do?
+
+It has two modes:
+
+- **Numbers:** type a value in decimal, hexadecimal, binary or octal and see it in all the others at once. Negative numbers and numbers of any size are supported.
+- **Text ↔ bytes:** turns text into its UTF-8 bytes written in hex, binary or decimal, and back. Handy for protocols, network dumps or CTF challenges.
+
+## Quick reference
+
+| Decimal | Hex | Binary | Octal |
+| --- | --- | --- | --- |
+| 10 | `0xA` | `0b1010` | `0o12` |
+| 255 | `0xFF` | `0b1111 1111` | `0o377` |
+| 4096 | `0x1000` | `0b1 0000 0000 0000` | `0o10000` |
+
+## Text example
+
+`Hola` in UTF-8 is `48 6f 6c 61` in hex, or `01001000 01101111 01101100 01100001` in binary.

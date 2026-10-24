@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "Which JSON Schema drafts are supported?",
+    a: "Draft-07, 2019-09 and 2020-12. The draft is chosen from the $schema keyword; without it, draft-07 is used. Formats such as email, uri, date-time and uuid are checked.",
+  },
+  {
+    q: "How is a schema generated from data?",
+    a: "Types are inferred from the example: objects list their properties (all marked as required), arrays take the schema of their items, and strings that look like dates, emails or URIs get a format. Review it and relax what should be optional.",
+  },
+  {
+    q: "Why are all the errors shown and not only the first?",
+    a: "Validation runs with allErrors enabled, so you can fix everything in one pass instead of going error by error.",
+  },
+];
+
+## What does it do?
+
+It **validates a JSON document against a JSON Schema** and tells you exactly **which field fails and why**: every error appears with its path (for example `/user/email`), the rule that failed and a readable message, and the value is underlined in the data editor.
+
+It also works the other way: **generate a schema from an example JSON**, a fast way to start documenting an API payload or a config file.
+
+## How to use it
+
+1. Paste the schema on top and the data below.
+2. The result updates as you type.
+3. Click an error to see it in the data.
+
+## Example
+
+With a schema that requires `email` with `format: email` and a `plan` that is one of `free` or `pro`, the data `{"email": "ana@", "plan": "gold"}` gives two errors: the email does not match the format and the plan is not one of the allowed values.

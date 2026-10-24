@@ -1,0 +1,160 @@
+{
+  "en": {
+    "name": "Common Regex",
+    "short": "Ready-made, explained patterns: email, URL, DNI/NIE, IBAN, phone…",
+    "title": "Common regex patterns: email, URL, IBAN, phone, password",
+    "description": "A library of ready-to-use, explained regular expressions: email, URL, Spanish DNI and NIE, IBAN, phone numbers, postal codes, strong passwords, dates, hex colours, IPv4 and more, each with examples. Open any of them in the Tester or the Builder.",
+    "h1": "Common regex patterns",
+    "lead": "Pick a pattern, check its examples and copy it for your language or framework.",
+    "patterns_title": "Patterns",
+    "search": "Search patterns…",
+    "noResults": "No patterns match your search.",
+    "openTester": "Open in the Tester",
+    "openBuilder": "Open in the Builder",
+    "export": "Copy for",
+    "examples": "Examples (valid and invalid)",
+    "explanation": "Explanation",
+    "patterns": {
+      "email": {
+        "name": "Email address",
+        "description": "A practical email check: name, @, domain and a top-level domain of at least two letters. Confirm the address by sending an email."
+      },
+      "url": {
+        "name": "URL (http/https)",
+        "description": "An absolute http or https URL with an optional port, path, query string and fragment."
+      },
+      "dni": {
+        "name": "Spanish DNI",
+        "description": "Eight digits and the control letter. The regex checks the format; the letter itself must match the number modulo 23."
+      },
+      "nie": { "name": "Spanish NIE", "description": "X, Y or Z, seven digits and the control letter." },
+      "iban": {
+        "name": "IBAN",
+        "description": "Country code, two check digits and up to 30 alphanumeric characters, with or without spaces every four. Validate the checksum separately."
+      },
+      "phone-intl": {
+        "name": "Phone (international, E.164)",
+        "description": "A plus sign, the country code and up to 15 digits in total, with no spaces."
+      },
+      "phone-es": {
+        "name": "Spanish phone",
+        "description": "Nine digits starting with 6, 7, 8 or 9, with an optional +34 prefix and spaces or hyphens."
+      },
+      "postal-es": {
+        "name": "Spanish postal code",
+        "description": "Five digits whose first two (01–52) are a valid province."
+      },
+      "password": {
+        "name": "Strong password",
+        "description": "At least 12 characters with a lower-case letter, an upper-case letter, a digit and a symbol, using lookaheads."
+      },
+      "date-iso": {
+        "name": "Date (ISO, YYYY-MM-DD)",
+        "description": "Year, month 01–12 and day 01–31. It does not know that February has 28 or 29 days."
+      },
+      "date-eu": {
+        "name": "Date (DD/MM/YYYY)",
+        "description": "Day, month and year with slashes, as used in Europe and Latin America."
+      },
+      "time": { "name": "Time (HH:MM[:SS])", "description": "24-hour time with optional seconds." },
+      "hex-color": { "name": "Hex colour", "description": "CSS hexadecimal colour with 3, 4, 6 or 8 digits." },
+      "ipv4": {
+        "name": "IPv4 address",
+        "description": "Four numbers from 0 to 255 separated by dots, without leading zeros."
+      },
+      "slug": { "name": "URL slug", "description": "Lower-case letters and digits separated by single hyphens." },
+      "uuid": { "name": "UUID", "description": "A UUID of version 1 to 8 with the RFC 9562 variant." },
+      "username": {
+        "name": "Username",
+        "description": "3 to 16 characters: letters, digits and underscores, starting with a letter."
+      }
+    }
+  },
+  "es": {
+    "name": "Regex comunes",
+    "short": "Patrones listos y explicados: email, URL, DNI/NIE, IBAN, teléfono…",
+    "title": "Regex comunes: email, URL, DNI, IBAN, teléfono, contraseña",
+    "description": "Biblioteca de expresiones regulares listas y explicadas: email, URL, DNI y NIE, IBAN, teléfonos, códigos postales, contraseñas seguras, fechas, colores hex, IPv4 y más, cada una con ejemplos. Abre cualquiera en el Tester o el Builder.",
+    "h1": "Expresiones regulares comunes",
+    "lead": "Elige un patrón, revisa sus ejemplos y cópialo para tu lenguaje o framework.",
+    "patterns_title": "Patrones",
+    "search": "Buscar patrones…",
+    "noResults": "Ningún patrón coincide con tu búsqueda.",
+    "openTester": "Abrir en el Tester",
+    "openBuilder": "Abrir en el Builder",
+    "export": "Copiar para",
+    "examples": "Ejemplos (válidos y no válidos)",
+    "explanation": "Explicación",
+    "patterns": {
+      "email": {
+        "name": "Email",
+        "description": "Una comprobación práctica de email: nombre, @, dominio y un dominio de primer nivel de al menos dos letras. Confirma la dirección enviando un correo."
+      },
+      "url": {
+        "name": "URL (http/https)",
+        "description": "Una URL absoluta http o https con puerto, ruta, query string y fragmento opcionales."
+      },
+      "dni": {
+        "name": "DNI",
+        "description": "Ocho dígitos y la letra de control. La regex comprueba el formato; la letra debe además corresponder al número módulo 23."
+      },
+      "nie": { "name": "NIE", "description": "X, Y o Z, siete dígitos y la letra de control." },
+      "iban": {
+        "name": "IBAN",
+        "description": "Código de país, dos dígitos de control y hasta 30 caracteres alfanuméricos, con o sin espacios cada cuatro. Valida el dígito de control aparte."
+      },
+      "phone-intl": {
+        "name": "Teléfono internacional (E.164)",
+        "description": "Un signo más, el prefijo del país y hasta 15 dígitos en total, sin espacios."
+      },
+      "phone-es": {
+        "name": "Teléfono español",
+        "description": "Nueve dígitos que empiezan por 6, 7, 8 o 9, con prefijo +34 opcional y espacios o guiones."
+      },
+      "postal-es": {
+        "name": "Código postal español",
+        "description": "Cinco dígitos cuyos dos primeros (01–52) son una provincia válida."
+      },
+      "password": {
+        "name": "Contraseña segura",
+        "description": "Al menos 12 caracteres con una minúscula, una mayúscula, un dígito y un símbolo, usando lookaheads."
+      },
+      "date-iso": {
+        "name": "Fecha (ISO, AAAA-MM-DD)",
+        "description": "Año, mes 01–12 y día 01–31. No sabe que febrero tiene 28 o 29 días."
+      },
+      "date-eu": {
+        "name": "Fecha (DD/MM/AAAA)",
+        "description": "Día, mes y año con barras, como se usa en Europa y Latinoamérica."
+      },
+      "time": { "name": "Hora (HH:MM[:SS])", "description": "Hora en formato de 24 horas con segundos opcionales." },
+      "hex-color": { "name": "Color hexadecimal", "description": "Color CSS hexadecimal de 3, 4, 6 u 8 dígitos." },
+      "ipv4": {
+        "name": "Dirección IPv4",
+        "description": "Cuatro números de 0 a 255 separados por puntos, sin ceros a la izquierda."
+      },
+      "slug": { "name": "Slug de URL", "description": "Minúsculas y dígitos separados por guiones simples." },
+      "uuid": { "name": "UUID", "description": "Un UUID de versión 1 a 8 con la variante del RFC 9562." },
+      "username": {
+        "name": "Nombre de usuario",
+        "description": "De 3 a 16 caracteres: letras, dígitos y guiones bajos, empezando por una letra."
+      }
+    }
+  },
+  "fr": {
+    "name": "Regex courantes",
+    "short": "Motifs prêts et expliqués : e-mail, URL, IBAN, téléphone…",
+    "title": "Regex courantes : e-mail, URL, IBAN, téléphone, mot de passe",
+    "description": "Une bibliothèque d'expressions régulières prêtes et expliquées : e-mail, URL, IBAN, téléphones, codes postaux, mots de passe, dates, couleurs, IPv4 et plus, avec exemples.",
+    "h1": "Expressions régulières courantes",
+    "lead": "Choisissez un motif, vérifiez ses exemples et copiez-le."
+  },
+  "pt": {
+    "name": "Regex comuns",
+    "short": "Padrões prontos e explicados: e-mail, URL, IBAN, telefone…",
+    "title": "Regex comuns: e-mail, URL, IBAN, telefone, senha",
+    "description": "Uma biblioteca de expressões regulares prontas e explicadas: e-mail, URL, IBAN, telefones, códigos postais, senhas, datas, cores, IPv4 e mais, com exemplos.",
+    "h1": "Expressões regulares comuns",
+    "lead": "Escolha um padrão, confira os exemplos e copie-o."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "Text Diff",
+    "short": "Compare two texts or code side by side, with changes highlighted by line and word.",
+    "title": "Text and code diff online: compare side by side",
+    "description": "Compare two texts or code snippets side by side or inline, with the differences highlighted by line and by word. Ignore whitespace or case, hide unchanged lines and copy the result as a unified patch. Large texts are compared in a background worker. 100% in your browser.",
+    "h1": "Text Diff",
+    "lead": "Paste the original and the modified version to see exactly what changed.",
+    "original": "Original",
+    "modified": "Modified",
+    "differences": "Differences",
+    "view": "View",
+    "split": "Side by side",
+    "inline": "Inline",
+    "ignoreWhitespace": "Ignore whitespace",
+    "ignoreCase": "Ignore case",
+    "onlyChanges": "Only changes",
+    "placeholder": "Paste text…",
+    "hidden": "{count, plural, one {# unchanged line} other {# unchanged lines}}",
+    "identical": "Both texts are identical.",
+    "summary": "{added, plural, one {# line added} other {# lines added}}, {removed, plural, one {# removed} other {# removed}}"
+  },
+  "es": {
+    "name": "Comparar textos",
+    "short": "Compara dos textos o fragmentos de código lado a lado, con los cambios resaltados por línea y palabra.",
+    "title": "Comparar textos y código online (diff lado a lado)",
+    "description": "Compara dos textos o fragmentos de código lado a lado o en línea, con las diferencias resaltadas por línea y por palabra. Ignora espacios o mayúsculas, oculta las líneas sin cambios y copia el resultado como un parche unificado. Los textos grandes se comparan en un worker en segundo plano. 100% en tu navegador.",
+    "h1": "Comparar textos (diff)",
+    "lead": "Pega el original y la versión modificada para ver exactamente qué ha cambiado.",
+    "original": "Original",
+    "modified": "Modificado",
+    "differences": "Diferencias",
+    "view": "Vista",
+    "split": "Lado a lado",
+    "inline": "En línea",
+    "ignoreWhitespace": "Ignorar espacios",
+    "ignoreCase": "Ignorar mayúsculas",
+    "onlyChanges": "Solo cambios",
+    "placeholder": "Pega texto…",
+    "hidden": "{count, plural, one {# línea sin cambios} other {# líneas sin cambios}}",
+    "identical": "Los dos textos son idénticos.",
+    "summary": "{added, plural, one {# línea añadida} other {# líneas añadidas}}, {removed, plural, one {# eliminada} other {# eliminadas}}"
+  },
+  "fr": {
+    "name": "Comparer des textes",
+    "short": "Comparez deux textes ou extraits de code côte à côte.",
+    "title": "Comparer des textes et du code en ligne (diff)",
+    "description": "Comparez deux textes ou extraits de code côte à côte ou en ligne, avec les différences surlignées par ligne et par mot. Export en patch unifié. 100 % dans votre navigateur.",
+    "h1": "Comparer des textes (diff)",
+    "lead": "Collez l'original et la version modifiée."
+  },
+  "pt": {
+    "name": "Comparar textos",
+    "short": "Compare dois textos ou trechos de código lado a lado.",
+    "title": "Comparar textos e código online (diff)",
+    "description": "Compare dois textos ou trechos de código lado a lado ou em linha, com as diferenças destacadas por linha e por palavra. Exporte como patch unificado. 100% no seu navegador.",
+    "h1": "Comparar textos (diff)",
+    "lead": "Cole o original e a versão modificada."
+  }
+}

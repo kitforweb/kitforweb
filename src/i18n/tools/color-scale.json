@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "Color Scale Generator",
+    "short": "Generate a Tailwind-style 50–950 palette from one color.",
+    "title": "Color scale generator: Tailwind 50–950 palette from one color",
+    "description": "Generate a full 50–950 color scale in Tailwind style from a single base color, computed in OKLCH so every step looks evenly spaced. Your color is kept unchanged on its closest step. Export as CSS variables, SCSS or a Tailwind v3/v4 theme.",
+    "h1": "Color Scale Generator",
+    "lead": "Start from your brand color and get eleven shades ready for backgrounds, borders and text.",
+    "base": "Base color",
+    "export": "Export",
+    "name": "Name",
+    "format": "Format",
+    "space": "Color space",
+    "invalid": "This is not a valid CSS color.",
+    "input": "your color",
+    "how": "Lightness and chroma follow Tailwind's own palettes in OKLCH; the hue of your color is kept on every step.",
+    "hint": "Type or pick a base color to generate the scale."
+  },
+  "es": {
+    "name": "Generador de escala de colores",
+    "short": "Genera una paleta 50–950 al estilo Tailwind a partir de un color.",
+    "title": "Generador de escala de colores: paleta Tailwind 50–950 desde un color",
+    "description": "Genera una escala de colores completa 50–950 al estilo de Tailwind a partir de un solo color base, calculada en OKLCH para que cada paso se vea equiespaciado. Tu color se mantiene sin cambios en su paso más cercano. Exporta como variables CSS, SCSS o tema de Tailwind v3/v4.",
+    "h1": "Generador de escala de colores",
+    "lead": "Parte del color de tu marca y obtén once tonos listos para fondos, bordes y texto.",
+    "base": "Color base",
+    "export": "Exportar",
+    "name": "Nombre",
+    "format": "Formato",
+    "space": "Espacio de color",
+    "invalid": "No es un color CSS válido.",
+    "input": "tu color",
+    "how": "La luminosidad y el croma siguen las paletas de Tailwind en OKLCH; el tono de tu color se mantiene en todos los pasos.",
+    "hint": "Escribe o elige un color base para generar la escala."
+  },
+  "fr": {
+    "name": "Générateur de palette",
+    "short": "Générez une palette 50–950 style Tailwind à partir d'une couleur.",
+    "title": "Générateur de palette de couleurs Tailwind 50–950",
+    "description": "Générez une palette complète 50–950 style Tailwind à partir d'une couleur, calculée en OKLCH. Export en variables CSS ou thème Tailwind.",
+    "h1": "Générateur de palette de couleurs",
+    "lead": "Partez de la couleur de votre marque."
+  },
+  "pt": {
+    "name": "Gerador de escala de cores",
+    "short": "Gere uma paleta 50–950 estilo Tailwind a partir de uma cor.",
+    "title": "Gerador de escala de cores Tailwind 50–950",
+    "description": "Gere uma paleta completa 50–950 estilo Tailwind a partir de uma cor, calculada em OKLCH. Exporte em variáveis CSS ou tema Tailwind.",
+    "h1": "Gerador de escala de cores",
+    "lead": "Parta da cor da sua marca."
+  }
+}

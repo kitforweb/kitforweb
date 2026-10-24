@@ -1,0 +1,40 @@
+{
+  "en": {
+    "name": "Punycode",
+    "short": "Convert domains with accents or non-Latin characters to xn-- and back.",
+    "title": "Punycode converter: IDN domains to ASCII (xn--) and back",
+    "description": "Convert international domain names with accents, ñ or non-Latin scripts to their ASCII Punycode form (xn--…) and back. Works with emails and full URLs, one per line. 100% in your browser.",
+    "h1": "Punycode converter",
+    "lead": "One domain, email or URL per line. Only the host is converted.",
+    "unicode": "Unicode",
+    "placeholder": "españa.com\nmünchen.de",
+    "lineErrors": "Could not convert line(s): {lines}"
+  },
+  "es": {
+    "name": "Punycode",
+    "short": "Convierte dominios con tildes, ñ o caracteres no latinos a xn-- y al revés.",
+    "title": "Convertir dominios a Punycode (xn--) y al revés",
+    "description": "Convierte dominios internacionales con tildes, ñ o alfabetos no latinos a su forma ASCII en Punycode (xn--…) y al revés. Funciona con emails y URLs completas, una por línea. 100% en tu navegador.",
+    "h1": "Conversor Punycode",
+    "lead": "Un dominio, email o URL por línea. Solo se convierte el host.",
+    "unicode": "Unicode",
+    "placeholder": "españa.com\nmünchen.de",
+    "lineErrors": "No se han podido convertir las líneas: {lines}"
+  },
+  "fr": {
+    "name": "Punycode",
+    "short": "Convertissez les domaines accentués ou non latins en xn-- et inversement.",
+    "title": "Convertisseur Punycode : domaines IDN vers ASCII (xn--)",
+    "description": "Convertissez les noms de domaine internationaux en Punycode (xn--…) et inversement, avec e-mails et URL. 100 % dans votre navigateur.",
+    "h1": "Convertisseur Punycode",
+    "lead": "Un domaine, e-mail ou URL par ligne."
+  },
+  "pt": {
+    "name": "Punycode",
+    "short": "Converta domínios com acentos ou caracteres não latinos em xn-- e vice-versa.",
+    "title": "Conversor Punycode: domínios IDN para ASCII (xn--)",
+    "description": "Converta nomes de domínio internacionais em Punycode (xn--…) e vice-versa, com e-mails e URLs. 100% no seu navegador.",
+    "h1": "Conversor Punycode",
+    "lead": "Um domínio, e-mail ou URL por linha."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "Color Converter",
+    "short": "Convert colors between HEX, RGB, HSL, OKLCH and CSS names.",
+    "title": "Color converter: HEX, RGB, HSL and OKLCH online",
+    "description": "Convert any CSS color between HEX, RGB, HSL, OKLCH and its CSS name, with a visual picker. Shows the closest named color and warns when a color is outside the sRGB gamut. 100% in your browser.",
+    "h1": "Color Converter",
+    "lead": "Paste a color in any CSS format, or pick one, and copy it in the format you need.",
+    "color": "Color",
+    "formats": "Formats",
+    "accepts": "HEX (with or without #), rgb(), hsl(), hwb(), lab(), oklch(), color() or a CSS name.",
+    "invalid": "This is not a valid CSS color.",
+    "swatch": "Color preview",
+    "hint": "Type or pick a color to see it in every format.",
+    "name": "Name",
+    "nearest": "closest: {name}",
+    "outOfGamut": "This color is outside sRGB: screens that cannot show it use the closest color, and HEX, RGB and HSL show that fallback."
+  },
+  "es": {
+    "name": "Conversor de colores",
+    "short": "Convierte colores entre HEX, RGB, HSL, OKLCH y nombres CSS.",
+    "title": "Conversor de colores: HEX, RGB, HSL y OKLCH online",
+    "description": "Convierte cualquier color CSS entre HEX, RGB, HSL, OKLCH y su nombre CSS, con selector visual. Muestra el color con nombre más cercano y avisa cuando un color está fuera de la gama sRGB. 100% en tu navegador.",
+    "h1": "Conversor de colores",
+    "lead": "Pega un color en cualquier formato CSS, o elígelo, y cópialo en el formato que necesites.",
+    "color": "Color",
+    "formats": "Formatos",
+    "accepts": "HEX (con o sin #), rgb(), hsl(), hwb(), lab(), oklch(), color() o un nombre CSS.",
+    "invalid": "No es un color CSS válido.",
+    "swatch": "Vista previa del color",
+    "hint": "Escribe o elige un color para verlo en todos los formatos.",
+    "name": "Nombre",
+    "nearest": "más cercano: {name}",
+    "outOfGamut": "Este color está fuera de sRGB: las pantallas que no pueden mostrarlo usan el más parecido, y HEX, RGB y HSL muestran ese sustituto."
+  },
+  "fr": {
+    "name": "Convertisseur de couleurs",
+    "short": "Convertissez des couleurs entre HEX, RGB, HSL, OKLCH et noms CSS.",
+    "title": "Convertisseur de couleurs HEX, RGB, HSL et OKLCH en ligne",
+    "description": "Convertissez une couleur CSS entre HEX, RGB, HSL, OKLCH et son nom CSS, avec un sélecteur visuel. 100 % dans votre navigateur.",
+    "h1": "Convertisseur de couleurs",
+    "lead": "Collez une couleur dans n'importe quel format."
+  },
+  "pt": {
+    "name": "Conversor de cores",
+    "short": "Converta cores entre HEX, RGB, HSL, OKLCH e nomes CSS.",
+    "title": "Conversor de cores HEX, RGB, HSL e OKLCH online",
+    "description": "Converta qualquer cor CSS entre HEX, RGB, HSL, OKLCH e seu nome CSS, com seletor visual. 100% no seu navegador.",
+    "h1": "Conversor de cores",
+    "lead": "Cole uma cor em qualquer formato."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "en": {
+    "name": "Unicode",
+    "short": "See the code point, escapes and UTF-8 bytes of every character.",
+    "title": "Unicode inspector: code points, escapes and invisible characters",
+    "description": "See the Unicode code point of every character, its escapes (\\u00E9, \\u'{'1F600'}', &#xE9;) and its UTF-8 bytes. Finds invisible characters such as zero-width spaces, BOM or bidi controls and removes them. 100% in your browser.",
+    "h1": "Unicode inspector",
+    "lead": "Paste any text to inspect it character by character and hunt down invisible or strange characters.",
+    "text": "Text",
+    "characters": "Characters",
+    "placeholder": "Paste text with emoji, accents or something that “looks wrong”…",
+    "stats": {
+      "graphemes": "Visible characters",
+      "codePoints": "Code points",
+      "units": "UTF-16 units (.length)",
+      "bytes": "UTF-8 bytes"
+    },
+    "invisibleFound": "{count, plural, one {# invisible character} other {# invisible characters}}",
+    "copyClean": "Copy without invisible characters",
+    "copyEscaped": "Copy escaped for JS",
+    "char": "Char",
+    "codePoint": "Code point",
+    "category": "Name / category",
+    "categories": {
+      "letter": "Letter",
+      "mark": "Combining mark",
+      "number": "Number",
+      "punctuation": "Punctuation",
+      "symbol": "Symbol",
+      "space": "Space",
+      "control": "Control",
+      "format": "Format (invisible)",
+      "other": "Other"
+    },
+    "truncated": "Only the first {max} characters are shown."
+  },
+  "es": {
+    "name": "Unicode",
+    "short": "Muestra el código Unicode, los escapes y los bytes UTF-8 de cada carácter.",
+    "title": "Inspector Unicode: códigos, escapes y caracteres invisibles",
+    "description": "Mira el código Unicode de cada carácter, sus escapes (\\u00E9, \\u'{'1F600'}', &#xE9;) y sus bytes UTF-8. Encuentra caracteres invisibles como espacios de ancho cero, BOM o controles bidireccionales y elimínalos. 100% en tu navegador.",
+    "h1": "Inspector Unicode",
+    "lead": "Pega cualquier texto para inspeccionarlo carácter a carácter y dar con los caracteres invisibles o raros.",
+    "text": "Texto",
+    "characters": "Caracteres",
+    "placeholder": "Pega un texto con emojis, tildes o algo que “se ve raro”…",
+    "stats": {
+      "graphemes": "Caracteres visibles",
+      "codePoints": "Puntos de código",
+      "units": "Unidades UTF-16 (.length)",
+      "bytes": "Bytes UTF-8"
+    },
+    "invisibleFound": "{count, plural, one {# carácter invisible} other {# caracteres invisibles}}",
+    "copyClean": "Copiar sin caracteres invisibles",
+    "copyEscaped": "Copiar escapado para JS",
+    "char": "Carácter",
+    "codePoint": "Código",
+    "category": "Nombre / categoría",
+    "categories": {
+      "letter": "Letra",
+      "mark": "Marca combinable",
+      "number": "Número",
+      "punctuation": "Puntuación",
+      "symbol": "Símbolo",
+      "space": "Espacio",
+      "control": "Control",
+      "format": "Formato (invisible)",
+      "other": "Otro"
+    },
+    "truncated": "Solo se muestran los primeros {max} caracteres."
+  },
+  "fr": {
+    "name": "Unicode",
+    "short": "Affichez le point de code, les échappements et les octets UTF-8 de chaque caractère.",
+    "title": "Inspecteur Unicode : points de code et caractères invisibles",
+    "description": "Affichez le point de code Unicode de chaque caractère, ses échappements et ses octets UTF-8. Trouvez les caractères invisibles (espaces de largeur nulle, BOM). 100 % dans votre navigateur.",
+    "h1": "Inspecteur Unicode",
+    "lead": "Collez un texte pour l'inspecter caractère par caractère."
+  },
+  "pt": {
+    "name": "Unicode",
+    "short": "Veja o code point, os escapes e os bytes UTF-8 de cada caractere.",
+    "title": "Inspetor Unicode: code points e caracteres invisíveis",
+    "description": "Veja o code point Unicode de cada caractere, seus escapes e bytes UTF-8. Encontre caracteres invisíveis como espaços de largura zero e BOM. 100% no seu navegador.",
+    "h1": "Inspetor Unicode",
+    "lead": "Cole um texto para inspecioná-lo caractere por caractere."
+  }
+}

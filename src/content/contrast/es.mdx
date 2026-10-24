@@ -1,0 +1,28 @@
+export const faq = [
+  {
+    q: "¿Qué diferencia hay entre AA y AAA?",
+    a: "AA es el nivel que exigen la mayoría de leyes y normativas: 4,5:1 para texto normal y 3:1 para texto grande. AAA es más estricto (7:1 y 4,5:1) y se recomienda para lectura larga o para usuarios con baja visión.",
+  },
+  {
+    q: "¿Qué se considera texto grande?",
+    a: "Texto de al menos 24px (18pt), o de al menos 18,66px (14pt) en negrita. Los encabezados suelen cumplirlo; el texto de párrafo no.",
+  },
+  {
+    q: "¿Cómo se elige el color sugerido?",
+    a: "Mantiene el tono y el croma de tu color de texto y solo cambia su luminosidad en OKLCH, más oscuro o más claro, lo mínimo para llegar al nivel. Así el color sigue pareciéndose al de tu marca.",
+  },
+];
+
+## ¿Qué hace?
+
+Comprueba la **relación de contraste** entre el color del texto y el de su fondo según **WCAG 2.2**, y te dice qué niveles cumple: **AA y AAA** para texto normal y grande, y **3:1 para componentes de interfaz** como iconos y bordes de campos.
+
+Cuando un nivel no se cumple, sugiere el **color más cercano que sí cumple**, con un botón para aplicarlo, para arreglar la accesibilidad sin rediseñar.
+
+## Relaciones mínimas
+
+| Contenido | AA | AAA |
+| --- | --- | --- |
+| Texto normal | 4,5:1 | 7:1 |
+| Texto grande | 3:1 | 4,5:1 |
+| Iconos, bordes de controles | 3:1 | — |

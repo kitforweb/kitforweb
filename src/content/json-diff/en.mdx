@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "Does key order matter?",
+    a: "No. Two objects with the same keys and values are equal even if the keys appear in a different order, which is how JSON is defined.",
+  },
+  {
+    q: "How are arrays compared?",
+    a: "Element by element, by index: items[2] in the original is compared with items[2] in the modified document. Extra elements are reported as added or removed.",
+  },
+  {
+    q: "Is 1 different from \"1\"?",
+    a: "Yes. A change of type is a change of value, so a number that became a string is reported as changed.",
+  },
+];
+
+## What does it do?
+
+It compares two JSON documents and lists every difference **by path**, such as `user.address.city` or `features[2]`, telling you whether the value was **added**, **removed** or **changed** — with the old and new value side by side.
+
+It is the quickest way to answer "what changed in this API response?" or "why does this config behave differently in production?".
+
+## How to use it
+
+1. Paste the **original** JSON in the top editor and the **modified** one below.
+2. The list of differences appears instantly, with a count of additions, removals and changes.
+3. Press **Swap** to reverse the comparison, or **Copy** to get the differences as JSON.
+
+## How paths are written
+
+| Path | Meaning |
+| --- | --- |
+| `version` | top-level key |
+| `user.address.city` | nested object |
+| `features[2]` | third element of an array |
+| `headers["content-type"]` | key with characters that need quotes |
+
+If either side is not valid JSON, the tool tells you which one and where the error is.

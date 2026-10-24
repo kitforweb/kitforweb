@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Importa el orden de las claves?",
+    a: "No. Dos objetos con las mismas claves y valores son iguales aunque las claves aparezcan en otro orden, que es como está definido JSON.",
+  },
+  {
+    q: "¿Cómo se comparan los arrays?",
+    a: "Elemento a elemento, por índice: items[2] del original se compara con items[2] del modificado. Los elementos de más aparecen como añadidos o eliminados.",
+  },
+  {
+    q: "¿Es distinto 1 que \"1\"?",
+    a: "Sí. Un cambio de tipo es un cambio de valor, así que un número que pasa a ser texto aparece como modificado.",
+  },
+];
+
+## ¿Qué hace?
+
+Compara dos documentos JSON y enumera cada diferencia **por ruta**, como `user.address.city` o `features[2]`, indicando si el valor se ha **añadido**, **eliminado** o **modificado**, con el valor antiguo y el nuevo uno al lado del otro.
+
+Es la forma más rápida de responder a "¿qué ha cambiado en esta respuesta de la API?" o "¿por qué esta configuración se comporta distinto en producción?".
+
+## Cómo se usa
+
+1. Pega el JSON **original** en el editor de arriba y el **modificado** debajo.
+2. La lista de diferencias aparece al instante, con el recuento de añadidos, eliminados y modificados.
+3. Pulsa **Intercambiar** para invertir la comparación o **Copiar** para obtener las diferencias en JSON.
+
+## Cómo se escriben las rutas
+
+| Ruta | Significado |
+| --- | --- |
+| `version` | clave de primer nivel |
+| `user.address.city` | objeto anidado |
+| `features[2]` | tercer elemento de un array |
+| `headers["content-type"]` | clave con caracteres que necesitan comillas |
+
+Si alguno de los dos no es un JSON válido, la herramienta te dice cuál y dónde está el error.

@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Cómo obtengo el certificado de una web?",
+    a: "Ejecuta openssl s_client -connect example.com:443 -showcerts y copia los bloques BEGIN/END CERTIFICATE, o expórtalo desde el candado de la barra de direcciones del navegador.",
+  },
+  {
+    q: "¿Por qué no basta con el Common Name?",
+    a: "Los navegadores ignoran el CN y solo confían en la lista Subject Alternative Name (SAN). Un certificado vale para un dominio solo si ese dominio, o un comodín que lo cubra, aparece en el SAN.",
+  },
+  {
+    q: "¿Es seguro pegar aquí un certificado?",
+    a: "Los certificados son públicos, y además esta herramienta los decodifica en tu navegador. Nunca pegues una clave privada en una herramienta online que no controles.",
+  },
+];
+
+## ¿Qué hace?
+
+Decodifica **certificados X.509** en formato PEM —los que usan HTTPS, mTLS y la firma de código— y muestra:
+
+- **Sujeto** y **emisor**, y si el certificado es autofirmado o de una CA.
+- Los **dominios** que cubre (Subject Alternative Names) y las direcciones IP.
+- Las fechas de **validez**, con aviso si ha caducado o caduca en menos de 30 días.
+- Los algoritmos de **clave pública** y de **firma**, el tamaño de la clave y su uso.
+- Las huellas **SHA-256** y **SHA-1**, para fijar o comparar certificados.
+
+Pega una **cadena** completa (hoja, intermedios, raíz) y cada certificado aparece en orden.
+
+## Equivalente en línea de comandos
+
+```bash
+openssl x509 -in cert.pem -noout -text
+openssl x509 -in cert.pem -noout -fingerprint -sha256
+```

@@ -1,0 +1,58 @@
+{
+  "en": {
+    "name": "Favicon Generator",
+    "short": "Generate favicon.ico, Apple and PWA icons, the manifest and the tags from one image.",
+    "title": "Favicon generator: ICO, apple-touch-icon, PWA and manifest",
+    "description": "Upload a logo and get every icon a modern site needs: favicon.ico (16, 32, 48), favicon.svg, apple-touch-icon 180, PWA icons 192 and 512 plus a maskable one, the site.webmanifest and the link tags. Download everything as a ZIP. Your image never leaves your browser.",
+    "h1": "Favicon Generator",
+    "lead": "One image in, the complete set of icons and the HTML tags out.",
+    "source": "Image",
+    "icons": "Icons",
+    "choose": "Choose an image",
+    "chooseHint": "SVG or a square PNG of at least 512px works best.",
+    "padding": "Padding",
+    "background": "Background (Apple and maskable icons)",
+    "theme": "Theme color",
+    "name": "App name",
+    "hint": "Choose or drop an image to generate the icons.",
+    "generating": "Generating icons…",
+    "unreadable": "This image could not be read.",
+    "tags": "Tags for the head"
+  },
+  "es": {
+    "name": "Generador de favicon",
+    "short": "Genera favicon.ico, iconos de Apple y PWA, el manifest y las etiquetas a partir de una imagen.",
+    "title": "Generador de favicon: ICO, apple-touch-icon, PWA y manifest",
+    "description": "Sube un logo y obtén todos los iconos que necesita una web moderna: favicon.ico (16, 32, 48), favicon.svg, apple-touch-icon 180, iconos PWA 192 y 512 más uno maskable, el site.webmanifest y las etiquetas link. Descárgalo todo en un ZIP. Tu imagen nunca sale de tu navegador.",
+    "h1": "Generador de favicon",
+    "lead": "Una imagen de entrada; el juego completo de iconos y las etiquetas HTML de salida.",
+    "source": "Imagen",
+    "icons": "Iconos",
+    "choose": "Elige una imagen",
+    "chooseHint": "Funciona mejor un SVG o un PNG cuadrado de al menos 512px.",
+    "padding": "Margen",
+    "background": "Fondo (iconos de Apple y maskable)",
+    "theme": "Color del tema",
+    "name": "Nombre de la app",
+    "hint": "Elige o suelta una imagen para generar los iconos.",
+    "generating": "Generando iconos…",
+    "unreadable": "No se ha podido leer esta imagen.",
+    "tags": "Etiquetas para el head"
+  },
+  "fr": {
+    "name": "Générateur de favicon",
+    "short": "Générez favicon.ico, icônes Apple et PWA et le manifest à partir d'une image.",
+    "title": "Générateur de favicon : ICO, apple-touch-icon, PWA",
+    "description": "Importez un logo et obtenez favicon.ico, apple-touch-icon, icônes PWA, le manifest et les balises. Téléchargement en ZIP. 100 % dans votre navigateur.",
+    "h1": "Générateur de favicon",
+    "lead": "Une image, tous les icônes."
+  },
+  "pt": {
+    "name": "Gerador de favicon",
+    "short": "Gere favicon.ico, ícones Apple e PWA e o manifest a partir de uma imagem.",
+    "title": "Gerador de favicon: ICO, apple-touch-icon, PWA",
+    "description": "Envie um logo e obtenha favicon.ico, apple-touch-icon, ícones PWA, o manifest e as tags. Baixe em ZIP. 100% no seu navegador.",
+    "h1": "Gerador de favicon",
+    "lead": "Uma imagem, todos os ícones."
+  }
+}

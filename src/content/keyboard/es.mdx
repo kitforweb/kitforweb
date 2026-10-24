@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "¿Qué diferencia hay entre event.key y event.code?",
+    a: "event.key es el carácter o la acción que se produce y depende de la distribución del teclado y de Shift: en un teclado AZERTY francés la tecla junto al Tab da a. event.code es la posición física, siempre KeyQ para esa tecla. Usa key para atajos de texto (Ctrl+S) y code para juegos o controles por posición (WASD).",
+  },
+  {
+    q: "¿Debo seguir usando keyCode?",
+    a: "No. keyCode y which están obsoletos y son inconsistentes entre navegadores y distribuciones. Se muestran solo para ayudar a mantener código antiguo.",
+  },
+  {
+    q: "¿Por qué Ctrl+W o Cmd+Q siguen cerrando la pestaña?",
+    a: "Algunos atajos están reservados por el navegador o el sistema operativo y nunca llegan a la página, aunque actives Bloquear atajos del navegador.",
+  },
+];
+
+## ¿Qué hace?
+
+Pulsa cualquier tecla o combinación dentro del recuadro y muestra las propiedades del **evento keydown**: `event.key`, `event.code`, el obsoleto `keyCode`, la **posición** (Shift izquierdo o derecho, teclado numérico) y el estado de las **teclas modificadoras**.
+
+También escribe un **listener listo para pegar** para ese atajo, que compara `key` sin distinguir mayúsculas para que funcione con Shift y con cualquier distribución.
+
+## Ejemplo
+
+Al pulsar Ctrl+Shift+K se obtiene:
+
+| Propiedad | Valor |
+| --- | --- |
+| event.key | "K" |
+| event.code | "KeyK" |
+| event.keyCode | 75 |
+| ctrlKey, shiftKey | true |

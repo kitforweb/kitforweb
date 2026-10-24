@@ -1,0 +1,43 @@
+export const faq = [
+  {
+    q: "Why use Zod instead of plain TypeScript types?",
+    a: "TypeScript types disappear at runtime. A Zod schema actually checks the data you receive from an API, a form or localStorage, and gives you the TypeScript type for free with z.infer.",
+  },
+  {
+    q: "Which Zod version does the output target?",
+    a: "The schema uses the standard z.object, z.array, z.union and .optional() APIs available in Zod 3 and Zod 4, imported as import * as z from \"zod\".",
+  },
+  {
+    q: "Can I add stricter rules like email or min length?",
+    a: "Yes. The generated schema is a starting point: chain refinements such as .email(), .min(1) or .int() on the fields that need them.",
+  },
+];
+
+## What does it do?
+
+It turns a **JSON sample** into a **[Zod](https://zod.dev) schema** that validates data with the same shape, plus the TypeScript type inferred from it. Optional fields, nulls and unions are detected from your sample.
+
+## How to use it
+
+1. Paste a JSON object or an array of objects (several examples give better results).
+2. Name the schema: `Task` produces `TaskSchema` and `type Task`.
+3. Copy the code and refine it with Zod's validators.
+
+## Example
+
+```ts
+import * as z from "zod";
+
+export const TaskSchema = z.object({
+  "title": z.string(),
+  "done": z.boolean(),
+  "dueDate": z.null(),
+});
+export type Task = z.infer<typeof TaskSchema>;
+
+const task = TaskSchema.parse(await res.json()); // throws if the API changed
+```
+
+## When the root is an array
+
+If your sample is an array, the tool generates the schema for one element and an extra `z.array(...)` schema for the whole list.

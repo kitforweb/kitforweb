@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "Hash",
+    "short": "MD5, SHA-1, SHA-256, SHA-384 and SHA-512 of a text or file at once.",
+    "title": "Hash generator: MD5, SHA-1, SHA-256, SHA-512 online",
+    "description": "Calculate the MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hash of a text or a file at once, in hex or Base64, and compare it with an expected checksum to verify a download. 100% in your browser.",
+    "h1": "Hash generator",
+    "lead": "Get every common hash of a text or file at once, and check a download against its published checksum.",
+    "input": "Text",
+    "hashes": "Hashes",
+    "encoding": "Output encoding",
+    "hashFile": "Hash a file",
+    "placeholder": "Type or paste text, or drop a file with the button above…",
+    "expected": "Expected hash (optional)",
+    "matches": "Matches the {algorithm} hash",
+    "noMatch": "Does not match any of the hashes",
+    "weak": "Not collision-resistant: fine for checksums, not for security."
+  },
+  "es": {
+    "name": "Hash",
+    "short": "MD5, SHA-1, SHA-256, SHA-384 y SHA-512 de un texto o archivo a la vez.",
+    "title": "Generador de hash: MD5, SHA-1, SHA-256, SHA-512 online",
+    "description": "Calcula el hash MD5, SHA-1, SHA-256, SHA-384 y SHA-512 de un texto o un archivo a la vez, en hex o Base64, y compáralo con un checksum esperado para verificar una descarga. 100% en tu navegador.",
+    "h1": "Generador de hash",
+    "lead": "Obtén todos los hashes habituales de un texto o archivo a la vez y comprueba una descarga contra su checksum publicado.",
+    "input": "Texto",
+    "hashes": "Hashes",
+    "encoding": "Codificación de salida",
+    "hashFile": "Calcular de un archivo",
+    "placeholder": "Escribe o pega un texto, o elige un archivo con el botón de arriba…",
+    "expected": "Hash esperado (opcional)",
+    "matches": "Coincide con el hash {algorithm}",
+    "noMatch": "No coincide con ninguno de los hashes",
+    "weak": "No resiste colisiones: vale para checksums, no para seguridad."
+  },
+  "fr": {
+    "name": "Hash",
+    "short": "MD5, SHA-1, SHA-256, SHA-384 et SHA-512 d'un texte ou fichier en une fois.",
+    "title": "Générateur de hash : MD5, SHA-1, SHA-256, SHA-512 en ligne",
+    "description": "Calculez les hash MD5, SHA-1, SHA-256, SHA-384 et SHA-512 d'un texte ou d'un fichier et comparez-les à une somme de contrôle. 100 % dans votre navigateur.",
+    "h1": "Générateur de hash",
+    "lead": "Tous les hash courants d'un texte ou d'un fichier en une fois."
+  },
+  "pt": {
+    "name": "Hash",
+    "short": "MD5, SHA-1, SHA-256, SHA-384 e SHA-512 de um texto ou arquivo de uma vez.",
+    "title": "Gerador de hash: MD5, SHA-1, SHA-256, SHA-512 online",
+    "description": "Calcule os hashes MD5, SHA-1, SHA-256, SHA-384 e SHA-512 de um texto ou arquivo e compare com um checksum esperado. 100% no seu navegador.",
+    "h1": "Gerador de hash",
+    "lead": "Todos os hashes comuns de um texto ou arquivo de uma vez."
+  }
+}

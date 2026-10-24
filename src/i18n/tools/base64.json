@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "Base64",
+    "short": "Encode and decode Base64 and Base64URL, text and files.",
+    "title": "Base64 encode and decode online (text and files)",
+    "description": "Encode and decode Base64 and Base64URL online, from text or files, with UTF-8 support, data URLs and image preview. Decoded binary files can be downloaded. 100% in your browser.",
+    "h1": "Base64 encoder and decoder",
+    "lead": "Encode text or a file to Base64, or decode Base64 back to text, an image or a file.",
+    "plain": "Text",
+    "mode": "Mode",
+    "encode": "Encode",
+    "decode": "Decode",
+    "encodeFile": "Encode a file",
+    "placeholderEncode": "Type or paste text to encode…",
+    "placeholderDecode": "Paste Base64, Base64URL or a data: URL…",
+    "errors": {
+      "alphabet": "It contains characters that are not valid in Base64.",
+      "length": "The length is not valid: some characters may be missing."
+    },
+    "binary": "Binary data",
+    "preview": "Decoded image"
+  },
+  "es": {
+    "name": "Base64",
+    "short": "Codifica y decodifica Base64 y Base64URL, de texto y archivos.",
+    "title": "Codificar y decodificar Base64 online (texto y archivos)",
+    "description": "Codifica y decodifica Base64 y Base64URL online, de texto o archivos, con soporte UTF-8, data URLs y vista previa de imágenes. Los archivos binarios decodificados se pueden descargar. 100% en tu navegador.",
+    "h1": "Codificar y decodificar Base64",
+    "lead": "Codifica un texto o un archivo en Base64, o decodifica Base64 a texto, imagen o archivo.",
+    "plain": "Texto",
+    "mode": "Modo",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "encodeFile": "Codificar un archivo",
+    "placeholderEncode": "Escribe o pega el texto a codificar…",
+    "placeholderDecode": "Pega Base64, Base64URL o una data: URL…",
+    "errors": {
+      "alphabet": "Contiene caracteres que no son válidos en Base64.",
+      "length": "La longitud no es válida: puede que falten caracteres."
+    },
+    "binary": "Datos binarios",
+    "preview": "Imagen decodificada"
+  },
+  "fr": {
+    "name": "Base64",
+    "short": "Encodez et décodez du Base64 et Base64URL, texte et fichiers.",
+    "title": "Encoder et décoder Base64 en ligne (texte et fichiers)",
+    "description": "Encodez et décodez Base64 et Base64URL en ligne, texte ou fichiers, avec UTF-8, data URL et aperçu des images. 100 % dans votre navigateur.",
+    "h1": "Encodeur et décodeur Base64",
+    "lead": "Encodez un texte ou un fichier en Base64, ou décodez du Base64."
+  },
+  "pt": {
+    "name": "Base64",
+    "short": "Codifique e decodifique Base64 e Base64URL, texto e arquivos.",
+    "title": "Codificar e decodificar Base64 online (texto e arquivos)",
+    "description": "Codifique e decodifique Base64 e Base64URL online, de texto ou arquivos, com UTF-8, data URLs e pré-visualização de imagens. 100% no seu navegador.",
+    "h1": "Codificador e decodificador Base64",
+    "lead": "Codifique um texto ou arquivo em Base64, ou decodifique Base64."
+  }
+}

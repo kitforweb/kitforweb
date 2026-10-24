@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "How long should a password be?",
+    a: "With a password manager, 20 or more random characters. Around 80 bits of entropy is strong for online accounts, and 128 bits is plenty for secrets that could be attacked offline.",
+  },
+  {
+    q: "Is it really random?",
+    a: "Yes. Characters are chosen with crypto.getRandomValues using rejection sampling, so every character in the pool has exactly the same probability, and the result is shuffled with Fisher–Yates.",
+  },
+  {
+    q: "What is the .env secret for?",
+    a: "For values such as SESSION_SECRET, JWT signing keys or webhook secrets. 32 random bytes (256 bits) in hex or Base64 is the usual size.",
+  },
+];
+
+## What does it do?
+
+It generates **secure random passwords** and **secrets** directly in your browser. Nothing is stored or sent, not even to analytics.
+
+- Choose the **length** (4 to 128) and the character sets: lower case, upper case, digits and symbols.
+- **Exclude ambiguous characters** such as `0`, `O`, `1`, `l` and `I` for passwords someone has to read or type.
+- See the **entropy** in bits and a strength rating.
+- Get a ready-to-paste `.env` line with a random secret in hex, Base64 or Base64URL.
+
+## Entropy
+
+Entropy measures how many guesses an attacker needs: `length × log2(pool size)`.
+
+| Password | Pool | Entropy |
+| --- | --- | --- |
+| 8 lower-case letters | 26 | 38 bits — weak |
+| 12 mixed characters | 88 | 77 bits — fair |
+| 20 mixed characters | 88 | 129 bits — very strong |

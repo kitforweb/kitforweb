@@ -1,0 +1,54 @@
+{
+  "en": {
+    "name": "OpenAPI Viewer",
+    "short": "Turn an OpenAPI/Swagger file into navigable docs, with errors marked.",
+    "title": "OpenAPI and Swagger viewer and validator online",
+    "description": "Paste or upload an OpenAPI 3 or Swagger 2.0 document (YAML or JSON) and browse it as documentation: endpoints by tag, parameters, request bodies and responses with resolved schemas. Spec problems such as broken references or undeclared path parameters are listed.",
+    "h1": "OpenAPI Viewer",
+    "lead": "Paste a spec to browse its endpoints and catch its mistakes, without uploading it anywhere.",
+    "placeholder": "openapi: 3.0.3\ninfo:\n  title: My API\n…",
+    "docs": "Documentation",
+    "issues": "Problems",
+    "valid": "No problems found in the specification.",
+    "search": "Filter endpoints…",
+    "untagged": "Other",
+    "parameters": "Parameters",
+    "requestBody": "Request body",
+    "responses": "Responses",
+    "schemas": "Schemas"
+  },
+  "es": {
+    "name": "OpenAPI Viewer",
+    "short": "Convierte un OpenAPI/Swagger en documentación navegable, con los errores marcados.",
+    "title": "Visor y validador de OpenAPI y Swagger online",
+    "description": "Pega o sube un documento OpenAPI 3 o Swagger 2.0 (YAML o JSON) y navégalo como documentación: endpoints por etiqueta, parámetros, cuerpos de petición y respuestas con los esquemas resueltos. Se enumeran los problemas de la especificación, como referencias rotas o parámetros de ruta sin declarar.",
+    "h1": "Visor de OpenAPI",
+    "lead": "Pega una especificación para recorrer sus endpoints y detectar sus errores, sin subirla a ningún sitio.",
+    "placeholder": "openapi: 3.0.3\ninfo:\n  title: Mi API\n…",
+    "docs": "Documentación",
+    "issues": "Problemas",
+    "valid": "No se han encontrado problemas en la especificación.",
+    "search": "Filtrar endpoints…",
+    "untagged": "Otros",
+    "parameters": "Parámetros",
+    "requestBody": "Cuerpo de la petición",
+    "responses": "Respuestas",
+    "schemas": "Esquemas"
+  },
+  "fr": {
+    "name": "OpenAPI Viewer",
+    "short": "Transformez un fichier OpenAPI/Swagger en documentation navigable.",
+    "title": "Visualiseur et validateur OpenAPI et Swagger en ligne",
+    "description": "Collez un document OpenAPI 3 ou Swagger 2.0 (YAML ou JSON) et parcourez-le comme une documentation, avec les erreurs de la spécification signalées. 100 % dans votre navigateur.",
+    "h1": "Visualiseur OpenAPI",
+    "lead": "Collez une spécification pour parcourir ses endpoints."
+  },
+  "pt": {
+    "name": "OpenAPI Viewer",
+    "short": "Transforme um arquivo OpenAPI/Swagger em documentação navegável.",
+    "title": "Visualizador e validador de OpenAPI e Swagger online",
+    "description": "Cole um documento OpenAPI 3 ou Swagger 2.0 (YAML ou JSON) e navegue como documentação, com os erros da especificação marcados. 100% no seu navegador.",
+    "h1": "Visualizador de OpenAPI",
+    "lead": "Cole uma especificação para navegar pelos endpoints."
+  }
+}

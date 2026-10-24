@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "How are nested objects converted to columns?",
+    a: "They are flattened with dot notation: { \"address\": { \"city\": \"London\" } } becomes a column called address.city. Arrays use the index, like tags.0 and tags.1. Converting back to JSON rebuilds the original structure.",
+  },
+  {
+    q: "Excel opens my CSV in a single column. What do I do?",
+    a: "Excel uses the list separator of your region: in many European locales it is the semicolon. Choose the semicolon as delimiter before downloading.",
+  },
+  {
+    q: "Are numbers and booleans kept when converting CSV to JSON?",
+    a: "Yes. Cells that look like numbers or true/false are typed automatically, and empty cells become null.",
+  },
+];
+
+## What does it do?
+
+It converts an **array of JSON objects to CSV** — ready to open in Excel, Google Sheets or Numbers — and **CSV back to JSON**. Rows with different keys are supported: the columns are the union of every key found.
+
+## How to use it
+
+1. Paste a JSON array on the left to get the CSV on the right.
+2. Pick the **delimiter**: comma, semicolon, tab or pipe.
+3. Press **Swap** to convert CSV to JSON. In this direction **Auto** detects the delimiter for you.
+
+## Example
+
+```json
+[{ "id": 1, "address": { "city": "London" }, "tags": ["a", "b"] }]
+```
+
+```csv
+id,address.city,tags.0,tags.1
+1,London,a,b
+```
+
+Values containing the delimiter, quotes or line breaks are quoted automatically, following RFC 4180.

@@ -1,0 +1,36 @@
+export const faq = [
+  {
+    q: "RSA, EC or Ed25519?",
+    a: "For new systems prefer EC P-256 (ES256) or Ed25519: smaller keys, faster signatures and equivalent security to RSA 3072. Choose RSA 2048+ when you need compatibility with older software.",
+  },
+  {
+    q: "What is the difference between PEM and JWK?",
+    a: "They hold the same key in different envelopes. PEM is Base64 DER between BEGIN/END lines, used by OpenSSL, nginx or Node. JWK is JSON, used by JWKS endpoints, OAuth and the jose libraries.",
+  },
+  {
+    q: "Can I use these keys in production?",
+    a: "They are generated with the browser's secure Web Crypto API, so they are real keys. For production, many teams still prefer generating them on the server or in a KMS so the private key never exists on a laptop.",
+  },
+];
+
+## What does it do?
+
+It has two modes:
+
+- **Generate** an **RSA** (2048, 3072 or 4096 bits), **elliptic curve** (P-256, P-384, P-521) or **Ed25519** key pair and export it as **PEM** (PKCS#8 private key, SPKI public key) and **JWK**.
+- **Convert** an existing key from PEM to JWK or from JWK to PEM. Public and private keys are both supported.
+
+## Generating the same keys with OpenSSL
+
+```bash
+openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:P-256 -out private.pem
+openssl pkey -in private.pem -pubout -out public.pem
+```
+
+## PEM headers
+
+| Header | Contents |
+| --- | --- |
+| `BEGIN PUBLIC KEY` | public key, SPKI |
+| `BEGIN PRIVATE KEY` | private key, PKCS#8 |
+| `BEGIN RSA PRIVATE KEY` | legacy PKCS#1 RSA key: convert it with `openssl pkcs8 -topk8 -nocrypt` |

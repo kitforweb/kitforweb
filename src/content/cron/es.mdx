@@ -1,0 +1,40 @@
+export const faq = [
+  {
+    q: "¿En qué zona horaria se ejecuta mi tarea cron?",
+    a: "En la de la máquina o el servicio que la ejecuta. La mayoría de servidores, contenedores y programadores en la nube (GitHub Actions, Vercel, AWS) usan UTC, así que cambia la herramienta a UTC para ver las horas reales.",
+  },
+  {
+    q: "¿Qué significa */15?",
+    a: "Cada 15 unidades de ese campo: en el campo de minutos, en los minutos 0, 15, 30 y 45. Es una forma abreviada de la lista 0,15,30,45.",
+  },
+  {
+    q: "¿Y si pongo a la vez día del mes y día de la semana?",
+    a: "En el cron clásico, la tarea se ejecuta cuando coincide cualquiera de los dos, no ambos. Por ejemplo, 0 9 1 * 1 se ejecuta el día 1 de cada mes y además todos los lunes.",
+  },
+];
+
+## ¿Qué hace?
+
+**Explica una expresión cron en lenguaje natural** —por ejemplo, `*/15 9-17 * * 1-5` pasa a ser «Cada 15 minutos, entre las 09:00 y las 17:59, de lunes a viernes»— y muestra las **10 próximas ejecuciones** en tu hora local o en UTC. También puedes **construir** una expresión campo a campo o partir de una plantilla.
+
+## Sintaxis de cron
+
+```
+┌───────── minuto (0–59)
+│ ┌─────── hora (0–23)
+│ │ ┌───── día del mes (1–31)
+│ │ │ ┌─── mes (1–12 o JAN–DEC)
+│ │ │ │ ┌─ día de la semana (0–6 o SUN–SAT, 0 = domingo)
+│ │ │ │ │
+* * * * *
+```
+
+| Expresión | Significado |
+| --- | --- |
+| `0 * * * *` | cada hora en punto |
+| `0 9 * * 1-5` | de lunes a viernes a las 09:00 |
+| `30 2 1 * *` | el día 1 de cada mes a las 02:30 |
+| `0 0 * * 0` | todos los domingos a medianoche |
+| `@daily` | todos los días a las 00:00 |
+
+También se admite un sexto campo al principio, para los **segundos**, como en Spring, Quartz y node-cron.

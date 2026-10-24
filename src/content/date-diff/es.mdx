@@ -1,0 +1,39 @@
+export const faq = [
+  {
+    q: "¿Qué pasa si sumo un mes al 31 de enero?",
+    a: "Obtienes el último día de febrero (28 o 29). Los meses tienen longitudes distintas, así que la aritmética de calendario se ajusta al final del mes en lugar de desbordarse hasta marzo.",
+  },
+  {
+    q: "¿Cómo se cuentan los días laborables?",
+    a: "De lunes a viernes entre las dos fechas, sin contar la fecha final. Los festivos no se tienen en cuenta porque dependen del país y la comunidad.",
+  },
+  {
+    q: "¿Por qué el número de días puede variar en uno en marzo u octubre?",
+    a: "Por el horario de verano: un día del año tiene 23 horas y otro 25. Los totales se calculan con los instantes exactos, en tu zona horaria local.",
+  },
+];
+
+## ¿Qué hace?
+
+Dos calculadoras en una:
+
+- **Entre dos fechas**: la diferencia desglosada en años, meses, días, horas y minutos, además de los totales en días, semanas, horas y minutos y el número de **días laborables**.
+- **Sumar o restar**: la fecha que resulta de sumar o restar años, meses, semanas, días, horas o minutos a una fecha dada.
+
+## Ejemplos
+
+| Pregunta | Respuesta |
+| --- | --- |
+| Días entre el 1 de enero y el 24 de diciembre de 2026 | 357 días |
+| 30 días después del 15 de marzo | 14 de abril |
+| 1 mes después del 31 de enero de 2024 | 29 de febrero de 2024 |
+| Días laborables de un lunes al lunes siguiente | 5 |
+
+## En código
+
+```js
+import { differenceInDays, differenceInBusinessDays, addMonths } from "date-fns";
+
+differenceInDays(new Date("2026-12-24"), new Date("2026-01-01")); // 357
+addMonths(new Date("2024-01-31"), 1); // 2024-02-29
+```

@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Tiene en cuenta el horario de verano?",
+    a: "Sí. Los desfases vienen de la base de datos de zonas horarias IANA que incluye tu navegador, así que cada ciudad muestra el desfase que corresponde en la fecha elegida, sea verano o invierno.",
+  },
+  {
+    q: "¿Por qué Europe/Madrid en vez de CET?",
+    a: "Las abreviaturas como CET, EST o IST son ambiguas y no dicen cuándo empieza el horario de verano. Los nombres IANA como Europe/Madrid o America/New_York llevan toda la historia de reglas.",
+  },
+  {
+    q: "¿Cómo guardo las fechas en mi base de datos?",
+    a: "Guarda los instantes en UTC (o como tiempo Unix) y conviértelos a la zona del usuario solo al mostrarlos. Guarda aparte el nombre IANA de la zona si necesitas saber la hora local del usuario.",
+  },
+];
+
+## ¿Qué hace?
+
+Muestra **un mismo momento en varias zonas horarias a la vez**. Elige una fecha y hora en cualquier zona y verás al instante la hora local de cada ciudad de tu lista, con su desfase respecto a UTC y una marca cuando cae dentro del horario laboral (de 9:00 a 18:00).
+
+## Cómo se usa
+
+1. Elige la **fecha y hora** y la **zona horaria** a la que se refiere.
+2. **Añade ciudades o zonas** con el buscador: «Tokyo», «Sao Paulo», «America/Denver»…
+3. Las filas fuera del horario laboral aparecen atenuadas, y un **+1d** o **−1d** indica otro día del calendario.
+4. Copia la lista para pegarla en una convocatoria o un chat.
+
+Tu lista de zonas se recuerda en este navegador para la próxima vez.
+
+## Útil para
+
+- Encontrar un hueco para una reunión que le venga bien a un equipo distribuido.
+- Comprobar la hora del servidor en logs y tareas cron que se ejecutan en UTC.
+- Depurar errores que solo ocurren «pasada la medianoche» en otro país.

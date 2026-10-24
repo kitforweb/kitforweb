@@ -1,0 +1,41 @@
+export const faq = [
+  {
+    q: "¿Qué SQL entiende?",
+    a: "Sentencias CREATE TABLE de dumps o migraciones de PostgreSQL, MySQL, SQLite y SQL Server: tipos de columna, PRIMARY KEY, REFERENCES en línea, restricciones FOREIGN KEY a nivel de tabla y ALTER TABLE … ADD FOREIGN KEY. El resto de sentencias se ignoran.",
+  },
+  {
+    q: "¿Cómo se decide la cardinalidad?",
+    a: "Una clave foránea dibuja una relación muchos a uno. Si la columna de la clave foránea también es única o clave primaria, se dibuja como uno a uno. Las claves foráneas que admiten NULL se dibujan como opcionales.",
+  },
+  {
+    q: "¿Puedo editar el diagrama?",
+    a: "Sí. Cambia a la vista Mermaid para copiar el código erDiagram, o ábrelo en el editor de Mermaid para modificarlo y exportarlo.",
+  },
+];
+
+## ¿Qué hace?
+
+Lee tus sentencias **CREATE TABLE** y dibuja el **diagrama entidad-relación**: cada tabla con sus columnas y tipos, las claves primarias (PK) y foráneas (FK) marcadas, y líneas entre tablas por cada relación. Sirve para entender una base de datos heredada, documentar un esquema o revisar una migración.
+
+## Cómo se usa
+
+1. Pega un volcado del esquema (`pg_dump --schema-only`, `mysqldump --no-data`) o tus migraciones.
+2. El diagrama se actualiza mientras escribes.
+3. Expórtalo como **SVG** o **PNG**, copia el código **Mermaid** o ábrelo en el editor de Mermaid.
+
+## Ejemplo
+
+```sql
+CREATE TABLE authors (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  author_id INT NOT NULL REFERENCES authors(id),
+  title TEXT NOT NULL
+);
+```
+
+dibuja dos tablas unidas por una relación uno a muchos: un autor tiene muchos libros.

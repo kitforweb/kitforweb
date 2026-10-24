@@ -1,0 +1,68 @@
+{
+  "en": {
+    "name": "Bcrypt",
+    "short": "Hash a password with bcrypt and check a password against a hash.",
+    "title": "Bcrypt hash generator and checker online",
+    "description": "Generate the bcrypt hash of a password with the cost you choose and verify whether a password matches a bcrypt hash ($2a$, $2b$, $2y$). Everything runs in your browser: passwords are never sent.",
+    "h1": "Bcrypt generator and checker",
+    "lead": "Create a bcrypt hash on the left; verify a password against a hash on the right.",
+    "hashTitle": "Generate a hash",
+    "verifyTitle": "Verify a password",
+    "password": "Password",
+    "tooLong": "bcrypt only uses the first 72 bytes of the password.",
+    "cost": "Cost",
+    "rounds": "rounds",
+    "costHint": "Each +1 doubles the time. 10–12 is a common choice for servers today.",
+    "errors": {
+      "cost": "The cost must be between 4 and 15.",
+      "length": "The password is longer than 72 bytes.",
+      "hash": "This is not a valid bcrypt hash."
+    },
+    "hash": "Bcrypt hash",
+    "version": "Version",
+    "salt": "Salt",
+    "match": "The password matches the hash",
+    "noMatch": "The password does not match"
+  },
+  "es": {
+    "name": "Bcrypt",
+    "short": "Genera el hash bcrypt de una contraseña y comprueba una contraseña contra un hash.",
+    "title": "Generador y verificador de hash bcrypt online",
+    "description": "Genera el hash bcrypt de una contraseña con el coste que elijas y comprueba si una contraseña coincide con un hash bcrypt ($2a$, $2b$, $2y$). Todo se ejecuta en tu navegador: las contraseñas nunca se envían.",
+    "h1": "Generador y verificador bcrypt",
+    "lead": "Crea un hash bcrypt a la izquierda; verifica una contraseña contra un hash a la derecha.",
+    "hashTitle": "Generar un hash",
+    "verifyTitle": "Verificar una contraseña",
+    "password": "Contraseña",
+    "tooLong": "bcrypt solo usa los primeros 72 bytes de la contraseña.",
+    "cost": "Coste",
+    "rounds": "rondas",
+    "costHint": "Cada +1 duplica el tiempo. Hoy 10–12 es una elección habitual en servidores.",
+    "errors": {
+      "cost": "El coste debe estar entre 4 y 15.",
+      "length": "La contraseña ocupa más de 72 bytes.",
+      "hash": "No es un hash bcrypt válido."
+    },
+    "hash": "Hash bcrypt",
+    "version": "Versión",
+    "salt": "Sal",
+    "match": "La contraseña coincide con el hash",
+    "noMatch": "La contraseña no coincide"
+  },
+  "fr": {
+    "name": "Bcrypt",
+    "short": "Hachez un mot de passe avec bcrypt et vérifiez un mot de passe.",
+    "title": "Générateur et vérificateur de hash bcrypt en ligne",
+    "description": "Générez le hash bcrypt d'un mot de passe avec le coût choisi et vérifiez si un mot de passe correspond à un hash. 100 % dans votre navigateur.",
+    "h1": "Générateur et vérificateur bcrypt",
+    "lead": "Créez un hash bcrypt ou vérifiez un mot de passe."
+  },
+  "pt": {
+    "name": "Bcrypt",
+    "short": "Gere o hash bcrypt de uma senha e verifique uma senha contra um hash.",
+    "title": "Gerador e verificador de hash bcrypt online",
+    "description": "Gere o hash bcrypt de uma senha com o custo escolhido e verifique se uma senha corresponde a um hash. 100% no seu navegador.",
+    "h1": "Gerador e verificador bcrypt",
+    "lead": "Crie um hash bcrypt ou verifique uma senha."
+  }
+}

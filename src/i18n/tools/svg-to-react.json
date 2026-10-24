@@ -1,0 +1,50 @@
+{
+  "en": {
+    "name": "SVG → React",
+    "short": "Turn an SVG into a React/TSX icon component with size and currentColor.",
+    "title": "SVG to React component converter (TSX, currentColor, size prop)",
+    "description": "Convert an SVG into a React component in TSX or JSX: attributes in camelCase, a size prop, colors replaced by currentColor so the icon follows the text color, and the rest of the props passed to the svg element. Like SVGR, but in your browser.",
+    "h1": "SVG to React component",
+    "lead": "Paste an icon and get a component you can style with className and color.",
+    "placeholder": "Paste SVG code…",
+    "name": "Component",
+    "size": "size prop",
+    "multicolor": "The icon had several colors ({colors}) and all became currentColor. Turn off currentColor to keep them.",
+    "errors": {
+      "not-svg": "This is not an SVG: it has no svg element.",
+      "name": "The component name must start with a capital letter and use only letters and numbers."
+    }
+  },
+  "es": {
+    "name": "SVG → React",
+    "short": "Convierte un SVG en un componente de icono React/TSX con size y currentColor.",
+    "title": "Convertir SVG a componente React (TSX, currentColor, prop size)",
+    "description": "Convierte un SVG en un componente de React en TSX o JSX: atributos en camelCase, una prop size, colores sustituidos por currentColor para que el icono siga el color del texto, y el resto de props pasadas al elemento svg. Como SVGR, pero en tu navegador.",
+    "h1": "SVG a componente React",
+    "lead": "Pega un icono y obtén un componente que puedes estilar con className y color.",
+    "placeholder": "Pega código SVG…",
+    "name": "Componente",
+    "size": "prop size",
+    "multicolor": "El icono tenía varios colores ({colors}) y todos han pasado a currentColor. Desactiva currentColor para conservarlos.",
+    "errors": {
+      "not-svg": "No es un SVG: no tiene elemento svg.",
+      "name": "El nombre del componente debe empezar por mayúscula y usar solo letras y números."
+    }
+  },
+  "fr": {
+    "name": "SVG → React",
+    "short": "Transformez un SVG en composant React/TSX.",
+    "title": "Convertisseur SVG vers composant React (TSX)",
+    "description": "Convertissez un SVG en composant React TSX ou JSX avec prop size et currentColor. 100 % dans votre navigateur.",
+    "h1": "SVG vers composant React",
+    "lead": "Collez une icône et obtenez un composant."
+  },
+  "pt": {
+    "name": "SVG → React",
+    "short": "Transforme um SVG em componente React/TSX.",
+    "title": "Conversor de SVG para componente React (TSX)",
+    "description": "Converta um SVG em componente React TSX ou JSX com prop size e currentColor. 100% no seu navegador.",
+    "h1": "SVG para componente React",
+    "lead": "Cole um ícone e obtenha um componente."
+  }
+}

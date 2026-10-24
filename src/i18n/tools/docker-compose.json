@@ -1,0 +1,48 @@
+{
+  "en": {
+    "name": "docker run → Compose",
+    "short": "Turn docker run commands into a docker-compose.yml.",
+    "title": "Convert docker run to docker-compose.yml online",
+    "description": "Paste one or more docker run commands and get the equivalent docker-compose.yml: ports, environment, volumes, networks, restart policy, healthcheck, logging, limits and GPUs. Flags without a Compose equivalent are listed. 100% in your browser.",
+    "h1": "docker run to Docker Compose",
+    "lead": "Paste the command from a README and get the service ready for your compose file.",
+    "placeholder": "docker run -d -p 80:80 --name web nginx",
+    "ignored": "Flags without a Compose equivalent were skipped: {flags}",
+    "errors": {
+      "not-docker-run": "This is not a docker run command.",
+      "no-image": "The command has no image.",
+      "quotes": "There is an unclosed quote."
+    }
+  },
+  "es": {
+    "name": "docker run → Compose",
+    "short": "Convierte comandos docker run en un docker-compose.yml.",
+    "title": "Convertir docker run a docker-compose.yml online",
+    "description": "Pega uno o varios comandos docker run y obtén el docker-compose.yml equivalente: puertos, variables de entorno, volúmenes, redes, política de reinicio, healthcheck, logging, límites y GPUs. Los flags sin equivalente en Compose se indican. 100% en tu navegador.",
+    "h1": "docker run a Docker Compose",
+    "lead": "Pega el comando de un README y obtén el servicio listo para tu fichero compose.",
+    "placeholder": "docker run -d -p 80:80 --name web nginx",
+    "ignored": "Se han omitido flags sin equivalente en Compose: {flags}",
+    "errors": {
+      "not-docker-run": "No es un comando docker run.",
+      "no-image": "El comando no tiene imagen.",
+      "quotes": "Hay unas comillas sin cerrar."
+    }
+  },
+  "fr": {
+    "name": "docker run → Compose",
+    "short": "Transformez des commandes docker run en docker-compose.yml.",
+    "title": "Convertir docker run en docker-compose.yml en ligne",
+    "description": "Collez des commandes docker run et obtenez le docker-compose.yml équivalent : ports, variables, volumes, réseaux, healthcheck et plus. 100 % dans votre navigateur.",
+    "h1": "docker run vers Docker Compose",
+    "lead": "Collez la commande et obtenez le service prêt."
+  },
+  "pt": {
+    "name": "docker run → Compose",
+    "short": "Transforme comandos docker run em um docker-compose.yml.",
+    "title": "Converter docker run para docker-compose.yml online",
+    "description": "Cole comandos docker run e obtenha o docker-compose.yml equivalente: portas, variáveis, volumes, redes, healthcheck e mais. 100% no seu navegador.",
+    "h1": "docker run para Docker Compose",
+    "lead": "Cole o comando e obtenha o serviço pronto."
+  }
+}

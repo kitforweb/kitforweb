@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "¿Es seguro ejecutar código aquí?",
+    a: "La vista previa se ejecuta en un iframe con sandbox=\"allow-scripts\" y sin allow-same-origin, así que el código recibe un origen opaco: no puede leer las cookies, el almacenamiento ni la página de este sitio, ni navegar la página en la que estás.",
+  },
+  {
+    q: "¿Cómo uso paquetes de npm?",
+    a: "Añade el nombre del paquete (opcionalmente con versión, como canvas-confetti@1) al import map e impórtalo en el JS. El playground lo resuelve con esm.sh y ejecuta tu script como módulo ES.",
+  },
+  {
+    q: "¿Cómo comparto mi código?",
+    a: "Pulsa Compartir: el HTML, el CSS, el JS y las librerías se comprimen en el # del enlace, que nunca llega a ningún servidor. Quien lo abra verá exactamente tu código.",
+  },
+];
+
+## ¿Qué hace?
+
+Es un **editor en vivo de HTML, CSS y JavaScript**: escribe en las tres pestañas y la vista previa se actualiza mientras escribes, o desactiva la ejecución automática y pulsa **Ejecutar**. Una **consola** integrada muestra `console.log`, avisos, errores y promesas rechazadas sin capturar, con los objetos legibles.
+
+## Librerías
+
+- **Librerías populares** con un clic: Tailwind, Pico, Bootstrap, jQuery, Lodash, Alpine.js, Chart.js, GSAP y más.
+- Cualquier **URL de script u hoja de estilos** de jsDelivr, unpkg, cdnjs o esm.sh.
+- **Import maps**: añade `react`, `vue` o cualquier paquete de npm y escribe `import` como en un proyecto real.
+
+## Útil para
+
+- Reproducir un bug de forma aislada antes de abrir una incidencia.
+- Probar rápido un layout CSS o una animación.
+- Compartir un ejemplo pequeño con un compañero por enlace.

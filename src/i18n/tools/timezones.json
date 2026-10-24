@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "Time zones",
+    "short": "See a date and time in several time zones at once, for meetings.",
+    "title": "Time zone converter and meeting planner",
+    "description": "See a date and time in several time zones at once, with city search, UTC offsets, daylight saving time and working hours highlighted. Ideal for scheduling meetings or debugging server dates. 100% in your browser.",
+    "h1": "Time zone converter",
+    "lead": "Pick a time in one zone and see what time it is everywhere else.",
+    "when": "When",
+    "zones": "Time zones",
+    "dateTime": "Date and time",
+    "in": "In time zone",
+    "addCity": "Add a city or zone",
+    "businessHint": "Green dot: within working hours (9:00–18:00) in that zone. Your list is remembered in this browser.",
+    "working": "Working hours",
+    "outside": "Outside working hours",
+    "remove": "Remove {city}"
+  },
+  "es": {
+    "name": "Zonas horarias",
+    "short": "Mira una fecha y hora en varias zonas horarias a la vez, para reuniones.",
+    "title": "Conversor de zonas horarias y planificador de reuniones",
+    "description": "Mira una fecha y hora en varias zonas horarias a la vez, con buscador de ciudades, diferencia con UTC, horario de verano y horario laboral resaltado. Ideal para cuadrar reuniones o depurar fechas de servidores. 100% en tu navegador.",
+    "h1": "Conversor de zonas horarias",
+    "lead": "Elige una hora en una zona y mira qué hora es en todas las demás.",
+    "when": "Cuándo",
+    "zones": "Zonas horarias",
+    "dateTime": "Fecha y hora",
+    "in": "En la zona horaria",
+    "addCity": "Añadir una ciudad o zona",
+    "businessHint": "Punto verde: dentro del horario laboral (9:00–18:00) de esa zona. Tu lista se recuerda en este navegador.",
+    "working": "Horario laboral",
+    "outside": "Fuera del horario laboral",
+    "remove": "Quitar {city}"
+  },
+  "fr": {
+    "name": "Fuseaux horaires",
+    "short": "Voyez une date et une heure dans plusieurs fuseaux à la fois.",
+    "title": "Convertisseur de fuseaux horaires et planificateur de réunions",
+    "description": "Voyez une date et une heure dans plusieurs fuseaux horaires, avec recherche de villes, décalage UTC et heures de bureau. 100 % dans votre navigateur.",
+    "h1": "Convertisseur de fuseaux horaires",
+    "lead": "Choisissez une heure et voyez l'heure partout ailleurs."
+  },
+  "pt": {
+    "name": "Fusos horários",
+    "short": "Veja uma data e hora em vários fusos horários ao mesmo tempo.",
+    "title": "Conversor de fusos horários e planejador de reuniões",
+    "description": "Veja uma data e hora em vários fusos horários, com busca de cidades, diferença para UTC e horário comercial. 100% no seu navegador.",
+    "h1": "Conversor de fusos horários",
+    "lead": "Escolha um horário e veja que horas são em todos os outros lugares."
+  }
+}

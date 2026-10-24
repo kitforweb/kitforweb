@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "Keyboard Event Tester",
+    "short": "Press any key to see event.key, event.code, keyCode and modifiers.",
+    "title": "JavaScript keyboard event tester: event.key, code and keyCode",
+    "description": "Press any key or shortcut and see its event.key, event.code, keyCode, location and modifier keys, plus a ready-to-paste keydown listener for that shortcut. Useful to program keyboard shortcuts that work on every layout.",
+    "h1": "Keyboard Event Tester",
+    "lead": "Click the box and press a key or a combination like Ctrl+Shift+K.",
+    "press": "Press a key",
+    "details": "Event",
+    "prevent": "Block browser shortcuts",
+    "mac": "Mac names",
+    "focusHint": "Click here and press any key",
+    "listening": "Listening… press a key or a shortcut",
+    "history": "Last keys",
+    "hint": "Press a key in the box to see its event properties.",
+    "keyCode": "event.keyCode (deprecated)",
+    "locations": { "standard": "standard", "left": "left", "right": "right", "numpad": "numpad" },
+    "modifierOnly": "A modifier on its own: combine it with another key to build a shortcut.",
+    "snippet": "Listener for this shortcut",
+    "keyCodeNote": "Use event.key for characters (it follows the keyboard layout) and event.code for physical positions such as WASD. keyCode is deprecated."
+  },
+  "es": {
+    "name": "Probar teclado",
+    "short": "Pulsa cualquier tecla y mira event.key, event.code, keyCode y modificadores.",
+    "title": "Probar eventos de teclado en JavaScript: event.key, code y keyCode",
+    "description": "Pulsa cualquier tecla o atajo y mira su event.key, event.code, keyCode, posición y teclas modificadoras, junto con un listener keydown listo para pegar para ese atajo. Útil para programar atajos de teclado que funcionen en cualquier distribución.",
+    "h1": "Probar eventos de teclado",
+    "lead": "Pulsa en el recuadro y después una tecla o una combinación como Ctrl+Shift+K.",
+    "press": "Pulsa una tecla",
+    "details": "Evento",
+    "prevent": "Bloquear atajos del navegador",
+    "mac": "Nombres de Mac",
+    "focusHint": "Haz clic aquí y pulsa cualquier tecla",
+    "listening": "Escuchando… pulsa una tecla o un atajo",
+    "history": "Últimas teclas",
+    "hint": "Pulsa una tecla en el recuadro para ver las propiedades del evento.",
+    "keyCode": "event.keyCode (obsoleto)",
+    "locations": { "standard": "estándar", "left": "izquierda", "right": "derecha", "numpad": "teclado numérico" },
+    "modifierOnly": "Un modificador solo: combínalo con otra tecla para crear un atajo.",
+    "snippet": "Listener para este atajo",
+    "keyCodeNote": "Usa event.key para caracteres (sigue la distribución del teclado) y event.code para posiciones físicas como WASD. keyCode está obsoleto."
+  },
+  "fr": {
+    "name": "Tester le clavier",
+    "short": "Appuyez sur une touche pour voir event.key, event.code et keyCode.",
+    "title": "Testeur d'événements clavier JavaScript",
+    "description": "Appuyez sur une touche ou un raccourci et voyez event.key, event.code, keyCode et les modificateurs, avec un listener prêt à coller.",
+    "h1": "Tester les événements clavier",
+    "lead": "Cliquez dans la zone et appuyez sur une touche."
+  },
+  "pt": {
+    "name": "Testar teclado",
+    "short": "Pressione qualquer tecla para ver event.key, event.code e keyCode.",
+    "title": "Testador de eventos de teclado JavaScript",
+    "description": "Pressione uma tecla ou atalho e veja event.key, event.code, keyCode e modificadores, com um listener pronto para colar.",
+    "h1": "Testar eventos de teclado",
+    "lead": "Clique na área e pressione uma tecla."
+  }
+}

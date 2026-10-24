@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Base64 es cifrado?",
+    a: "No. Base64 es una codificación: cualquiera puede decodificarla. Solo convierte datos binarios en texto que se puede meter sin problemas en JSON, URLs, emails o HTML.",
+  },
+  {
+    q: "¿Qué diferencia hay entre Base64 y Base64URL?",
+    a: "Base64URL cambia + por - y / por _, y normalmente quita el relleno =, para que el resultado pueda ir en una URL o un nombre de archivo. Los JWT usan Base64URL.",
+  },
+  {
+    q: "¿Por qué mi texto con tildes sale con caracteres raros en otro sitio?",
+    a: "Porque btoa del navegador solo acepta Latin-1. Esta herramienta codifica primero el texto en UTF-8, que es lo que esperan todos los sistemas modernos.",
+  },
+];
+
+## ¿Qué hace?
+
+**Codifica** texto o archivos en Base64 y **decodifica** Base64 a texto, imágenes o archivos. Admite:
+
+- Texto **UTF-8**, con tildes y emojis.
+- **Base64URL** (`-` y `_`, sin relleno), como en los JWT.
+- **Data URLs** (`data:image/png;base64,…`) en los dos sentidos.
+- **Archivos** de cualquier tipo, con vista previa de imágenes y botón de descarga al decodificar datos binarios.
+
+## Cómo se usa
+
+1. Para codificar, escribe un texto o pulsa **Codificar un archivo**.
+2. Para decodificar, cambia a **Decodificar** y pega Base64, Base64URL o una data URL. Los espacios y saltos de línea se ignoran.
+3. Pulsa **Intercambiar** para llevar el resultado a la entrada en el modo contrario.
+
+## Tamaño
+
+Base64 convierte cada 3 bytes en 4 caracteres, así que el texto codificado ocupa alrededor de un **33% más** que el original. Incrustar imágenes grandes como data URLs hace las páginas más pesadas e impide la caché; resérvalo para iconos pequeños.

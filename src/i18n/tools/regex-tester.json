@@ -1,0 +1,56 @@
+{
+  "en": {
+    "name": "Regex Tester",
+    "short": "Test a regex against many strings, with matches, groups and an explanation.",
+    "title": "Regex tester online with explanation",
+    "description": "Write a regular expression and a list of test strings: each one turns green or red, with matches and capture groups highlighted and the regex explained part by part. JavaScript syntax, 100% in your browser.",
+    "h1": "Regex Tester",
+    "lead": "One test case per line: see at a glance which ones match, and why.",
+    "pattern": "Pattern",
+    "results": "Results",
+    "mode": "Test mode",
+    "eachLine": "Each line",
+    "wholeText": "Whole text",
+    "flags": "Flags",
+    "tests": "Test cases",
+    "testsPlaceholder": "Write test strings, one per line…",
+    "timeout": "The regex took too long and was stopped. It probably has catastrophic backtracking, like (a+)+.",
+    "summary": "{passed} of {total} match",
+    "explanation": "Explanation"
+  },
+  "es": {
+    "name": "Regex Tester",
+    "short": "Prueba una regex con muchos textos, con coincidencias, grupos y explicación.",
+    "title": "Probar regex online con explicación",
+    "description": "Escribe una expresión regular y una lista de textos de prueba: cada uno sale en verde o en rojo, con las coincidencias y los grupos capturados resaltados y la regex explicada parte por parte. Sintaxis de JavaScript, 100% en tu navegador.",
+    "h1": "Probador de regex",
+    "lead": "Un caso de prueba por línea: mira de un vistazo cuáles coinciden y por qué.",
+    "pattern": "Patrón",
+    "results": "Resultados",
+    "mode": "Modo de prueba",
+    "eachLine": "Cada línea",
+    "wholeText": "Texto completo",
+    "flags": "Flags",
+    "tests": "Casos de prueba",
+    "testsPlaceholder": "Escribe textos de prueba, uno por línea…",
+    "timeout": "La regex tardaba demasiado y se ha detenido. Probablemente tiene backtracking catastrófico, como (a+)+.",
+    "summary": "{passed} de {total} coinciden",
+    "explanation": "Explicación"
+  },
+  "fr": {
+    "name": "Regex Tester",
+    "short": "Testez une regex sur plusieurs chaînes, avec correspondances et explication.",
+    "title": "Tester une regex en ligne avec explication",
+    "description": "Écrivez une expression régulière et une liste de chaînes de test : chacune s'affiche en vert ou en rouge, avec les groupes capturés et une explication. 100 % dans votre navigateur.",
+    "h1": "Testeur de regex",
+    "lead": "Un cas de test par ligne : voyez lesquels correspondent et pourquoi."
+  },
+  "pt": {
+    "name": "Regex Tester",
+    "short": "Teste uma regex com vários textos, com correspondências e explicação.",
+    "title": "Testar regex online com explicação",
+    "description": "Escreva uma expressão regular e uma lista de textos de teste: cada um aparece em verde ou vermelho, com os grupos capturados e uma explicação. 100% no seu navegador.",
+    "h1": "Testador de regex",
+    "lead": "Um caso de teste por linha: veja quais correspondem e por quê."
+  }
+}

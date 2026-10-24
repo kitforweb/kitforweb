@@ -1,0 +1,44 @@
+{
+  "en": {
+    "name": "Markdown Editor",
+    "short": "Write Markdown with a live GitHub-style preview, Mermaid diagrams and HTML export.",
+    "title": "Online Markdown editor with live preview (GitHub flavored)",
+    "description": "Markdown editor with live GitHub-flavored preview: tables, task lists, highlighted code and embedded Mermaid diagrams. Perfect for READMEs and pull request descriptions. Copy a table of contents and export to HTML. 100% in your browser.",
+    "h1": "Markdown Editor",
+    "lead": "Write your README or PR description and see it exactly as GitHub will show it.",
+    "placeholder": "# Title\n\nWrite **Markdown** here…",
+    "preview": "Preview",
+    "copyToc": "TOC",
+    "stats": "{words, plural, one {# word} other {# words}} · {minutes} min",
+    "hint": "Type Markdown on the left to see the preview here."
+  },
+  "es": {
+    "name": "Editor Markdown",
+    "short": "Escribe Markdown con vista previa en vivo estilo GitHub, diagramas Mermaid y exportación a HTML.",
+    "title": "Editor de Markdown online con vista previa (estilo GitHub)",
+    "description": "Editor de Markdown con vista previa en vivo al estilo de GitHub: tablas, listas de tareas, código resaltado y diagramas Mermaid incrustados. Perfecto para README y descripciones de pull requests. Copia un índice y exporta a HTML. 100% en tu navegador.",
+    "h1": "Editor de Markdown",
+    "lead": "Escribe tu README o la descripción de tu PR y míralo tal como lo mostrará GitHub.",
+    "placeholder": "# Título\n\nEscribe **Markdown** aquí…",
+    "preview": "Vista previa",
+    "copyToc": "Índice",
+    "stats": "{words, plural, one {# palabra} other {# palabras}} · {minutes} min",
+    "hint": "Escribe Markdown a la izquierda para ver aquí la vista previa."
+  },
+  "fr": {
+    "name": "Éditeur Markdown",
+    "short": "Écrivez du Markdown avec aperçu en direct style GitHub et export HTML.",
+    "title": "Éditeur Markdown en ligne avec aperçu (style GitHub)",
+    "description": "Éditeur Markdown avec aperçu en direct style GitHub : tableaux, listes de tâches, code coloré et diagrammes Mermaid. Export HTML. 100 % dans votre navigateur.",
+    "h1": "Éditeur Markdown",
+    "lead": "Écrivez votre README et voyez-le comme sur GitHub."
+  },
+  "pt": {
+    "name": "Editor Markdown",
+    "short": "Escreva Markdown com pré-visualização ao vivo estilo GitHub e exportação HTML.",
+    "title": "Editor de Markdown online com pré-visualização (estilo GitHub)",
+    "description": "Editor de Markdown com pré-visualização ao vivo estilo GitHub: tabelas, listas de tarefas, código destacado e diagramas Mermaid. Exporte para HTML. 100% no seu navegador.",
+    "h1": "Editor de Markdown",
+    "lead": "Escreva seu README e veja como no GitHub."
+  }
+}

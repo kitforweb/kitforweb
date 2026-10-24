@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "How long should the title and description be?",
+    a: "Google shows about 50–60 characters of the title and 150–160 of the description, depending on their pixel width. Put the important words first so a cut does not hide them.",
+  },
+  {
+    q: "Why does my link show an old image on social networks?",
+    a: "LinkedIn, Facebook and WhatsApp cache link previews. Use their debugging tools (LinkedIn Post Inspector, Facebook Sharing Debugger) to refresh it, or change the image URL.",
+  },
+  {
+    q: "What size should the Open Graph image be?",
+    a: "1200 × 630 pixels (1.91:1), under about 5 MB, in JPG or PNG. Keep important text away from the edges, because some apps crop it into a square.",
+  },
+];
+
+## What does it do?
+
+You fill in the **title**, **description**, **URL** and **image** of a page and see, live, how it will look in:
+
+- **Google** search results.
+- **LinkedIn** and Facebook link cards.
+- **X (Twitter)** cards.
+- **WhatsApp** link previews.
+
+The character counters warn you when the title or the description is too short or will be cut. Below the previews you get the tags ready to paste in the `head` of your page: `title`, `description`, `canonical`, **Open Graph** and **Twitter Card**.
+
+## In Next.js
+
+```ts
+export const metadata = {
+  title: "My page",
+  description: "What the page is about.",
+  openGraph: { images: ["https://example.com/og.png"] },
+};
+```
+
+Next.js generates the same tags from the `metadata` object of each page.

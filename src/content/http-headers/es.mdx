@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "¿Cómo copio las cabeceras de la respuesta?",
+    a: "En las DevTools, abre la pestaña Red, selecciona la petición y, en Encabezados → Encabezados de respuesta, activa Sin procesar y cópialos. Desde una terminal, curl -I https://example.com también los muestra.",
+  },
+  {
+    q: "¿Qué cabeceras de seguridad importan más?",
+    a: "Content-Security-Policy contra XSS, Strict-Transport-Security para forzar HTTPS, X-Content-Type-Options: nosniff, la protección de frames con frame-ancestors en la CSP y una Referrer-Policy razonable.",
+  },
+  {
+    q: "¿Es peligroso Access-Control-Allow-Origin: *?",
+    a: "No para recursos públicos de solo lectura. Se convierte en un problema combinado con credenciales (los navegadores lo rechazan) o cuando se intenta esquivar esa restricción reflejando cualquier Origin.",
+  },
+];
+
+## ¿Qué hace?
+
+Lee las cabeceras de una respuesta HTTP y:
+
+- **Explica cada cabecera** en lenguaje sencillo, agrupadas por categoría: caché, CORS, cookies, seguridad, contenido y conexión.
+- **Avisa de lo que falta o es arriesgado**: sin CSP, sin HSTS, cookies sin `Secure`, `HttpOnly` o `SameSite`, CORS con comodín y credenciales, versiones en `Server` o `X-Powered-By`, cabeceras obsoletas.
+
+## Una buena base
+
+```
+Content-Security-Policy: default-src 'self'; frame-ancestors 'none'
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Set-Cookie: session=…; Secure; HttpOnly; SameSite=Lax
+```
+
+Empieza tu Content-Security-Policy como `Content-Security-Policy-Report-Only` para ver qué bloquearía antes de aplicarla.

@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "¿Se suben mis textos para compararlos?",
+    a: "No. La comparación se ejecuta en un Web Worker dentro de tu navegador, así que incluso los ficheros largos se comparan sin bloquear la página y sin salir de tu equipo.",
+  },
+  {
+    q: "¿Qué significan los dos tonos de resaltado?",
+    a: "El fondo claro marca las líneas que han cambiado; el más intenso marca las palabras exactas que difieren dentro de esas líneas, para que un cambio de un carácter se vea enseguida.",
+  },
+  {
+    q: "¿Puedo obtener el resultado como parche?",
+    a: "Sí. La acción Copiar copia un diff unificado, el formato que imprime git diff, que puedes pegar en una revisión, en una incidencia o aplicar con git apply.",
+  },
+];
+
+## ¿Qué hace?
+
+**Compara dos textos** (código, configuración, contratos, SQL…) y muestra qué ha cambiado **línea a línea y palabra a palabra**, **lado a lado** o **en línea** como en una pull request.
+
+## Opciones
+
+- **Ignorar espacios**: la sangría o los espacios finales no cuentan como cambios.
+- **Ignorar mayúsculas**: `SELECT` y `select` son lo mismo.
+- **Solo cambios**: oculta las zonas largas sin cambios y deja tres líneas de contexto.
+- **Intercambiar**: cambia de lado el original y el modificado.
+
+## Usos típicos
+
+- Comprobar qué ha cambiado de verdad un formateador o una refactorización.
+- Comparar dos versiones de un fichero de configuración entre entornos.
+- Revisar un texto antes y después de una edición cuando no hay control de versiones.

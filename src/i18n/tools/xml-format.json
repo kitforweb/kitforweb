@@ -1,0 +1,46 @@
+{
+  "en": {
+    "name": "XML Formatter",
+    "short": "Format, minify and validate XML, with the error located.",
+    "title": "XML formatter and validator online",
+    "description": "Format (pretty-print), minify and validate XML online. Errors are reported with their line and column. Comments, CDATA sections and processing instructions are kept. Works with SOAP, SVG, RSS, WSDL and any XML. 100% in your browser.",
+    "h1": "XML Formatter and Validator",
+    "lead": "Paste an XML document on one line and get it indented, or find where it is broken.",
+    "placeholder": "Paste XML…",
+    "mode": "Mode",
+    "format": "Format",
+    "minify": "Minify",
+    "indent": "Indentation",
+    "spaces": "{n} spaces"
+  },
+  "es": {
+    "name": "Formatear XML",
+    "short": "Formatea, minifica y valida XML, marcando dónde está el error.",
+    "title": "Formatear y validar XML online",
+    "description": "Formatea, minifica y valida XML online. Los errores se indican con su línea y columna. Se conservan los comentarios, las secciones CDATA y las instrucciones de procesamiento. Funciona con SOAP, SVG, RSS, WSDL y cualquier XML. 100% en tu navegador.",
+    "h1": "Formatear y validar XML",
+    "lead": "Pega un documento XML en una línea y obtenlo indentado, o encuentra dónde está roto.",
+    "placeholder": "Pega XML…",
+    "mode": "Modo",
+    "format": "Formatear",
+    "minify": "Minificar",
+    "indent": "Sangría",
+    "spaces": "{n} espacios"
+  },
+  "fr": {
+    "name": "Formater XML",
+    "short": "Formatez, minifiez et validez du XML, avec l'erreur localisée.",
+    "title": "Formateur et validateur XML en ligne",
+    "description": "Formatez, minifiez et validez du XML. Les erreurs sont indiquées avec leur ligne et colonne. Commentaires et CDATA conservés. 100 % dans votre navigateur.",
+    "h1": "Formater et valider XML",
+    "lead": "Collez un XML et obtenez-le indenté."
+  },
+  "pt": {
+    "name": "Formatar XML",
+    "short": "Formate, minifique e valide XML, com o erro localizado.",
+    "title": "Formatador e validador de XML online",
+    "description": "Formate, minifique e valide XML. Os erros aparecem com linha e coluna. Comentários e CDATA são mantidos. 100% no seu navegador.",
+    "h1": "Formatar e validar XML",
+    "lead": "Cole um XML e obtenha-o indentado."
+  }
+}

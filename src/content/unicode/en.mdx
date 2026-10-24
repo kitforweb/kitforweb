@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "Why does \"👍🏽\".length return 4 in JavaScript?",
+    a: "length counts UTF-16 code units. The thumbs-up and the skin-tone modifier are two code points outside the basic plane, and each needs two units. Users see a single character (a grapheme).",
+  },
+  {
+    q: "What are invisible characters and why do they matter?",
+    a: "Zero-width spaces, joiners, the BOM or bidirectional controls take no space on screen but break string comparisons, passwords, slugs and JSON parsing, and can be used to disguise file names.",
+  },
+  {
+    q: "Which escape should I use?",
+    a: "\\u00E9 or \\u{1F600} in JavaScript strings, &#xE9; in HTML and \\E9 in CSS content. The table shows all of them for every character.",
+  },
+];
+
+## What does it do?
+
+It shows **every character of a text one by one**: its Unicode code point (`U+00E9`), its name or category, its **UTF-8 bytes** and how to escape it in JavaScript, HTML and CSS. It is the tool for those moments when a string "looks right" but does not behave.
+
+## Typical problems it solves
+
+- A string comparison fails because one text has an **invisible zero-width space**.
+- A JSON file does not parse because it starts with a **BOM**.
+- A file named `invoice\u202Etxt.exe` hides its real extension with a **right-to-left override**.
+- `é` is one code point in one text and `e` plus a combining accent in another.
+
+## How to use it
+
+1. Paste the suspicious text.
+2. Check the counters: visible characters, code points, UTF-16 length and UTF-8 bytes.
+3. Invisible characters are highlighted in the table.
+4. Press **Copy without invisible characters** to get a clean version.

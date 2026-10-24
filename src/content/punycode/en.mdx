@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "Why do domains with accents need Punycode?",
+    a: "DNS only understands ASCII letters, digits and hyphens. Internationalised domain names (IDN) are stored as xn-- labels, and browsers show the Unicode version to users.",
+  },
+  {
+    q: "What about the part before the @ in an email?",
+    a: "Only the domain is converted. Non-ASCII local parts (josé@…) need SMTPUTF8 support on the mail servers and are left unchanged.",
+  },
+  {
+    q: "What is an IDN homograph attack?",
+    a: "Registering a domain that looks identical to another using letters from other alphabets, like a Cyrillic а in аpple.com. Converting to Punycode reveals the trick: the domain becomes xn--pple-43d.com.",
+  },
+];
+
+## What does it do?
+
+It converts **internationalised domain names** — with accents, `ñ`, umlauts or non-Latin scripts — into their **ASCII Punycode** form (`xn--…`) and back.
+
+| Unicode | Punycode |
+| --- | --- |
+| `españa.com` | `xn--espaa-rta.com` |
+| `münchen.de` | `xn--mnchen-3ya.de` |
+| `例え.テスト` | `xn--r8jz45g.xn--zckzah` |
+
+## How to use it
+
+1. Paste one domain, email address or URL per line.
+2. Only the host is converted: paths, query strings and the local part of emails stay as they are.
+3. Press **Swap** to decode `xn--` domains back to Unicode.
+
+You need the Punycode form when configuring DNS records, TLS certificates, CORS allow-lists or cookies for an internationalised domain.

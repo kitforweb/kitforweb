@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "Should I use UUID v4 or v7?",
+    a: "Use v7 for database primary keys: it starts with a timestamp, so new rows are inserted in order and indexes stay compact. Use v4 when you do not want the creation time to be visible.",
+  },
+  {
+    q: "Can two UUIDs collide?",
+    a: "In theory yes, in practice no: a v4 has 122 random bits. You would need to generate about 2.7 quintillion of them to have a 50% chance of a single duplicate.",
+  },
+  {
+    q: "Are the generated UUIDs secure?",
+    a: "They use crypto.getRandomValues, a cryptographically secure generator. Still, a UUID is an identifier, not a secret: do not use it as a password or an API key.",
+  },
+];
+
+## What does it do?
+
+It **generates UUIDs** (universally unique identifiers) in version 4 (random) or version 7 (time-ordered), one at a time or up to 1,000 at once, and **inspects** any UUID you paste: it validates it and tells you its version, its variant and, for time-based versions (1, 6 and 7), when it was created.
+
+## How to use it
+
+1. Choose **v4** or **v7** and how many you need. Toggle upper case, hyphens or braces to match your codebase.
+2. Copy the list, or press **Regenerate** for a new batch.
+3. Paste any UUID on the left to inspect it.
+
+## Anatomy of a UUID v7
+
+```
+0190a5b8-6e1f-7c3a-9b2d-4e5f6a7b8c9d
+└──────┬─────┘ │ └┬┘ │
+ Unix ms (48 bits) │  │  └ variant (10xx)
+             version 7  random
+```

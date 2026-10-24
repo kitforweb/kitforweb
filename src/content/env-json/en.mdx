@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "Is my .env stored or sent anywhere?",
+    a: "No. This tool is marked as sensitive: the content is not saved in your browser, cannot be shared by link and never leaves the page.",
+  },
+  {
+    q: "Which value wins when a key is repeated?",
+    a: "The last one, as in dotenv, Docker Compose and most loaders. The tool warns you because the first definition is usually a leftover that someone will edit by mistake.",
+  },
+  {
+    q: "What does nesting with __ do?",
+    a: "It turns DB__HOST and DB__PORT into { DB: { HOST, PORT } }, the convention used by ASP.NET Core and many config libraries. JSON to .env does the opposite: nested objects are flattened with __.",
+  },
+];
+
+## What does it do?
+
+It converts a **.env file to JSON** and **JSON to .env**, following the same rules as `dotenv`: `export` prefixes, comments, single quotes (literal), double quotes (with `\n` escapes and values over several lines) and inline comments after unquoted values.
+
+While converting, it **reports what loaders usually accept in silence**:
+
+- **Duplicate keys**, with the line of the first definition.
+- **Unclosed quotes** and **stray quotes** in the middle of a value.
+- **Spaces around =**, which break `docker run --env-file` and shells.
+- **Unquoted values with spaces** and **invalid variable names**.
+
+## Options
+
+- **Numbers and booleans**: `PORT=3000` becomes `3000` instead of `"3000"`.
+- **Nest KEY__SUB**: builds nested objects from double underscores.
+- **UPPER_CASE keys** (JSON to .env): `apiUrl` becomes `APIURL`; nested keys are joined with `__`.

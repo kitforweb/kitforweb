@@ -1,0 +1,84 @@
+{
+  "en": {
+    "name": "Cron",
+    "short": "Explain a cron expression in plain words and see its next runs.",
+    "title": "Cron expression explainer and generator",
+    "description": "Explain any cron expression in plain language (“every Monday at 09:00”), see its next 10 runs in your time zone or UTC, and build expressions field by field or from presets. Supports 5 and 6 fields and @daily-style macros.",
+    "h1": "Cron expression explainer",
+    "lead": "Type or build a cron expression and see in plain words when it will run.",
+    "expression": "Cron expression",
+    "schedule": "Schedule",
+    "presets": "Presets",
+    "preset": {
+      "everyMinute": "Every minute",
+      "every5Minutes": "Every 5 minutes",
+      "hourly": "Every hour",
+      "daily9": "Every day at 09:00",
+      "weekdays9": "Weekdays at 09:00",
+      "weeklyMonday": "Mondays at 09:00",
+      "monthlyFirst": "First day of the month",
+      "yearly": "Every 1 January"
+    },
+    "zone": "Time zone",
+    "local": "Local",
+    "builder": "Field by field",
+    "fields": {
+      "minute": "Minute",
+      "hour": "Hour",
+      "dayOfMonth": "Day",
+      "month": "Month",
+      "dayOfWeek": "Weekday"
+    },
+    "syntaxHint": "* any · */15 every 15 · 1-5 range · 1,15 list · weekdays 0–6 (0 = Sunday) or MON–SUN.",
+    "nextRuns": "Next runs"
+  },
+  "es": {
+    "name": "Cron",
+    "short": "Explica una expresión cron en lenguaje natural y muestra sus próximas ejecuciones.",
+    "title": "Explicar y generar expresiones cron",
+    "description": "Explica cualquier expresión cron en lenguaje natural («cada lunes a las 09:00»), muestra sus 10 próximas ejecuciones en tu zona horaria o en UTC y crea expresiones campo a campo o a partir de plantillas. Admite 5 y 6 campos y macros como @daily.",
+    "h1": "Explicar expresiones cron",
+    "lead": "Escribe o construye una expresión cron y mira en lenguaje natural cuándo se ejecutará.",
+    "expression": "Expresión cron",
+    "schedule": "Programación",
+    "presets": "Plantillas",
+    "preset": {
+      "everyMinute": "Cada minuto",
+      "every5Minutes": "Cada 5 minutos",
+      "hourly": "Cada hora",
+      "daily9": "Cada día a las 09:00",
+      "weekdays9": "Laborables a las 09:00",
+      "weeklyMonday": "Los lunes a las 09:00",
+      "monthlyFirst": "El día 1 de cada mes",
+      "yearly": "Cada 1 de enero"
+    },
+    "zone": "Zona horaria",
+    "local": "Local",
+    "builder": "Campo a campo",
+    "fields": {
+      "minute": "Minuto",
+      "hour": "Hora",
+      "dayOfMonth": "Día",
+      "month": "Mes",
+      "dayOfWeek": "Día sem."
+    },
+    "syntaxHint": "* cualquiera · */15 cada 15 · 1-5 rango · 1,15 lista · días de la semana 0–6 (0 = domingo) o MON–SUN.",
+    "nextRuns": "Próximas ejecuciones"
+  },
+  "fr": {
+    "name": "Cron",
+    "short": "Expliquez une expression cron en langage clair et voyez ses prochaines exécutions.",
+    "title": "Expliquer et générer des expressions cron",
+    "description": "Expliquez une expression cron en langage clair, voyez ses 10 prochaines exécutions et construisez des expressions champ par champ. 100 % dans votre navigateur.",
+    "h1": "Expliquer les expressions cron",
+    "lead": "Saisissez une expression cron et voyez quand elle s'exécutera."
+  },
+  "pt": {
+    "name": "Cron",
+    "short": "Explique uma expressão cron em linguagem simples e veja as próximas execuções.",
+    "title": "Explicar e gerar expressões cron",
+    "description": "Explique uma expressão cron em linguagem simples, veja as próximas 10 execuções e construa expressões campo a campo. 100% no seu navegador.",
+    "h1": "Explicar expressões cron",
+    "lead": "Digite uma expressão cron e veja quando ela será executada."
+  }
+}

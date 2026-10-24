@@ -1,0 +1,76 @@
+{
+  "en": {
+    "name": "X.509 certificates",
+    "short": "Decode a PEM certificate: issuer, SAN domains, validity and fingerprint.",
+    "title": "SSL/TLS certificate decoder (X.509 PEM)",
+    "description": "Paste a .pem certificate or a whole chain and see the issuer, subject, domains (SAN), validity dates with an expiry warning, algorithms and SHA-256 fingerprint. Decoded in your browser: the certificate is never uploaded.",
+    "h1": "X.509 certificate decoder",
+    "lead": "Paste a certificate or a chain to see who issued it, which domains it covers and when it expires.",
+    "details": "Certificate details",
+    "placeholder": "-----BEGIN CERTIFICATE-----\n…\n-----END CERTIFICATE-----",
+    "status": {
+      "valid": "Valid · {days} days left",
+      "expired": "Expired {days} days ago",
+      "not-yet-valid": "Not valid yet"
+    },
+    "selfSigned": "Self-signed",
+    "subject": "Subject",
+    "issuer": "Issuer",
+    "san": "Domains (SAN)",
+    "validFrom": "Valid from",
+    "validTo": "Valid until",
+    "publicKey": "Public key",
+    "signature": "Signature",
+    "serial": "Serial number",
+    "keyUsage": "Key usage",
+    "errors": {
+      "none": "No -----BEGIN CERTIFICATE----- block found.",
+      "invalid": "Certificate #{index} could not be decoded."
+    }
+  },
+  "es": {
+    "name": "Certificados X.509",
+    "short": "Decodifica un certificado PEM: emisor, dominios SAN, validez y huella.",
+    "title": "Decodificador de certificados SSL/TLS (X.509 PEM)",
+    "description": "Pega un certificado .pem o una cadena completa y mira el emisor, el sujeto, los dominios (SAN), las fechas de validez con aviso de caducidad, los algoritmos y la huella SHA-256. Se decodifica en tu navegador: el certificado nunca se sube.",
+    "h1": "Decodificador de certificados X.509",
+    "lead": "Pega un certificado o una cadena para ver quién lo emitió, qué dominios cubre y cuándo caduca.",
+    "details": "Detalles del certificado",
+    "placeholder": "-----BEGIN CERTIFICATE-----\n…\n-----END CERTIFICATE-----",
+    "status": {
+      "valid": "Válido · quedan {days} días",
+      "expired": "Caducado hace {days} días",
+      "not-yet-valid": "Aún no es válido"
+    },
+    "selfSigned": "Autofirmado",
+    "subject": "Sujeto",
+    "issuer": "Emisor",
+    "san": "Dominios (SAN)",
+    "validFrom": "Válido desde",
+    "validTo": "Válido hasta",
+    "publicKey": "Clave pública",
+    "signature": "Firma",
+    "serial": "Número de serie",
+    "keyUsage": "Uso de la clave",
+    "errors": {
+      "none": "No hay ningún bloque -----BEGIN CERTIFICATE-----.",
+      "invalid": "No se ha podido decodificar el certificado #{index}."
+    }
+  },
+  "fr": {
+    "name": "Certificats X.509",
+    "short": "Décodez un certificat PEM : émetteur, domaines SAN, validité et empreinte.",
+    "title": "Décodeur de certificats SSL/TLS (X.509 PEM)",
+    "description": "Collez un certificat .pem ou une chaîne et voyez l'émetteur, les domaines (SAN), les dates de validité, les algorithmes et l'empreinte SHA-256. 100 % dans votre navigateur.",
+    "h1": "Décodeur de certificats X.509",
+    "lead": "Collez un certificat pour voir qui l'a émis et quand il expire."
+  },
+  "pt": {
+    "name": "Certificados X.509",
+    "short": "Decodifique um certificado PEM: emissor, domínios SAN, validade e impressão digital.",
+    "title": "Decodificador de certificados SSL/TLS (X.509 PEM)",
+    "description": "Cole um certificado .pem ou uma cadeia e veja o emissor, os domínios (SAN), as datas de validade, os algoritmos e a impressão digital SHA-256. 100% no seu navegador.",
+    "h1": "Decodificador de certificados X.509",
+    "lead": "Cole um certificado para ver quem o emitiu e quando expira."
+  }
+}

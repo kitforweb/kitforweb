@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "¿Qué diferencia hay entre ^ y ~?",
+    a: "^1.2.3 acepta cualquier 1.x.x desde la 1.2.3 (funciones nuevas, sin cambios incompatibles). ~1.2.3 solo acepta parches 1.2.x. npm install usa ^ por defecto.",
+  },
+  {
+    q: "¿Por qué ^0.2.3 no acepta la 0.3.0?",
+    a: "Por debajo de la 1.0.0 la versión menor se considera incompatible, así que ^0.2.3 significa >=0.2.3 <0.3.0. Y ^0.0.3 solo acepta la 0.0.3.",
+  },
+  {
+    q: "¿Se incluyen las prerelease como 2.0.0-beta.1?",
+    a: "No por defecto: un rango solo acepta prerelease del mismo major.minor.patch que menciona. Activa Incluir prerelease para aceptarlas igualmente, como hace npm con --include-prerelease.",
+  },
+];
+
+## ¿Qué hace?
+
+Responde a la pregunta **«¿esta versión cumple este rango?»** con las mismas reglas que npm, y explica el rango con comparadores simples: `^1.2.3` pasa a ser `>=1.2.3 <2.0.0-0`. También te da la versión mínima que cumple el rango y **ordena listas de versiones semánticamente**, para que `1.10.0` vaya después de `1.9.0` y no después de `1.1.0`.
+
+## El versionado semántico en una línea
+
+`MAYOR.MENOR.PARCHE`: sube la **mayor** para cambios incompatibles, la **menor** para funciones nuevas compatibles y el **parche** para correcciones. Las prerelease añaden un sufijo: `2.0.0-rc.1`.
+
+## Rangos que verás en package.json
+
+| Rango | Acepta |
+| --- | --- |
+| `^1.2.3` | `>=1.2.3 <2.0.0` |
+| `~1.2.3` | `>=1.2.3 <1.3.0` |
+| `1.x` | `>=1.0.0 <2.0.0` |
+| `>=18 <21` | Node 18, 19 y 20 |
+| `^16 \|\| ^18` | cualquiera de las dos mayores |

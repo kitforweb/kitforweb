@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "Does it validate against an XSD or DTD?",
+    a: "No. It checks that the XML is well formed (tags closed and nested correctly, quoted attributes, a single root, valid entities), which is the error you hit most often. Schema validation is not performed.",
+  },
+  {
+    q: "Are comments and CDATA kept?",
+    a: "Yes. Comments, CDATA sections, the XML declaration and processing instructions are kept when formatting and minifying.",
+  },
+  {
+    q: "Is my XML sent anywhere?",
+    a: "No. Parsing and formatting run in your browser, so SOAP messages with credentials or customer data stay on your machine.",
+  },
+];
+
+## What does it do?
+
+It **formats XML** with consistent indentation, **minifies it** to a single line and **validates that it is well formed**. When the document is broken, the error says **what is wrong and on which line and column**: a tag that is not closed, an attribute without quotes, a stray `&`.
+
+## Typical uses
+
+- Reading a SOAP request or response copied from a log.
+- Checking an SVG, RSS feed, sitemap or Maven `pom.xml` before deploying it.
+- Compacting XML to embed it in a string or a test fixture.
+
+## Example
+
+`<order><id>42</id><items><item sku="A1"/></items></order>` becomes
+
+```xml
+<order>
+  <id>42</id>
+  <items>
+    <item sku="A1"/>
+  </items>
+</order>
+```

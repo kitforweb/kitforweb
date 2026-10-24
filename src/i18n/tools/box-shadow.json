@@ -1,0 +1,58 @@
+{
+  "en": {
+    "name": "Box-shadow Generator",
+    "short": "Design layered CSS shadows visually and copy the CSS.",
+    "title": "CSS box-shadow generator with layers and inset",
+    "description": "Design CSS box-shadows visually: several layers, inset shadows, blur, spread and any color, with a live preview on your own background. Start from Tailwind's presets, paste an existing shadow to edit it, and copy the CSS or the Tailwind class.",
+    "h1": "Box-shadow Generator",
+    "lead": "Soft, realistic shadows are usually two or three layers: tweak each one and see the result.",
+    "layers": "Layers",
+    "preview": "Preview",
+    "layer": "Layer {n}",
+    "remove": "Remove",
+    "blur": "Blur",
+    "spread": "Spread",
+    "color": "Color",
+    "add": "Add layer",
+    "paste": "Edit an existing shadow",
+    "load": "Load",
+    "box": "Box",
+    "canvas": "Background"
+  },
+  "es": {
+    "name": "Generador de box-shadow",
+    "short": "Diseña sombras CSS por capas de forma visual y copia el CSS.",
+    "title": "Generador de box-shadow CSS con capas e inset",
+    "description": "Diseña sombras box-shadow de CSS de forma visual: varias capas, sombras interiores (inset), desenfoque, expansión y cualquier color, con vista previa sobre tu propio fondo. Parte de los presets de Tailwind, pega una sombra existente para editarla y copia el CSS o la clase de Tailwind.",
+    "h1": "Generador de box-shadow",
+    "lead": "Las sombras suaves y realistas suelen ser dos o tres capas: ajusta cada una y mira el resultado.",
+    "layers": "Capas",
+    "preview": "Vista previa",
+    "layer": "Capa {n}",
+    "remove": "Quitar",
+    "blur": "Desenfoque",
+    "spread": "Expansión",
+    "color": "Color",
+    "add": "Añadir capa",
+    "paste": "Editar una sombra existente",
+    "load": "Cargar",
+    "box": "Caja",
+    "canvas": "Fondo"
+  },
+  "fr": {
+    "name": "Générateur box-shadow",
+    "short": "Créez des ombres CSS en couches visuellement.",
+    "title": "Générateur de box-shadow CSS avec couches et inset",
+    "description": "Créez des ombres box-shadow visuellement : plusieurs couches, inset, flou, étalement, avec aperçu en direct. Copiez le CSS ou la classe Tailwind.",
+    "h1": "Générateur de box-shadow",
+    "lead": "Ajustez chaque couche et voyez le résultat."
+  },
+  "pt": {
+    "name": "Gerador de box-shadow",
+    "short": "Crie sombras CSS em camadas visualmente.",
+    "title": "Gerador de box-shadow CSS com camadas e inset",
+    "description": "Crie sombras box-shadow visualmente: várias camadas, inset, desfoque, expansão, com pré-visualização ao vivo. Copie o CSS ou a classe Tailwind.",
+    "h1": "Gerador de box-shadow",
+    "lead": "Ajuste cada camada e veja o resultado."
+  }
+}

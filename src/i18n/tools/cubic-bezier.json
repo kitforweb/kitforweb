@@ -1,0 +1,48 @@
+{
+  "en": {
+    "name": "cubic-bezier Editor",
+    "short": "Design CSS easing curves by dragging the points and preview the animation.",
+    "title": "cubic-bezier() editor: CSS easing curves with preview",
+    "description": "Design CSS animation easing curves by dragging the two control points of cubic-bezier(), start from presets like easeOutBack or Material's standard curve, and preview the animation next to linear. Copy the timing function for transition or animation.",
+    "h1": "cubic-bezier Editor",
+    "lead": "Drag the two points to shape how an animation accelerates, then press Play to feel it.",
+    "curve": "Curve",
+    "preview": "Preview",
+    "presets": "Presets",
+    "custom": "Custom",
+    "xRange": "x1 and x2 must be between 0 and 1: time cannot go backwards.",
+    "duration": "Duration",
+    "play": "Play"
+  },
+  "es": {
+    "name": "Editor cubic-bezier",
+    "short": "Diseña curvas de animación CSS arrastrando los puntos y previsualiza la animación.",
+    "title": "Editor de cubic-bezier(): curvas de animación CSS con vista previa",
+    "description": "Diseña curvas de aceleración de animaciones CSS arrastrando los dos puntos de control de cubic-bezier(), parte de presets como easeOutBack o la curva estándar de Material y previsualiza la animación junto a linear. Copia la función de tiempo para transition o animation.",
+    "h1": "Editor de cubic-bezier",
+    "lead": "Arrastra los dos puntos para dar forma a cómo acelera una animación y pulsa Reproducir para notarlo.",
+    "curve": "Curva",
+    "preview": "Vista previa",
+    "presets": "Presets",
+    "custom": "Personalizada",
+    "xRange": "x1 y x2 deben estar entre 0 y 1: el tiempo no puede ir hacia atrás.",
+    "duration": "Duración",
+    "play": "Reproducir"
+  },
+  "fr": {
+    "name": "Éditeur cubic-bezier",
+    "short": "Créez des courbes d'animation CSS en déplaçant les points.",
+    "title": "Éditeur cubic-bezier() : courbes d'animation CSS",
+    "description": "Créez des courbes d'accélération CSS en déplaçant les points de contrôle de cubic-bezier(), avec presets et aperçu de l'animation.",
+    "h1": "Éditeur cubic-bezier",
+    "lead": "Déplacez les points et lancez l'animation."
+  },
+  "pt": {
+    "name": "Editor cubic-bezier",
+    "short": "Crie curvas de animação CSS arrastando os pontos.",
+    "title": "Editor de cubic-bezier(): curvas de animação CSS",
+    "description": "Crie curvas de aceleração CSS arrastando os pontos de controle de cubic-bezier(), com presets e pré-visualização da animação.",
+    "h1": "Editor de cubic-bezier",
+    "lead": "Arraste os pontos e reproduza a animação."
+  }
+}

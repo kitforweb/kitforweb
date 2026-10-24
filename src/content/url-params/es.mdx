@@ -1,0 +1,37 @@
+export const faq = [
+  {
+    q: "¿Qué pasa con los parámetros repetidos como tag=a&tag=b?",
+    a: "Cada uno aparece en su propia fila, numerado, y se mantiene en el mismo orden al reconstruir la URL. Muchos frameworks los leen como un array.",
+  },
+  {
+    q: "¿Por qué hay parámetros después de la #?",
+    a: "El fragmento nunca se envía al servidor, así que el flujo implícito de OAuth y las aplicaciones de una sola página lo usan para pasar datos como access_token. La herramienta lo analiza como si fuera una query string.",
+  },
+  {
+    q: "¿Un + es un espacio?",
+    a: "En la query string, sí: el formato application/x-www-form-urlencoded lee el + como espacio, y así lo decodifican los navegadores y URLSearchParams.",
+  },
+];
+
+## ¿Qué hace?
+
+Desglosa una URL —por larga que sea— en una **tabla de parámetros decodificados**. Los enlaces de seguimiento, las redirecciones de OAuth y las URLs de búsqueda se vuelven legibles en un segundo:
+
+- `%C3%A9` y `+` se decodifican, así que `caf%C3%A9+con+leche` se lee `café con leche`.
+- Las claves repetidas aparecen una a una.
+- Los parámetros del **fragmento** (`#access_token=…`) tienen su propia sección.
+- Los valores que son **JSON**, **JWT**, **Base64** o **URLs anidadas** (`redirect_uri`) se reconocen y se decodifican debajo del valor.
+
+## Cómo se usa
+
+1. Pega una URL. El esquema es opcional: `example.com/?a=1` también funciona.
+2. Usa el buscador para encontrar un parámetro entre decenas.
+3. Edita cualquier valor: la **URL reconstruida** aparece abajo, correctamente codificada.
+
+## Anatomía de una URL
+
+```
+https://tienda.example.com/buscar?q=cafe&page=2#opiniones
+└─┬─┘   └───────┬────────┘└──┬──┘└─────┬────┘└───┬────┘
+esquema        host         ruta     query    fragmento
+```

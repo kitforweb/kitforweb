@@ -1,0 +1,90 @@
+{
+  "en": {
+    "name": "Semver",
+    "short": "Check if a version satisfies a range (^, ~, >=…) and sort versions.",
+    "title": "Semver checker: does ^1.2.3 accept 1.4.0?",
+    "description": "Check whether a version satisfies an npm semver range, see what ^, ~, >=, x and || really mean, find the lowest matching version and sort lists of versions semantically. Uses the same library as npm.",
+    "h1": "Semver range checker",
+    "lead": "Type a version and a range to see whether it matches, and what the range really means.",
+    "check": "Check a range",
+    "sortTitle": "Sort versions",
+    "prerelease": "Include prereleases",
+    "version": "Version",
+    "range": "Range",
+    "errors": {
+      "range": "This is not a valid semver range.",
+      "version": "This is not a valid version."
+    },
+    "satisfies": "{version} satisfies {range}",
+    "notSatisfies": "{version} does not satisfy {range}",
+    "meaning": "Means",
+    "min": "Lowest version",
+    "cheatSheet": "Operators",
+    "operators": {
+      "^": "Compatible: same major version (^1.2.3 → >=1.2.3 <2.0.0). For 0.x, same minor.",
+      "~": "Patch updates only: same minor (~1.2.3 → >=1.2.3 <1.3.0).",
+      ">=": "Greater than or equal. Also >, <=, < and = for exact versions.",
+      "<": "Lower than. Combine with a space for an AND: >=1.0.0 <2.0.0.",
+      "x": "Wildcard: 1.x or 1.2.* match any value in that position.",
+      "||": "OR between ranges: ^1.0.0 || ^2.0.0.",
+      "-": "Inclusive range: 1.2.3 - 2.3.4 is >=1.2.3 <=2.3.4."
+    },
+    "listLabel": "Versions, one per line",
+    "order": "Order",
+    "asc": "Ascending",
+    "desc": "Descending",
+    "invalidList": "Ignored (not valid versions): {list}"
+  },
+  "es": {
+    "name": "Semver",
+    "short": "Comprueba si una versión cumple un rango (^, ~, >=…) y ordena versiones.",
+    "title": "Comprobar semver: ¿^1.2.3 acepta la 1.4.0?",
+    "description": "Comprueba si una versión cumple un rango semver de npm, mira qué significan de verdad ^, ~, >=, x y ||, encuentra la versión mínima que lo cumple y ordena listas de versiones semánticamente. Usa la misma librería que npm.",
+    "h1": "Comprobador de rangos semver",
+    "lead": "Escribe una versión y un rango para ver si coinciden y qué significa realmente el rango.",
+    "check": "Comprobar un rango",
+    "sortTitle": "Ordenar versiones",
+    "prerelease": "Incluir prerelease",
+    "version": "Versión",
+    "range": "Rango",
+    "errors": {
+      "range": "No es un rango semver válido.",
+      "version": "No es una versión válida."
+    },
+    "satisfies": "{version} cumple {range}",
+    "notSatisfies": "{version} no cumple {range}",
+    "meaning": "Equivale a",
+    "min": "Versión mínima",
+    "cheatSheet": "Operadores",
+    "operators": {
+      "^": "Compatible: misma versión mayor (^1.2.3 → >=1.2.3 <2.0.0). Para 0.x, misma menor.",
+      "~": "Solo parches: misma versión menor (~1.2.3 → >=1.2.3 <1.3.0).",
+      ">=": "Mayor o igual. También >, <=, < y = para versiones exactas.",
+      "<": "Menor que. Combínalo con un espacio para un Y: >=1.0.0 <2.0.0.",
+      "x": "Comodín: 1.x o 1.2.* aceptan cualquier valor en esa posición.",
+      "||": "O entre rangos: ^1.0.0 || ^2.0.0.",
+      "-": "Rango inclusivo: 1.2.3 - 2.3.4 es >=1.2.3 <=2.3.4."
+    },
+    "listLabel": "Versiones, una por línea",
+    "order": "Orden",
+    "asc": "Ascendente",
+    "desc": "Descendente",
+    "invalidList": "Ignoradas (no son versiones válidas): {list}"
+  },
+  "fr": {
+    "name": "Semver",
+    "short": "Vérifiez si une version satisfait une plage (^, ~, >=…) et triez des versions.",
+    "title": "Vérificateur semver : ^1.2.3 accepte-t-il 1.4.0 ?",
+    "description": "Vérifiez si une version satisfait une plage semver npm, comprenez ^, ~, >=, x et ||, et triez des listes de versions. 100 % dans votre navigateur.",
+    "h1": "Vérificateur de plages semver",
+    "lead": "Saisissez une version et une plage pour voir si elles correspondent."
+  },
+  "pt": {
+    "name": "Semver",
+    "short": "Verifique se uma versão satisfaz um intervalo (^, ~, >=…) e ordene versões.",
+    "title": "Verificador semver: ^1.2.3 aceita 1.4.0?",
+    "description": "Verifique se uma versão satisfaz um intervalo semver do npm, entenda ^, ~, >=, x e ||, e ordene listas de versões. 100% no seu navegador.",
+    "h1": "Verificador de intervalos semver",
+    "lead": "Digite uma versão e um intervalo para ver se correspondem."
+  }
+}

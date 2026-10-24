@@ -1,0 +1,58 @@
+{
+  "en": {
+    "name": "WebP Converter",
+    "short": "Convert images to WebP or AVIF with adjustable quality and compare the size.",
+    "title": "Convert images to WebP (and AVIF) online, without uploading",
+    "description": "Convert JPEG, PNG and other images to WebP, AVIF (when your browser supports it), JPEG or PNG with adjustable quality and optional resizing. Compare size and look before downloading. Images are processed in your browser and never uploaded.",
+    "h1": "WebP and AVIF Converter",
+    "lead": "Drop an image, pick the format and quality, and see how much lighter it gets.",
+    "original": "Original",
+    "converted": "Converted",
+    "format": "Format",
+    "choose": "Choose an image",
+    "chooseHint": "JPEG, PNG, WebP, GIF or SVG.",
+    "quality": "Quality",
+    "maxWidth": "Max width (0 = original)",
+    "noAvif": "This browser cannot encode AVIF; Chrome and Edge can.",
+    "hint": "Choose or drop an image to convert it.",
+    "encoding": "Encoding…",
+    "unreadable": "This image could not be read.",
+    "saved": "saved {percent}%"
+  },
+  "es": {
+    "name": "Convertir a WebP",
+    "short": "Convierte imágenes a WebP o AVIF con calidad ajustable y compara el tamaño.",
+    "title": "Convertir imágenes a WebP (y AVIF) online, sin subirlas",
+    "description": "Convierte JPEG, PNG y otras imágenes a WebP, AVIF (si tu navegador lo admite), JPEG o PNG con calidad ajustable y redimensionado opcional. Compara tamaño y aspecto antes de descargar. Las imágenes se procesan en tu navegador y nunca se suben.",
+    "h1": "Conversor a WebP y AVIF",
+    "lead": "Suelta una imagen, elige formato y calidad y mira cuánto pesa menos.",
+    "original": "Original",
+    "converted": "Convertida",
+    "format": "Formato",
+    "choose": "Elige una imagen",
+    "chooseHint": "JPEG, PNG, WebP, GIF o SVG.",
+    "quality": "Calidad",
+    "maxWidth": "Ancho máximo (0 = original)",
+    "noAvif": "Este navegador no puede codificar AVIF; Chrome y Edge sí.",
+    "hint": "Elige o suelta una imagen para convertirla.",
+    "encoding": "Codificando…",
+    "unreadable": "No se ha podido leer esta imagen.",
+    "saved": "ahorro {percent}%"
+  },
+  "fr": {
+    "name": "Convertir en WebP",
+    "short": "Convertissez des images en WebP ou AVIF.",
+    "title": "Convertir des images en WebP (et AVIF) en ligne",
+    "description": "Convertissez des images en WebP, AVIF, JPEG ou PNG avec qualité réglable. Traitement dans votre navigateur, sans envoi.",
+    "h1": "Convertisseur WebP et AVIF",
+    "lead": "Déposez une image et choisissez le format."
+  },
+  "pt": {
+    "name": "Converter para WebP",
+    "short": "Converta imagens para WebP ou AVIF.",
+    "title": "Converter imagens para WebP (e AVIF) online",
+    "description": "Converta imagens para WebP, AVIF, JPEG ou PNG com qualidade ajustável. Processamento no seu navegador, sem envio.",
+    "h1": "Conversor WebP e AVIF",
+    "lead": "Solte uma imagem e escolha o formato."
+  }
+}

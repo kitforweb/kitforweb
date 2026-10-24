@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "Is Base64 encryption?",
+    a: "No. Base64 is an encoding: anyone can decode it. It only turns binary data into text that is safe to put in JSON, URLs, emails or HTML.",
+  },
+  {
+    q: "What is the difference between Base64 and Base64URL?",
+    a: "Base64URL replaces + with - and / with _, and usually drops the = padding, so the result can go in a URL or a filename. JWTs use Base64URL.",
+  },
+  {
+    q: "Why does my text with accents decode as strange characters elsewhere?",
+    a: "Because the browser's btoa only accepts Latin-1. This tool encodes text as UTF-8 first, which is what every modern system expects.",
+  },
+];
+
+## What does it do?
+
+It **encodes** text or files to Base64 and **decodes** Base64 back to text, images or files. It supports:
+
+- **UTF-8** text, including accents and emoji.
+- **Base64URL** (`-` and `_`, no padding), as used by JWTs.
+- **Data URLs** (`data:image/png;base64,…`) in both directions.
+- **Files** of any type, with a preview for images and a download button when decoding binary data.
+
+## How to use it
+
+1. To encode, type text or press **Encode a file**.
+2. To decode, switch to **Decode** and paste Base64, Base64URL or a data URL. Whitespace and line breaks are ignored.
+3. Press **Swap** to send the result back to the input in the other mode.
+
+## Size
+
+Base64 turns every 3 bytes into 4 characters, so the encoded text is about **33% larger** than the original. Embedding big images as data URLs makes pages heavier and prevents caching; keep it for small icons.

@@ -1,0 +1,24 @@
+export const faq = [
+  {
+    q: "¿Está mi color de marca exacto en la escala?",
+    a: "Sí. Se coloca, sin cambios, en el paso cuya luminosidad es más parecida (a menudo 500 o 600), y el resto de la escala se construye a su alrededor.",
+  },
+  {
+    q: "¿Por qué se calcula en OKLCH?",
+    a: "En HSL, un amarillo al 50% de luminosidad parece mucho más claro que un azul al 50%. La luminosidad de OKLCH se corresponde con la percepción, así que cada paso de la escala se ve equiespaciado sea cual sea el tono; así construye Tailwind v4 su propia paleta.",
+  },
+  {
+    q: "¿Qué pasos uso para qué?",
+    a: "Una convención habitual: 50–100 para fondos, 200–300 para bordes, 500–600 para botones y acentos, 700–900 para texto sobre fondos claros y 950 para superficies en modo oscuro.",
+  },
+];
+
+## ¿Qué hace?
+
+A partir de **un color base** genera los **once tonos 50–950** que usa Tailwind, listos para fondos, bordes, botones y texto. La escala se calcula en **OKLCH**, manteniendo tu tono y bajando el croma en los extremos, para que los tonos claros y oscuros no se vean apagados ni fluorescentes.
+
+## Exportar
+
+- **Tailwind v4**: variables `--color-brand-500` dentro de `@theme`, para que `bg-brand-500` funcione directamente.
+- **Tailwind v3**: un objeto para `theme.extend.colors`.
+- **Variables CSS** y variables **SCSS**, en OKLCH o HEX.

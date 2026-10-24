@@ -1,0 +1,74 @@
+{
+  "en": {
+    "name": "Fluid Type Scale",
+    "short": "Generate a fluid typographic scale with clamp(), as CSS variables or a Tailwind theme.",
+    "title": "Fluid type scale generator (clamp, CSS variables, Tailwind)",
+    "description": "Pick a base size and a ratio for small and large screens and get a complete fluid type scale, from small text to h1, with clamp() values that respect the user's zoom. Export as CSS variables or a Tailwind v3/v4 theme. Live preview while you resize.",
+    "h1": "Fluid Type Scale Generator",
+    "lead": "One base size and one ratio per screen size: every heading scales smoothly between them.",
+    "settings": "Settings",
+    "scale": "Scale",
+    "format": "Export",
+    "small": "Small screen ({vw}px)",
+    "large": "Large screen ({vw}px)",
+    "base": "Base size",
+    "ratio": "Ratio",
+    "minViewport": "Small screen width",
+    "maxViewport": "Large screen width",
+    "stepsUp": "Steps above base",
+    "stepsDown": "Steps below base",
+    "root": "Root font size",
+    "viewport": "Screen width",
+    "sample": "The quick brown fox",
+    "errors": {
+      "ratio": "The ratio must be between 1 and 4.",
+      "base": "The base size must be greater than 0.",
+      "viewport": "The large screen must be wider than the small one.",
+      "steps": "Use 0–10 steps above and 0–4 below."
+    }
+  },
+  "es": {
+    "name": "Escala tipográfica fluida",
+    "short": "Genera una escala tipográfica fluida con clamp(), como variables CSS o tema de Tailwind.",
+    "title": "Generador de escala tipográfica fluida (clamp, variables CSS, Tailwind)",
+    "description": "Elige un tamaño base y una proporción para pantallas pequeñas y grandes y obtén una escala tipográfica fluida completa, del texto pequeño al h1, con valores clamp() que respetan el zoom del usuario. Exporta como variables CSS o tema de Tailwind v3/v4. Vista previa en vivo al cambiar el ancho.",
+    "h1": "Generador de escala tipográfica fluida",
+    "lead": "Un tamaño base y una proporción por tamaño de pantalla: cada encabezado escala suavemente entre ellos.",
+    "settings": "Ajustes",
+    "scale": "Escala",
+    "format": "Exportar",
+    "small": "Pantalla pequeña ({vw}px)",
+    "large": "Pantalla grande ({vw}px)",
+    "base": "Tamaño base",
+    "ratio": "Proporción",
+    "minViewport": "Ancho de pantalla pequeña",
+    "maxViewport": "Ancho de pantalla grande",
+    "stepsUp": "Pasos por encima",
+    "stepsDown": "Pasos por debajo",
+    "root": "Tamaño de fuente raíz",
+    "viewport": "Ancho de pantalla",
+    "sample": "El veloz murciélago hindú",
+    "errors": {
+      "ratio": "La proporción debe estar entre 1 y 4.",
+      "base": "El tamaño base debe ser mayor que 0.",
+      "viewport": "La pantalla grande debe ser más ancha que la pequeña.",
+      "steps": "Usa 0–10 pasos por encima y 0–4 por debajo."
+    }
+  },
+  "fr": {
+    "name": "Échelle typographique fluide",
+    "short": "Générez une échelle typographique fluide avec clamp().",
+    "title": "Générateur d'échelle typographique fluide (clamp, Tailwind)",
+    "description": "Choisissez une taille de base et un ratio et obtenez une échelle typographique fluide complète avec clamp(), en variables CSS ou thème Tailwind.",
+    "h1": "Échelle typographique fluide",
+    "lead": "Une taille de base et un ratio par taille d'écran."
+  },
+  "pt": {
+    "name": "Escala tipográfica fluida",
+    "short": "Gere uma escala tipográfica fluida com clamp().",
+    "title": "Gerador de escala tipográfica fluida (clamp, Tailwind)",
+    "description": "Escolha um tamanho base e uma proporção e obtenha uma escala tipográfica fluida completa com clamp(), em variáveis CSS ou tema Tailwind.",
+    "h1": "Escala tipográfica fluida",
+    "lead": "Um tamanho base e uma proporção por tamanho de tela."
+  }
+}

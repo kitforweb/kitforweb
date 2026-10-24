@@ -1,0 +1,8 @@
+.next
+node_modules
+src/components/ui
+src/content
+package-lock.json
+test-results
+playwright-report
+.lighthouseci

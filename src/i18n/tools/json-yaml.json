@@ -1,0 +1,40 @@
+{
+  "en": {
+    "name": "JSON ↔ YAML",
+    "short": "Convert JSON to YAML and back, with YAML indentation errors marked.",
+    "title": "JSON to YAML converter (and YAML to JSON)",
+    "description": "Convert JSON to YAML and YAML to JSON online, for GitHub Actions, docker-compose, Kubernetes or OpenAPI. YAML indentation errors are shown with their line. 100% in your browser.",
+    "h1": "JSON ↔ YAML converter",
+    "lead": "Convert in both directions: use Swap to go from YAML back to JSON.",
+    "placeholder": "Paste JSON (or YAML after pressing Swap)…",
+    "indent": "Indentation",
+    "spaces": "{n} spaces"
+  },
+  "es": {
+    "name": "JSON ↔ YAML",
+    "short": "Convierte JSON a YAML y al revés, marcando errores de indentación.",
+    "title": "Convertir JSON a YAML (y YAML a JSON)",
+    "description": "Convierte JSON a YAML y YAML a JSON online, para GitHub Actions, docker-compose, Kubernetes u OpenAPI. Los errores de indentación del YAML se muestran con su línea. 100% en tu navegador.",
+    "h1": "Conversor JSON ↔ YAML",
+    "lead": "Convierte en los dos sentidos: pulsa Intercambiar para pasar de YAML a JSON.",
+    "placeholder": "Pega JSON (o YAML después de pulsar Intercambiar)…",
+    "indent": "Sangría",
+    "spaces": "{n} espacios"
+  },
+  "fr": {
+    "name": "JSON ↔ YAML",
+    "short": "Convertissez du JSON en YAML et inversement, avec erreurs d'indentation signalées.",
+    "title": "Convertisseur JSON vers YAML (et YAML vers JSON)",
+    "description": "Convertissez JSON en YAML et YAML en JSON en ligne, pour GitHub Actions, docker-compose ou Kubernetes. Les erreurs d'indentation sont signalées. 100 % dans votre navigateur.",
+    "h1": "Convertisseur JSON ↔ YAML",
+    "lead": "Convertissez dans les deux sens avec le bouton Inverser."
+  },
+  "pt": {
+    "name": "JSON ↔ YAML",
+    "short": "Converta JSON em YAML e vice-versa, com erros de indentação marcados.",
+    "title": "Conversor de JSON para YAML (e YAML para JSON)",
+    "description": "Converta JSON em YAML e YAML em JSON online, para GitHub Actions, docker-compose ou Kubernetes. Erros de indentação aparecem com a linha. 100% no seu navegador.",
+    "h1": "Conversor JSON ↔ YAML",
+    "lead": "Converta nos dois sentidos com o botão Inverter."
+  }
+}

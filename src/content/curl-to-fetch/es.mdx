@@ -1,0 +1,44 @@
+export const faq = [
+  {
+    q: "¿Cómo copio una petición como cURL?",
+    a: "Abre las DevTools, ve a la pestaña Red, haz clic derecho en la petición y elige Copiar → Copiar como cURL. Se admiten la versión bash y la de cmd (Windows).",
+  },
+  {
+    q: "¿Se envían las cookies o los tokens a algún sitio?",
+    a: "No. El comando se analiza y se convierte en tu navegador; no se ejecuta ni se sube nada. Aun así, recuerda que una petición copiada contiene tus cookies de sesión y la cabecera Authorization.",
+  },
+  {
+    q: "¿Por qué no hay Content-Type con los formularios -F?",
+    a: "Porque FormData pone por sí mismo el Content-Type multipart, con el boundary incluido. Ponerlo a mano rompería la petición.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte un **comando cURL** en código listo para usar con **fetch**, **axios** o **HttpClient de Angular**: método, URL, cabeceras, cuerpos JSON o de formulario, subida de archivos y autenticación básica.
+
+Es la forma más rápida de reproducir en tu frontend una petición que viste en las DevTools, en Postman o en la documentación de una API.
+
+## Opciones admitidas
+
+| Opción | Significado |
+| --- | --- |
+| `-X`, `--request` | método HTTP |
+| `-H`, `--header` | cabecera |
+| `-d`, `--data`, `--data-raw`, `--data-binary` | cuerpo de la petición |
+| `--json` | cuerpo JSON con su Content-Type y Accept |
+| `-F`, `--form` | campo o archivo de un formulario multipart |
+| `-u`, `--user` | autenticación básica |
+| `-b`, `--cookie` | cookies |
+| `-G` | enviar los datos como query string |
+
+## Ejemplo de resultado
+
+```js
+const response = await fetch("https://api.example.com/v1/orders", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ "productId": 42 }),
+});
+const data = await response.json();
+```

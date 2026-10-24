@@ -1,0 +1,47 @@
+export const faq = [
+  {
+    q: "Is my query sent to a server?",
+    a: "No. Formatting happens in your browser with the sql-formatter library, so queries with real table names or data never leave your machine.",
+  },
+  {
+    q: "Why does the dialect matter?",
+    a: "Each database has its own syntax: backtick identifiers in MySQL, square brackets in SQL Server, :: casts and $1 parameters in PostgreSQL. Choosing the right dialect avoids splitting tokens the wrong way.",
+  },
+  {
+    q: "Does it change what the query does?",
+    a: "No. Only whitespace and, if you choose so, the case of keywords change. Strings, identifiers and comments are kept as they are.",
+  },
+];
+
+## What does it do?
+
+It takes a SQL query written on one line (the kind you copy from a log, an ORM or a slow-query report) and **puts every clause on its own line**, with consistent indentation and keywords in upper case. It can also do the opposite: **compact a query into one line** to paste it into code or a config file.
+
+## Options
+
+- **Dialect**: PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, Oracle PL/SQL, BigQuery, Snowflake or standard SQL.
+- **Keywords**: upper case, lower case or as written.
+- **Indentation**: 2 or 4 spaces.
+
+## Example
+
+```sql
+select u.id,u.email,count(o.id) as orders from users u left join orders o on o.user_id=u.id where u.active=true group by u.id,u.email
+```
+
+becomes
+
+```sql
+SELECT
+  u.id,
+  u.email,
+  count(o.id) AS orders
+FROM
+  users u
+  LEFT JOIN orders o ON o.user_id = u.id
+WHERE
+  u.active = TRUE
+GROUP BY
+  u.id,
+  u.email
+```

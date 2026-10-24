@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "¿Por qué los dominios con tildes necesitan Punycode?",
+    a: "El DNS solo entiende letras ASCII, dígitos y guiones. Los nombres de dominio internacionalizados (IDN) se guardan como etiquetas xn--, y los navegadores muestran al usuario la versión Unicode.",
+  },
+  {
+    q: "¿Y la parte de antes de la @ en un email?",
+    a: "Solo se convierte el dominio. Las partes locales no ASCII (josé@…) necesitan soporte SMTPUTF8 en los servidores de correo y se dejan como están.",
+  },
+  {
+    q: "¿Qué es un ataque homógrafo IDN?",
+    a: "Registrar un dominio que se ve idéntico a otro usando letras de otros alfabetos, como una а cirílica en аpple.com. Al convertirlo a Punycode se descubre el truco: el dominio pasa a ser xn--pple-43d.com.",
+  },
+];
+
+## ¿Qué hace?
+
+Convierte **nombres de dominio internacionalizados** —con tildes, `ñ`, diéresis o alfabetos no latinos— a su forma **ASCII en Punycode** (`xn--…`) y al revés.
+
+| Unicode | Punycode |
+| --- | --- |
+| `españa.com` | `xn--espaa-rta.com` |
+| `münchen.de` | `xn--mnchen-3ya.de` |
+| `例え.テスト` | `xn--r8jz45g.xn--zckzah` |
+
+## Cómo se usa
+
+1. Pega un dominio, email o URL por línea.
+2. Solo se convierte el host: las rutas, las query strings y la parte local de los emails se quedan como están.
+3. Pulsa **Intercambiar** para decodificar dominios `xn--` a Unicode.
+
+Necesitas la forma Punycode al configurar registros DNS, certificados TLS, listas de CORS o cookies para un dominio internacionalizado.

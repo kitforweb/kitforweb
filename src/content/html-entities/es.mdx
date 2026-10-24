@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "¿Qué caracteres hay que escapar siempre en HTML?",
+    a: "El ampersand (&) y el signo menor que (<) en el texto, más la comilla que delimita el valor de un atributo. Escapar también > y ambas comillas es la opción segura.",
+  },
+  {
+    q: "¿Necesito entidades para tildes como é?",
+    a: "No si tu página se sirve en UTF-8, que es lo habitual. Codifica todo lo no ASCII solo para sistemas antiguos o emails que puedan estropear la codificación.",
+  },
+  {
+    q: "¿Escapar protege contra XSS?",
+    a: "Escapar el texto antes de insertarlo en HTML es la defensa principal, pero el contexto importa: los valores dentro de URLs, JavaScript o CSS necesitan su propio escapado.",
+  },
+];
+
+## ¿Qué hace?
+
+**Convierte caracteres especiales en entidades HTML** para que se muestren como texto en lugar de interpretarse como etiquetas, y **decodifica** las entidades a caracteres.
+
+| Carácter | Con nombre | Decimal | Hexadecimal |
+| --- | --- | --- | --- |
+| `&` | `&amp;` | `&#38;` | `&#x26;` |
+| `<` | `&lt;` | `&#60;` | `&#x3C;` |
+| `"` | `&quot;` | `&#34;` | `&#x22;` |
+| `é` | `&eacute;` | `&#233;` | `&#xE9;` |
+
+## Cómo se usa
+
+1. Pega texto o HTML para codificarlo. Elige referencias con nombre, decimales o hexadecimales.
+2. Activa **Codificar todo lo no ASCII** para convertir también tildes y emojis.
+3. Pulsa **Intercambiar** para decodificar entidades encontradas en una página, una base de datos o una respuesta de API.
+
+El decodificador entiende la lista completa de referencias con nombre de HTML5, como `&nbsp;`, `&mdash;` o `&hellip;`.

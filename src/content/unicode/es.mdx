@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "¿Por qué \"👍🏽\".length devuelve 4 en JavaScript?",
+    a: "length cuenta unidades UTF-16. El pulgar y el modificador de tono de piel son dos puntos de código fuera del plano básico, y cada uno necesita dos unidades. El usuario ve un único carácter (un grafema).",
+  },
+  {
+    q: "¿Qué son los caracteres invisibles y por qué importan?",
+    a: "Los espacios de ancho cero, los joiners, el BOM o los controles bidireccionales no ocupan sitio en pantalla, pero rompen comparaciones de textos, contraseñas, slugs y el análisis de JSON, y pueden usarse para disfrazar nombres de archivo.",
+  },
+  {
+    q: "¿Qué escape debo usar?",
+    a: "\\u00E9 o \\u{1F600} en textos de JavaScript, &#xE9; en HTML y \\E9 en el content de CSS. La tabla los muestra todos para cada carácter.",
+  },
+];
+
+## ¿Qué hace?
+
+Muestra **cada carácter de un texto uno a uno**: su código Unicode (`U+00E9`), su nombre o categoría, sus **bytes UTF-8** y cómo escaparlo en JavaScript, HTML y CSS. Es la herramienta para esos momentos en los que un texto "se ve bien" pero no se comporta como debería.
+
+## Problemas típicos que resuelve
+
+- Una comparación de textos falla porque uno tiene un **espacio invisible de ancho cero**.
+- Un archivo JSON no se analiza porque empieza con un **BOM**.
+- Un archivo llamado `factura\u202Etxt.exe` esconde su verdadera extensión con un **control de derecha a izquierda**.
+- `é` es un punto de código en un texto y una `e` más un acento combinable en otro.
+
+## Cómo se usa
+
+1. Pega el texto sospechoso.
+2. Revisa los contadores: caracteres visibles, puntos de código, longitud UTF-16 y bytes UTF-8.
+3. Los caracteres invisibles aparecen resaltados en la tabla.
+4. Pulsa **Copiar sin caracteres invisibles** para obtener una versión limpia.

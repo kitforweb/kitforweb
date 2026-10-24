@@ -1,0 +1,42 @@
+{
+  "en": {
+    "name": "Case Converter",
+    "short": "Convert identifiers between camelCase, snake_case, kebab-case, PascalCase and more.",
+    "title": "camelCase, snake_case and kebab-case converter online",
+    "description": "Convert text or lists of identifiers between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, dot.case and more, line by line. Acronyms such as HTTP or XML are split correctly. 100% in your browser.",
+    "h1": "Case Converter",
+    "lead": "Paste one identifier per line and copy it in the style your language or API expects.",
+    "input": "Identifiers",
+    "output": "Styles",
+    "placeholder": "user_first_name\ngetUserName\n…",
+    "current": "current"
+  },
+  "es": {
+    "name": "Conversor de mayúsculas",
+    "short": "Convierte identificadores entre camelCase, snake_case, kebab-case, PascalCase y más.",
+    "title": "Conversor de camelCase, snake_case y kebab-case online",
+    "description": "Convierte texto o listas de identificadores entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, dot.case y más, línea a línea. Los acrónimos como HTTP o XML se separan correctamente. 100% en tu navegador.",
+    "h1": "Conversor camelCase, snake_case y kebab-case",
+    "lead": "Pega un identificador por línea y cópialo en el estilo que espera tu lenguaje o tu API.",
+    "input": "Identificadores",
+    "output": "Estilos",
+    "placeholder": "user_first_name\ngetUserName\n…",
+    "current": "actual"
+  },
+  "fr": {
+    "name": "Convertisseur de casse",
+    "short": "Convertissez des identifiants entre camelCase, snake_case, kebab-case et plus.",
+    "title": "Convertisseur camelCase, snake_case et kebab-case en ligne",
+    "description": "Convertissez des identifiants entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE et plus, ligne par ligne. 100 % dans votre navigateur.",
+    "h1": "Convertisseur de casse",
+    "lead": "Collez un identifiant par ligne."
+  },
+  "pt": {
+    "name": "Conversor de caixa",
+    "short": "Converta identificadores entre camelCase, snake_case, kebab-case e mais.",
+    "title": "Conversor de camelCase, snake_case e kebab-case online",
+    "description": "Converta identificadores entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE e mais, linha por linha. 100% no seu navegador.",
+    "h1": "Conversor de caixa",
+    "lead": "Cole um identificador por linha."
+  }
+}

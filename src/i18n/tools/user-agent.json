@@ -1,0 +1,76 @@
+{
+  "en": {
+    "name": "User-Agent",
+    "short": "Break a User-Agent into browser, engine, OS and device. Shows yours.",
+    "title": "User-Agent parser: browser, OS, device and bots",
+    "description": "Break down any User-Agent string into browser and version, rendering engine, operating system and device type, and recognise bots such as Googlebot, GPTBot or ClaudeBot. Shows your own User-Agent by default.",
+    "h1": "User-Agent parser",
+    "lead": "This is your browser's User-Agent. Paste any other one to analyse it.",
+    "result": "Result",
+    "mine": "My User-Agent",
+    "empty": "Paste a User-Agent string.",
+    "unknown": "Unknown",
+    "browser": "Browser",
+    "engine": "Engine",
+    "os": "Operating system",
+    "device": "Device",
+    "cpu": "CPU",
+    "devices": {
+      "desktop": "Desktop",
+      "mobile": "Mobile",
+      "tablet": "Tablet",
+      "smarttv": "Smart TV",
+      "console": "Console",
+      "wearable": "Wearable",
+      "embedded": "Embedded",
+      "xr": "XR headset"
+    },
+    "bot": "This User-Agent belongs to a bot or tool: {name}.",
+    "hint": "User-Agents can be faked and are being reduced by browsers (User-Agent Client Hints). Use feature detection rather than UA sniffing when possible."
+  },
+  "es": {
+    "name": "User-Agent",
+    "short": "Desglosa un User-Agent en navegador, motor, sistema y dispositivo. Muestra el tuyo.",
+    "title": "Analizar User-Agent: navegador, sistema, dispositivo y bots",
+    "description": "Desglosa cualquier User-Agent en navegador y versión, motor de renderizado, sistema operativo y tipo de dispositivo, y reconoce bots como Googlebot, GPTBot o ClaudeBot. Muestra tu propio User-Agent por defecto.",
+    "h1": "Analizador de User-Agent",
+    "lead": "Este es el User-Agent de tu navegador. Pega cualquier otro para analizarlo.",
+    "result": "Resultado",
+    "mine": "Mi User-Agent",
+    "empty": "Pega un User-Agent.",
+    "unknown": "Desconocido",
+    "browser": "Navegador",
+    "engine": "Motor",
+    "os": "Sistema operativo",
+    "device": "Dispositivo",
+    "cpu": "CPU",
+    "devices": {
+      "desktop": "Escritorio",
+      "mobile": "Móvil",
+      "tablet": "Tableta",
+      "smarttv": "Smart TV",
+      "console": "Consola",
+      "wearable": "Wearable",
+      "embedded": "Integrado",
+      "xr": "Gafas XR"
+    },
+    "bot": "Este User-Agent pertenece a un bot o herramienta: {name}.",
+    "hint": "Los User-Agent se pueden falsificar y los navegadores los están recortando (User-Agent Client Hints). Usa la detección de funciones en lugar de mirar el UA siempre que puedas."
+  },
+  "fr": {
+    "name": "User-Agent",
+    "short": "Décomposez un User-Agent en navigateur, moteur, système et appareil.",
+    "title": "Analyseur de User-Agent : navigateur, système, appareil et bots",
+    "description": "Décomposez une chaîne User-Agent en navigateur, moteur, système d'exploitation et type d'appareil, et reconnaissez les bots. Affiche votre propre User-Agent.",
+    "h1": "Analyseur de User-Agent",
+    "lead": "Voici le User-Agent de votre navigateur. Collez-en un autre pour l'analyser."
+  },
+  "pt": {
+    "name": "User-Agent",
+    "short": "Decomponha um User-Agent em navegador, motor, sistema e dispositivo.",
+    "title": "Analisador de User-Agent: navegador, sistema, dispositivo e bots",
+    "description": "Decomponha qualquer User-Agent em navegador, motor, sistema operacional e tipo de dispositivo, e reconheça bots. Mostra o seu próprio User-Agent.",
+    "h1": "Analisador de User-Agent",
+    "lead": "Este é o User-Agent do seu navegador. Cole outro para analisá-lo."
+  }
+}

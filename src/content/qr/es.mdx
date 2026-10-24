@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "¿Caducan estos códigos QR?",
+    a: "No. El código contiene directamente tu texto, URL o datos de WiFi. Muchos generadores online codifican en su lugar un enlace corto a su propio servidor, que puede dejar de funcionar o registrar cada escaneo.",
+  },
+  {
+    q: "¿Puedo añadir un logo sin romper el código?",
+    a: "Sí. Con logo, la corrección de errores pasa a H, que tolera alrededor de un 30% de módulos dañados, y los módulos del centro se dejan libres para que el logo no tape datos irrecuperables. Prueba el resultado con la cámara del móvil.",
+  },
+  {
+    q: "¿Cómo funciona el QR de WiFi?",
+    a: "Usa el formato WIFI:T:WPA;S:nombre;P:contraseña;; que entienden las cámaras de iOS y Android: al apuntar con la cámara ofrece conectarse a la red. Esta página nunca guarda la contraseña.",
+  },
+];
+
+## ¿Qué hace?
+
+Crea **códigos QR** para:
+
+- **Texto o URLs**: enlaces a tu web, una carta, un formulario.
+- **WiFi**: los invitados se conectan a tu red escaneando, sin escribir la contraseña.
+- **Contactos** (vCard): nombre, teléfono, email, empresa y web, guardados con un escaneo.
+
+Elige los **colores**, el nivel de **corrección de errores**, añade un **logo** en el centro y descárgalo en **PNG** o **SVG** (vectorial, perfecto para imprimir).
+
+## Consejos
+
+- Mantén un contraste fuerte: módulos oscuros sobre fondo claro. Los colores invertidos fallan en algunos lectores.
+- Deja la zona de silencio (el margen blanco): sin ella, el escaneo es menos fiable.
+- Cuanto más corto el contenido, más pequeño y fácil de escanear es el código.

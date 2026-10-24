@@ -1,0 +1,40 @@
+export const faq = [
+  {
+    q: "In which time zone does my cron job run?",
+    a: "In the time zone of the machine or service that runs it. Most servers, containers and cloud schedulers (GitHub Actions, Vercel, AWS) use UTC, so switch the tool to UTC to see the real run times.",
+  },
+  {
+    q: "What does */15 mean?",
+    a: "Every 15 units of that field: in the minute field, at minutes 0, 15, 30 and 45. It is shorthand for the list 0,15,30,45.",
+  },
+  {
+    q: "What if I set both day of month and day of week?",
+    a: "In classic cron, the job runs when either of them matches, not both. For example 0 9 1 * 1 runs on the 1st of every month and also every Monday.",
+  },
+];
+
+## What does it do?
+
+It **explains a cron expression in plain words** — for example `*/15 9-17 * * 1-5` becomes "Every 15 minutes, between 09:00 and 17:59, Monday through Friday" — and lists the **next 10 runs** in your local time or UTC. You can also **build** an expression field by field or start from a preset.
+
+## Cron syntax
+
+```
+┌───────── minute (0–59)
+│ ┌─────── hour (0–23)
+│ │ ┌───── day of month (1–31)
+│ │ │ ┌─── month (1–12 or JAN–DEC)
+│ │ │ │ ┌─ day of week (0–6 or SUN–SAT, 0 = Sunday)
+│ │ │ │ │
+* * * * *
+```
+
+| Expression | Meaning |
+| --- | --- |
+| `0 * * * *` | every hour, on the hour |
+| `0 9 * * 1-5` | weekdays at 09:00 |
+| `30 2 1 * *` | the 1st of each month at 02:30 |
+| `0 0 * * 0` | every Sunday at midnight |
+| `@daily` | every day at 00:00 |
+
+A sixth field at the beginning, for **seconds**, is also supported, as used by Spring, Quartz and node-cron.

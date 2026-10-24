@@ -1,0 +1,31 @@
+export const faq = [
+  {
+    q: "Which versions are supported?",
+    a: "OpenAPI 3.0 and 3.1, and Swagger 2.0, written in YAML or JSON. Local references ($ref to #/components/…) are resolved; references to external files are reported as unresolved.",
+  },
+  {
+    q: "What problems does it detect?",
+    a: "Missing required fields (info, title, version, paths), broken $ref references, path parameters used in the URL but not declared (or declared but not used), duplicate operationId values and operations without responses.",
+  },
+  {
+    q: "Is my spec uploaded anywhere?",
+    a: "No. The document is parsed in your browser, so internal or unpublished APIs stay private.",
+  },
+];
+
+## What does it do?
+
+It turns an **OpenAPI** (or Swagger) file into **readable documentation**: endpoints grouped by tag with their HTTP method, parameters, request body and responses, with the referenced schemas expanded. A filter finds an endpoint by path, method or summary.
+
+At the same time it **checks the specification** and lists its problems, so you can fix them before publishing the spec or generating a client from it.
+
+## How to use it
+
+1. Paste the YAML or JSON, or drop the file.
+2. Browse the **Documentation** tab, or open **Problems** to see what is wrong.
+
+## Common mistakes it catches
+
+- A path like `/books/{id}` without a parameter `id` with `in: path`.
+- A `$ref` pointing to a schema that was renamed or deleted.
+- Two operations sharing the same `operationId`, which breaks code generators.

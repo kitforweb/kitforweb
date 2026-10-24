@@ -1,0 +1,33 @@
+export const faq = [
+  {
+    q: "Does it take daylight saving time into account?",
+    a: "Yes. Offsets come from the IANA time zone database built into your browser, so each city shows the offset that applies on the chosen date, summer or winter.",
+  },
+  {
+    q: "Why use Europe/Madrid instead of CET?",
+    a: "Abbreviations like CET, EST or IST are ambiguous and do not tell when daylight saving starts. IANA names such as Europe/Madrid or America/New_York carry the whole history of rules.",
+  },
+  {
+    q: "How should I store dates in my database?",
+    a: "Store instants in UTC (or as Unix time) and convert to the user's time zone only when displaying them. Keep the IANA zone name separately if you need to know the user's local time.",
+  },
+];
+
+## What does it do?
+
+It shows **one moment in several time zones at the same time**. Choose a date and time in any zone and you instantly see the local time in every city on your list, with its UTC offset and a marker when it falls within working hours (9:00 to 18:00).
+
+## How to use it
+
+1. Pick the **date and time** and the **time zone** it refers to.
+2. **Add cities or zones** with the search box: "Tokyo", "Sao Paulo", "America/Denver"…
+3. Rows outside working hours are dimmed, and a **+1d** or **−1d** marks a different calendar day.
+4. Copy the list to paste it in an invitation or a chat.
+
+Your list of zones is remembered in this browser for next time.
+
+## Useful for
+
+- Finding a meeting slot that works for a distributed team.
+- Checking the server time in logs and cron jobs that run in UTC.
+- Debugging bugs that only happen "after midnight" in another country.

@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "¿Basta una regex para validar un email?",
+    a: "No. Una regex puede rechazar errores evidentes, pero la única comprobación real es enviar un correo de confirmación. La gramática del RFC 5322 es demasiado permisiva y compleja para ser útil en un formulario.",
+  },
+  {
+    q: "¿Estos patrones comprueban la letra del DNI o el dígito de control del IBAN?",
+    a: "No, comprueban el formato. La letra del DNI (número módulo 23) y el dígito de control del IBAN (módulo 97) necesitan un par de líneas de código después de la regex.",
+  },
+  {
+    q: "¿Puedo usarlos en formularios HTML?",
+    a: "Sí. Elige HTML en Copiar para: obtienes un input con el atributo pattern, sin los anclajes ^ y $ que el navegador añade por su cuenta.",
+  },
+];
+
+## ¿Qué hace?
+
+Es una **biblioteca de expresiones regulares listas** para las validaciones que necesita cualquier proyecto: email, URL, DNI y NIE, IBAN, teléfonos internacionales y españoles, códigos postales, contraseñas seguras, fechas, horas, colores hexadecimales, direcciones IPv4, slugs, UUID y nombres de usuario.
+
+Cada patrón incluye:
+
+- Una **descripción** de lo que acepta y de sus límites.
+- **Ejemplos** que deben coincidir y que no, ya probados.
+- Una **explicación** de cada parte de la regex.
+- **Copiar para** JavaScript/TypeScript, HTML, Zod, Angular y Python.
+- Botones para abrirlo en el **Tester** o en el **Builder** y adaptarlo.
+
+## Consejo
+
+Valida en el navegador para dar una respuesta rápida al usuario y **valida siempre otra vez en el servidor**: una regex en el cliente se puede saltar.

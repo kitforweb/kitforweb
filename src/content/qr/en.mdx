@@ -1,0 +1,30 @@
+export const faq = [
+  {
+    q: "Do these QR codes expire?",
+    a: "No. The code contains your text, URL or WiFi data directly. Many online generators encode a short link to their own server instead, which can stop working or track every scan.",
+  },
+  {
+    q: "Can I add a logo without breaking the code?",
+    a: "Yes. With a logo the error correction is set to H, which tolerates about 30% of damaged modules, and the center modules are cleared so the logo covers no data it cannot recover. Test the result with your phone camera.",
+  },
+  {
+    q: "How does the WiFi QR work?",
+    a: "It uses the WIFI:T:WPA;S:name;P:password;; format that iOS and Android cameras understand: pointing the camera offers to join the network. The password is never stored by this page.",
+  },
+];
+
+## What does it do?
+
+It creates **QR codes** for:
+
+- **Text or URLs**: links to your site, a menu, a form.
+- **WiFi**: guests join your network by scanning, without typing the password.
+- **Contacts** (vCard): name, phone, email, company and website, saved in one scan.
+
+Choose the **colors**, the **error correction** level, add a **logo** in the center and download it as **PNG** or **SVG** (vector, perfect for print).
+
+## Tips
+
+- Keep a strong contrast: dark modules on a light background. Inverted colors fail in some readers.
+- Leave the quiet zone (the white margin): without it, scanning is less reliable.
+- Shorter content means a smaller, easier-to-scan code.

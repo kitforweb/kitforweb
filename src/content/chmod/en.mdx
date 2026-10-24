@@ -1,0 +1,32 @@
+export const faq = [
+  {
+    q: "How is 755 calculated?",
+    a: "Each digit is the sum of read (4), write (2) and execute (1) for one class: owner, group and others. 7 = 4+2+1 (rwx), 5 = 4+1 (r-x). So 755 is rwxr-xr-x.",
+  },
+  {
+    q: "What does execute mean on a directory?",
+    a: "Permission to enter it and reach the files inside (cd, open a file by its path). Read only lets you list the names. That is why directories are usually 755 and files 644.",
+  },
+  {
+    q: "What are the fourth digit and the s and t letters?",
+    a: "Special bits: 4 is setuid (runs with the owner's privileges), 2 is setgid (new files inherit the directory's group) and 1 is the sticky bit (in /tmp, only the owner can delete their files). ls shows them as s or t in the execute position, in upper case when execute is not set.",
+  },
+];
+
+## What does it do?
+
+It translates Unix permissions between the three ways you meet them: **checkboxes** (read, write and execute for owner, group and others), the **octal mode** that `chmod` takes (`755`) and the **symbolic string** that `ls -l` prints (`rwxr-xr-x`). Change any of them and the others follow.
+
+You can also paste a whole command (`chmod -R 750 /srv/app`), an `ls -l` line (`-rw-r--r--`) or apply a symbolic expression like `u+x,go-w` to see the resulting mode.
+
+## Common modes
+
+| Mode | Symbolic | Typical use |
+| --- | --- | --- |
+| 644 | rw-r--r-- | Regular files |
+| 755 | rwxr-xr-x | Scripts and directories |
+| 600 | rw------- | SSH keys, .env files |
+| 700 | rwx------ | ~/.ssh |
+| 1777 | rwxrwxrwt | /tmp |
+
+Avoid `777`: any user or compromised process on the machine could modify the file.

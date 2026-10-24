@@ -1,0 +1,34 @@
+export const faq = [
+  {
+    q: "How do I copy the response headers?",
+    a: "In DevTools, open the Network tab, select the request and, in Headers → Response Headers, enable Raw and copy them. From a terminal, curl -I https://example.com prints them too.",
+  },
+  {
+    q: "Which security headers matter most?",
+    a: "Content-Security-Policy against XSS, Strict-Transport-Security to force HTTPS, X-Content-Type-Options: nosniff, frame protection with CSP frame-ancestors, and a sensible Referrer-Policy.",
+  },
+  {
+    q: "Is Access-Control-Allow-Origin: * dangerous?",
+    a: "Not for public, read-only resources. It becomes a problem combined with credentials (browsers reject it) or when people try to work around that by reflecting any Origin.",
+  },
+];
+
+## What does it do?
+
+It reads the headers of an HTTP response and:
+
+- **Explains every header** in plain words, grouped by category: cache, CORS, cookies, security, content and connection.
+- **Flags what is missing or risky**: no CSP, no HSTS, cookies without `Secure`, `HttpOnly` or `SameSite`, CORS wildcards with credentials, version numbers in `Server` or `X-Powered-By`, obsolete headers.
+
+## A good baseline
+
+```
+Content-Security-Policy: default-src 'self'; frame-ancestors 'none'
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Set-Cookie: session=…; Secure; HttpOnly; SameSite=Lax
+```
+
+Start your Content-Security-Policy as `Content-Security-Policy-Report-Only` to see what it would block before enforcing it.

@@ -1,0 +1,52 @@
+{
+  "en": {
+    "name": "SVG Optimizer",
+    "short": "Clean and shrink SVGs with SVGO, with before/after preview and savings.",
+    "title": "SVG optimizer online with SVGO (before and after preview)",
+    "description": "Optimize SVG files with SVGO: remove editor metadata, comments and empty groups, round decimals and merge paths, while keeping the viewBox and title. See the size saved and a before/after preview. Runs in a Web Worker in your browser.",
+    "h1": "SVG Optimizer",
+    "lead": "Paste or drop an SVG exported from Figma, Illustrator or Inkscape and get a lighter one that looks the same.",
+    "optimized": "Optimized",
+    "precision": "Precision",
+    "decimals": "{n, plural, one {# decimal} other {# decimals}}",
+    "pretty": "Indent",
+    "placeholder": "Paste SVG code or drop a .svg file…",
+    "notSvg": "This is not an SVG: it has no svg element.",
+    "saved": "saved {percent}%",
+    "before": "Before",
+    "after": "After"
+  },
+  "es": {
+    "name": "Optimizar SVG",
+    "short": "Limpia y reduce SVGs con SVGO, con vista previa antes/después y el ahorro.",
+    "title": "Optimizar SVG online con SVGO (vista previa antes y después)",
+    "description": "Optimiza ficheros SVG con SVGO: elimina metadatos de editores, comentarios y grupos vacíos, redondea decimales y une trazados, conservando el viewBox y el título. Mira el tamaño ahorrado y una vista previa antes/después. Se ejecuta en un Web Worker en tu navegador.",
+    "h1": "Optimizar SVG",
+    "lead": "Pega o suelta un SVG exportado de Figma, Illustrator o Inkscape y obtén uno más ligero que se ve igual.",
+    "optimized": "Optimizado",
+    "precision": "Precisión",
+    "decimals": "{n, plural, one {# decimal} other {# decimales}}",
+    "pretty": "Indentar",
+    "placeholder": "Pega código SVG o suelta un fichero .svg…",
+    "notSvg": "No es un SVG: no tiene elemento svg.",
+    "saved": "ahorro {percent}%",
+    "before": "Antes",
+    "after": "Después"
+  },
+  "fr": {
+    "name": "Optimiser SVG",
+    "short": "Nettoyez et réduisez des SVG avec SVGO.",
+    "title": "Optimiseur SVG en ligne avec SVGO",
+    "description": "Optimisez des fichiers SVG avec SVGO : métadonnées, commentaires et groupes inutiles supprimés, décimales arrondies. Aperçu avant/après. 100 % dans votre navigateur.",
+    "h1": "Optimiseur SVG",
+    "lead": "Collez un SVG et obtenez-en un plus léger."
+  },
+  "pt": {
+    "name": "Otimizar SVG",
+    "short": "Limpe e reduza SVGs com SVGO.",
+    "title": "Otimizador de SVG online com SVGO",
+    "description": "Otimize arquivos SVG com SVGO: remove metadados, comentários e grupos vazios, arredonda decimais. Pré-visualização antes/depois. 100% no seu navegador.",
+    "h1": "Otimizador de SVG",
+    "lead": "Cole um SVG e obtenha um mais leve."
+  }
+}

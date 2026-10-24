@@ -1,0 +1,64 @@
+{
+  "en": {
+    "name": "Hex ↔ Binary",
+    "short": "Convert numbers and text between hex, binary, octal and decimal.",
+    "title": "Hex, binary, octal and decimal converter",
+    "description": "Convert numbers of any size between decimal, hexadecimal, binary and octal, and text to hex, binary or decimal UTF-8 bytes and back. 100% in your browser.",
+    "h1": "Hex ↔ Binary converter",
+    "lead": "Type a number in any base to see it in the others, or turn text into bytes.",
+    "number": "Number",
+    "bases": "All bases",
+    "text": "Text",
+    "bytes": "Bytes",
+    "mode": "Mode",
+    "numbers": "Numbers",
+    "textBytes": "Text ↔ bytes",
+    "format": "Byte format",
+    "placeholderText": "Type text to see its bytes…",
+    "invalidDigits": "Not a valid number in base {base}.",
+    "bits": "Bits",
+    "errors": {
+      "digits": "Every byte must be a valid value between 0 and 255 in the chosen format.",
+      "utf8": "These bytes are not valid UTF-8 text."
+    }
+  },
+  "es": {
+    "name": "Hex ↔ Binario",
+    "short": "Convierte números y texto entre hexadecimal, binario, octal y decimal.",
+    "title": "Conversor hexadecimal, binario, octal y decimal",
+    "description": "Convierte números de cualquier tamaño entre decimal, hexadecimal, binario y octal, y texto a bytes UTF-8 en hex, binario o decimal, y al revés. 100% en tu navegador.",
+    "h1": "Conversor Hex ↔ Binario",
+    "lead": "Escribe un número en cualquier base para verlo en las demás, o convierte texto en bytes.",
+    "number": "Número",
+    "bases": "Todas las bases",
+    "text": "Texto",
+    "bytes": "Bytes",
+    "mode": "Modo",
+    "numbers": "Números",
+    "textBytes": "Texto ↔ bytes",
+    "format": "Formato de bytes",
+    "placeholderText": "Escribe un texto para ver sus bytes…",
+    "invalidDigits": "No es un número válido en base {base}.",
+    "bits": "Bits",
+    "errors": {
+      "digits": "Cada byte debe ser un valor válido entre 0 y 255 en el formato elegido.",
+      "utf8": "Estos bytes no son texto UTF-8 válido."
+    }
+  },
+  "fr": {
+    "name": "Hex ↔ Binaire",
+    "short": "Convertissez nombres et texte entre hexadécimal, binaire, octal et décimal.",
+    "title": "Convertisseur hexadécimal, binaire, octal et décimal",
+    "description": "Convertissez des nombres de toute taille entre décimal, hexadécimal, binaire et octal, et du texte en octets UTF-8. 100 % dans votre navigateur.",
+    "h1": "Convertisseur Hex ↔ Binaire",
+    "lead": "Saisissez un nombre dans une base pour le voir dans les autres."
+  },
+  "pt": {
+    "name": "Hex ↔ Binário",
+    "short": "Converta números e texto entre hexadecimal, binário, octal e decimal.",
+    "title": "Conversor hexadecimal, binário, octal e decimal",
+    "description": "Converta números de qualquer tamanho entre decimal, hexadecimal, binário e octal, e texto em bytes UTF-8. 100% no seu navegador.",
+    "h1": "Conversor Hex ↔ Binário",
+    "lead": "Digite um número em qualquer base para vê-lo nas outras."
+  }
+}

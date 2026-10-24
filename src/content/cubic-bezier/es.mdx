@@ -1,0 +1,24 @@
+export const faq = [
+  {
+    q: "¿Qué significan los cuatro números?",
+    a: "Son las coordenadas de dos puntos de control, P1 (x1, y1) y P2 (x2, y2). El eje x es el tiempo y el eje y el progreso; la curva siempre empieza en (0, 0) y termina en (1, 1).",
+  },
+  {
+    q: "¿Por qué y puede bajar de 0 o pasar de 1?",
+    a: "Los valores fuera de 0–1 hacen que la animación se pase: va más allá del final y vuelve (easeOutBack) o retrocede antes de arrancar (easeInBack). x debe estar entre 0 y 1 porque el tiempo no puede ir hacia atrás.",
+  },
+  {
+    q: "¿Qué curva debo usar?",
+    a: "Los elementos que entran en pantalla suelen quedar mejor con ease-out (arranque rápido, parada suave), los que salen con ease-in y los que se mueven dentro de la pantalla con ease-in-out. Mantén las transiciones de interfaz entre 150 y 300ms.",
+  },
+];
+
+## ¿Qué hace?
+
+Es un **editor visual de curvas de animación CSS**. Arrastra los dos puntos de control de `cubic-bezier()` o escribe sus valores, parte de presets (las palabras clave de CSS, las curvas de easings.net y las de Material) y pulsa **Reproducir** para comparar el movimiento con una animación lineal.
+
+Copia el resultado para `transition-timing-function` o `animation-timing-function`. Cuando la curva coincide con una palabra clave de CSS, se usa la palabra: `cubic-bezier(0.25, 0.1, 0.25, 1)` es simplemente `ease`.
+
+## Ejemplo
+
+`cubic-bezier(0.34, 1.56, 0.64, 1)` (easeOutBack) se pasa un poco del destino y se asienta, un efecto vivo para menús y notificaciones.

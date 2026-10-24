@@ -1,0 +1,82 @@
+{
+  "en": {
+    "name": "Timestamp",
+    "short": "Convert Unix epoch (s, ms) to ISO 8601 and readable dates, and back.",
+    "title": "Unix timestamp converter (epoch to date)",
+    "description": "Convert Unix timestamps in seconds, milliseconds, microseconds or nanoseconds to ISO 8601, UTC and a readable date in your language, and dates back to epoch. Shows the current timestamp live. 100% in your browser.",
+    "h1": "Unix timestamp converter",
+    "lead": "Paste an epoch or a date in any format, or pick one, to see every representation.",
+    "input": "Timestamp or date",
+    "formats": "Formats",
+    "unit": "Unit",
+    "auto": "Auto-detect unit",
+    "unitS": "seconds",
+    "unitMs": "milliseconds",
+    "unitUs": "microseconds",
+    "unitNs": "nanoseconds",
+    "now": "Current Unix timestamp",
+    "useNow": "Now",
+    "pick": "Or pick a date",
+    "seconds": "Unix (seconds)",
+    "milliseconds": "Unix (milliseconds)",
+    "utc": "UTC (RFC 7231)",
+    "local": "Local · {zone}",
+    "relative": "Relative",
+    "errors": {
+      "empty": "Type a timestamp or a date.",
+      "invalid": "This is not a timestamp or a date format the browser understands. Try ISO 8601: 2024-05-01T10:00:00Z.",
+      "range": "The value is outside the range of dates JavaScript can represent."
+    },
+    "detectedUnit": "Interpreted as {unit} since 1 January 1970 UTC",
+    "week": "ISO week {n}",
+    "dayOfYear": "Day {n} of the year"
+  },
+  "es": {
+    "name": "Timestamp",
+    "short": "Convierte epoch Unix (s, ms) a ISO 8601 y a fecha legible, y al revés.",
+    "title": "Convertir timestamp Unix a fecha (epoch)",
+    "description": "Convierte timestamps Unix en segundos, milisegundos, microsegundos o nanosegundos a ISO 8601, UTC y una fecha legible en tu idioma, y fechas a epoch. Muestra el timestamp actual en vivo. 100% en tu navegador.",
+    "h1": "Conversor de timestamp Unix",
+    "lead": "Pega un epoch o una fecha en cualquier formato, o elige una, para ver todas sus representaciones.",
+    "input": "Timestamp o fecha",
+    "formats": "Formatos",
+    "unit": "Unidad",
+    "auto": "Detectar unidad",
+    "unitS": "segundos",
+    "unitMs": "milisegundos",
+    "unitUs": "microsegundos",
+    "unitNs": "nanosegundos",
+    "now": "Timestamp Unix actual",
+    "useNow": "Ahora",
+    "pick": "O elige una fecha",
+    "seconds": "Unix (segundos)",
+    "milliseconds": "Unix (milisegundos)",
+    "utc": "UTC (RFC 7231)",
+    "local": "Local · {zone}",
+    "relative": "Relativo",
+    "errors": {
+      "empty": "Escribe un timestamp o una fecha.",
+      "invalid": "No es un timestamp ni un formato de fecha que entienda el navegador. Prueba con ISO 8601: 2024-05-01T10:00:00Z.",
+      "range": "El valor está fuera del rango de fechas que JavaScript puede representar."
+    },
+    "detectedUnit": "Interpretado como {unit} desde el 1 de enero de 1970 UTC",
+    "week": "Semana ISO {n}",
+    "dayOfYear": "Día {n} del año"
+  },
+  "fr": {
+    "name": "Timestamp",
+    "short": "Convertissez un epoch Unix (s, ms) en ISO 8601 et en date lisible.",
+    "title": "Convertisseur de timestamp Unix (epoch vers date)",
+    "description": "Convertissez des timestamps Unix en secondes ou millisecondes en ISO 8601, UTC et date lisible, et inversement. Affiche le timestamp actuel en direct. 100 % dans votre navigateur.",
+    "h1": "Convertisseur de timestamp Unix",
+    "lead": "Collez un epoch ou une date pour voir toutes ses représentations."
+  },
+  "pt": {
+    "name": "Timestamp",
+    "short": "Converta epoch Unix (s, ms) em ISO 8601 e em data legível.",
+    "title": "Conversor de timestamp Unix (epoch para data)",
+    "description": "Converta timestamps Unix em segundos ou milissegundos para ISO 8601, UTC e data legível, e vice-versa. Mostra o timestamp atual ao vivo. 100% no seu navegador.",
+    "h1": "Conversor de timestamp Unix",
+    "lead": "Cole um epoch ou uma data para ver todas as suas representações."
+  }
+}

@@ -1,0 +1,28 @@
+export const faq = [
+  {
+    q: "¿Qué diferencia hay entre gradientes lineales, radiales y cónicos?",
+    a: "Los lineales cambian de color a lo largo de una línea recta con un ángulo. Los radiales se extienden desde un centro como un círculo o una elipse. Los cónicos giran alrededor de un centro, como una rueda de color o un gráfico de tarta.",
+  },
+  {
+    q: "¿Por qué algunos gradientes se ven grises en el centro?",
+    a: "Mezclar dos tonos muy distintos en sRGB pasa por colores apagados. Añadir un punto intermedio con un color saturado lo evita, igual que usar interpolación in oklch en navegadores modernos.",
+  },
+  {
+    q: "¿Qué hace Repetido?",
+    a: "Repite los puntos en lugar de estirarlos por todo el elemento: con puntos al 0% y al 10% obtienes diez franjas. Útil para patrones.",
+  },
+];
+
+## ¿Qué hace?
+
+**Crea gradientes CSS de forma visual**: elige **lineal, radial o cónico**, añade todos los **puntos de color** que quieras, muévelos y ajusta el ángulo o el centro mientras la vista previa se actualiza. Pega un gradiente existente para seguir editándolo.
+
+## Ejemplo
+
+`linear-gradient(135deg, #0ea5e9 0%, #6366f1 45%, #d946ef 100%)` va en diagonal del azul cielo al fucsia pasando por el índigo.
+
+## Consejos
+
+- Usa el gradiente como `background` (o `background-image`), no como `background-color`.
+- Dos puntos en la misma posición crean un borde nítido: `red 50%, blue 50%` dibuja dos mitades.
+- Un gradiente cónico con bordes nítidos hace un gráfico de tarta solo con CSS.

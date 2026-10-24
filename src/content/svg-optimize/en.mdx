@@ -1,0 +1,29 @@
+export const faq = [
+  {
+    q: "Will the optimized SVG look the same?",
+    a: "Yes, as long as the precision is high enough for its size. Two decimals are plenty for icons; use three or more for large illustrations with fine detail. Compare the before and after previews to be sure.",
+  },
+  {
+    q: "Why keep the viewBox?",
+    a: "Without a viewBox the SVG cannot be resized with CSS: setting width or height crops it instead of scaling it. Only remove it if you know the SVG is always used at its original size.",
+  },
+  {
+    q: "Is my file uploaded?",
+    a: "No. SVGO runs in a Web Worker in your browser, so unpublished logos and illustrations stay on your device.",
+  },
+];
+
+## What does it do?
+
+It optimizes SVG files with **SVGO**, the same engine used by most build tools. Design apps export a lot of things browsers do not need: editor metadata, comments, empty groups, default attributes, coordinates with six decimals. Removing them often makes the file **50–80% smaller**.
+
+## Options
+
+- **Precision**: decimals kept in coordinates.
+- **Multipass**: repeats the optimization until nothing else can be removed.
+- **Indent**: readable output instead of a single line.
+- **viewBox** and **title**: kept by default, since they matter for resizing and accessibility.
+
+## Typical savings
+
+An icon exported from Inkscape with metadata and nested groups can go from about 2 KB to 300 bytes, which adds up when a page inlines dozens of icons.

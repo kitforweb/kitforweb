@@ -1,0 +1,60 @@
+{
+  "en": {
+    "name": "HMAC",
+    "short": "Compute and verify HMAC signatures, e.g. for Stripe or GitHub webhooks.",
+    "title": "HMAC generator and webhook signature checker",
+    "description": "Calculate the HMAC-SHA256, SHA-384 or SHA-512 signature of a message with a key and compare it with the signature of a webhook (Stripe, GitHub, Slack…). Keys in text, hex or Base64. 100% in your browser.",
+    "h1": "HMAC generator",
+    "lead": "Debug webhook signatures: paste the raw body, the secret and the signature you received.",
+    "message": "Message (raw body)",
+    "signature": "Signature",
+    "algorithm": "Algorithm",
+    "keyEncoding": "Key format",
+    "keyText": "Key as text",
+    "keyHex": "Key in hex",
+    "keyBase64": "Key in Base64",
+    "placeholder": "Paste the exact request body, byte for byte…",
+    "key": "Secret key",
+    "expected": "Signature received (optional)",
+    "invalidKey": "The key is not valid in the selected format.",
+    "valid": "Signature matches",
+    "invalid": "Signature does not match"
+  },
+  "es": {
+    "name": "HMAC",
+    "short": "Calcula y verifica firmas HMAC, por ejemplo de webhooks de Stripe o GitHub.",
+    "title": "Generador HMAC y verificador de firmas de webhooks",
+    "description": "Calcula la firma HMAC-SHA256, SHA-384 o SHA-512 de un mensaje con una clave y compárala con la firma de un webhook (Stripe, GitHub, Slack…). Claves en texto, hex o Base64. 100% en tu navegador.",
+    "h1": "Generador HMAC",
+    "lead": "Depura firmas de webhooks: pega el cuerpo tal cual, el secreto y la firma que recibiste.",
+    "message": "Mensaje (cuerpo sin procesar)",
+    "signature": "Firma",
+    "algorithm": "Algoritmo",
+    "keyEncoding": "Formato de la clave",
+    "keyText": "Clave como texto",
+    "keyHex": "Clave en hex",
+    "keyBase64": "Clave en Base64",
+    "placeholder": "Pega el cuerpo exacto de la petición, byte a byte…",
+    "key": "Clave secreta",
+    "expected": "Firma recibida (opcional)",
+    "invalidKey": "La clave no es válida en el formato elegido.",
+    "valid": "La firma coincide",
+    "invalid": "La firma no coincide"
+  },
+  "fr": {
+    "name": "HMAC",
+    "short": "Calculez et vérifiez des signatures HMAC, par exemple de webhooks Stripe ou GitHub.",
+    "title": "Générateur HMAC et vérification de signatures de webhooks",
+    "description": "Calculez la signature HMAC-SHA256, SHA-384 ou SHA-512 d'un message et comparez-la à celle d'un webhook. 100 % dans votre navigateur.",
+    "h1": "Générateur HMAC",
+    "lead": "Déboguez les signatures de webhooks."
+  },
+  "pt": {
+    "name": "HMAC",
+    "short": "Calcule e verifique assinaturas HMAC, por exemplo de webhooks do Stripe ou GitHub.",
+    "title": "Gerador HMAC e verificador de assinaturas de webhooks",
+    "description": "Calcule a assinatura HMAC-SHA256, SHA-384 ou SHA-512 de uma mensagem e compare com a de um webhook. 100% no seu navegador.",
+    "h1": "Gerador HMAC",
+    "lead": "Depure assinaturas de webhooks."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "en": {
+    "name": "px ↔ rem",
+    "short": "Convert between px, rem and em, one value or a whole CSS block.",
+    "title": "px to rem converter (and rem to px, em), also in bulk",
+    "description": "Convert CSS units between px, rem and em using your root font size. Type a single value, or paste a whole CSS block and convert every value at once, optionally keeping 1px borders. Includes a px to rem reference table.",
+    "h1": "px to rem converter",
+    "lead": "Type a value or paste CSS: every px becomes rem (or the other way round).",
+    "input": "Values or CSS",
+    "output": "Result",
+    "from": "From",
+    "to": "To",
+    "hairlines": "Keep 1px",
+    "base": "Root font size",
+    "baseHint": "Browsers default to 16px. For em, use the parent's font size.",
+    "placeholder": "24px, or a CSS block…",
+    "converted": "{count, plural, one {# value converted} other {# values converted}}",
+    "table": "Reference (root {base}px)"
+  },
+  "es": {
+    "name": "px ↔ rem",
+    "short": "Convierte entre px, rem y em, un valor o un bloque CSS entero.",
+    "title": "Convertir px a rem (y rem a px, em), también en lote",
+    "description": "Convierte unidades CSS entre px, rem y em según tu tamaño de fuente raíz. Escribe un valor, o pega un bloque CSS entero y convierte todos los valores a la vez, conservando si quieres los bordes de 1px. Incluye una tabla de referencia de px a rem.",
+    "h1": "Conversor de px a rem",
+    "lead": "Escribe un valor o pega CSS: cada px pasa a rem (o al revés).",
+    "input": "Valores o CSS",
+    "output": "Resultado",
+    "from": "De",
+    "to": "A",
+    "hairlines": "Mantener 1px",
+    "base": "Tamaño de fuente raíz",
+    "baseHint": "Los navegadores usan 16px por defecto. Para em, usa el tamaño de fuente del padre.",
+    "placeholder": "24px, o un bloque CSS…",
+    "converted": "{count, plural, one {# valor convertido} other {# valores convertidos}}",
+    "table": "Referencia (raíz {base}px)"
+  },
+  "fr": {
+    "name": "px ↔ rem",
+    "short": "Convertissez entre px, rem et em, une valeur ou un bloc CSS.",
+    "title": "Convertisseur px vers rem (et rem vers px, em)",
+    "description": "Convertissez des unités CSS entre px, rem et em selon la taille de police racine, une valeur ou tout un bloc CSS.",
+    "h1": "Convertisseur px vers rem",
+    "lead": "Saisissez une valeur ou collez du CSS."
+  },
+  "pt": {
+    "name": "px ↔ rem",
+    "short": "Converta entre px, rem e em, um valor ou um bloco CSS.",
+    "title": "Conversor de px para rem (e rem para px, em)",
+    "description": "Converta unidades CSS entre px, rem e em segundo o tamanho de fonte raiz, um valor ou um bloco CSS inteiro.",
+    "h1": "Conversor de px para rem",
+    "lead": "Digite um valor ou cole CSS."
+  }
+}
