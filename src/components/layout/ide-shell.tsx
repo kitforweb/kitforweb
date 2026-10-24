@@ -33,13 +33,18 @@ export function IdeShell({ children }: { children: ReactNode }) {
         >
           {t("skip")}
         </a>
-        <div className="flex h-dvh flex-col overflow-hidden">
+        {/*
+          The frame is exactly one viewport tall and only its panels scroll. `relative` makes it (and
+          <main>) the containing block of absolute descendants such as `sr-only` labels: otherwise
+          they are placed against the document and can stretch it, scrolling the whole page.
+        */}
+        <div className="relative flex h-dvh flex-col overflow-hidden">
           <div className="flex min-h-0 flex-1">
             <ActivityBar />
             <Explorer />
             <div className="flex min-w-0 flex-1 flex-col">
               <TabBar />
-              <main id="main" tabIndex={-1} className="min-h-0 flex-1 overflow-y-auto outline-none">
+              <main id="main" tabIndex={-1} className="relative min-h-0 flex-1 overflow-y-auto outline-none">
                 {children}
               </main>
             </div>

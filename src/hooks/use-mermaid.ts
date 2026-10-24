@@ -10,6 +10,25 @@ let mermaidModule: Promise<Mermaid> | null = null;
 const loadMermaid = () => (mermaidModule ??= import("mermaid").then((m) => m.default));
 
 /**
+ * Where Mermaid lays out the SVG while measuring it. By default it appends a
+ * temporary node to <body>, which stretches the page for a moment and makes it
+ * scroll; a fixed, clipped box keeps the layout (needed to measure text)
+ * without affecting the document.
+ */
+function renderSandbox(): HTMLElement {
+  const id = "mermaid-sandbox";
+  let box = document.getElementById(id);
+  if (!box) {
+    box = document.createElement("div");
+    box.id = id;
+    box.setAttribute("aria-hidden", "true");
+    box.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:0;overflow:hidden;visibility:hidden";
+    document.body.append(box);
+  }
+  return box;
+}
+
+/**
  * Renders Mermaid code to an SVG string, following the site theme. Keeps the
  * last good SVG while the code has an error, so the preview does not flash.
  */
@@ -38,7 +57,7 @@ export function useMermaid(code: string): { svg: string; error: string | null } 
       }
       try {
         await mermaid.parse(code);
-        const { svg } = await mermaid.render(`mmd-${renderId}-${++counter.current}`, code);
+        const { svg } = await mermaid.render(`mmd-${renderId}-${++counter.current}`, code, renderSandbox());
         if (!cancelled) setState({ svg, error: null });
       } catch (e) {
         if (!cancelled) setState((s) => ({ svg: s.svg, error: e instanceof Error ? e.message : String(e) }));
