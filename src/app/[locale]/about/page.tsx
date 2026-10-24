@@ -4,19 +4,23 @@ import { GithubIcon, LinkedinIcon } from "@/components/shared/brand-icons";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { JsonLd } from "@/components/seo/json-ld";
 import { DonateButton } from "@/components/shared/donate-button";
+import { Logo } from "@/components/shared/logo";
 import { site } from "@/config/site";
 import { isLocale, type Locale } from "@/i18n/routing";
 import { aboutPath } from "@/lib/routes";
-import { absoluteUrl, alternates } from "@/lib/seo";
+import { absoluteUrl, alternates, logoImage, openGraph, twitter } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: "about" });
+  const page = { title: `${t("title")} · ${site.name}`, description: t("description") };
   return {
     title: t("title"),
-    description: t("description"),
+    description: page.description,
     alternates: alternates(locale, aboutPath),
+    openGraph: openGraph(locale, { ...page, url: absoluteUrl(aboutPath(locale)) }),
+    twitter: twitter(page),
   };
 }
 
@@ -40,10 +44,13 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
           "@type": "Person",
           name: site.author.name,
           url: absoluteUrl(aboutPath(locale)),
+          // schema.org has no `logo` on Person: `image` is its equivalent.
+          image: logoImage(),
           sameAs: links.map((l) => l.href),
           knowsAbout: ["Web development", "Frontend", "TypeScript"],
         }}
       />
+      <Logo className="mb-8 h-6 w-auto" />
       <p className="mb-3 font-mono text-xs text-accent-text">
         <span aria-hidden>$ </span>whoami
       </p>

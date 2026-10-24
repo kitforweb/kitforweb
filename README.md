@@ -1,4 +1,10 @@
-# kitforweb
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/brand/logo-light.svg">
+    <img alt="kitforweb" src="docs/brand/logo-light.svg" width="320">
+  </picture>
+</h1>
 
 Web developer utilities that run **100% in the browser**. Full specification in [`spec.md`](./spec.md).
 
@@ -43,6 +49,19 @@ src/
 5. SEO content in `src/content/<id>/en.mdx` and `es.mdx`.
 
 The menu, routes, sitemap, llms.txt, search, Ctrl+K and the detector pick it up automatically.
+
+## Brand assets
+
+The sources live in `assets/images/` and are never served directly. `npm run generate:icons` builds everything else from them:
+
+| Output                                                               | Used for                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------ |
+| `src/app/icon.svg`, `favicon.ico` (16/32/48), `apple-icon.png` (180) | Browser and home-screen icons                    |
+| `public/brand/icon-192.png`, `icon-512.png`, `icon-maskable-512.png` | PWA manifest; `icon-512.png` is the JSON-LD logo |
+| `public/examples/`                                                   | "Load example" in the image tools                |
+| `docs/brand/logo-*.svg`, `github-social-preview.png` (1280×640)      | This README and the repository social preview    |
+
+Open Graph and Twitter images are rendered at build time by the `opengraph-image.tsx` routes, using the card layout in `src/lib/og-card.ts`. The in-app wordmark is `src/components/shared/logo.tsx`.
 
 ## Configuration
 

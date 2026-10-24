@@ -7,7 +7,7 @@ import { IdeShell } from "@/components/layout/ide-shell";
 import { site } from "@/config/site";
 import { clientMessages } from "@/i18n/messages";
 import { isLocale, locales, localeTags } from "@/i18n/routing";
-import { alternates, ogLocale } from "@/lib/seo";
+import { absoluteUrl, alternates, openGraph, twitter } from "@/lib/seo";
 import { homePath } from "@/lib/routes";
 import { themeBootScript } from "@/lib/workspace-store";
 import "../globals.css";
@@ -23,7 +23,7 @@ export function generateStaticParams() {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0d1117" },
+    { media: "(prefers-color-scheme: dark)", color: site.brandColor },
     { media: "(prefers-color-scheme: light)", color: "#f7f9fb" },
   ],
   colorScheme: "dark light",
@@ -33,14 +33,16 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: "meta" });
+  const page = { title: t("title"), description: t("description") };
+  // Icons, manifest and social images come from the metadata files in app/.
   return {
     metadataBase: new URL(site.url),
-    title: { default: t("title"), template: `%s · ${site.name}` },
-    description: t("description"),
+    title: { default: page.title, template: `%s · ${site.name}` },
+    description: page.description,
     applicationName: site.name,
     alternates: alternates(locale, homePath),
-    openGraph: { siteName: site.name, locale: ogLocale[locale], type: "website" },
-    twitter: { card: "summary_large_image" },
+    openGraph: openGraph(locale, { ...page, url: absoluteUrl(homePath(locale)) }),
+    twitter: twitter(page),
     robots: { index: true, follow: true },
   };
 }

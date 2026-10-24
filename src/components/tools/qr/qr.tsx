@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToolInput } from "@/hooks/use-tool-input";
 import { downloadBlob } from "@/lib/download";
+import { brandExamples, exampleFile } from "@/lib/examples";
 import { svgToPng } from "@/lib/svg-export";
 import { convertColor } from "@/lib/utils/css/color";
 import {
@@ -107,9 +108,10 @@ export default function Qr() {
       inputLabel={t("content")}
       outputLabel="QR"
       defaultInputSize={45}
-      onExample={() => {
+      onExample={async () => {
         setMode("text");
         setText("https://kitforweb.com/en/qr-code-generator");
+        readLogo(await exampleFile(brandExamples.icon));
       }}
       onClear={() => {
         setText("");

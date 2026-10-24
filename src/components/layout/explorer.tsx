@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Fragment, useMemo, useState } from "react";
 import { House, Search, Star, UserRound, X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Logo } from "@/components/shared/logo";
 import { groupedTools, getTool, tools, type ToolDefinition, type ToolId } from "@/config/tools";
 import { useAppLocale } from "@/hooks/use-app-locale";
 import { useWorkspace } from "@/hooks/use-workspace";
@@ -134,6 +135,11 @@ export function Explorer() {
           explorerOpen ? "md:flex" : "md:hidden",
         )}
       >
+        <div className="flex h-11 shrink-0 items-center border-b px-3">
+          <Link href={homePath(locale)} onClick={closeMobileExplorer} className="rounded-sm text-foreground">
+            <Logo className="h-4 w-auto" />
+          </Link>
+        </div>
         <div className="flex h-9 shrink-0 items-center justify-between px-3">
           <span className="font-mono text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
             {title}

@@ -7,20 +7,24 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SmartDetector } from "@/components/home/smart-detector";
 import { JsonLd } from "@/components/seo/json-ld";
 import { DonateButton } from "@/components/shared/donate-button";
+import { Logo } from "@/components/shared/logo";
 import { site } from "@/config/site";
 import { groupedTools } from "@/config/tools";
 import { isLocale, localeTags, type Locale } from "@/i18n/routing";
 import { aboutPath, homePath, toolPath } from "@/lib/routes";
-import { absoluteUrl, alternates } from "@/lib/seo";
+import { absoluteUrl, alternates, logoImage, openGraph, twitter } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: "meta" });
+  const page = { title: t("homeTitle"), description: t("description") };
   return {
-    title: { absolute: t("homeTitle") },
-    description: t("description"),
+    title: { absolute: page.title },
+    description: page.description,
     alternates: alternates(locale, homePath),
+    openGraph: openGraph(locale, { ...page, url: absoluteUrl(homePath(locale)) }),
+    twitter: twitter(page),
   };
 }
 
@@ -39,22 +43,35 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <div className="mx-auto w-full max-w-5xl px-4 pt-8 pb-20 md:px-8 md:pt-14">
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: site.name,
-          url: absoluteUrl(homePath(locale)),
-          inLanguage: localeTags[locale],
-          description: t("meta.description"),
-          potentialAction: {
-            "@type": "SearchAction",
-            target: { "@type": "EntryPoint", urlTemplate: `${absoluteUrl(homePath(locale))}?q={search_term_string}` },
-            "query-input": "required name=search_term_string",
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": `${site.url}/#organization`,
+            name: site.name,
+            url: site.url,
+            logo: logoImage(),
+            sameAs: [site.repository],
           },
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: site.name,
+            url: absoluteUrl(homePath(locale)),
+            inLanguage: localeTags[locale],
+            description: t("meta.description"),
+            publisher: { "@id": `${site.url}/#organization` },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: { "@type": "EntryPoint", urlTemplate: `${absoluteUrl(homePath(locale))}?q={search_term_string}` },
+              "query-input": "required name=search_term_string",
+            },
+          },
+        ]}
       />
 
       <header className="max-w-3xl">
+        <Logo blink className="mb-6 h-8 w-auto md:h-10" />
         <p className="mb-3 font-mono text-xs text-accent-text">
           <span aria-hidden>$ </span>
           {site.name} --{t("home.tagline")}

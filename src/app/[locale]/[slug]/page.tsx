@@ -12,7 +12,7 @@ import { clientMessages } from "@/i18n/messages";
 import { isLocale, localeTags, type Locale } from "@/i18n/routing";
 import { loadToolContent } from "@/lib/content";
 import { homePath, toolPath } from "@/lib/routes";
-import { absoluteUrl, alternates, ogLocale } from "@/lib/seo";
+import { absoluteUrl, alternates, logoImage, openGraph, twitter } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -32,18 +32,13 @@ async function resolve(params: PageProps<"/[locale]/[slug]">["params"]) {
 export async function generateMetadata({ params }: PageProps<"/[locale]/[slug]">): Promise<Metadata> {
   const { locale, tool } = await resolve(params);
   const t = await getTranslations({ locale, namespace: `tools.${tool.id}` });
+  const page = { title: t("title"), description: t("description") };
   return {
-    title: t("title"),
-    description: t("description"),
+    ...page,
     keywords: tool.keywords,
     alternates: alternates(locale, (l) => toolPath(tool.id, l)),
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: absoluteUrl(toolPath(tool.id, locale)),
-      locale: ogLocale[locale],
-      type: "website",
-    },
+    openGraph: openGraph(locale, { ...page, url: absoluteUrl(toolPath(tool.id, locale)) }),
+    twitter: twitter(page),
   };
 }
 
@@ -68,7 +63,7 @@ export default async function ToolPage({ params }: PageProps<"/[locale]/[slug]">
       inLanguage: localeTags[locale],
       isAccessibleForFree: true,
       offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-      publisher: { "@type": "Organization", name: site.name, url: site.url },
+      publisher: { "@type": "Organization", name: site.name, url: site.url, logo: logoImage() },
     },
     {
       "@context": "https://schema.org",

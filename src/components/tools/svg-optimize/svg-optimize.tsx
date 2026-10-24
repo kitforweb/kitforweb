@@ -12,24 +12,10 @@ import { useDebounced } from "@/hooks/use-debounced";
 import { useSettled } from "@/hooks/use-settled";
 import { useToolInput } from "@/hooks/use-tool-input";
 import { downloadBlob } from "@/lib/download";
+import { brandExamples, exampleText } from "@/lib/examples";
 import { formatBytes } from "@/lib/utils/format/bytes";
 import { DEFAULT_SVG_OPTIONS, type SvgOptimizeOptions, type SvgOptimizeResult } from "@/lib/utils/image/svg-optimize";
 import { runSvgo } from "@/lib/workers";
-
-const EXAMPLE = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="64" height="64" viewBox="0 0 64.000000 64.000000" version="1.1" id="svg8" inkscape:version="1.3">
-  <title>Rocket</title>
-  <metadata id="metadata5">exported by an editor</metadata>
-  <defs id="defs2"/>
-  <g id="layer1" inkscape:label="Layer 1">
-    <g id="g10">
-      <path id="body" style="fill:#6366f1;fill-opacity:1;stroke:none" d="M 32.000000,4.000000 C 44.000000,14.000000 46.000000,30.000000 40.000000,44.000000 L 24.000000,44.000000 C 18.000000,30.000000 20.000000,14.000000 32.000000,4.000000 Z"/>
-      <circle id="window" cx="32.000000" cy="24.000000" r="5.500000" style="fill:#ffffff"/>
-      <path id="flame" style="fill:#f97316" d="M 26.000000,46.000000 L 38.000000,46.000000 L 32.000000,60.000000 Z"/>
-    </g>
-  </g>
-</svg>`;
 
 const dataUrl = (svg: string) => `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 
@@ -61,7 +47,7 @@ export default function SvgOptimize() {
       toolId="svg-optimize"
       inputLabel="input.svg"
       outputLabel={t("optimized")}
-      onExample={() => setSvg(EXAMPLE)}
+      onExample={async () => setSvg(await exampleText(brandExamples.wordmark))}
       onClear={() => setSvg("")}
       copyText={result?.ok ? result.output : ""}
       inputActions={<FileOpenButton accept=".svg,image/svg+xml" onText={setSvg} />}

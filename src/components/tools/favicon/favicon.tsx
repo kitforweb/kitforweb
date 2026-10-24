@@ -12,10 +12,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { downloadBlob } from "@/lib/download";
+import { brandExamples, exampleFile } from "@/lib/examples";
 import { canvasToBlob, createCanvas, loadImage, type LoadedImage } from "@/lib/image-canvas";
 import { buildIco, fitRect, ICO_SIZES, ICON_SPECS, linkTags, webManifest } from "@/lib/utils/image/favicon";
-
-const EXAMPLE_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#4f46e5"/><path d="M18 20h10l6 12 6-12h6L36 44h-6z" fill="#fff"/></svg>`;
 
 interface Generated {
   icons: { file: string; size: number; blob: Blob; url: string }[];
@@ -104,7 +103,12 @@ export default function Favicon() {
       inputLabel={t("source")}
       outputLabel={t("icons")}
       defaultInputSize={38}
-      onExample={() => setFile(new File([EXAMPLE_SVG], "logo.svg", { type: "image/svg+xml" }))}
+      onExample={async () => {
+        setFile(await exampleFile(brandExamples.icon));
+        setName("kitforweb");
+        setBackground("#0b1120");
+        setTheme("#0b1120");
+      }}
       onClear={() => setFile(null)}
       copyText={tags}
       outputActions={

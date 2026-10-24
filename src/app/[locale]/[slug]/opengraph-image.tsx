@@ -1,12 +1,12 @@
 import { getTranslations } from "next-intl/server";
+import { site } from "@/config/site";
 import { findToolBySlug, tools } from "@/config/tools";
 import { defaultLocale, isLocale, locales } from "@/i18n/routing";
-import { ogCard, ogSize } from "@/lib/og";
-import { toolPath } from "@/lib/routes";
+import { ogImage, ogSize } from "@/lib/og";
 
 export const size = ogSize;
 export const contentType = "image/png";
-export const alt = "kitforweb";
+export const alt = site.name;
 
 export function generateStaticParams() {
   return locales.flatMap((locale) => tools.map((tool) => ({ locale, slug: tool.slugs[locale] })));
@@ -17,10 +17,6 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
   const locale = isLocale(raw) ? raw : defaultLocale;
   const tool = findToolBySlug(locale, slug);
   const t = await getTranslations({ locale, namespace: "tools" });
-  if (!tool) return ogCard({ title: "kitforweb", subtitle: "", path: `/${locale}` });
-  return ogCard({
-    title: t(`${tool.id}.name`),
-    subtitle: t(`${tool.id}.short`),
-    path: toolPath(tool.id, locale),
-  });
+  if (!tool) return ogImage({ title: site.name, subtitle: "" });
+  return ogImage({ title: t(`${tool.id}.name`), subtitle: t(`${tool.id}.short`) });
 }

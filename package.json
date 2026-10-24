@@ -14,6 +14,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "lhci": "lhci autorun",
+    "generate:icons": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-icons.mjs",
     "verify": "npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@faker-js/faker": "^10.6.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
     "@lezer/highlight": "^1.2.5",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
@@ -110,6 +112,7 @@
     "eslint-config-next": "16.4.3",
     "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.0.5"

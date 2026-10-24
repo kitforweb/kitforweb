@@ -29,7 +29,8 @@ export interface ConverterToolProps {
   directions: [ConverterDirection] | [ConverterDirection, ConverterDirection];
   /** Must be stable (useCallback) or it re-runs on every render. */
   convert: (input: string, direction: number) => ConvertResult | Promise<ConvertResult>;
-  example: string | ((direction: number) => string);
+  /** A string, or a function that may load it (e.g. a file from public/examples/). */
+  example: string | ((direction: number) => string | Promise<string>);
   toolbar?: ReactNode | ((direction: number) => ReactNode);
   placeholder?: string;
   fileAccept?: string;
@@ -91,7 +92,7 @@ export function ConverterTool({
       inputLabel={side.input.label}
       outputLabel={side.output.label}
       defaultInputSize={defaultInputSize}
-      onExample={() => setInput(exampleFor(direction))}
+      onExample={async () => setInput(await exampleFor(direction))}
       onClear={() => setInput("")}
       onSwap={
         directions.length === 2

@@ -10,6 +10,7 @@ import { Segmented } from "@/components/shared/toolbar-controls";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { downloadBlob } from "@/lib/download";
+import { brandExamples, exampleFile } from "@/lib/examples";
 import { canEncode, canvasToBlob, createCanvas, loadImage } from "@/lib/image-canvas";
 import { formatBytes } from "@/lib/utils/format/bytes";
 import { MIME, outputName, savings, scaledSize, type ImageFormat } from "@/lib/utils/image/convert";
@@ -20,24 +21,6 @@ interface Output {
   url: string;
   width: number;
   height: number;
-}
-
-/** A colourful sample photo-like image, drawn on the fly (no download needed). */
-async function exampleFile(): Promise<File> {
-  const [canvas, ctx] = createCanvas(1200, 800);
-  const g = ctx.createLinearGradient(0, 0, 1200, 800);
-  g.addColorStop(0, "#0ea5e9");
-  g.addColorStop(0.5, "#6366f1");
-  g.addColorStop(1, "#f97316");
-  ctx.fillStyle = g;
-  ctx.fillRect(0, 0, 1200, 800);
-  for (let i = 0; i < 60; i++) {
-    ctx.fillStyle = `hsl(${(i * 37) % 360} 80% 60% / 0.35)`;
-    ctx.beginPath();
-    ctx.arc((i * 197) % 1200, (i * 113) % 800, 30 + ((i * 17) % 90), 0, Math.PI * 2);
-    ctx.fill();
-  }
-  return new File([await canvasToBlob(canvas, "image/png")], "sample.png", { type: "image/png" });
 }
 
 export default function WebpConverter() {
@@ -101,7 +84,7 @@ export default function WebpConverter() {
       toolId="webp"
       inputLabel={t("original")}
       outputLabel={t("converted")}
-      onExample={async () => setFile(await exampleFile())}
+      onExample={async () => setFile(await exampleFile(brandExamples.banner))}
       onClear={() => setFile(null)}
       outputActions={
         current &&
