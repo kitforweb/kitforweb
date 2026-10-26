@@ -18,7 +18,8 @@ const components = Object.fromEntries(
 export function ToolWorkspace({ toolId }: { toolId: ToolId }) {
   const Tool = components[toolId];
   return (
-    <div className="md:h-[max(30rem,calc(100dvh-11rem))]" data-testid="tool-workspace">
+    // Desktop: fills the rest of the page's height (never below 30rem; <main> scrolls if it must).
+    <div className="md:min-h-[30rem] md:flex-1" data-testid="tool-workspace">
       <Tool />
     </div>
   );

@@ -71,7 +71,7 @@ export function Explorer() {
   const locale = useAppLocale();
   const pathname = usePathname();
   const { explorerOpen, mobileExplorerOpen, explorerView, searchRef, closeMobileExplorer } = useIde();
-  const { favorites, recents } = useWorkspace();
+  const { favorites } = useWorkspace();
   const [query, setQuery] = useState("");
 
   const visible = useMemo(() => {
@@ -87,32 +87,17 @@ export function Explorer() {
 
   const list = (ids: ToolId[]) => ids.filter((id) => visible.has(id)).map(getTool);
   const favs = list(favorites);
-  const recent = list(recents);
   const searching = query.trim() !== "";
   const title = t(`nav.${explorerView === "tools" ? "explorer" : explorerView}`);
 
-  const pinned = (
+  const pinned = favs.length > 0 && (
     <>
-      {favs.length > 0 && (
-        <>
-          <SectionTitle>{t("nav.favorites")}</SectionTitle>
-          <ul>
-            {favs.map((tool) => (
-              <ToolRow key={tool.id} tool={tool} favorite />
-            ))}
-          </ul>
-        </>
-      )}
-      {recent.length > 0 && (
-        <>
-          <SectionTitle>{t("nav.recents")}</SectionTitle>
-          <ul>
-            {recent.map((tool) => (
-              <ToolRow key={tool.id} tool={tool} favorite={favorites.includes(tool.id)} />
-            ))}
-          </ul>
-        </>
-      )}
+      <SectionTitle>{t("nav.favorites")}</SectionTitle>
+      <ul>
+        {favs.map((tool) => (
+          <ToolRow key={tool.id} tool={tool} favorite />
+        ))}
+      </ul>
     </>
   );
 
@@ -181,16 +166,6 @@ export function Explorer() {
               </ul>
             ) : (
               <p className="px-2 py-3 text-xs leading-5 text-muted-foreground">{t("explorer.noFavorites")}</p>
-            )
-          ) : explorerView === "recents" ? (
-            recent.length ? (
-              <ul>
-                {recent.map((tool) => (
-                  <ToolRow key={tool.id} tool={tool} favorite={favorites.includes(tool.id)} />
-                ))}
-              </ul>
-            ) : (
-              <p className="px-2 py-3 text-xs leading-5 text-muted-foreground">{t("explorer.noRecents")}</p>
             )
           ) : (
             <>

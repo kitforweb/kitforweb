@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { History, House, Search, Settings, Star, type LucideIcon } from "lucide-react";
+import { House, Search, Settings, Star, type LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { useAppLocale } from "@/hooks/use-app-locale";
@@ -76,12 +76,6 @@ export function ActivityBar() {
         active={viewActive("favorites")}
         onClick={() => showView("favorites", { toggle: true })}
       />
-      <BarButton
-        icon={History}
-        label={t("recents")}
-        active={viewActive("recents")}
-        onClick={() => showView("recents", { toggle: true })}
-      />
       <div className="mt-auto">
         <BarButton icon={Settings} label={t("settings")} active={settingsOpen} onClick={() => setSettingsOpen(true)} />
       </div>
@@ -114,7 +108,6 @@ export function MobileNav() {
         [
           ["tools", Search, t("search")],
           ["favorites", Star, t("favorites")],
-          ["recents", History, t("recents")],
         ] as const
       ).map(([view, Icon, label]) => (
         <button

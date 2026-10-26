@@ -11,7 +11,7 @@ import {
   type RefObject,
 } from "react";
 
-export type ExplorerView = "tools" | "favorites" | "recents";
+export type ExplorerView = "tools" | "favorites";
 
 interface IdeContextValue {
   explorerOpen: boolean;

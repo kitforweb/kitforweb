@@ -9,22 +9,19 @@
     "home": "Home",
     "search": "Search",
     "favorites": "Favorites",
-    "recents": "Recent",
     "settings": "Settings",
     "about": "About",
     "explorer": "Explorer",
     "openTabs": "Open tools",
     "closeTab": "Close {name}",
-    "skip": "Skip to content",
-    "breadcrumb": "Breadcrumb"
+    "skip": "Skip to content"
   },
   "explorer": {
     "searchPlaceholder": "Search tools…",
     "addFavorite": "Add {name} to favorites",
     "removeFavorite": "Remove {name} from favorites",
     "noResults": "No tools match your search.",
-    "noFavorites": "No favorites yet. Hover a tool and click the star to pin it here.",
-    "noRecents": "Tools you open will show up here."
+    "noFavorites": "No favorites yet. Hover a tool and click the star to pin it here."
   },
   "common": {
     "copy": "Copy",
@@ -176,7 +173,8 @@
     "back": "Back to home"
   },
   "seo": {
-    "faq": "Frequently asked questions"
+    "faq": "Frequently asked questions",
+    "moreInfo": "About this tool"
   },
   "regex": {
     "blocks": {

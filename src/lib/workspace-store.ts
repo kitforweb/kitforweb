@@ -5,7 +5,6 @@ export type Theme = "dark" | "light";
 
 export interface WorkspaceState {
   favorites: ToolId[];
-  recents: ToolId[];
   tabs: ToolId[];
   theme: Theme;
   /** Remember the last input of each (non-sensitive) tool. */
@@ -13,12 +12,10 @@ export interface WorkspaceState {
 }
 
 const KEY = "workspace";
-const MAX_RECENTS = 6;
 const MAX_TABS = 8;
 
 export const defaultWorkspace: WorkspaceState = {
   favorites: [],
-  recents: [],
   tabs: [],
   theme: "dark",
   persistInputs: true,
@@ -34,7 +31,6 @@ function load(): WorkspaceState {
     const v = JSON.parse(raw) as Partial<Record<keyof WorkspaceState, unknown>>;
     return {
       favorites: toolList(v.favorites),
-      recents: toolList(v.recents).slice(0, MAX_RECENTS),
       tabs: toolList(v.tabs).slice(0, MAX_TABS),
       theme: v.theme === "light" ? "light" : "dark",
       persistInputs: v.persistInputs !== false,
@@ -75,11 +71,10 @@ export const workspaceActions = {
       favorites: s.favorites.includes(id) ? without(s.favorites, id) : [...s.favorites, id],
     }));
   },
-  /** Called whenever a tool page is shown: opens its tab and records it as recent. */
+  /** Called whenever a tool page is shown: opens its tab. */
   visit(id: ToolId) {
     workspaceStore.update((s) => ({
       ...s,
-      recents: [id, ...without(s.recents, id)].slice(0, MAX_RECENTS),
       tabs: s.tabs.includes(id) ? s.tabs : [...s.tabs, id].slice(-MAX_TABS),
     }));
   },

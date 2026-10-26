@@ -63,6 +63,24 @@ test("tool pages ship SEO content and metadata in the server HTML", async ({ req
   expect(html).toContain('"@type":"WebApplication"');
 });
 
+test("the SEO content opens in a dialog after the description", async ({ page }) => {
+  await page.goto("/es/formatear-json");
+  const dialog = page.getByRole("dialog", { name: "Formatear JSON" });
+  // In the DOM (server-rendered) but closed until asked for.
+  await expect(page.locator("dialog")).toContainText("Errores de JSON más comunes");
+  await expect(dialog).toBeHidden();
+
+  await page.getByRole("button", { name: "Sobre esta herramienta" }).click();
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByRole("heading", { name: "Preguntas frecuentes" })).toBeVisible();
+
+  await page.keyboard.press("Escape");
+  await expect(dialog).toBeHidden();
+  await page.getByRole("button", { name: "Sobre esta herramienta" }).click();
+  await dialog.getByRole("button", { name: "Cerrar" }).click();
+  await expect(dialog).toBeHidden();
+});
+
 test("sitemap, robots and llms.txt", async ({ request }) => {
   const sitemap = await (await request.get("/sitemap.xml")).text();
   expect(sitemap).toContain("https://kitforweb.com/fr/decodeur-jwt");

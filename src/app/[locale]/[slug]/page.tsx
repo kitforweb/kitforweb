@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight } from "lucide-react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { JsonLd } from "@/components/seo/json-ld";
+import { InfoDialog } from "@/components/shared/info-dialog";
 import { ToolWorkspace } from "@/components/tools/tool-workspace";
 import { site } from "@/config/site";
 import { findToolBySlug, tools } from "@/config/tools";
@@ -89,52 +88,44 @@ export default async function ToolPage({ params }: PageProps<"/[locale]/[slug]">
       : []),
   ];
 
+  // Desktop: the page is exactly as tall as <main> and the tool fills what the header leaves.
   return (
-    <div className="mx-auto w-full max-w-[1600px] px-3 pt-3 pb-16 md:px-4">
+    <div className="mx-auto flex w-full max-w-[1600px] flex-col px-3 pt-3 pb-16 md:h-full md:px-4 md:pb-3">
       <JsonLd data={structuredData} />
-      <header className="mb-3 flex flex-col gap-1 md:flex-row md:items-baseline md:gap-4">
-        <nav aria-label={t("nav.breadcrumb")} className="hidden md:block">
-          <ol className="flex items-center gap-1 font-mono text-xs text-muted-foreground">
-            <li>
-              <Link href={homePath(locale)} className="hover:text-foreground">
-                {site.name}
-              </Link>
-            </li>
-            <li aria-hidden>
-              <ChevronRight className="size-3" />
-            </li>
-            <li aria-current="page" className="text-foreground">
-              {tool.slugs[locale]}
-            </li>
-          </ol>
-        </nav>
-        <h1 className="font-heading text-lg font-semibold tracking-tight md:text-xl">{t(`tools.${tool.id}.h1`)}</h1>
-        <p className="text-sm text-muted-foreground md:truncate">{t(`tools.${tool.id}.lead`)}</p>
+      <header className="mb-3 flex shrink-0 flex-col gap-1 md:flex-row md:items-baseline md:gap-4">
+        <h1 className="shrink-0 font-heading text-lg font-semibold tracking-tight md:text-xl">
+          {t(`tools.${tool.id}.h1`)}
+        </h1>
+        <p className="text-sm text-muted-foreground md:min-w-0 md:truncate">{t(`tools.${tool.id}.lead`)}</p>
+        {content && (
+          // The long-form SEO content lives in a dialog, but is rendered here on the server.
+          <InfoDialog label={t("seo.moreInfo")} title={name} closeLabel={t("common.close")}>
+            <article className="prose-tool" lang={localeTags[content.locale]}>
+              <content.Body />
+              {content.faq.length > 0 && (
+                <section aria-labelledby="faq">
+                  <h2 id="faq">{t("seo.faq")}</h2>
+                  {content.faq.map((f) => (
+                    <details key={f.q} className="group border-b py-3">
+                      <summary className="cursor-pointer list-none font-medium text-foreground marker:hidden">
+                        <span className="me-2 inline-block text-primary transition-transform group-open:rotate-90">
+                          ›
+                        </span>
+                        {f.q}
+                      </summary>
+                      <p className="mt-2 ps-5">{f.a}</p>
+                    </details>
+                  ))}
+                </section>
+              )}
+            </article>
+          </InfoDialog>
+        )}
       </header>
 
       <NextIntlClientProvider messages={clientMessages(await getMessages(), tool.id, tool.messages)}>
         <ToolWorkspace toolId={tool.id} />
       </NextIntlClientProvider>
-
-      {content && (
-        <article className="prose-tool mx-auto mt-12 max-w-3xl" lang={localeTags[content.locale]}>
-          <content.Body />
-          {content.faq.length > 0 && (
-            <section aria-labelledby="faq">
-              <h2 id="faq">{t("seo.faq")}</h2>
-              {content.faq.map((f) => (
-                <details key={f.q} className="group border-b py-3">
-                  <summary className="cursor-pointer list-none font-medium text-foreground marker:hidden">
-                    <span className="me-2 inline-block text-primary transition-transform group-open:rotate-90">›</span>
-                    {f.q}
-                  </summary>
-                  <p className="mt-2 ps-5">{f.a}</p>
-                </details>
-              ))}
-            </section>
-          )}
-        </article>
-      )}
     </div>
   );
 }

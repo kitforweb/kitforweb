@@ -9,22 +9,19 @@
     "home": "Accueil",
     "search": "Rechercher",
     "favorites": "Favoris",
-    "recents": "Récents",
     "settings": "Paramètres",
     "about": "À propos",
     "explorer": "Explorateur",
     "openTabs": "Outils ouverts",
     "closeTab": "Fermer {name}",
-    "skip": "Aller au contenu",
-    "breadcrumb": "Fil d'Ariane"
+    "skip": "Aller au contenu"
   },
   "explorer": {
     "searchPlaceholder": "Rechercher un outil…",
     "addFavorite": "Ajouter {name} aux favoris",
     "removeFavorite": "Retirer {name} des favoris",
     "noResults": "Aucun outil ne correspond à votre recherche.",
-    "noFavorites": "Pas encore de favoris. Survolez un outil et cliquez sur l'étoile pour l'épingler ici.",
-    "noRecents": "Les outils que vous ouvrez apparaîtront ici."
+    "noFavorites": "Pas encore de favoris. Survolez un outil et cliquez sur l'étoile pour l'épingler ici."
   },
   "common": {
     "copy": "Copier",
@@ -176,7 +173,8 @@
     "back": "Retour à l'accueil"
   },
   "seo": {
-    "faq": "Questions fréquentes"
+    "faq": "Questions fréquentes",
+    "moreInfo": "À propos de cet outil"
   },
   "regex": {
     "blocks": {
