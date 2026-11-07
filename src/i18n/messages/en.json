@@ -21,7 +21,10 @@
     "addFavorite": "Add {name} to favorites",
     "removeFavorite": "Remove {name} from favorites",
     "noResults": "No tools match your search.",
-    "noFavorites": "No favorites yet. Hover a tool and click the star to pin it here."
+    "noFavorites": "No favorites yet. Hover a tool and click the star to pin it here.",
+    "collapse": "Collapse sidebar",
+    "expand": "Expand sidebar",
+    "favoritesOnly": "Show only favorites"
   },
   "common": {
     "copy": "Copy",
@@ -134,9 +137,8 @@
     "noToolYet": "Looks like {kind}, but there's no tool for it yet."
   },
   "home": {
-    "tagline": "local",
-    "title": "Web developer tools that never see your data",
-    "lead": "Format JSON, decode JWTs, build fluid CSS or draw diagrams. Each tool runs entirely in your browser, so you can paste production tokens, certificates or customer data without fear.",
+    "title": "One kit. Every tool. Zero uploads.",
+    "lead": "Format JSON, decode JWTs, build fluid CSS or draw diagrams. Everything is processed in your browser: what you paste is never sent to a server and stays on your device.",
     "point1Title": "Private by design",
     "point1Text": "No backend processes your input. 0 bytes of what you paste are sent anywhere.",
     "point2Title": "Works offline",

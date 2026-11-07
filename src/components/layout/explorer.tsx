@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment, useMemo, useState } from "react";
-import { House, Search, Star, UserRound, X } from "lucide-react";
+import { PanelLeftClose, PanelLeftOpen, Search, Settings, Star, UserRound, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Logo } from "@/components/shared/logo";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { groupedTools, getTool, tools, type ToolDefinition, type ToolId } from "@/config/tools";
 import { useAppLocale } from "@/hooks/use-app-locale";
 import { useWorkspace } from "@/hooks/use-workspace";
@@ -58,11 +59,71 @@ function ToolRow({ tool, favorite }: { tool: ToolDefinition; favorite: boolean }
   );
 }
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
+const iconButton =
+  "grid size-7 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-surface-3 hover:text-foreground";
+
+/** Desktop rail shown while the explorer is collapsed: home (brand icon), expand, about and settings. */
+function CollapsedRail() {
+  const t = useTranslations();
+  const locale = useAppLocale();
+  const pathname = usePathname();
+  const { setExplorerOpen, setSettingsOpen } = useIde();
+
+  const item = (label: string, child: React.ReactNode) => (
+    <Tooltip>
+      <TooltipTrigger asChild>{child}</TooltipTrigger>
+      <TooltipContent side="right">{label}</TooltipContent>
+    </Tooltip>
+  );
+
   return (
-    <h2 className="px-2 pt-3 pb-1 font-mono text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
-      {children}
-    </h2>
+    <nav
+      aria-label={t("nav.explorer")}
+      className="hidden w-12 shrink-0 flex-col items-center gap-1 border-e bg-surface-1 py-2 md:flex"
+    >
+      {item(
+        t("nav.home"),
+        <Link href={homePath(locale)} aria-label={t("nav.home")} className="mb-1 rounded-md">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icon.svg" alt="" width={32} height={32} className="size-8" />
+        </Link>,
+      )}
+      {item(
+        t("explorer.expand"),
+        <button
+          type="button"
+          className={iconButton}
+          onClick={() => setExplorerOpen(true)}
+          aria-label={t("explorer.expand")}
+        >
+          <PanelLeftOpen className="size-4" aria-hidden />
+        </button>,
+      )}
+      {item(
+        t("nav.about"),
+        <Link
+          href={aboutPath(locale)}
+          aria-label={t("nav.about")}
+          aria-current={pathname === aboutPath(locale) ? "page" : undefined}
+          className={cn(iconButton, "aria-[current=page]:text-primary")}
+        >
+          <UserRound className="size-4" aria-hidden />
+        </Link>,
+      )}
+      <div className="mt-auto">
+        {item(
+          t("nav.settings"),
+          <button
+            type="button"
+            className={iconButton}
+            onClick={() => setSettingsOpen(true)}
+            aria-label={t("nav.settings")}
+          >
+            <Settings className="size-4" aria-hidden />
+          </button>,
+        )}
+      </div>
+    </nav>
   );
 }
 
@@ -70,9 +131,11 @@ export function Explorer() {
   const t = useTranslations();
   const locale = useAppLocale();
   const pathname = usePathname();
-  const { explorerOpen, mobileExplorerOpen, explorerView, searchRef, closeMobileExplorer } = useIde();
+  const { explorerOpen, setExplorerOpen, mobileExplorerOpen, explorerView, showView, searchRef, closeMobileExplorer } =
+    useIde();
   const { favorites } = useWorkspace();
   const [query, setQuery] = useState("");
+  const favoritesOnly = explorerView === "favorites";
 
   const visible = useMemo(() => {
     const match = (tool: ToolDefinition) =>
@@ -89,17 +152,6 @@ export function Explorer() {
   const favs = list(favorites);
   const searching = query.trim() !== "";
   const title = t(`nav.${explorerView === "tools" ? "explorer" : explorerView}`);
-
-  const pinned = favs.length > 0 && (
-    <>
-      <SectionTitle>{t("nav.favorites")}</SectionTitle>
-      <ul>
-        {favs.map((tool) => (
-          <ToolRow key={tool.id} tool={tool} favorite />
-        ))}
-      </ul>
-    </>
-  );
 
   return (
     <>
@@ -120,26 +172,30 @@ export function Explorer() {
           explorerOpen ? "md:flex" : "md:hidden",
         )}
       >
-        <div className="flex h-11 shrink-0 items-center border-b px-3">
+        <div className="flex h-12 shrink-0 items-center justify-between gap-2 border-b ps-3 pe-2">
           <Link href={homePath(locale)} onClick={closeMobileExplorer} className="rounded-sm text-foreground">
-            <Logo className="h-4 w-auto" />
+            <Logo className="h-5 w-auto" />
           </Link>
-        </div>
-        <div className="flex h-9 shrink-0 items-center justify-between px-3">
-          <span className="font-mono text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
-            {title}
-          </span>
           <button
             type="button"
-            className="grid size-6 place-items-center rounded text-muted-foreground hover:text-foreground md:hidden"
+            className={cn(iconButton, "hidden md:grid")}
+            onClick={() => setExplorerOpen(false)}
+            aria-label={t("explorer.collapse")}
+            title={t("explorer.collapse")}
+          >
+            <PanelLeftClose className="size-4" aria-hidden />
+          </button>
+          <button
+            type="button"
+            className={cn(iconButton, "md:hidden")}
             onClick={closeMobileExplorer}
             aria-label={t("common.close")}
           >
             <X className="size-4" aria-hidden />
           </button>
         </div>
-        <div className="shrink-0 px-2 pb-2">
-          <div className="relative">
+        <div className="flex shrink-0 items-center gap-1 p-2">
+          <div className="relative min-w-0 flex-1">
             <Search
               className="pointer-events-none absolute inset-y-0 start-2 my-auto size-3.5 text-muted-foreground"
               aria-hidden
@@ -155,6 +211,17 @@ export function Explorer() {
               className="h-8 w-full rounded-md border bg-background ps-7 pe-2 text-[13px] outline-none placeholder:text-muted-foreground focus:border-primary focus:shadow-glow"
             />
           </div>
+          {/* Filters the list (and the search) to the favorite tools. */}
+          <button
+            type="button"
+            className={cn(iconButton, "size-8 shrink-0 border", favoritesOnly && "border-primary/60 text-primary")}
+            onClick={() => showView(favoritesOnly ? "tools" : "favorites")}
+            aria-pressed={favoritesOnly}
+            aria-label={t("explorer.favoritesOnly")}
+            title={t("explorer.favoritesOnly")}
+          >
+            <Star className={cn("size-4", favoritesOnly && "fill-primary")} aria-hidden />
+          </button>
         </div>
         <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-4">
           {explorerView === "favorites" ? (
@@ -169,39 +236,23 @@ export function Explorer() {
             )
           ) : (
             <>
-              {!searching && (
-                <ul>
-                  <li>
-                    <Link
-                      href={homePath(locale)}
-                      className={rowClass(pathname === homePath(locale))}
-                      aria-current={pathname === homePath(locale) ? "page" : undefined}
-                      onClick={closeMobileExplorer}
-                    >
-                      <House className="size-4 shrink-0" aria-hidden />
-                      {t("nav.home")}
-                    </Link>
-                  </li>
-                </ul>
-              )}
-              {!searching && pinned}
+              {/* No "Home" row (the logo links home) and no favorites block (the star filters them). */}
               {visible.size === 0 && (
                 <p className="px-2 py-3 text-xs text-muted-foreground">{t("explorer.noResults")}</p>
               )}
-              {groupedTools().map((group, i) => {
-                const items = group.filter((tool) => visible.has(tool.id));
-                if (items.length === 0) return null;
-                return (
-                  <Fragment key={i}>
-                    <hr className="my-2 border-border/70" />
+              {groupedTools()
+                .map((group) => group.filter((tool) => visible.has(tool.id)))
+                .filter((items) => items.length > 0)
+                .map((items, i) => (
+                  <Fragment key={items[0].id}>
+                    {i > 0 && <hr className="my-2 border-border/70" />}
                     <ul>
                       {items.map((tool) => (
                         <ToolRow key={tool.id} tool={tool} favorite={favorites.includes(tool.id)} />
                       ))}
                     </ul>
                   </Fragment>
-                );
-              })}
+                ))}
               {!searching && (
                 <>
                   <hr className="my-2 border-border/70" />
@@ -224,6 +275,7 @@ export function Explorer() {
           )}
         </div>
       </aside>
+      {!explorerOpen && <CollapsedRail />}
     </>
   );
 }

@@ -21,7 +21,10 @@
     "addFavorite": "Ajouter {name} aux favoris",
     "removeFavorite": "Retirer {name} des favoris",
     "noResults": "Aucun outil ne correspond à votre recherche.",
-    "noFavorites": "Pas encore de favoris. Survolez un outil et cliquez sur l'étoile pour l'épingler ici."
+    "noFavorites": "Pas encore de favoris. Survolez un outil et cliquez sur l'étoile pour l'épingler ici.",
+    "collapse": "Réduire le menu",
+    "expand": "Agrandir le menu",
+    "favoritesOnly": "Afficher uniquement les favoris"
   },
   "common": {
     "copy": "Copier",
@@ -134,9 +137,8 @@
     "noToolYet": "On dirait {kind}, mais il n'y a pas encore d'outil pour cela."
   },
   "home": {
-    "tagline": "local",
-    "title": "Des outils pour développeurs web qui ne voient jamais vos données",
-    "lead": "Formatez du JSON, décodez des JWT, créez du CSS fluide ou dessinez des diagrammes. Chaque outil tourne entièrement dans votre navigateur : collez des tokens de production, des certificats ou des données clients sans crainte.",
+    "title": "Un kit. Tous les outils. Zéro envoi.",
+    "lead": "Formatez du JSON, décodez des JWT, créez du CSS fluide ou dessinez des diagrammes. Tout est traité dans votre navigateur : ce que vous collez n'est jamais envoyé à un serveur et reste sur votre appareil.",
     "point1Title": "Privé par conception",
     "point1Text": "Aucun serveur ne traite votre saisie. 0 octet de ce que vous collez n'est envoyé.",
     "point2Title": "Fonctionne hors ligne",

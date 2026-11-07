@@ -21,7 +21,10 @@
     "addFavorite": "Adicionar {name} aos favoritos",
     "removeFavorite": "Remover {name} dos favoritos",
     "noResults": "Nenhuma ferramenta corresponde à sua busca.",
-    "noFavorites": "Ainda sem favoritos. Passe o mouse sobre uma ferramenta e clique na estrela para fixá-la aqui."
+    "noFavorites": "Ainda sem favoritos. Passe o mouse sobre uma ferramenta e clique na estrela para fixá-la aqui.",
+    "collapse": "Recolher menu",
+    "expand": "Expandir menu",
+    "favoritesOnly": "Mostrar só favoritos"
   },
   "common": {
     "copy": "Copiar",
@@ -134,9 +137,8 @@
     "noToolYet": "Parece {kind}, mas ainda não há ferramenta para isso."
   },
   "home": {
-    "tagline": "local",
-    "title": "Ferramentas para desenvolvedores web que nunca veem seus dados",
-    "lead": "Formate JSON, decodifique JWTs, crie CSS fluido ou desenhe diagramas. Cada ferramenta roda inteira no seu navegador: cole tokens de produção, certificados ou dados de clientes sem medo.",
+    "title": "Um kit. Todas as ferramentas. Zero uploads.",
+    "lead": "Formate JSON, decodifique JWTs, crie CSS fluido ou desenhe diagramas. Tudo é processado no seu navegador: o que você cola nunca é enviado a um servidor e fica no seu dispositivo.",
     "point1Title": "Privado por design",
     "point1Text": "Nenhum servidor processa o que você digita. 0 bytes do que você cola são enviados.",
     "point2Title": "Funciona offline",

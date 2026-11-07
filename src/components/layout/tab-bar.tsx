@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { Command, House, UserRound, X } from "lucide-react";
+import { Command, UserRound, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTool, type ToolId } from "@/config/tools";
 import { useAppLocale } from "@/hooks/use-app-locale";
@@ -31,7 +31,7 @@ export function TabBar() {
   const { openPalette } = useIde();
   const current = toolFromPath(pathname);
 
-  // Every visit to a tool opens its tab and records it as recent.
+  // Every visit to a tool opens its tab.
   useEffect(() => {
     if (current) workspaceActions.visit(current);
   }, [current]);
@@ -45,12 +45,8 @@ export function TabBar() {
     workspaceActions.closeTab(id);
   };
 
-  const page =
-    pathname === homePath(locale)
-      ? { href: homePath(locale), label: t("nav.home"), Icon: House }
-      : pathname === aboutPath(locale)
-        ? { href: aboutPath(locale), label: t("nav.about"), Icon: UserRound }
-        : null;
+  const isHome = pathname === homePath(locale);
+  const isAbout = pathname === aboutPath(locale);
 
   return (
     <div className="flex h-9 shrink-0 items-stretch border-b bg-surface-1">
@@ -58,10 +54,17 @@ export function TabBar() {
         aria-label={t("nav.openTabs")}
         className="flex min-w-0 flex-1 [scrollbar-width:none] items-stretch overflow-x-auto"
       >
-        {page && (
-          <Link href={page.href} aria-current="page" className={cn(tabClass(true), "italic")}>
-            <page.Icon className="size-3.5 text-primary" aria-hidden />
-            {page.label}
+        {/* Home is just the brand icon, like the mobile navigation. */}
+        {isHome && (
+          <Link href={homePath(locale)} aria-current="page" aria-label={t("nav.home")} className={tabClass(true)}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icon.svg" alt="" width={24} height={24} className="size-6" />
+          </Link>
+        )}
+        {isAbout && (
+          <Link href={aboutPath(locale)} aria-current="page" className={cn(tabClass(true), "italic")}>
+            <UserRound className="size-3.5 text-primary" aria-hidden />
+            {t("nav.about")}
           </Link>
         )}
         {tabs.map((id) => {

@@ -44,6 +44,8 @@ function titleSize(title: string, contentWidth: number): number {
   return oneLine >= 56 ? Math.min(oneLine, 84) : 56;
 }
 
+const sentences = (text: string) => text.split(/(?<=[.!?])\s+/);
+
 export interface OgCardProps {
   title: string;
   subtitle: string;
@@ -78,8 +80,21 @@ export function ogCard({ title, subtitle, footer, wordmarkSrc, width = ogSize.wi
       { style: { display: "flex", flexDirection: "column", gap: 24 } },
       h(
         "div",
-        { style: { fontSize: titleSize(title, width - 2 * PADDING_X), fontWeight: 700, lineHeight: 1.1 } },
-        title,
+        {
+          style: {
+            display: "flex",
+            flexWrap: "wrap",
+            // One space between sentences (JetBrains Mono glyphs are 0.6em wide).
+            columnGap: `${CHAR_WIDTH}em`,
+            fontSize: titleSize(title, width - 2 * PADDING_X),
+            fontWeight: 700,
+            lineHeight: 1.1,
+          },
+        },
+        // A slogan of short sentences only breaks between them ("One kit. Every tool. / Zero uploads.").
+        ...sentences(title).map((s) =>
+          h("span", { key: s, style: sentences(title).length > 1 ? { whiteSpace: "nowrap" } : {} }, s),
+        ),
       ),
       subtitle && h("div", { style: { fontSize: 30, lineHeight: 1.4, color: brand.muted } }, subtitle),
     ),

@@ -17,10 +17,51 @@ test("/ redirects by Accept-Language, and only there", async ({ request }) => {
 
 test("switches language to the equivalent page", async ({ page }) => {
   await page.goto("/en/json-formatter");
-  await page.getByRole("button", { name: "Language" }).click();
+  await page
+    .getByRole("contentinfo")
+    .getByRole("button", { name: /^Language/ })
+    .click();
   await page.getByRole("link", { name: /Español/ }).click();
   await expect(page).toHaveURL(/\/es\/formatear-json$/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Formatear y validar JSON");
+});
+
+test("desktop has no activity bar: the explorer logo goes home", async ({ page }) => {
+  await page.goto("/en/json-formatter");
+  await expect(page.getByRole("navigation", { name: "Main navigation" })).toBeHidden();
+  const explorer = page.getByRole("complementary");
+  await expect(explorer.getByRole("link", { name: "Home" })).toHaveCount(0);
+  // Language and theme stay in the status bar, as on small screens.
+  await expect(page.getByRole("contentinfo").getByRole("button", { name: /^Language/ })).toBeVisible();
+  await expect(page.getByRole("contentinfo").getByRole("button", { name: /^(Light|Dark)$/ })).toBeVisible();
+  await explorer.getByRole("link", { name: "kitforweb" }).click();
+  await expect(page).toHaveURL(/\/en$/);
+});
+
+test("the explorer collapses to a rail and filters by favorites", async ({ page }) => {
+  await page.goto("/en/json-formatter");
+  const explorer = page.getByRole("complementary");
+
+  // Star next to the search: only favorites.
+  await explorer.getByRole("button", { name: "Add JSON Formatter to favorites" }).click();
+  await explorer.getByRole("button", { name: "Show only favorites" }).click();
+  await expect(explorer.getByRole("link", { name: "JSON Formatter" })).toBeVisible();
+  await expect(explorer.getByRole("link", { name: "JWT Decoder" })).toHaveCount(0);
+  await explorer.getByRole("button", { name: "Show only favorites" }).click();
+  await expect(explorer.getByRole("link", { name: "JWT Decoder" })).toBeVisible();
+
+  // Collapsed: brand icon (home), expand, about and settings.
+  await explorer.getByRole("button", { name: "Collapse sidebar" }).click();
+  await expect(explorer).toBeHidden();
+  const rail = page.getByRole("navigation", { name: "Explorer" });
+  await expect(rail.getByRole("link", { name: "Home" })).toBeVisible();
+  await expect(rail.getByRole("link", { name: "About" })).toBeVisible();
+  await rail.getByRole("button", { name: "Settings" }).click();
+  await expect(page.getByRole("dialog").getByRole("radiogroup", { name: "Theme" })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await rail.getByRole("button", { name: "Expand sidebar" }).click();
+  await expect(explorer).toBeVisible();
+  await expect(rail).toBeHidden();
 });
 
 test("explorer search filters tools", async ({ page }) => {

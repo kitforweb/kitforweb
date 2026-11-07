@@ -21,7 +21,10 @@
     "addFavorite": "Añadir {name} a favoritos",
     "removeFavorite": "Quitar {name} de favoritos",
     "noResults": "Ninguna herramienta coincide con tu búsqueda.",
-    "noFavorites": "Aún no tienes favoritos. Pasa el ratón por una herramienta y pulsa la estrella para anclarla aquí."
+    "noFavorites": "Aún no tienes favoritos. Pasa el ratón por una herramienta y pulsa la estrella para anclarla aquí.",
+    "collapse": "Contraer menú",
+    "expand": "Expandir menú",
+    "favoritesOnly": "Mostrar solo favoritos"
   },
   "common": {
     "copy": "Copiar",
@@ -134,9 +137,8 @@
     "noToolYet": "Parece {kind}, pero todavía no hay herramienta para ello."
   },
   "home": {
-    "tagline": "local",
-    "title": "Utilidades para desarrolladores web que nunca ven tus datos",
-    "lead": "Formatea JSON, decodifica JWT, crea CSS fluido o dibuja diagramas. Cada herramienta se ejecuta entera en tu navegador, así que puedes pegar tokens de producción, certificados o datos de clientes sin miedo.",
+    "title": "Un kit. Todas las herramientas. Cero subidas.",
+    "lead": "Formatea JSON, decodifica JWT, crea CSS fluido o dibuja diagramas. Todo se procesa en tu navegador: lo que pegas nunca se envía a un servidor y se queda en tu equipo.",
     "point1Title": "Privada por diseño",
     "point1Text": "Ningún servidor procesa lo que escribes. Se envían 0 bytes de lo que pegas.",
     "point2Title": "Funciona sin conexión",

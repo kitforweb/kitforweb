@@ -14,7 +14,9 @@ import {
 export type ExplorerView = "tools" | "favorites";
 
 interface IdeContextValue {
+  /** Desktop: the explorer is expanded (false = collapsed to a narrow rail). */
   explorerOpen: boolean;
+  setExplorerOpen: (open: boolean) => void;
   /** On small screens the explorer is an overlay, closed by default. */
   mobileExplorerOpen: boolean;
   explorerView: ExplorerView;
@@ -64,6 +66,7 @@ export function IdeProvider({ children }: { children: ReactNode }) {
   const value = useMemo<IdeContextValue>(
     () => ({
       explorerOpen,
+      setExplorerOpen,
       explorerView,
       showView,
       mobileExplorerOpen,

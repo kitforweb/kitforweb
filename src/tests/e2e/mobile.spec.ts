@@ -3,6 +3,8 @@ import { expect, test } from "@playwright/test";
 test("mobile: bottom navigation opens the explorer and panels stack", async ({ page }) => {
   await page.goto("/en/json-formatter");
   const nav = page.getByRole("navigation", { name: "Main navigation" });
+  // Home shows the brand icon instead of a generic house.
+  await expect(nav.getByRole("link", { name: "Home" }).locator('img[src="/icon.svg"]')).toBeVisible();
   await nav.getByRole("button", { name: "Search" }).click();
   await page.getByRole("complementary").getByRole("link", { name: "JWT Decoder" }).click();
   await expect(page).toHaveURL(/\/en\/jwt-decoder$/);

@@ -70,16 +70,22 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         ]}
       />
 
-      <header className="max-w-3xl">
+      <header className="max-w-4xl">
         <Logo blink className="mb-6 h-8 w-auto md:h-10" />
-        <p className="mb-3 font-mono text-xs text-accent-text">
-          <span aria-hidden>$ </span>
-          {site.name} --{t("home.tagline")}
-        </p>
         <h1 className="font-heading text-3xl leading-tight font-bold tracking-tight text-balance md:text-5xl">
-          {t("home.title")}
+          {/* On desktop the slogan only breaks between its sentences ("One kit. Every tool. / Zero uploads."). */}
+          {t("home.title")
+            .split(/(?<=[.!?])\s+/)
+            .map((sentence, i) => (
+              <Fragment key={i}>
+                {i > 0 && " "}
+                <span className="md:whitespace-nowrap">{sentence}</span>
+              </Fragment>
+            ))}
         </h1>
-        <p className="mt-4 text-base leading-7 text-pretty text-muted-foreground md:text-lg">{t("home.lead")}</p>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-pretty text-muted-foreground md:text-lg">
+          {t("home.lead")}
+        </p>
       </header>
 
       <ul className="mt-8 grid gap-3 sm:grid-cols-3">

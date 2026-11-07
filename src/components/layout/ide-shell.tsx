@@ -4,10 +4,10 @@ import dynamic from "next/dynamic";
 import { useState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { ActivityBar, MobileNav } from "./activity-bar";
 import { CommandPalette } from "./command-palette";
 import { Explorer } from "./explorer";
 import { IdeProvider, useIde } from "./ide-context";
+import { MobileNav } from "./mobile-nav";
 import { StatusBar } from "./status-bar";
 import { TabBar } from "./tab-bar";
 
@@ -21,7 +21,7 @@ function LazySettings() {
   return loaded ? <SettingsDialog /> : null;
 }
 
-/** VS Code-like frame: activity bar, explorer, tabs, content and status bar. */
+/** VS Code-like frame: explorer, tabs, content and status bar (bottom navigation on small screens). */
 export function IdeShell({ children }: { children: ReactNode }) {
   const t = useTranslations("nav");
   return (
@@ -40,7 +40,6 @@ export function IdeShell({ children }: { children: ReactNode }) {
         */}
         <div className="relative flex h-dvh flex-col overflow-hidden">
           <div className="flex min-h-0 flex-1">
-            <ActivityBar />
             <Explorer />
             <div className="flex min-w-0 flex-1 flex-col">
               <TabBar />
